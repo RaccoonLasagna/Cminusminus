@@ -1,5 +1,6 @@
 #include <array>
 #include <string>
+#include <vector>
 using namespace std;
 
 #ifndef CLASS_H
@@ -7,37 +8,36 @@ using namespace std;
 
 class GameObject {
 private:
+public:
   string repersentation;
   array<int, 2> coordinate;
-
-public:
   virtual string repersent();
-  virtual void decition();
+  virtual void decision();
   array<int, 2> get_coordinate();
 };
 
-class LivingThing : private GameObject {
+class LivingThing : public GameObject {
 private:
   int health_point, lifetime;
   bool alive;
-
 public:
   virtual bool isAlive();
   virtual void die();
+  virtual void decision() override;
 };
 
-class Feild : private GameObject {};
+class Feild : public GameObject {};
 
-class Land : private Feild {
+class Land : public Feild {
 private:
 public:
   explicit Land(int x, int y);
 };
 
-class Plant : private LivingThing {
+class Plant : public LivingThing {
 private:
-  bool hasfruit;
-  int fruitamount, fruithungervalue;
+  bool has_fruit;
+  int fruit_amount, fruit_hunger_value;
 
 public:
   explicit Plant(int x, int y);
@@ -45,10 +45,10 @@ public:
   virtual void reproduce();
 };
 
-class Animal : private LivingThing {
+class Animal : public LivingThing {
 private:
   string type;
-  int health_point, hungerpoint, stamina, stamina_regen, damage, vision_range,
+  int health_point, hunger_point, stamina, stamina_regen, damage, vision_range,
       lifetime;
   virtual void move();
   virtual void rest();
@@ -61,14 +61,14 @@ public:
   explicit Animal(int x, int y, string type, int health_point, int hunger_point,
                   int stamina, int stamina_regen, int damage, int vision_range,
                   int lifetime);
-  void decition() override;
+  void decision() override;
 };
 
-class Region : private Feild {
+class Region : public Feild {
 private:
 int width, height;
-  array<array<GameObject *, width>, height> map;
-  string lastrepersentation;
+  vector<vector<GameObject*>> map;
+  string last_repersentation;
 
 public:
   explicit Region(int width, int height);
@@ -78,15 +78,15 @@ public:
   void place(GameObject *object);
 };
 
-class Herbivore : private Animal {
+class Herbivore : public Animal {
   virtual void eat();
 };
 
-class Carnivore : private Animal {
+class Carnivore : public Animal {
   virtual void eat();
 };
 
-class Omnivore : private Animal {
+class Omnivore : public Animal {
   virtual void eat();
 };
 

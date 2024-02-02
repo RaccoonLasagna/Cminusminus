@@ -1,0 +1,22 @@
+Nash Theorem that we can apply to this problem is for animal.
+
+Animal can design what is the point for doing that action and then
+compare with the other animal. If the point is higher than the other
+animal, then the animal will prefer that action. If all of animal
+prefer the same action, then that action is the best action for all of
+the animal.
+
+/*--------------------------------------------------------------------------*/
+Pegion hole Theorem that we can apply to reproduce problem is for animal.
+
+If there are 3 animal and 2 action, then there is at least 1 action
+that is chosen by 2 animal if that 2 animal use reproduce action then
+they will reproduce.
+
+/*--------------------------------------------------------------------------*/
+Oligopoly Theorem that we can apply to this problem is for animal food chain.
+
+If there are a lot of carnivore animal, then the food chain will try to don't
+eat the same animal type to avoid extinction and avoid competition but if there
+are less herbivore animal, then carnivore animal will eat the same animal type
+and kill other animal type to avoid extinction and avoid competition.

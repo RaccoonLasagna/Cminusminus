@@ -6,6 +6,9 @@ using namespace std;
 #ifndef CLASS_H
 #define CLASS_H
 
+template <typename T, typename R> inline bool checkSubclass(const R *obj);
+// checkSubclass<Herbivore>(animalPtr) <= use like this.
+
 class GameObject {
 private:
 public:
@@ -20,6 +23,11 @@ class LivingThing : public GameObject {
 private:
   int health_point, lifetime;
   bool alive;
+  double need_to_survive, need_to_eat, need_to_reproduce;
+  virtual void calculate_need_to_survive();
+  virtual void calculate_need_to_eat();
+  virtual void calculate_need_to_reproduce();
+
 public:
   virtual bool isAlive();
   virtual void die();
@@ -38,6 +46,7 @@ class Plant : public LivingThing {
 private:
   bool has_fruit;
   int fruit_amount, fruit_hunger_value;
+  virtual double calculate_point_for_reproduce();
 
 public:
   explicit Plant(int x, int y);
@@ -50,12 +59,25 @@ private:
   string type;
   int health_point, hunger_point, stamina, stamina_regen, damage, vision_range,
       lifetime;
+
+  virtual void calculate_need_to_survive() override;
+  virtual void calculate_need_to_eat() override;
+  virtual void calculate_need_to_reproduce() override;
+
+  virtual double calculate_point_for_move();
+  virtual double calculate_point_for_rest();
+  virtual double calculate_point_for_eat();
+  virtual double calculate_point_for_attack();
+  virtual double calculate_point_for_reproduce();
+  
   virtual void move();
   virtual void rest();
   virtual void eat();
-  virtual int eaten();
   virtual void attack();
   virtual void reproduce();
+
+  virtual int eaten();
+
 
 public:
   explicit Animal(int x, int y, string type, int health_point, int hunger_point,
@@ -66,8 +88,8 @@ public:
 
 class Region : public Feild {
 private:
-int width, height;
-  vector<vector<GameObject*>> map;
+  int width, height;
+  vector<vector<GameObject *>> map;
   string last_repersentation;
 
 public:
@@ -89,5 +111,11 @@ class Carnivore : public Animal {
 class Omnivore : public Animal {
   virtual void eat();
 };
+
+class Scarvenger : public Omnivore {
+  virtual void eat();
+};
+
+/*--------------------------------------------------------------------------*/
 
 #endif

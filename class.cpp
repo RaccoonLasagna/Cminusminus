@@ -2,8 +2,13 @@
 #include <array>
 #include <iostream>
 #include <string>
+#include <vector>
 
 using namespace std;
+
+template <typename T, typename R> inline bool checkSubclass(const R *obj) {
+  return dynamic_cast<const T *>(obj) != nullptr;
+}
 
 /*----------------------------------------------------------*/
 // GameObject
@@ -23,6 +28,7 @@ void LivingThing::decision() {
   }
   return;
 }
+
 // use same as GameObject::repersent()
 
 /*----------------------------------------------------------*/
@@ -79,12 +85,59 @@ void Animal::eat() { return; }
 int Animal::eaten() { return 0; }
 void Animal::attack() { return; }
 void Animal::reproduce() { return; }
+
+// need_to_function will use input from current status of the animal
+// point_for_move will use input from current need_to_function of the animal
+
+// these equation function will change depend on the type of animal
+void Animal::calculate_need_to_survive() { return; }
+void Animal::calculate_need_to_eat() { return; }
+void Animal::calculate_need_to_reproduce() { return; }
+
+/* these equation fuction can change if action is wried */
+double Animal::calculate_point_for_move() { return 0; }
+double Animal::calculate_point_for_rest() { return 0; }
+double Animal::calculate_point_for_eat() { return 0; }
+double Animal::calculate_point_for_attack() { return 0; }
+double Animal::calculate_point_for_reproduce() { return 0; }
+
 void Animal::decision() {
   if (Animal::lifetime == 0) {
     Animal::die();
   } else {
     --Animal::lifetime;
-    // and so on
+  }
+
+  Animal::calculate_need_to_eat();
+  Animal::calculate_need_to_survive();
+  Animal::calculate_need_to_reproduce();
+
+  vector<double> desition_value = {
+      Animal::calculate_point_for_move(), Animal::calculate_point_for_rest(),
+      Animal::calculate_point_for_eat(), Animal::calculate_point_for_attack(),
+      Animal::calculate_point_for_reproduce()};
+  int max_index = 0;
+  for (int i = 1; i < desition_value.size(); ++i) {
+    if (desition_value.at(i) > desition_value.at(max_index)) {
+      max_index = i;
+    }
+  }
+  switch (max_index) {
+  case 0:
+    Animal::move();
+    break;
+  case 1:
+    Animal::rest();
+    break;
+  case 2:
+    Animal::eat();
+    break;
+  case 3:
+    Animal::attack();
+    break;
+  case 4:
+    Animal::reproduce();
+    break;
   }
   return;
 }

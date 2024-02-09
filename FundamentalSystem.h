@@ -2,17 +2,16 @@
 #include <vector>
 using namespace std;
 
-class StatParam;
-class StatParamMax;
-class StatParamCoord;
+class StatParameter;
+class StatParameterMax;
+class StatParameterCoord;
 class Ability;
-class AbilitySlot;
+class AbilitySystem;
 class Affliction;
-class AfflictionSlot;
-class Stat;
+class AfflictionSystem;
+class StatusSystem;
 class GameObject;
 class Layer;
-class Layers;
 class Environment;
 class LivingThing;
 class Animal;
@@ -23,44 +22,47 @@ class Field;
 #ifndef FUNDAMENTALSYSTEM_H
 #define FUNDAMENTALSYSTEM_H
 
-class StatParam {
+class StatParameter {
 private:
   int value;
-  Stat &parent;
+  StatusSystem &parent;
 
 public:
-  explicit StatParam(Stat *parent,
-                     int value = 0) // รับ Stat มาเป็น pointer แล้ว dereference
-                                    // จากนั้นเอามาสร้างเป็น reference.
+  explicit StatParameter(StatusSystem *parent,
+                         int value = 0) // รับ Stat มาเป็น pointer แล้ว dereference
+                                        // จากนั้นเอามาสร้างเป็น reference.
       : parent(*parent), value(value) {}
   inline int getValue() const { return value; }
-  inline Stat &getParent() const { return parent; }
+  inline StatusSystem &getParent() const { return parent; }
   inline void setValue(const int i) { value = i; }
+  void increse(const int i) { value += i; };
+  void decrese(const int i) { value -= i; };
 };
 
-class StatParamMax : public StatParam {
+class StatParameterMax : public StatParameter {
 private:
   int maxValue;
 
 public:
-  explicit StatParamMax(Stat *parent, int value = 0, int maxValue = 0)
-      : maxValue(maxValue), StatParam(parent, value) {}
+  explicit StatParameterMax(StatusSystem *parent, int value = 0,
+                            int maxValue = 0)
+      : maxValue(maxValue), StatParameter(parent, value) {}
   void increse(const int);
   void decrese(const int);
   inline int getMax() const { return maxValue; }
   inline void setMax(const int i) { maxValue = i; };
 };
 
-class StatParamCoord : public StatParam {
+class StatParameterCoord : public StatParameter {
 private:
   int xValue, yValue, xMAX, yMAX, xMIN, yMIN;
 
 public:
-  explicit StatParamCoord(Stat *parent, int xValue = 0, int yValue = 0,
-                          int xMAX = 0, int yMAX = 0, int xMIN = 0,
-                          int yMIN = 0)
+  explicit StatParameterCoord(StatusSystem *parent, int xValue = 0,
+                              int yValue = 0, int xMAX = 0, int yMAX = 0,
+                              int xMIN = 0, int yMIN = 0)
       : xValue(xValue), yValue(yValue), xMAX(xMAX), yMAX(yMAX), xMIN(xMIN),
-        yMIN(yMIN), StatParam(parent) {}
+        yMIN(yMIN), StatParameter(parent) {}
   bool changeCoord(const int, const int); // ขยับไหม
   bool setCoord(const int, const int);    // ขยับไหม
   void setMax(const int x, const int y) { xMAX = x, yMAX = y; }
@@ -76,81 +78,91 @@ public:
 class Ability { // แล้วไอตัวนี้มันจะถูกทำลายตอน stat ถูกทำลาย
 private:
   string name;
-  AbilitySlot &parent;
+  AbilitySystem &parent;
 
 public:
-  explicit Ability(AbilitySlot *parent, string name = "")
+  explicit Ability(AbilitySystem *parent, string name = "")
       : parent(*parent), name(name) {}
-  int virtual decision() const = 0;
+  int virtual decision(const int, const int, const int) const = 0;
   bool virtual action() const = 0; // ตีโดนไหม
   inline string getName() { return name; }
-  inline AbilitySlot &getParent() { return parent; }
+  inline AbilitySystem &getParent() { return parent; }
   inline void setName(const string n) { name = n; }
 };
 
-class AbilitySlot {
+class AbilitySystem {
 private:
   vector<Ability *> abilities; // สร้างเป็นเวกเตอร์ของ pointer เพื่อเวลาที่ Ability
                                // มันพัฒนา จะได้สสามารถเปลี่ยนค่า pointer แทนที่ได้เลย
-  Stat &parent;
+  GameObject *parent;
 
 public:
-  explicit AbilitySlot(Stat *parent, vector<Ability *> abilities = {})
-      : parent(*parent), abilities(abilities){};
-  void addAbility(const Ability *);
-  bool removeAbility(const Ability *); // ได้ลบออกไหม มีตั้งแต่แรกไหม
+  explicit AbilitySystem(GameObject *parent, vector<Ability *> abilities = {})
+      : parent(parent), abilities(abilities){};
+  bool addAbility(Ability *);
+  bool removeAbility(const string);
   void decisionMakeing(const int, const int, const int) const;
   inline int getAbilitySize() const { return abilities.size(); }
-  inline Stat &getParent() const { return parent; }
+  inline GameObject *getParent() const { return parent; }
 };
 
 class Affliction {
 private:
   string name;
   int duration;
-  AfflictionSlot &parent;
+  AfflictionSystem &parent;
+  bool tick(); // ถ้า duration ลดลงแล้วเป็น 0 ให้ return false
+  void virtual action() = 0;
 
 public:
-  explicit Affliction(AfflictionSlot *parent, int duration = 0,
+  explicit Affliction(AfflictionSystem *parent, int duration = 0,
                       string name = "")
       : parent(*parent), duration(duration), name(name) {}
-  void virtual action();
+  void update();
   inline string getName() const { return name; }
   inline int getDuration() const { return duration; }
-  inline AfflictionSlot &getParent() { return parent; }
+  inline AfflictionSystem &getParent() { return parent; }
   inline void setName(const string n) { name = n; }
 };
 
-class AfflictionSlot {
+class AfflictionSystem {
 private:
   vector<Affliction *> afflictions;
-  Stat &parent;
+  GameObject *parent;
+  bool checkAlive(); // ต้องมีฟังก์ชั่นสำหรับเปิดดูและหาใน afflictions ด้วย
 
 public:
-  explicit AfflictionSlot(Stat *parent, vector<Affliction *> afflictions = {})
-      : parent(*parent), afflictions(afflictions){};
-  // ต้องมีฟังก์ชั่นสำหรับเปิดดูและหาใน afflictions ด้วย
-  void addAffliction(Affliction *);
-  void removeAffliction(Affliction *);
+  // bool isInAffliction(const string) const;
+  explicit AfflictionSystem(GameObject *parent,
+                            vector<Affliction *> afflictions = {})
+      : parent(parent), afflictions(afflictions){};
+  bool addAffliction(Affliction *);
+  bool removeAffliction(string name);
   bool updateAffliction(); // ยังไม่ตายใช่ไหม
   inline vector<Affliction *> getAfflictions() const { return afflictions; }
-  inline Stat &getParent() { return parent; }
+  inline GameObject *getParent() { return parent; }
   inline int getAfflictionSize() const { return afflictions.size(); }
-  bool isInAffliction(const string) const;
+  bool isInAffliction(const string name) {
+    for (Affliction *a : afflictions) {
+      if (a->getName() == name) {
+        return true;
+      }
+    }
+    return false;
+  }
 };
 
-class Stat {
+class StatusSystem : public AbilitySystem, public AfflictionSystem {
 private:
-  StatParamMax health, stamina, hunger, vision, lifetime;
-  StatParamCoord position;
-  AbilitySlot ability;
-  AfflictionSlot affliction;
+  StatParameterMax health, stamina, hunger, vision, lifetime;
+  StatParameterCoord position;
   GameObject *parent; // ต้องเป็น pointer เพราะว่ามันสามารถถูกโอนได้
 
 public:
-  explicit Stat(GameObject *parent)
-      : parent(parent), health(this), stamina(this), hunger(this), vision(this),
-        lifetime(this), position(this), ability(this), Affliction(this){};
+  explicit StatusSystem(GameObject *parent)
+      : health(this), stamina(this), hunger(this), vision(this), lifetime(this),
+        position(this), AbilitySystem(parent), AfflictionSystem(parent){};
+  // รอแก้ constructor
   inline int getHealth() { return health.getValue(); }
   inline int getStamina() { return stamina.getValue(); }
   inline int getHunger() { return hunger.getValue(); }
@@ -158,8 +170,6 @@ public:
   inline int getLifetime() { return lifetime.getValue(); }
   inline int getPositonX() { return position.getX(); }
   inline int getPositonY() { return position.getY(); }
-  inline AbilitySlot &getAbility() { return ability; }
-  inline AfflictionSlot &getAffliction() { return affliction; }
   inline GameObject *getParent() { return parent; }
   void setParent(GameObject *p) { parent = p; }
 };
@@ -167,19 +177,20 @@ public:
 class GameObject {
 private:
   string name;
-  Stat stat;
+  StatusSystem *stat; // stat ต้องเป็น pointer เพราะว่ามันสามาถเปลี่ยนเป็นตัวอื่นได้
   string represent;
-  Layer *parent;
+  Layer *parent; // stat ต้องเป็น pointer เพราะว่ามันสามาถเปลี่ยนย้าย layer ได้
 
 public:
   explicit GameObject(Layer *parent, string represent = "", string name = "")
-      : parent(parent), stat(this), represent(represent), name(name) {}
-  Stat &getStat() { return stat; }
+      : parent(parent), represent(represent), name(name) {}
+  // รอแก้ constructor
+  StatusSystem *getStat() { return stat; }
   string getRepresent() { return represent; }
   Layer *getParent() { return parent; }
   string getName() { return name; }
   inline void setName(const string n) { name = n; }
-  void setStat(const Stat *s) {} // อย่าลืมแก้ parent ใน stat ด้วย
+  void setStat(StatusSystem * statInput); // อย่าลืมแก้ parent ใน stat ด้วย
   inline void setRepresent(const string r) { represent = r; }
   void setParent(Layer *p) { parent = p; }
   void virtual update() = 0;
@@ -189,10 +200,10 @@ class Layer {
 private:
   vector<vector<GameObject *>> layer;
   string name;
-  Layers &parent;
+  Environment &parent;
 
 public:
-  explicit Layer(Layers *parent, vector<vector<GameObject *>> layer = {},
+  explicit Layer(Environment *parent, vector<vector<GameObject *>> layer = {},
                  string name = "")
       : parent(*parent), layer(layer), name(name) {}
   void addGameObject(GameObject *object, int x,
@@ -201,36 +212,29 @@ public:
                         int y); // ต้องทำให้ parent ของ object กลับมาเป็น nullptr
   void action();
   inline string getName() { return name; }
-  inline Layers &getParent() { return parent; }
+  inline Environment &getParent() { return parent; }
   inline void setName(const string n) { name = n; }
 };
 
 class Layers {
 private:
   vector<Layer> layers;
-  Environment &parent;
 
 public:
-  Layers(Environment *parent, vector<Layer> layers = {})
-      : parent(*parent), layers(layers) {}
+  explicit Layers(vector<Layer> layers = {}) : layers(layers) {}
   inline Layer getLayer(int i) { return layers.at(i); };
   inline string getLayerName(int i) { return layers.at(i).getName(); };
   bool createNewLayer(string name); // ตรวจสอบชื่อซ้ำเพื่อไม่ให้มีชื่อซ้ำ
   bool removeLayer(string name); // มี layer นั้นๆให้ลบไหม
-  inline Environment &getParent() { return parent; }
+  // inline Environment &getParent() { return parent; }
 };
 
-class Environment {
+class Environment : public Layers {
 private:
-  Layers layers;
-  // vector<string>  frame;
-  void printFrame(int width, int height);
-
 public:
-  explicit Environment(Layers layers = {})
-      : layers(layers) {} // ตรงนี้เกิดอะไรขึ้นทำไมมีปัญหา
+  explicit Environment(vector<Layer> * = {});
+  void changeLayer(GameObject*, string, string);
   void update();
-  inline Layers &getLayers() { return layers; }
 };
 
 class LivingThing : public GameObject {
@@ -244,6 +248,7 @@ public:
   explicit LivingThing(Layer *parent, string represent = "", string name = "")
       : GameObject(parent, represent, name), needToEnvironment(0),
         needToSurvive(0), needToReproduce(0) {}
+  // รอแก้ constructor
   int getNeedToSurvive() { return needToSurvive; }
   int getNeedToEnvironment() { return needToEnvironment; }
   int getNeedToReproduce() { return needToReproduce; }
@@ -264,6 +269,7 @@ private:
 public:
   explicit Animal(Layer *parent, string represent = "", string name = "")
       : LivingThing(parent, represent, name) {}
+  // รอแก้ constructor
   void update(); // ที่ไม่ต้องเขียน override เพราะมันเป็น abstract method อยู่แล้ว
 };
 
@@ -276,6 +282,7 @@ private:
 public:
   explicit Plant(Layer *parent, string represent = "", string name = "")
       : LivingThing(parent, represent, name) {}
+  // รอแก้ constructor
   void update(); // ที่ไม่ต้องเขียน override เพราะมันเป็น abstract method อยู่แล้ว
 };
 
@@ -284,6 +291,7 @@ private:
   explicit NonLivingThing(Layer *parent, string represent = "",
                           string name = "")
       : GameObject(parent, represent, name) {}
+  // รอแก้ constructor
   void virtual evolve() = 0;
 
 public:

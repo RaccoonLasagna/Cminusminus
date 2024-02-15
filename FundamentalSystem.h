@@ -24,7 +24,8 @@ class Field;
 #ifndef FUNDAMENTALSYSTEM_H
 #define FUNDAMENTALSYSTEM_H
 
-class StatParameter { // เป็น paramiter ที่ไม่สามารถติดลบได้
+class StatParameter
+{ // เป็น paramiter ที่ไม่สามารถติดลบได้
 private:
   string name; // มี Name เพราะว่าเวลาที่เราต้องการเรียกใช้เราต้องการเรียกด้วยชื่อ
   int value;
@@ -37,16 +38,17 @@ public:
       const int i); // บวก i แบบเรียบง่ายเอาไว้ให้ parameterMax inherit ไปใช้
   //-------------------------//
   inline void setValue(
-      const int i); // ใช้เพื่อเปลี่ยนค่าเพราะ value เป็น private ของ statparamiter
-                    // ถึงจะ inherit ไปก็ไม่สามารถ acess ถึง value ตรงๆได้
+      const int i);                    // ใช้เพื่อเปลี่ยนค่าเพราะ value เป็น private ของ statparamiter
+                                       // ถึงจะ inherit ไปก็ไม่สามารถ acess ถึง value ตรงๆได้
   inline void setName(const string n); // เหตุผลเดียวกัน
   //-------------------------//
-  inline int getValue();   // เหตุผลเดียวกัน
-  inline string getName(); // เหตุผลเดียวกัน
+  inline int getValue();            // เหตุผลเดียวกัน
+  inline string getName();          // เหตุผลเดียวกัน
   inline StatusSystem &getParent(); // เหตุผลเดียวกัน
 };
 
-class StatParameterMax : public StatParameter { // ติดลบไม่ได้แต่มีค่าสไม่เกินค่าที่กำหนด
+class StatParameterMax : public StatParameter
+{ // ติดลบไม่ได้แต่มีค่าสไม่เกินค่าที่กำหนด
 private:
   int maxValue;
 
@@ -60,7 +62,8 @@ public:
   inline void setMax(const int i);
 };
 
-class StatParameterCoord : public StatParameter {
+class StatParameterCoord : public StatParameter
+{
 private:
   int xValue, yValue, xMAX, yMAX, xMIN, yMIN;
 
@@ -70,7 +73,7 @@ public:
                               int yMIN);
   //-------------------------//
   bool changeCoord(const int, const int); // ขยับไหม? ใส่มาอยู่ในระยะที่กำหนดไว้ไหม
-  bool setCoord(const int, const int); // ขยับไหม? ใส่มาอยู่ในระยะที่กำหนดไว้ไหม
+  bool setCoord(const int, const int);    // ขยับไหม? ใส่มาอยู่ในระยะที่กำหนดไว้ไหม
   void setMax(const int x, const int y);
   void setMin(const int x, const int y);
   //-------------------------//
@@ -82,7 +85,8 @@ public:
   inline int getYMin();
 };
 
-class Ability { // แล้วไอตัวนี้มันจะถูกทำลายตอน stat ถูกทำลาย
+class Ability
+{ // แล้วไอตัวนี้มันจะถูกทำลายตอน stat ถูกทำลาย
 private:
   string name;
   AbilitySystem &parent;
@@ -104,14 +108,15 @@ public:
   inline AbilitySystem &getParent();
 };
 
-class Affliction {
+class Affliction
+{
 private:
   string name;
   int duration, passedTime = 0;
   AfflictionSystem &parent;
 
-  bool tick(); // ถ้า duration ลดลงแล้วเป็น 0 ให้ return false
-               // และฟังก์ชั่นนนี้สามรถใช้เพื่อลดเวลาการติดได้ด้วยโดยการให้มัน tick หลายๆรอบ
+  bool tick();               // ถ้า duration ลดลงแล้วเป็น 0 ให้ return false
+                             // และฟังก์ชั่นนนี้สามรถใช้เพื่อลดเวลาการติดได้ด้วยโดยการให้มัน tick หลายๆรอบ
   void virtual action() = 0; // ทำอะไรเมื่อมีโรคโดยที่มันจะไป acess
                              // ค่าต่างๆของสัตว์และส่งผลก่อนที่สัตว์จะได้ตัดสินใจ
 
@@ -132,7 +137,8 @@ public:
   inline int getDuration();
 };
 
-class AbilitySystem {
+class AbilitySystem
+{
 private:
   vector<Ability *> abilities; // สร้างเป็นเวกเตอร์ของ pointer เพื่อเวลาที่ Ability
                                // มันพัฒนา จะได้สามารถเปลี่ยนค่า pointer แทนที่ได้เลย
@@ -141,7 +147,7 @@ private:
 public:
   explicit AbilitySystem(GameObject *parent, vector<Ability *> abilities);
   //-------------------------//
-  bool addAbility(Ability *); // มีชื่อเดียวกันอยู่แล้วไหม
+  bool addAbility(Ability *);       // มีชื่อเดียวกันอยู่แล้วไหม
   bool removeAbility(const string); // มีให้ลบไหม
   bool isInAbility(const string);   // มีอยู่ไหม
   void decisionMakeing(const int, const int, const int) const;
@@ -151,7 +157,8 @@ public:
   inline int getAbilitySize();
 };
 
-class AfflictionSystem {
+class AfflictionSystem
+{
 private:
   vector<Affliction *> afflictions;
   GameObject *parent;
@@ -162,17 +169,18 @@ public:
                             vector<Affliction *> afflictions);
   //-------------------------//
   bool addAffliction(
-      Affliction *); // มีอยู่แล้วไหม ถ้ามมีก็ใส่เพิ่มรีเทิร์นจริง ไม่มีก็ใส่เพิ่มเหมือนกันแต่รีเทิร์นเท็จ
+      Affliction *);                      // มีอยู่แล้วไหม ถ้ามมีก็ใส่เพิ่มรีเทิร์นจริง ไม่มีก็ใส่เพิ่มเหมือนกันแต่รีเทิร์นเท็จ
   bool removeAffliction(string name);     // มีให้ลบไหม
   bool isInAffliction(const string name); // มีอยู่ไหม
-  bool updateAffliction(); // ยังไม่ตายใช่ไหม
+  bool updateAffliction();                // ยังไม่ตายใช่ไหม
   //-------------------------// ไม่ทำ set เหตุผลเหมือนกับ AbilitySystem
   inline vector<Affliction *> &getAfflictions();
   inline GameObject *getParent();
   inline int getAfflictionSize();
 };
 
-class StatusSystem : public AbilitySystem, public AfflictionSystem {
+class StatusSystem : public AbilitySystem, public AfflictionSystem
+{
 private:
   vector<StatParameterMax *>
       value; // GameObject บางแต่ละประเภทก็มี param ต่างกันไป จึงทำเช่นนี้
@@ -185,26 +193,29 @@ public:
                         vector<Ability *> *abilities,
                         vector<Affliction *> *afflictions);
   //-------------------------//
-  bool isInStat(string name); // เอาไว้เช็คว่าอยู่ใน value ไหม
-  bool addStat(string name); // ต้องชื่อไม่ซ้ำ เอาไว้เป็น StatParameterMax
+  bool isInStat(string name);   // เอาไว้เช็คว่าอยู่ใน value ไหม
+  bool addStat(string name);    // ต้องชื่อไม่ซ้ำ เอาไว้เป็น StatParameterMax
   bool removeStat(string name); // มีอยู่ไหม
   void
   setParent(GameObject *p); // เปลี่ยน parent ของ stat ให้เป็น p โดยไม่สนอะไรทั้งนั้น
   //-------------------------//
   StatParameterMax *
-  getValue(string name); // ใช้เพื่อเอา parameter object ที่มีชื่อตรงกันออกมา
+  getValue(string name);                    // ใช้เพื่อเอา parameter object ที่มีชื่อตรงกันออกมา
   inline StatParameterCoord &getPosition(); // ใช้เพื่อเอาค่า x ออกมา
   inline int getPositonX();
   inline int getPositonY();
   inline GameObject *getParent();
 };
 
-class GameObject {
+// GameObject's parent is Layer btw, not LayerSystem.
+// This means Gameobjects can't just move layers since parent can't be changed rn
+class GameObject
+{
 private:
   string represent;
   string name;
   StatusSystem *stat; // stat ต้องเป็น pointer เพราะว่ามันสามาถเปลี่ยนเป็นตัวอื่นได้
-  Layer *parent; // stat ต้องเป็น pointer เพราะว่ามันสามาถเปลี่ยนย้าย layer ได้
+  Layer *parent;      // stat ต้องเป็น pointer เพราะว่ามันสามาถเปลี่ยนย้าย layer ได้
 
 public:
   explicit GameObject(Layer *, string, string, int, int, int, int, int, int,
@@ -218,16 +229,35 @@ public:
   inline void setRepresent(const string r);
   void setStat(StatusSystem *statInput); // ไปแย่งเอา stat ของตัวอื่นมาใช้
                                          // จะเอามาใช้สำหรับกรณีสัตว์วิวัฒนาการ
-  void setParent(Layer *p); // เปลี่ยนแบบไม่สนว่าที่ตรงนั้นจะไปทับใครใน layer เดียวกันไหม
+  void setParent(Layer *p);              // เปลี่ยนแบบไม่สนว่าที่ตรงนั้นจะไปทับใครใน layer เดียวกันไหม
   //-------------------------//
   string getRepresent();
   string getName();
   StatusSystem &getStat();
   Layer *getParent();
   //-------------------------//
+  int getX();
+  int getY();
 };
 
-class Layer { // ต้องทำการเรียงให้มีตำแหน่งติดลบด้วย
+class Land : public GameObject
+{
+private:
+  int x, y;
+
+public:
+  explicit Land(Layer *parentInput, string representInput,
+                string nameInput = "", int xValueInput = 0,
+                int yValueInput = 0, int xMaxInput = 0,
+                int yMaxInput = 0, int xMinInput = 0, int yMinInput = 0,
+                vector<StatParameterMax *> *value = {},
+                vector<Ability *> *abilities = {},
+                vector<Affliction *> *afflictions = {});
+  void update();
+};
+
+class Layer
+{ // ต้องทำการเรียงให้มีตำแหน่งติดลบด้วย
 private:
   string name;
   vector<vector<GameObject *>> layer;
@@ -235,30 +265,38 @@ private:
   LayerSystem &parent;
 
 public:
-  explicit Layer(LayerSystem *parent, string name,
-                 vector<vector<GameObject *>> layer);
+  explicit Layer(LayerSystem *parent, int width, int height, string name, bool ground);
   //-------------------------//
-  bool addGameObject(GameObject *object, int x,
-                     int y); // ต้องมี parent เป็น nullptr และช่องนั้นว่าง
-  bool removeGameObject(int x,
-                        int y); // ต้องทำให้ parent ของ object กลับมาเป็น nullptr
   void action();
   //-------------------------//
   inline void setName(const string n);
   //-------------------------//
   inline string getName();
   inline LayerSystem &getParent();
+  void setLayer(int layer_num)
+  {
+  }
 };
+/*
+Layer notes:
+- addGameObject is going to be moved to layer system,
+  since coordinates need to refer to the ground layer
+  and size needs to be initialized by layer system
+- removeGameObject as well
+*/
 
-class LayerSystem {
+class LayerSystem
+{
 private:
+  int width;
+  int height;
   vector<Layer *> layers;
 
 public:
-  explicit LayerSystem(vector<Layer *> layers);
+  explicit LayerSystem(int width, int height, int amount);
   //-------------------------//
-  bool createNewLayer(string name); // ตรวจสอบชื่อซ้ำเพื่อไม่ให้มีชื่อซ้ำ
-  bool removeLayer(string name); // มี layer นั้นๆให้ลบไหม
+  bool createNewLayer(string name, bool ground); // ตรวจสอบชื่อซ้ำเพื่อไม่ให้มีชื่อซ้ำ
+  bool removeLayer(string name);    // มี layer นั้นๆให้ลบไหม
   //-------------------------//
   inline Layer *getLayer(string name);
   inline Layer *getLayer(int i);
@@ -267,7 +305,9 @@ public:
   inline int getLayerSize();
 };
 
-class Biome : public LayerSystem {
+// no
+class Biome : public LayerSystem
+{
 private:
 public:
   explicit Biome(vector<Layer *>);

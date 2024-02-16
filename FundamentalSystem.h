@@ -29,7 +29,7 @@ class StatParameter
 private:
   string name; // มี Name เพราะว่าเวลาที่เราต้องการเรียกใช้เราต้องการเรียกด้วยชื่อ
   int value;
-  StatusSystem &parent; // เป็นประเภทที่ไม่สามารถเปลี่ยน parent ได้
+  StatusSystem* parent; // เป็นประเภทที่ไม่สามารถเปลี่ยน parent ได้
 
 public:
   explicit StatParameter(StatusSystem *parent, string name, int value);
@@ -44,7 +44,7 @@ public:
   //-------------------------//
   inline int getValue();            // เหตุผลเดียวกัน
   inline string getName();          // เหตุผลเดียวกัน
-  inline StatusSystem &getParent(); // เหตุผลเดียวกัน
+  inline StatusSystem *getParent(); // เหตุผลเดียวกัน
 };
 
 class StatParameterMax : public StatParameter
@@ -89,7 +89,7 @@ class Ability
 { // แล้วไอตัวนี้มันจะถูกทำลายตอน stat ถูกทำลาย
 private:
   string name;
-  AbilitySystem &parent;
+  AbilitySystem *parent;
 
 public:
   explicit Ability(AbilitySystem *parent, string name);
@@ -105,7 +105,7 @@ public:
   inline void setName(const string n);
   //-------------------------//
   inline string getName();
-  inline AbilitySystem &getParent();
+  inline AbilitySystem *getParent();
 };
 
 class Affliction
@@ -113,7 +113,7 @@ class Affliction
 private:
   string name;
   int duration, passedTime = 0;
-  AfflictionSystem &parent;
+  AfflictionSystem *parent;
 
   bool tick();               // ถ้า duration ลดลงแล้วเป็น 0 ให้ return false
                              // และฟังก์ชั่นนนี้สามรถใช้เพื่อลดเวลาการติดได้ด้วยโดยการให้มัน tick หลายๆรอบ
@@ -122,14 +122,14 @@ private:
 
 public:
   explicit Affliction(AfflictionSystem *parent, int duration, string name)
-      : parent(*parent), duration(duration), name(name) {}
+      : parent(parent), duration(duration), name(name) {}
   //-------------------------//
   bool refresh();
   void
   update(); // ที่มีฟังก์ชั่น update เพราะว่าต้องการให้มันตรวจก่อนว่าเวลาที่โรคจะหมดยังไม่เท่ากับ 0
             // แล้วค่อยใช้ action
   //-------------------------//
-  inline AfflictionSystem &getParent();
+  inline AfflictionSystem *getParent();
   inline void setName(const string n);
   inline void setDuration(const int d);
   //-------------------------//
@@ -174,7 +174,7 @@ public:
   bool isInAffliction(const string name); // มีอยู่ไหม
   bool updateAffliction();                // ยังไม่ตายใช่ไหม
   //-------------------------// ไม่ทำ set เหตุผลเหมือนกับ AbilitySystem
-  inline vector<Affliction *> &getAfflictions();
+  inline vector<Affliction *> *getAfflictions();
   inline GameObject *getParent();
   inline int getAfflictionSize();
 };
@@ -201,7 +201,7 @@ public:
   //-------------------------//
   StatParameterMax *
   getValue(string name);                    // ใช้เพื่อเอา parameter object ที่มีชื่อตรงกันออกมา
-  inline StatParameterCoord &getPosition(); // ใช้เพื่อเอาค่า x ออกมา
+  inline StatParameterCoord*getPosition(); // ใช้เพื่อเอาค่า x ออกมา
   inline int getPositonX();
   inline int getPositonY();
   inline GameObject *getParent();
@@ -233,7 +233,7 @@ public:
   //-------------------------//
   string getRepresent();
   string getName();
-  StatusSystem &getStat();
+  StatusSystem *getStat();
   Layer *getParent();
   //-------------------------//
   int getX();
@@ -247,12 +247,12 @@ private:
 
 public:
   explicit Land(Layer *parentInput, string representInput,
-                string nameInput = "", int xValueInput = 0,
-                int yValueInput = 0, int xMaxInput = 0,
-                int yMaxInput = 0, int xMinInput = 0, int yMinInput = 0,
-                vector<StatParameterMax *> *value = {},
-                vector<Ability *> *abilities = {},
-                vector<Affliction *> *afflictions = {});
+                string nameInput, int xValueInput,
+                int yValueInput, int xMaxInput,
+                int yMaxInput, int xMinInput, int yMinInput,
+                vector<StatParameterMax *> *value,
+                vector<Ability *> *abilities,
+                vector<Affliction *> *afflictions);
   void update();
 };
 
@@ -262,7 +262,7 @@ private:
   string name;
   vector<vector<GameObject *>> layer;
   GameObject *default_value;
-  LayerSystem &parent;
+  LayerSystem *parent;
 
 public:
   explicit Layer(LayerSystem *parent, int width, int height, string name, bool ground);
@@ -272,7 +272,7 @@ public:
   inline void setName(const string n);
   //-------------------------//
   inline string getName();
-  inline LayerSystem &getParent();
+  inline LayerSystem *getParent();
   void setLayer(int layer_num)
   {
   }

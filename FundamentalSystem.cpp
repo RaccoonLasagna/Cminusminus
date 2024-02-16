@@ -1,20 +1,21 @@
 #include "FundamentalSystem.h"
 #include <string>
 #include <vector>
+#include <cmath>
 // #include <iterator>
 using namespace std;
 
 //-------------------StatParameter-------------------// Clean!
 StatParameter::StatParameter(StatusSystem *parentInput, string nameInput,
                              int value = 0)
-    : parent(*parentInput), name(nameInput), value(value) {}
+    : parent(parentInput), name(nameInput), value(value) {}
 
 void inline StatParameter::change(const int i) { value += i; }
 void inline StatParameter::setValue(const int i) { value = i; }
 void inline StatParameter::setName(const string nameInput) { name = nameInput; }
 int inline StatParameter::getValue() { return value; }
 string inline StatParameter::getName() { return name; }
-StatusSystem inline &StatParameter::getParent() { return parent; }
+StatusSystem inline *StatParameter::getParent() { return parent; }
 
 //-------------------StatParameterMax-------------------//
 StatParameterMax::StatParameterMax(StatusSystem *parentInput, string nameInput,
@@ -95,11 +96,11 @@ int inline StatParameterCoord::getYMin() { return yMIN; }
 
 //-------------------Ability-------------------// Clean!
 Ability::Ability(AbilitySystem *parentInput, string nameInput)
-    : parent(*parentInput), name(nameInput) {}
+    : parent(parentInput), name(nameInput) {}
 
 void inline Ability::setName(const string nameInput) { name = nameInput; }
 string inline Ability::getName() { return name; }
-AbilitySystem inline &Ability::getParent() { return parent; }
+AbilitySystem inline *Ability::getParent() { return parent; }
 // ฟังก์ชั่น desition class ลูกคลาสจะต้องเขียนเอง
 
 //-------------------Affliction-------------------// Clean!
@@ -129,7 +130,7 @@ bool Affliction::refresh()
   return true;
 }
 
-AfflictionSystem &Affliction::getParent() { return parent; }
+AfflictionSystem *Affliction::getParent() { return parent; }
 void inline Affliction::setName(const string nameInput) { name = nameInput; }
 void inline Affliction::setDuration(const int i) { duration = i; }
 string inline Affliction::getName() { return name; }
@@ -201,9 +202,9 @@ int inline AbilitySystem::getAbilitySize() { return abilities.size(); }
 //-------------------AfflictionSystem-------------------// clean!
 bool AfflictionSystem::checkAlive()
 {
-  if (parent->getStat().isInStat("health"))
+  if (parent->getStat()->isInStat("health"))
   {
-    if (parent->getStat().getValue("health")->getValue() <= 0)
+    if (parent->getStat()->getValue("health")->getValue() <= 0)
     {
       return false;
     }
@@ -265,9 +266,9 @@ bool AfflictionSystem::updateAffliction()
   return checkAlive();
 }
 
-vector<Affliction *> inline &AfflictionSystem::getAfflictions()
+vector<Affliction *> inline *AfflictionSystem::getAfflictions()
 {
-  return afflictions;
+  return &afflictions;
 }
 GameObject inline *AfflictionSystem::getParent() { return parent; }
 int inline AfflictionSystem::getAfflictionSize() { return afflictions.size(); }
@@ -337,9 +338,9 @@ StatParameterMax *StatusSystem::getValue(string name)
   }
   return nullptr;
 }
-StatParameterCoord inline &StatusSystem::getPosition()
+StatParameterCoord inline *StatusSystem::getPosition()
 {
-  return positionParamiter;
+  return &positionParamiter;
 }
 int StatusSystem::getPositonX() { return positionParamiter.getX(); }
 int StatusSystem::getPositonY() { return positionParamiter.getY(); }
@@ -380,13 +381,13 @@ void GameObject::setStat(StatusSystem *statInput)
 void inline GameObject::setParent(Layer *parentInput) { parent = parentInput; }
 string inline GameObject::getRepresent() { return represent; }
 string inline GameObject::getName() { return name; }
-StatusSystem inline &GameObject::getStat() { return *stat; }
+StatusSystem inline *GameObject::getStat() { return stat; }
 Layer inline *GameObject::getParent() { return parent; }
 int GameObject::getX(){
-  
+  return 0;
 };
 int GameObject::getY(){
-
+  return 0;
 };
 
 // get coordinate code - tba
@@ -428,7 +429,7 @@ Land::Land(Layer *parentInput, string representInput,
 void Land::update() { return; }
 
 //-------------------Layer-------------------// clean!
-Layer::Layer(LayerSystem *parent, int width, int height, string name, bool ground) : parent(*parent), name(name)
+Layer::Layer(LayerSystem *parent, int width, int height, string name, bool ground) : parent(parent), name(name)
 {
   int width_min = static_cast<int>(-floor(width / 2));
   int height_min = static_cast<int>(-floor(height / 2));
@@ -470,7 +471,7 @@ void inline Layer::setName(const string nameInput) { name = nameInput; }
 
 string inline Layer::getName() { return name; }
 
-LayerSystem inline &Layer::getParent() { return parent; }
+LayerSystem inline *Layer::getParent() { return parent; }
 
 //-------------------LayerSystem-------------------//
 LayerSystem::LayerSystem(int width, int height, int amount) : width(width), height(height)

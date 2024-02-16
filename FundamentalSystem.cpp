@@ -1,7 +1,8 @@
 #include "FundamentalSystem.h"
+#include <cmath>
 #include <string>
 #include <vector>
-#include <cmath>
+
 // #include <iterator>
 using namespace std;
 
@@ -22,15 +23,11 @@ StatParameterMax::StatParameterMax(StatusSystem *parentInput, string nameInput,
                                    int value = 0, int maxValueInput = 0)
     : StatParameter(parentInput, nameInput, value), maxValue(maxValueInput) {}
 
-void StatParameterMax::change(const int i)
-{
+void StatParameterMax::change(const int i) {
   int value = getValue();
-  if (value + i <= maxValue)
-  {
+  if (value + i <= maxValue) {
     value += i;
-  }
-  else
-  {
+  } else {
     value = maxValue;
   }
 }
@@ -47,43 +44,33 @@ StatParameterCoord::StatParameterCoord(StatusSystem *parentInput,
     : StatParameter(parentInput, nameInput), xValue(xValueInput),
       yValue(yValueInput), xMAX(xMAX), yMAX(yMAX), xMIN(xMIN), yMIN(yMIN) {}
 
-bool StatParameterCoord::changeCoord(const int x, const int y)
-{
+bool StatParameterCoord::changeCoord(const int x, const int y) {
   int newX = xValue + x;
   int newY = yValue + y;
-  if (newX >= xMIN && xMAX >= newX && newY >= yMIN && yMAX >= newY)
-  {
+  if (newX >= xMIN && xMAX >= newX && newY >= yMIN && yMAX >= newY) {
     xValue = newX;
     yValue = newY;
     return true;
-  }
-  else
-  {
+  } else {
     return false;
   }
 }
 
-bool StatParameterCoord::setCoord(const int x, const int y)
-{
-  if (x >= xMIN && xMAX >= x && y >= yMIN && yMAX >= y)
-  {
+bool StatParameterCoord::setCoord(const int x, const int y) {
+  if (x >= xMIN && xMAX >= x && y >= yMIN && yMAX >= y) {
     xValue = x;
     yValue = y;
     return true;
-  }
-  else
-  {
+  } else {
     return false;
   }
 }
 
-void StatParameterCoord::setMax(const int x, const int y)
-{
+void StatParameterCoord::setMax(const int x, const int y) {
   xMAX = x;
   yMAX = y;
 }
-void StatParameterCoord::setMin(const int x, const int y)
-{
+void StatParameterCoord::setMin(const int x, const int y) {
   xMIN = x;
   yMIN = y;
 }
@@ -104,26 +91,21 @@ AbilitySystem inline *Ability::getParent() { return parent; }
 // ฟังก์ชั่น desition class ลูกคลาสจะต้องเขียนเอง
 
 //-------------------Affliction-------------------// Clean!
-void Affliction::update()
-{
+void Affliction::update() {
   tick();
   action();
 }
 
-bool Affliction::tick()
-{
-  if (duration - passedTime > 0)
-  {
+bool Affliction::tick() {
+  if (duration - passedTime > 0) {
     passedTime++;
     return true;
   }
   return false;
 }
 
-bool Affliction::refresh()
-{
-  if (passedTime == 0)
-  {
+bool Affliction::refresh() {
+  if (passedTime == 0) {
     return false;
   }
   passedTime = 0;
@@ -141,12 +123,9 @@ AbilitySystem::AbilitySystem(GameObject *parentInput,
                              vector<Ability *> abilitiesInput = {})
     : parent(parentInput), abilities(abilitiesInput) {}
 
-bool AbilitySystem::addAbility(Ability *ability)
-{
-  for (Ability *a : abilities)
-  {
-    if (a->getName() == ability->getName())
-    {
+bool AbilitySystem::addAbility(Ability *ability) {
+  for (Ability *a : abilities) {
+    if (a->getName() == ability->getName()) {
       return false;
     }
   }
@@ -154,12 +133,9 @@ bool AbilitySystem::addAbility(Ability *ability)
   return true;
 }
 
-bool AbilitySystem::removeAbility(const string name)
-{
-  for (int i = 0; i < abilities.size(); i++)
-  {
-    if (abilities.at(i)->getName() == name)
-    {
+bool AbilitySystem::removeAbility(const string name) {
+  for (int i = 0; i < abilities.size(); i++) {
+    if (abilities.at(i)->getName() == name) {
       abilities.erase(abilities.begin() + i);
       return true;
     }
@@ -167,12 +143,9 @@ bool AbilitySystem::removeAbility(const string name)
   return false;
 }
 
-bool AbilitySystem::isInAbility(const string name)
-{
-  for (Ability *a : abilities)
-  {
-    if (a->getName() == name)
-    {
+bool AbilitySystem::isInAbility(const string name) {
+  for (Ability *a : abilities) {
+    if (a->getName() == name) {
       return true;
     }
   }
@@ -180,15 +153,12 @@ bool AbilitySystem::isInAbility(const string name)
 }
 
 void AbilitySystem::decisionMakeing(const int needSur, const int needEnv,
-                                    const int needRepr) const
-{
+                                    const int needRepr) const {
   int maxValue = 0;
   int maxIndex = 0;
-  for (int i = 0; i < abilities.size(); i++)
-  {
+  for (int i = 0; i < abilities.size(); i++) {
     int value = abilities.at(i)->decision(needSur, needEnv, needRepr);
-    if (value > maxValue)
-    {
+    if (value > maxValue) {
       maxValue = value;
       maxIndex = i;
     }
@@ -200,12 +170,9 @@ GameObject inline *AbilitySystem::getParent() { return parent; }
 int inline AbilitySystem::getAbilitySize() { return abilities.size(); }
 
 //-------------------AfflictionSystem-------------------// clean!
-bool AfflictionSystem::checkAlive()
-{
-  if (parent->getStat()->isInStat("health"))
-  {
-    if (parent->getStat()->getValue("health")->getValue() <= 0)
-    {
+bool AfflictionSystem::checkAlive() {
+  if (parent->getStat()->isInStat("health")) {
+    if (parent->getStat()->getValue("health")->getValue() <= 0) {
       return false;
     }
   }
@@ -216,14 +183,11 @@ AfflictionSystem::AfflictionSystem(GameObject *parentInput,
                                    vector<Affliction *> afflictionsInput = {})
     : parent(parentInput), afflictions(afflictionsInput) {}
 
-bool AfflictionSystem::addAffliction(Affliction *affliction)
-{
+bool AfflictionSystem::addAffliction(Affliction *affliction) {
   string name = affliction->getName();
-  for (Affliction *a : afflictions)
-  {
+  for (Affliction *a : afflictions) {
     string tempName = a->getName();
-    if (tempName == name)
-    {
+    if (tempName == name) {
       afflictions.push_back(affliction);
       return false;
     }
@@ -232,12 +196,9 @@ bool AfflictionSystem::addAffliction(Affliction *affliction)
   return true;
 }
 
-bool AfflictionSystem::removeAffliction(const string name)
-{
-  for (int i = 0; i < afflictions.size(); i++)
-  {
-    if (afflictions.at(i)->getName() == name)
-    {
+bool AfflictionSystem::removeAffliction(const string name) {
+  for (int i = 0; i < afflictions.size(); i++) {
+    if (afflictions.at(i)->getName() == name) {
       afflictions.erase(afflictions.begin() + i);
       return true;
     }
@@ -245,29 +206,23 @@ bool AfflictionSystem::removeAffliction(const string name)
   return false;
 }
 
-bool AfflictionSystem::isInAffliction(const string name)
-{
-  for (Affliction *a : afflictions)
-  {
-    if (a->getName() == name)
-    {
+bool AfflictionSystem::isInAffliction(const string name) {
+  for (Affliction *a : afflictions) {
+    if (a->getName() == name) {
       return true;
     }
   }
   return false;
 }
 
-bool AfflictionSystem::updateAffliction()
-{
-  for (Affliction *a : afflictions)
-  {
+bool AfflictionSystem::updateAffliction() {
+  for (Affliction *a : afflictions) {
     a->update();
   }
   return checkAlive();
 }
 
-vector<Affliction *> inline *AfflictionSystem::getAfflictions()
-{
+vector<Affliction *> inline *AfflictionSystem::getAfflictions() {
   return &afflictions;
 }
 GameObject inline *AfflictionSystem::getParent() { return parent; }
@@ -277,7 +232,7 @@ int inline AfflictionSystem::getAfflictionSize() { return afflictions.size(); }
 StatusSystem::StatusSystem(GameObject *parentInput, int xValueInput = 0,
                            int yValueInput = 0, int xMAX = 0, int yMAX = 0,
                            int xMIN = 0, int yMIN = 0,
-                           vector<StatParameterMax *> *value = {},
+                           vector<StatParameter *> *value = {},
                            vector<Ability *> *abilities = {},
                            vector<Affliction *> *afflictions = {})
     : parentParamiter(parentInput), value(*value),
@@ -286,22 +241,17 @@ StatusSystem::StatusSystem(GameObject *parentInput, int xValueInput = 0,
       positionParamiter(this, "position", xValueInput, yValueInput, xMAX, yMAX,
                         xMIN, yMIN) {}
 
-bool StatusSystem::isInStat(string name)
-{
-  for (StatParameterMax *s : value)
-  {
-    if (s->getName() == name)
-    {
+bool StatusSystem::isInStat(string name) {
+  for (StatParameter *s : value) {
+    if (s->getName() == name) {
       return true;
     }
   }
   return false;
 }
 
-bool StatusSystem::addStat(string name)
-{
-  if (isInStat(name))
-  {
+bool StatusSystem::addStat(string name) {
+  if (isInStat(name)) {
     return false;
   }
   StatParameterMax *stat = new StatParameterMax(this, name);
@@ -309,12 +259,9 @@ bool StatusSystem::addStat(string name)
   return true;
 }
 
-bool StatusSystem::removeStat(string name)
-{
-  for (int i = 0; i < value.size(); i++)
-  {
-    if (value.at(i)->getName() == name)
-    {
+bool StatusSystem::removeStat(string name) {
+  for (int i = 0; i < value.size(); i++) {
+    if (value.at(i)->getName() == name) {
       value.erase(value.begin() + i);
       return true;
     }
@@ -322,24 +269,19 @@ bool StatusSystem::removeStat(string name)
   return false;
 }
 
-void StatusSystem::setParent(GameObject *parentInput)
-{
+void StatusSystem::setParent(GameObject *parentInput) {
   parentParamiter = parentInput;
 }
 
-StatParameterMax *StatusSystem::getValue(string name)
-{
-  for (StatParameterMax *s : value)
-  {
-    if (s->getName() == name)
-    {
+StatParameter *StatusSystem::getValue(string name) {
+  for (StatParameter *s : value) {
+    if (s->getName() == name) {
       return s;
     }
   }
   return nullptr;
 }
-StatParameterCoord inline *StatusSystem::getPosition()
-{
+StatParameterCoord inline *StatusSystem::getPosition() {
   return &positionParamiter;
 }
 int StatusSystem::getPositonX() { return positionParamiter.getX(); }
@@ -351,11 +293,10 @@ GameObject::GameObject(Layer *parentInput, string representInput,
                        string nameInput = "", int xValueInput = 0,
                        int yValueInput = 0, int xMaxInput = 0,
                        int yMaxInput = 0, int xMinInput = 0, int yMinInput = 0,
-                       vector<StatParameterMax *> *value = {},
+                       vector<StatParameter *> *value = {},
                        vector<Ability *> *abilities = {},
                        vector<Affliction *> *afflictions = {})
-    : parent(parentInput), represent(representInput), name(nameInput)
-{
+    : parent(parentInput), represent(representInput), name(nameInput) {
 
   StatusSystem *statCreate =
       new StatusSystem(this, xValueInput, yValueInput, xMaxInput, yMaxInput,
@@ -364,15 +305,12 @@ GameObject::GameObject(Layer *parentInput, string representInput,
 }
 
 void inline GameObject::setName(const string nameInput) { name = nameInput; }
-void inline GameObject::setRepresent(const string representInput)
-{
+void inline GameObject::setRepresent(const string representInput) {
   represent = representInput;
 }
 
-void GameObject::setStat(StatusSystem *statInput)
-{
-  if (statInput->getParent() != nullptr)
-  {
+void GameObject::setStat(StatusSystem *statInput) {
+  if (statInput->getParent() != nullptr) {
     statInput->getParent()->stat = nullptr;
   }
   statInput->setParent(this);
@@ -383,19 +321,16 @@ string inline GameObject::getRepresent() { return represent; }
 string inline GameObject::getName() { return name; }
 StatusSystem inline *GameObject::getStat() { return stat; }
 Layer inline *GameObject::getParent() { return parent; }
-int GameObject::getX(){
-  return 0;
-};
-int GameObject::getY(){
-  return 0;
-};
+int GameObject::getX() { return 0; };
+int GameObject::getY() { return 0; };
 
 // get coordinate code - tba
 // pair<int, int> GameObject::getVectorIndex() const
 // {
 //     if (parent)
 //     {
-//         const vector<vector<GameObject *>> &layerVectors = parent->getLayerVectors();
+//         const vector<vector<GameObject *>> &layerVectors =
+//         parent->getLayerVectors();
 
 //         for (size_t i = 0; i < layerVectors.size(); ++i)
 //         {
@@ -415,36 +350,44 @@ int GameObject::getY(){
 //     return {-1, -1};
 // }
 
+// -------------------Feild--------------------//
+Feild::Feild(Layer *parentInput, string representInput, string nameInput,
+             int xValueInput = 0, int yValueInput = 0, int xMaxInput = 0,
+             int yMaxInput = 0, int xMinInput = 0, int yMinInput = 0,
+             vector<StatParameter *> *value = {},
+             vector<Ability *> *abilities = {},
+             vector<Affliction *> *afflictions = {})
+    : GameObject(parentInput, representInput, nameInput, xValueInput,
+                 yValueInput, xMaxInput, yMaxInput, xMinInput, yMinInput, value,
+                 abilities, afflictions) {}
+
 // -------------------Land--------------------//
-Land::Land(Layer *parentInput, string representInput,
-           string nameInput, int xValueInput = 0, int yValueInput = 0,
-           int xMaxInput = 0, int yMaxInput = 0, int xMinInput = 0, int yMinInput = 0,
-           vector<StatParameterMax *> *value = {},
+Land::Land(Layer *parentInput, string representInput, string nameInput,
+           int xValueInput = 0, int yValueInput = 0, int xMaxInput = 0,
+           int yMaxInput = 0, int xMinInput = 0, int yMinInput = 0,
+           vector<StatParameter *> *value = {},
            vector<Ability *> *abilities = {},
-           vector<Affliction *> *afflictions = {}) : GameObject(parentInput, representInput, nameInput,
-                                                                xValueInput, yValueInput, xMaxInput, yMaxInput,
-                                                                xMinInput, yMinInput, value, abilities, afflictions) {}
+           vector<Affliction *> *afflictions = {})
+    : Feild(parentInput, representInput, nameInput, xValueInput, yValueInput,
+            xMaxInput, yMaxInput, xMinInput, yMinInput, value, abilities,
+            afflictions) {}
 
 // placeholder
 void Land::update() { return; }
 
 //-------------------Layer-------------------// clean!
-Layer::Layer(LayerSystem *parent, int width, int height, string name, bool ground) : parent(parent), name(name)
-{
+Layer::Layer(LayerSystem *parent, int width, int height, string name,
+             bool ground)
+    : parent(parent), name(name) {
   int width_min = static_cast<int>(-floor(width / 2));
   int height_min = static_cast<int>(-floor(height / 2));
 
-  for (int y = height_min; y < height_min + height; y++)
-  {
+  for (int y = height_min; y < height_min + height; y++) {
     vector<GameObject *> row;
-    for (int x = width_min; x < width_min + width; x++)
-    {
-      if (ground)
-      {
+    for (int x = width_min; x < width_min + width; x++) {
+      if (ground) {
         row.push_back(new Land(this, "#", "land", x, y));
-      }
-      else
-      {
+      } else {
         row.push_back(nullptr);
       }
     }
@@ -453,14 +396,10 @@ Layer::Layer(LayerSystem *parent, int width, int height, string name, bool groun
 }
 
 // update everything in the layer
-void Layer::action()
-{
-  for (int i = 0; i < layer.size(); i++)
-  {
-    for (int j = 0; j < layer.at(i).size(); j++)
-    {
-      if (layer.at(i).at(j) != nullptr)
-      {
+void Layer::action() {
+  for (int i = 0; i < layer.size(); i++) {
+    for (int j = 0; j < layer.at(i).size(); j++) {
+      if (layer.at(i).at(j) != nullptr) {
         layer.at(i).at(j)->update();
       }
     }
@@ -474,27 +413,21 @@ string inline Layer::getName() { return name; }
 LayerSystem inline *Layer::getParent() { return parent; }
 
 //-------------------LayerSystem-------------------//
-LayerSystem::LayerSystem(int width, int height, int amount) : width(width), height(height)
-{
-  for (size_t lCount = 0; lCount < amount; lCount++)
-  {
-    if (lCount == 0)
-    {
+LayerSystem::LayerSystem(int width, int height, int amount)
+    : width(width), height(height) {
+  for (size_t lCount = 0; lCount < amount; lCount++) {
+    if (lCount == 0) {
       createNewLayer("ground", true);
-    }
-    else
-    {
+    } else {
       createNewLayer("layer" + to_string(lCount), false);
     }
   }
 }
 
-bool LayerSystem::createNewLayer(string name, bool ground)
-{ // ต้องสร้าง layer ที่หนาดเท่ากับ layer ที่มีอยูแล้วด้วย
-  for (Layer *l : layers)
-  {
-    if (l->getName() == name)
-    {
+bool LayerSystem::createNewLayer(
+    string name, bool ground) { // ต้องสร้าง layer ที่หนาดเท่ากับ layer ที่มีอยูแล้วด้วย
+  for (Layer *l : layers) {
+    if (l->getName() == name) {
       return false;
     }
   }
@@ -503,12 +436,9 @@ bool LayerSystem::createNewLayer(string name, bool ground)
   return true;
 }
 
-bool LayerSystem::removeLayer(string name)
-{
-  for (int i = 0; i < layers.size(); i++)
-  {
-    if (layers.at(i)->getName() == name)
-    {
+bool LayerSystem::removeLayer(string name) {
+  for (int i = 0; i < layers.size(); i++) {
+    if (layers.at(i)->getName() == name) {
       layers.erase(layers.begin() + i);
       return true;
     }
@@ -516,12 +446,9 @@ bool LayerSystem::removeLayer(string name)
   return false;
 }
 
-Layer inline *LayerSystem::getLayer(string name)
-{
-  for (Layer *l : layers)
-  {
-    if (l->getName() == name)
-    {
+Layer inline *LayerSystem::getLayer(string name) {
+  for (Layer *l : layers) {
+    if (l->getName() == name) {
       return l;
     }
   }
@@ -530,84 +457,8 @@ Layer inline *LayerSystem::getLayer(string name)
 
 Layer inline *LayerSystem::getLayer(int i) { return layers.at(i); }
 
-string inline LayerSystem::getLayerName(int i)
-{
+string inline LayerSystem::getLayerName(int i) {
   return layers.at(i)->getName();
 }
 vector<Layer *> *LayerSystem::getLayers() { return &layers; }
 int inline LayerSystem::getLayerSize() { return layers.size(); }
-
-// //-------------------Livingthing-------------------//
-// LivingThing::LivingThing(
-//     Layer *parentInput, string representInput, string nameInput = "",
-//     int healthInput = 10, int maxHealthInput = 10, int staminaInput = 10,
-//     int maxStaminaInput = 10, int hungerInput = 10, int maxHungerInput = 10,
-//     int visionInput = 1, int maxVisionInput = 1, int lifetimeInput = 10,
-//     int maxLifetimeInput = 10, int xValueInput = 0, int yValueInput = 0,
-//     int xMaxInput = 0, int yMaxInput = 0, int xMinInput = 0, int yMinInput = 0)
-//     : GameObject(parentInput, representInput, nameInput, healthInput,
-//                  maxHealthInput, staminaInput, maxStaminaInput, hungerInput,
-//                  maxHungerInput, visionInput, maxVisionInput, lifetimeInput,
-//                  maxLifetimeInput, xValueInput, yValueInput, xMaxInput,
-//                  yMaxInput, xMinInput, yMinInput) {
-//   needToEnvironment = needToReproduce = needToSurvive = 0;
-// }
-
-// //-------------------Animal-------------------//
-// Animal::Animal(Layer *parentInput, string representInput, string nameInput = "",
-//                int healthInput = 10, int maxHealthInput = 10,
-//                int staminaInput = 10, int maxStaminaInput = 10,
-//                int hungerInput = 10, int maxHungerInput = 10,
-//                int visionInput = 1, int maxVisionInput = 1,
-//                int lifetimeInput = 10, int maxLifetimeInput = 10,
-//                int xValueInput = 0, int yValueInput = 0, int xMaxInput = 0,
-//                int yMaxInput = 0, int xMinInput = 0, int yMinInput = 0)
-//     : LivingThing(parentInput, representInput, nameInput, healthInput,
-//                   maxHealthInput, staminaInput, maxStaminaInput, hungerInput,
-//                   maxHungerInput, visionInput, maxVisionInput, lifetimeInput,
-//                   maxLifetimeInput, xValueInput, yValueInput, xMaxInput,
-//                   yMaxInput, xMinInput, yMinInput) {}
-
-// //-------------------Plant-------------------//
-// Plant::Plant(Layer *parentInput, string representInput, string nameInput = "",
-//              int healthInput = 10, int maxHealthInput = 10,
-//              int staminaInput = 10, int maxStaminaInput = 10,
-//              int hungerInput = 10, int maxHungerInput = 10, int visionInput = 1,
-//              int maxVisionInput = 1, int lifetimeInput = 10,
-//              int maxLifetimeInput = 10, int xValueInput = 0,
-//              int yValueInput = 0, int xMaxInput = 0, int yMaxInput = 0,
-//              int xMinInput = 0, int yMinInput = 0)
-//     : LivingThing(parentInput, representInput, nameInput, healthInput,
-//                   maxHealthInput, staminaInput, maxStaminaInput, hungerInput,
-//                   maxHungerInput, visionInput, maxVisionInput, lifetimeInput,
-//                   maxLifetimeInput, xValueInput, yValueInput, xMaxInput,
-//                   yMaxInput, xMinInput, yMinInput) {}
-
-// //-------------------NonLivingThing-------------------//
-// NonLivingThing::NonLivingThing(
-//     Layer *parentInput, string representInput, string nameInput = "",
-//     int healthInput = 10, int maxHealthInput = 10, int staminaInput = 10,
-//     int maxStaminaInput = 10, int hungerInput = 10, int maxHungerInput = 10,
-//     int visionInput = 1, int maxVisionInput = 1, int lifetimeInput = 10,
-//     int maxLifetimeInput = 10, int xValueInput = 0, int yValueInput = 0,
-//     int xMaxInput = 0, int yMaxInput = 0, int xMinInput = 0, int yMinInput = 0)
-//     : GameObject(parentInput, representInput, nameInput, healthInput,
-//                  maxHealthInput, staminaInput, maxStaminaInput, hungerInput,
-//                  maxHungerInput, visionInput, maxVisionInput, lifetimeInput,
-//                  maxLifetimeInput, xValueInput, yValueInput, xMaxInput,
-//                  yMaxInput, xMinInput, yMinInput) {}
-
-// //-------------------Field-------------------//
-// Field::Field(Layer *parentInput, string representInput, string nameInput = "",
-//              int healthInput = 10, int maxHealthInput = 10,
-//              int staminaInput = 10, int maxStaminaInput = 10,
-//              int hungerInput = 10, int maxHungerInput = 10, int visionInput = 1,
-//              int maxVisionInput = 1, int lifetimeInput = 10,
-//              int maxLifetimeInput = 10, int xValueInput = 0,
-//              int yValueInput = 0, int xMaxInput = 0, int yMaxInput = 0,
-//              int xMinInput = 0, int yMinInput = 0)
-//     : NonLivingThing(parentInput, representInput, nameInput, healthInput,
-//                      maxHealthInput, staminaInput, maxStaminaInput, hungerInput,
-//                      maxHungerInput, visionInput, maxVisionInput, lifetimeInput,
-//                      maxLifetimeInput, xValueInput, yValueInput, xMaxInput,
-//                      yMaxInput, xMinInput, yMinInput) {}

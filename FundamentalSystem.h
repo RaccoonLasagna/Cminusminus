@@ -85,6 +85,7 @@ private:
 
 public:
   explicit Ability(AbilitySystem *parent, string name);
+  ~Ability();
   //-------------------------//
   int virtual decision(const int, const int, const int)
       const = 0; // ออกมาเป็นค่า desition point ให้สัตว์เลือก ability
@@ -107,14 +108,14 @@ private:
   int duration, passedTime = 0;
   AfflictionSystem *parent;
 
-  bool tick(); // ถ้า duration ลดลงแล้วเป็น 0 ให้ return false
+  bool virtual tick(); // ถ้า duration ลดลงแล้วเป็น 0 ให้ return false
                // และฟังก์ชั่นนนี้สามรถใช้เพื่อลดเวลาการติดได้ด้วยโดยการให้มัน tick หลายๆรอบ
   void virtual action() = 0; // ทำอะไรเมื่อมีโรคโดยที่มันจะไป acess
                              // ค่าต่างๆของสัตว์และส่งผลก่อนที่สัตว์จะได้ตัดสินใจ
 
 public:
-  explicit Affliction(AfflictionSystem *parent, int duration, string name)
-      : parent(parent), duration(duration), name(name) {}
+  explicit Affliction(AfflictionSystem *parent, int duration, string name);
+  ~Affliction();
   //-------------------------//
   bool refresh();
   void
@@ -183,6 +184,7 @@ public:
                         vector<Affliction *> *afflictions);
   //-------------------------//
   bool isInStat(string name); // เอาไว้เช็คว่าอยู่ใน value ไหม
+  // void changeStat(string name, int value); // ใช้เพื่อเปลี่ยนค่าของ parameter
   bool addStat(string name); // ต้องชื่อไม่ซ้ำ เอาไว้เป็น StatParameterMax
   bool removeStat(string name); // มีอยู่ไหม
   void

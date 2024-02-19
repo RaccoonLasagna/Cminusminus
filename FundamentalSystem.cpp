@@ -85,15 +85,31 @@ int inline StatParameterCoord::getYMin() { return yMIN; }
 Ability::Ability(AbilitySystem *parentInput, string nameInput)
     : parent(parentInput), name(nameInput) {}
 
+Ability::~Ability() {
+  if (parent != nullptr) {
+    parent->removeAbility(name);
+  }
+}
+
 void inline Ability::setName(const string nameInput) { name = nameInput; }
 string inline Ability::getName() { return name; }
 AbilitySystem inline *Ability::getParent() { return parent; }
 // ฟังก์ชั่น desition class ลูกคลาสจะต้องเขียนเอง
 
 //-------------------Affliction-------------------// Clean!
+Affliction::Affliction(AfflictionSystem *parentInput, int durationInput,
+                       string nameInput)
+    : parent(parentInput), duration(durationInput), name(nameInput) {}
+
+Affliction::~Affliction() {
+  if (parent != nullptr) {
+    parent->removeAffliction(name);
+  }
+}
 void Affliction::update() {
-  tick();
-  action();
+  if (tick()) {
+    action();
+  }
 }
 
 bool Affliction::tick() {
@@ -249,6 +265,7 @@ bool StatusSystem::isInStat(string name) {
   }
   return false;
 }
+
 
 bool StatusSystem::addStat(string name) {
   if (isInStat(name)) {

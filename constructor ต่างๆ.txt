@@ -1,7 +1,0 @@
-constructor
-
-statParamiter = *parent, name, value
-statParamiterMax = *parent, name, value, maxValue
-statParamiterCoord = *parent, name, xValue,
-                              yValue, xMAX, yMAX, xMIN,
-                              yMIN

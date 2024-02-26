@@ -1,100 +1,198 @@
-#include <cstddef>
-#include <cstdlib>
-#include <ctime>
-#include <fstream>
-#include <iomanip>
-#include <iostream>
-#include <vector>
+// class StatParameter { // เป็น paramiter ที่ไม่สามารถติดลบได้
+// private:
+//   string name; // มี Name เพราะว่าเวลาที่เราต้องการเรียกใช้ใน stat
+//                // เราต้องการเรียกแต่ละพารามิเตอร์ด้วยชื่อ
+//   int value;
+//   StatusSystem *parent;
 
+// public: // ยังไม่ได้ทำ destructor เลย
+//   explicit StatParameter(StatusSystem *parent, string name, int value);
+//   //-------------------------//
+//   void virtual change(const int i);
+//   bool isZero();
+//   void virtual actionZero();
+//   void virtual passiveAction();
+//   bool virtual update();
+//   //-------------------------//
+//   inline void setValue(const int i);
+//   inline void setName(const string n);
+//   //-------------------------//
+//   inline int &getValue(); // ทำไมต้องเป็น ref
+//   inline string getName();
+//   inline StatusSystem *getParent();
+// };
 
-using namespace std;
+// class StatParameterMax : public StatParameter { //
+// ติดลบไม่ได้และมีค่าสไม่เกินค่าที่กำหนด private:
+//   int maxValue;
 
-// Function for trilinear interpolation
-double trilinearInterpolate(double x, double y, double z,
-                            const vector<vector<vector<double>>> &data) {
-  int x0 = int(x);
-  int y0 = int(y);
-  int z0 = int(z);
-  int x1 = x0 + 1;
-  int y1 = y0 + 1;
-  int z1 = z0 + 1;
+// public:
+//   explicit StatParameterMax(StatusSystem *parent, string name, int value,
+//                             int maxValue);
+//   //-------------------------//
+//   void change(const int) override; // value อยู่ในช่วง 0 ถึง max
+//   bool isMax();
+//   void virtual actionMax();
+//   bool virtual update() override;
+//   //-------------------------//
+//   inline int getMax();
+//   inline void setMax(const int i);
+// };
 
-  double xd = x - x0;
-  double yd = y - y0;
-  double zd = z - z0;
+// class Ability { // แล้วไอตัวนี้มันจะถูกทำลายตอน stat ถูกทำลาย
+// private:
+//   string name;
+//   AbilitySystem *parent;
 
-  double c00 = data[x0][y0][z0] * (1 - xd) + data[x1][y0][z0] * xd;
-  double c10 = data[x0][y1][z0] * (1 - xd) + data[x1][y1][z0] * xd;
-  double c01 = data[x0][y0][z1] * (1 - xd) + data[x1][y0][z1] * xd;
-  double c11 = data[x0][y1][z1] * (1 - xd) + data[x1][y1][z1] * xd;
+// public:
+//   explicit Ability(AbilitySystem *parent, string name);
+//   explicit Ability(
+//       AbilitySystem *parent, string name,
+//       vector<string> statGiven); // หน้าเพิ่ม constructor อีกซักตัวให้รับอินพุตเป็น
+//                                  // vector<statparamiteer*>
+//   ~Ability(); // ยังไม่รู้ว่าต้องทำไง
+//   //-------------------------//
+//   int virtual decision(const int, const int, const int)
+//       const = 0; // ออกมาเป็นค่า desition point ให้สัตว์เลือก ability
+//                  // ที่แต้มมากที่สุดไปใช้งานในเทิร์นนั้นๆ
+//   bool virtual action()
+//       const = 0; // ตีโดนไหม ถ้าถามว่าทำไม action มาอยู่ในนี้แล้วไม่มีฟังก์ชั่น update
+//                  // เพราะว่าเราจะสั่งให้คำสั่ง action ทำงานจากตัวของสัตว์ ไม่ใช่จากตัวของ
+//                  // ability เอง
+//   bool virtual canAction() = 0; // เช็คเงื่อนไขว่าสามารถทำ action นั้นๆได้ไหม
+//   //-------------------------//
+//   inline void setName(const string n);
+//   //-------------------------//
+//   inline string getName();
+//   inline AbilitySystem *getParent();
+// };
 
-  double c0 = c00 * (1 - yd) + c10 * yd;
-  double c1 = c01 * (1 - yd) + c11 * yd;
+// class Affliction { // แล้วไอตัวนี้มันจะถูกทำลายตอน stat ถูกทำลาย
+// private:
+//   string name;
+//   int duration, passedTime = 0;
+//   AfflictionSystem *parent;
 
-  return c0 * (1 - zd) + c1 * zd;
-}
+//   bool virtual tick(); // ถ้า duration ลดลงแล้วเป็น 0 ให้ return false
+//                        // และฟังก์ชั่นนนี้สามรถใช้เพื่อลดเวลาการติดได้ด้วยโดยการให้มัน tick
+//                        // หลายๆรอบ
+//   void virtual action() = 0; // ทำอะไรเมื่อมีโรคโดยที่มันจะไป acess
+//                              // ค่าต่างๆของสัตว์และส่งผลก่อนที่สัตว์จะได้ตัดสินใจ
 
-// Function to generate random 3D data
-vector<vector<vector<double>>> generateRandomData() {
-  srand(time(NULL));
-  vector<vector<vector<double>>> data(
-      101, vector<vector<double>>(101, vector<double>(101, 0.0)));
-  for (int x = 0; x <= 100; ++x) {
-    for (int y = 0; y <= 100; ++y) {
-      for (int z = 0; z <= 100; ++z) {
-        // Generate random data in the range of 0 to 1
-        data[x][y][z] = static_cast<double>(rand()) / RAND_MAX;
-      }
-    }
-  }
-  return data;
-}
+// public:
+//   explicit Affliction(AfflictionSystem *parent, int duration, string name);
+//   ~Affliction(); // ยังไม่รู้ว่าจะทำไง
+//   //-------------------------//
+//   bool refresh();
+//   void
+//   update(); // ที่มีฟังก์ชั่น update
+//   เพราะว่าต้องการให้มันตรวจก่อนว่าเวลาที่โรคจะหมดยังไม่เท่ากับ 0
+//             // แล้วค่อยใช้ action
+//   //-------------------------//
+//   inline AfflictionSystem *getParent();
+//   inline void setName(const string n);
+//   inline void setDuration(const int d);
+//   //-------------------------//
+//   inline string getName();
+//   inline int getDuration();
+// };
 
-// Function to save data to a CSV file
-void saveToCSV(const vector<vector<vector<double>>> &result) {
-  ofstream outputFile("result.csv");
-  for (int x = 0; x < result.size(); ++x) {
-    for (int y = 0; y < result[0].size(); ++y) {
-      for (int z = 0; z < result[0][0].size(); ++z) {
-        outputFile << x << "," << y << "," << z << " is equal to " << fixed
-                   << setprecision(6) << result[x][y][z] << endl;
-      }
-    }
-  }
-  outputFile.close();
-}
+// class AbilitySystem {
+// private:
+//   vector<Ability *> abilities; // สร้างเป็นเวกเตอร์ของ pointer เพื่อเวลาที่ Ability
+//                                // มันพัฒนา จะได้สามารถเปลี่ยนค่า pointer แทนที่ได้เลย
+//   GameObject *parent;
+// public:
+//   explicit AbilitySystem(GameObject *parent, vector<Ability *> abilities);
+//   //-------------------------//
+//   bool addAbility(Ability *); // มีชื่อเดียวกันอยู่แล้วไหม
+//   bool removeAbility(const string); // มีให้ลบไหม
+//   bool isInAbility(const string);   // มีอยู่ไหม
+//   void decisionMakeing(const int, const int, const int);
+//   //-------------------------// ไม่ทำ set
+//   inline GameObject *getParent();
+//   inline int getAbilitySize(); // มีทำไม
+// };
 
-int main() {
-  // Generate random 3D data
-  vector<vector<vector<double>>> data = generateRandomData();
+// class AfflictionSystem {
+// private:
+//   vector<Affliction *> afflictions;
+//   GameObject *parent;
+//   bool checkAlive(); // ตายยัง?
 
-  cout << "Random data generated" << endl;
+// public:
+//   explicit AfflictionSystem(GameObject *parent,
+//                             vector<Affliction *> afflictions);
+//   ~AfflictionSystem();
+//   //-------------------------//
+//   bool addAffliction(
+//       Affliction *); // มีอยู่แล้วไหม ถ้ามมีก็ใส่เพิ่มรีเทิร์นจริง
+//       ไม่มีก็ใส่เพิ่มเหมือนกันแต่รีเทิร์นเท็จ
+//   bool removeAffliction(string name);     // มีให้ลบไหม
+//   bool isInAffliction(const string name); // มีอยู่ไหม
+//   bool updateAffliction(); // ยังไม่ตายใช่ไหม
+//   //-------------------------// ไม่ทำ set เหตุผลเหมือนกับ AbilitySystem
+//   inline vector<Affliction *> *getAfflictions();
+//   inline GameObject *getParent();
+//   inline int getAfflictionSize();
+// };
 
-  // Interpolate and generate results
-  vector<vector<vector<double>>> result(
-      101, vector<vector<double>>(101, vector<double>(101, 0.0)));
-  for (int x = 0; x <= 100; ++x) {
-    cout << "Interpolating at x = " << x << endl;
-    for (int y = 0; y <= 100; ++y) {
-      // cout << "Interpolating at y = " << y << endl;
-      for (int z = 0; z < 100; ++z) {
-        // cout << "Interpolating at z = " << z << endl;
-        double interpolated_value = trilinearInterpolate(x, y, z, data);
-        // cout << "Interpolated value at (" << x << ", " << y << ", " << z
-            //  << ") is " << interpolated_value << endl;
-        result[x][y][z] = interpolated_value;
-        // cout << "Interpolation at z = " << z << " complete" << endl;
-      }
-      // cout << "Interpolation at y = " << y << " complete" << endl;
-    }
-    // cout << "Interpolation at x = " << x << " complete" << endl;
-  }
-  cout << "Interpolation complete" << endl;
-  // Save results to CSV file
-  saveToCSV(result);
+// class StatusSystem : public AbilitySystem, public AfflictionSystem {
+// private:
+//   vector<StatParameter *>
+//       value; // GameObject บางแต่ละประเภทก็มี param ต่างกันไป จึงทำเช่นนี้
+//   GameObject *parentParamiter; // ต้องเป็น pointer เพราะว่ามันสามารถถูกโอนได้
 
-  // Output confirmation message
-  cout << "Result saved to result.csv" << endl;
+// public:
+//   explicit StatusSystem(GameObject *parent, vector<StatParameter *> *value,
+//                         vector<Ability *> *abilities,
+//                         vector<Affliction *> *afflictions);
+//   // ~StatusSystem();
+//   //-------------------------//
+//   bool isInStat(string name); // เอาไว้เช็คว่าอยู่ใน value ไหม
+//   // void changeStat(string name, int value); // ใช้เพื่อเปลี่ยนค่าของ parameter
+//   bool addStat(string name); // ต้องชื่อไม่ซ้ำ เอาไว้เป็น StatParameterMax
+//   bool removeStat(string name); // มีอยู่ไหม
+//   void
+//   setParent(GameObject *p); // เปลี่ยน parent ของ stat ให้เป็น p โดยไม่สนอะไรทั้งนั้น
+//   //-------------------------//
+//   StatParameter *
+//   getValue(string name); // ใช้เพื่อเอา parameter object ที่มีชื่อตรงกันออกมา
+//   vector<StatParameter *> &getValue();
+//   inline StatParameterCoord *getPosition(); // ใช้เพื่อเอาค่า x ออกมา
+//   inline GameObject *getParent();
+// };
 
-  return 0;
-}
+// // GameObject's parent is Layer btw, not LayerSystem.
+// // This means Gameobjects can't just move layers since parent can't be
+// changed
+// // rn
+// class GameObject {
+// private:
+//   string represent;
+//   string name;
+//   StatusSystem *stat; // stat ต้องเป็น pointer เพราะว่ามันสามาถเปลี่ยนเป็นตัวอื่นได้
+//   Layer *parent; // stat ต้องเป็น pointer เพราะว่ามันสามาถเปลี่ยนย้าย layer ได้
+
+// public:
+//   explicit GameObject(Layer *, string, string, vector<StatParameter *> *,
+//                       vector<Ability *> *,
+//                       vector<Affliction *> *); // ต้องมี parent ใน stat ด้วย
+//   //-------------------------//
+//   void virtual calculateNeed();
+//   void virtual update(); // ให้ class ลูกไปเขียนเองเพราะบางอย่าง เช่น พื้นดิน
+//                          // ก็ไม่ต้องตัดสินใจเหมือนสัตว์
+//   //-------------------------//
+//   inline void setName(const string n);
+//   inline void setRepresent(const string r);
+//   void setStat(StatusSystem *statInput); // ไปแย่งเอา stat ของตัวอื่นมาใช้
+//                                          // จะเอามาใช้สำหรับกรณีสัตว์วิวัฒนาการ
+//   void setParent(Layer *p); // เปลี่ยนแบบไม่สนว่าที่ตรงนั้นจะไปทับใครใน layer
+//   เดียวกันไหม
+//   //-------------------------//
+//   string getRepresent();
+//   string getName();
+//   StatusSystem *getStat();
+//   Layer *getParent();
+//   //-------------------------//
+// };

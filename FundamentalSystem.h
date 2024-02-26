@@ -1,294 +1,237 @@
+#include "Interpolate.h"
+#include <array>
+#include <cmath>
 #include <stdexcept>
 #include <string>
+#include <utility>
 #include <vector>
+
 using namespace std;
 
-class StatParameter;
-class StatParameterMax;
-class StatParameterCoord;
+class StatParam;
+class StatParamMax;
 class Ability;
 class AbilitySystem;
 class Affliction;
 class AfflictionSystem;
-class StatusSystem;
+class StatusBlock;
 class GameObject;
 class Layer;
 class LayerSystem;
-class Biome;
+class Command;
 class Feild;
 
 #ifndef FUNDAMENTALSYSTEM_H
 #define FUNDAMENTALSYSTEM_H
 
-class StatParameter { // เป็น paramiter ที่ไม่สามารถติดลบได้
-private:
-  string name; // มี Name เพราะว่าเวลาที่เราต้องการเรียกใช้เราต้องการเรียกด้วยชื่อ
-  int value;
-  StatusSystem *parent; // เป็นประเภทที่ไม่สามารถเปลี่ยน parent ได้
+class StatParam {
+protected:
+  static const string name; // ไปกำหนดเองตอนสร้าง classs
+  static const int targetValue; // ไปกำหนดเองตอนสร้าง class
+  vector<pair<Ability *, int> *> stackInfo;
+  int rawValue, value;
+  Ability *createBy;
+  StatusBlock *parent;
+  void virtual action() = 0; // ส่งผลกับตัวเองยังไง
+  bool isAction(int fristScope, int secondScope);
+  void updateAddBy();
 
 public:
-  explicit StatParameter(StatusSystem *parent, string name, int value);
-  //-------------------------//
-  void virtual change(
-      const int i); // บวก i แบบเรียบง่ายเอาไว้ให้ parameterMax inherit ไปใช้
-  //-------------------------//
-  inline void setValue(
-      const int i); // ใช้เพื่อเปลี่ยนค่าเพราะ value เป็น private ของ statparamiter
-                    // ถึงจะ inherit ไปก็ไม่สามารถ acess ถึง value ตรงๆได้
-  inline void setName(const string n); // เหตุผลเดียวกัน
-  //-------------------------//
-  inline int getValue();   // เหตุผลเดียวกัน
-  inline string getName(); // เหตุผลเดียวกัน
-  inline StatusSystem *getParent(); // เหตุผลเดียวกัน
+  StatParam(StatusBlock *parent, Ability *createBy, int rawValue);
+  StatParam(GameObject *target, Ability *createBy, int rawValue);
+  void virtual setRawTo(int i);      // คนใช้คือ Ability
+  bool virtual changeValueBy(int i); // คนใช้คือ Affliction
+  void pushStackInfo(pair<Ability *, int> *target); // คนใช้คือ Ability
+  //----------------------------//
+  void resetValue() { value = rawValue; }
+  inline string getName() { return name; }
+  inline int getRawValue() { return rawValue; }
+  inline int getValue() { return value; }
+  inline vector<pair<Ability *, int> *> getStackInfo() { return stackInfo; }
+  inline Ability *getCreateBy() { return createBy; }
+  inline StatusBlock *getParent() { return parent; }
 };
 
-class StatParameterMax : public StatParameter { // ติดลบไม่ได้แต่มีค่าสไม่เกินค่าที่กำหนด
-private:
-  int maxValue;
-
-public:
-  explicit StatParameterMax(StatusSystem *parent, string name, int value,
-                            int maxValue);
-  //-------------------------//
-  void change(const int); // ถ้าเพิ่มหรือลดเกิน max ให้เป็น max
-  //-------------------------//
-  inline int getMax();
-  inline void setMax(const int i);
-};
-
-class StatParameterCoord : public StatParameter {
-private:
-  int xValue, yValue, xMAX, yMAX, xMIN, yMIN;
-
-public:
-  explicit StatParameterCoord(StatusSystem *parent, string name, int xValue,
-                              int yValue, int xMAX, int yMAX, int xMIN,
-                              int yMIN);
-  //-------------------------//
-  bool changeCoord(const int, const int); // ขยับไหม? ใส่มาอยู่ในระยะที่กำหนดไว้ไหม
-  bool setCoord(const int, const int); // ขยับไหม? ใส่มาอยู่ในระยะที่กำหนดไว้ไหม
-  void setMax(const int x, const int y);
-  void setMin(const int x, const int y);
-  //-------------------------//
-  inline int getX();
-  inline int getY();
-  inline int getXMax();
-  inline int getYMax();
-  inline int getXMin();
-  inline int getYMin();
-};
-
-class Ability { // แล้วไอตัวนี้มันจะถูกทำลายตอน stat ถูกทำลาย
-private:
-  string name;
+class Ability { // statParam ทั้งหมดที่ Ability จะใช้ต้องถูกสร้างโดยตัว Ability เองทั้งหมด
+protected:
+  static const string name; // ไปกำหนดเองตอนสร้าง classs
+  static Var3DGraph data; // ไปกำหนดเองตอนสร้าง classs
   AbilitySystem *parent;
+  void virtual passiveAction(vector<GameObject *> *) = 0;
+  bool virtual canActiveAction(vector<GameObject *> *) = 0;
+  vector<GameObject *> virtual *findTargetForPassive() = 0;
+  void virtual produceAffliction() = 0; // สร้าง aff ใส่ศรัทตรูพร้อมคำนวน %
+                                        // ที่ศรัทตรูจะโดนด้วย
+  vector<StatParam *> virtual *
+  createStatParam(StatusBlock *parent,
+                  Ability *owner); // สร้าง Instant Class StatParam
+                                   // ตามประเภทที่กำหนด อันนี้ไป override ด้วยนะ
 
 public:
-  explicit Ability(AbilitySystem *parent, string name);
-  ~Ability();
-  //-------------------------//
-  int virtual decision(const int, const int, const int)
-      const = 0; // ออกมาเป็นค่า desition point ให้สัตว์เลือก ability
-                 // ที่แต้มมากที่สุดไปใช้งานในเทิร์นนั้นๆ
-  bool virtual action()
-      const = 0; // ตีโดนไหม ถ้าถามว่าทำไม action มาอยู่ในนี้แล้วไม่มีฟังก์ชั่น update
-                 // เพราะว่าเราจะสั่งให้คำสั่ง action ทำงานจากตัวของสัตว์ ไม่ใช่จากตัวของ
-                 // ability เอง
-  bool virtual canAction() = 0; // เช็คเงื่อนไขว่าสามารถทำ action นั้นๆได้ไหม
-  //-------------------------//
-  inline void setName(const string n);
-  //-------------------------//
-  inline string getName();
-  inline AbilitySystem *getParent();
+  Ability(AbilitySystem *parent);
+  Ability(GameObject *target);
+  vector<GameObject *> virtual *findTargetForActive() = 0;
+  void virtual activeAction(vector<GameObject *> *) = 0;
+  int decision(int sur, int env, int repro);
+  inline string getName() { return name; }
+  inline AbilitySystem *getParent() { return parent; }
 };
 
 class Affliction {
-private:
-  string name;
-  int duration, passedTime = 0;
+protected:
+  static const string name, targetValue; // ไปกำหนดเองตอนสร้าง class
+  static const Var3DGraph data; // ไปกำหนดเองตอนสร้าง classs
+  static const int duration,
+      valueIncrese; // ไปกำหนดเองตอนสร้าง classs valueIncrese ถ้าเป็น 0
+                    // คือการทำงานประเภทครั้งเดียว
+  static bool permanant; // ไปกำหนดเองตอนสร้าง classs
+  int passedTime, value = 0;
   AfflictionSystem *parent;
-
-  bool virtual tick(); // ถ้า duration ลดลงแล้วเป็น 0 ให้ return false
-               // และฟังก์ชั่นนนี้สามรถใช้เพื่อลดเวลาการติดได้ด้วยโดยการให้มัน tick หลายๆรอบ
-  void virtual action() = 0; // ทำอะไรเมื่อมีโรคโดยที่มันจะไป acess
-                             // ค่าต่างๆของสัตว์และส่งผลก่อนที่สัตว์จะได้ตัดสินใจ
+  bool virtual tick();
 
 public:
-  explicit Affliction(AfflictionSystem *parent, int duration, string name);
-  ~Affliction();
-  //-------------------------//
-  bool refresh();
-  void
-  update(); // ที่มีฟังก์ชั่น update เพราะว่าต้องการให้มันตรวจก่อนว่าเวลาที่โรคจะหมดยังไม่เท่ากับ 0
-            // แล้วค่อยใช้ action
-  //-------------------------//
-  inline AfflictionSystem *getParent();
-  inline void setName(const string n);
-  inline void setDuration(const int d);
-  //-------------------------//
-  inline string getName();
-  inline int getDuration();
+  Affliction(AfflictionSystem *parent); // เข้าไปใน AfflictionSystem อัตโนมัติ
+  Affliction(GameObject *target);
+  bool update(); // afflictionSystem จะเรียกใช้ และเมื่อไหร่ก็จามที่มันหมดอายุของมันแล้ว
+                 // มันก็จะเอาอันนี้ออกจาก afflictionSystem
+  //----------------------------//
+  bool getPermanant() { return permanant; }
+  string getName() { return name; }
+  string getTargetValue() { return targetValue; }
+  int getDuration() { return duration; }
+  int getValueIncrese() { return valueIncrese; }
+  int getPassedTime() { return passedTime; }
+  int getValue() { return value; }
+  AfflictionSystem *getParent() { return parent; }
 };
 
 class AbilitySystem {
-private:
-  vector<Ability *> abilities; // สร้างเป็นเวกเตอร์ของ pointer เพื่อเวลาที่ Ability
-                               // มันพัฒนา จะได้สามารถเปลี่ยนค่า pointer แทนที่ได้เลย
+protected:
   GameObject *parent;
+  bool isInAbility(string name);
 
 public:
-  explicit AbilitySystem(GameObject *parent, vector<Ability *> abilities);
-  //-------------------------//
-  bool addAbility(Ability *); // มีชื่อเดียวกันอยู่แล้วไหม
-  bool removeAbility(const string); // มีให้ลบไหม
-  bool isInAbility(const string);   // มีอยู่ไหม
-  void decisionMakeing(const int, const int, const int) const;
-  //-------------------------// ไม่ทำ set
-  // เพราะมันดูไม่สมเหตุสมผลเลยที่จะย้ายโรคของคนอื่นมาเป็นของเราแทน
-  inline GameObject *getParent();
-  inline int getAbilitySize();
+  vector<Ability *> abilityGroup;
+  AbilitySystem(GameObject *parent);
+  bool addAbility(Ability *ability);
+  void decisionMakeing(int sur, int env, int repro);
+  inline GameObject *getParent() { return parent; };
 };
 
 class AfflictionSystem {
-private:
-  vector<Affliction *> afflictions;
+protected:
   GameObject *parent;
-  bool checkAlive(); // ตายยัง?
 
 public:
-  explicit AfflictionSystem(GameObject *parent,
-                            vector<Affliction *> afflictions);
-  //-------------------------//
-  bool addAffliction(
-      Affliction *); // มีอยู่แล้วไหม ถ้ามมีก็ใส่เพิ่มรีเทิร์นจริง ไม่มีก็ใส่เพิ่มเหมือนกันแต่รีเทิร์นเท็จ
-  bool removeAffliction(string name);     // มีให้ลบไหม
-  bool isInAffliction(const string name); // มีอยู่ไหม
-  bool updateAffliction(); // ยังไม่ตายใช่ไหม
-  //-------------------------// ไม่ทำ set เหตุผลเหมือนกับ AbilitySystem
-  inline vector<Affliction *> *getAfflictions();
-  inline GameObject *getParent();
-  inline int getAfflictionSize();
+  vector<Affliction *> afflictionGroup;
+  void reClaCulateValue();
+  AfflictionSystem(GameObject *parent);
+  bool addAffliction(Affliction *affliction);
+  bool removeAffliction(string name);
+  bool removeAllAffliction(string name);
+  int amountOfAffliction(string name);
+  void updateAffliction();
+  GameObject *getParent() { return parent; };
 };
 
-class StatusSystem : public AbilitySystem, public AfflictionSystem {
-private:
-  vector<StatParameter *>
-      value; // GameObject บางแต่ละประเภทก็มี param ต่างกันไป จึงทำเช่นนี้
-  StatParameterCoord positionParamiter;
-  GameObject *parentParamiter; // ต้องเป็น pointer เพราะว่ามันสามารถถูกโอนได้
+class StatusBlock : public AbilitySystem, public AfflictionSystem {
+protected:
+  GameObject *parent;
 
 public:
-  explicit StatusSystem(GameObject *parent, int x, int y, int xMAX, int yMAX,
-                        int xMIN, int yMIN, vector<StatParameter *> *value,
-                        vector<Ability *> *abilities,
-                        vector<Affliction *> *afflictions);
-  //-------------------------//
-  bool isInStat(string name); // เอาไว้เช็คว่าอยู่ใน value ไหม
-  // void changeStat(string name, int value); // ใช้เพื่อเปลี่ยนค่าของ parameter
-  bool addStat(string name); // ต้องชื่อไม่ซ้ำ เอาไว้เป็น StatParameterMax
-  bool removeStat(string name); // มีอยู่ไหม
-  void
-  setParent(GameObject *p); // เปลี่ยน parent ของ stat ให้เป็น p โดยไม่สนอะไรทั้งนั้น
-  //-------------------------//
-  StatParameter *
-  getValue(string name); // ใช้เพื่อเอา parameter object ที่มีชื่อตรงกันออกมา
-  inline StatParameterCoord *getPosition(); // ใช้เพื่อเอาค่า x ออกมา
-  inline int getPositonX();
-  inline int getPositonY();
-  inline GameObject *getParent();
+  vector<StatParam *> statParamGroup;
+  StatusBlock(GameObject *parent);
+  StatusBlock(StatusBlock *copy);
+  bool isInParam(string name);
+  void resetValue();
+  bool addStat(StatParam *statParam); // คำนวน aff value ใหม่ทั้งหมดด้วยหลังจากทำเสร็จ
+  int getParamValueRaw(string name); // ถึงแม้จะไม่มีสแตดก็รีเทิร์น 0 ออกมา
+  int getParamValue(string name); // ถึงแม้จะไม่มีสแตดก็รีเทิร์น 0 ออกมา
+  StatParam *getParam(string name);
+  inline GameObject *getParent() { return parent; };
 };
 
-// GameObject's parent is Layer btw, not LayerSystem.
-// This means Gameobjects can't just move layers since parent can't be changed
-// rn
-class GameObject {
-private:
-  string represent;
-  string name;
-  StatusSystem *stat; // stat ต้องเป็น pointer เพราะว่ามันสามาถเปลี่ยนเป็นตัวอื่นได้
-  Layer *parent; // stat ต้องเป็น pointer เพราะว่ามันสามาถเปลี่ยนย้าย layer ได้
+class GameObject { // จะสร้างซักตัวก็ต้องสร้าง abilty, stat ของมันให้พร้อมนะ
+protected:
+  static Var3DGraph sur, env, repo; // กำหนดเองตอนสร้าง class
+  string name, represent;
+  int x, y = 0;
+  StatusBlock *stat;
+  Layer *parent;
 
 public:
-  explicit GameObject(Layer *, string, string, int, int, int, int, int, int,
-                      vector<StatParameter *> *, vector<Ability *> *,
-                      vector<Affliction *> *); // ต้องมี parent ใน stat ด้วย
-  //-------------------------//
-  void virtual update() = 0; // ให้ class ลูกไปเขียนเองเพราะบางอย่าง เช่น พื้นดิน
-                             // ก็ไม่ต้องตัดสินใจเหมือนสัตว์
-  //-------------------------//
-  inline void setName(const string n);
-  inline void setRepresent(const string r);
-  void setStat(StatusSystem *statInput); // ไปแย่งเอา stat ของตัวอื่นมาใช้
-                                         // จะเอามาใช้สำหรับกรณีสัตว์วิวัฒนาการ
-  void setParent(Layer *p); // เปลี่ยนแบบไม่สนว่าที่ตรงนั้นจะไปทับใครใน layer เดียวกันไหม
-  //-------------------------//
-  string getRepresent();
-  string getName();
-  StatusSystem *getStat();
-  Layer *getParent();
-  //-------------------------//
-  int getX();
-  int getY();
+  GameObject(string name, string represent, Layer *parent, int x, int y);
+  GameObject(string name, Layer *parent, int x, int y);
+  GameObject(string name, Layer *parent);
+  GameObject(GameObject *copy);
+  GameObject virtual *createItSelf() { return this; } // เอาไปเขียนใหม่ด้วย
+  int virtual getSur() = 0;
+  int virtual getEnv() = 0;
+  int virtual getRepo() = 0;
+  void virtual update(); // เล่นเทิร์น
+  pair<int, int> getPosition();
+  inline void setName(string stringInput) { name = stringInput; }
+  void setRepresent(string stringInput) { represent = stringInput; }
+  inline string getName() { return name; }
+  inline string getRepresent() { return represent; }
+  inline StatusBlock *getStat() { return stat; }
+  inline Layer *getParent() { return parent; }
 };
 
 class Feild : public GameObject {
 public:
-  explicit Feild(Layer *parentInput, string representInput, string nameInput,
-                 int xValueInput, int yValueInput, int xMaxInput, int yMaxInput,
-                 int xMinInput, int yMinInput,
-                 vector<StatParameter *> *value,
-                 vector<Ability *> *abilities,
-                 vector<Affliction *> *afflictions);
+  Feild(Layer *parent, string name = "Feild") : GameObject(name, parent) {}
+  GameObject virtual *createItSelf() override {
+    return new Feild(parent, "Feild");
+  }
+  int virtual getSur() override { return 0; }
+  int virtual getEnv() override { return 0; }
+  int virtual getRepo() override { return 0; }
+  void virtual update() override { return; }
 };
 
 class Land : public Feild {
-private:
-  int x, y;
-
 public:
-  explicit Land(Layer *parentInput, string representInput, string nameInput,
-                int xValueInput, int yValueInput, int xMaxInput, int yMaxInput,
-                int xMinInput, int yMinInput, vector<StatParameter *> *value,
-                vector<Ability *> *abilities,
-                vector<Affliction *> *afflictions);
-  void update();
+  Land(Layer *parent, string name = "Land") : Feild(parent, name) {}
+  GameObject virtual *createItSelf() override {
+    return new Land(parent, "Land");
+  }
+  void virtual update() override { return; }
 };
 
-class Layer { // ต้องทำการเรียงให้มีตำแหน่งติดลบด้วย
-private:
+class Layer {
+protected:
   string name;
-  vector<vector<GameObject *>> layer;
-  GameObject *default_value;
+  int width, height;
+  GameObject *defaultValue;
   LayerSystem *parent;
+  inline bool isInPosition(int x, int y) {
+    return insideLayer[x][y] != nullptr ? true : false;
+  }
+  inline int realX(int x) { return x + floor(width / 2); }
+  inline int realY(int y) { return y + floor(height / 2); }
 
 public:
-  explicit Layer(LayerSystem *parent, int width, int height, string name,
-                 bool ground);
-  //-------------------------//
-  void action();
-  //-------------------------//
-  inline void setName(const string n);
-  //-------------------------//
-  inline string getName();
-  inline LayerSystem *getParent();
-  void setLayer(int layer_num) {}
+  vector<vector<GameObject *>> insideLayer;
+  Layer(string name, LayerSystem *parent, GameObject *defaultValue = nullptr,
+        int width = 200, int height = 200);
+  void updateLayer();
+  bool addToLayer(GameObject *target, int x, int y);
+  inline void remove(int x, int y) {
+    insideLayer[realX(x)][realY(y)] = defaultValue->createItSelf();
+  }
+  inline void setName(string n) { name = n; };
+  inline string getName() { return name; };
+  inline LayerSystem *getParent() { return parent; };
 };
-/*
-Layer notes:
-- addGameObject is going to be moved to layer system,
-  since coordinates need to refer to the ground layer
-  and size needs to be initialized by layer system
-- removeGameObject as well
-*/
 
 class LayerSystem {
-private:
-  int width;
-  int height;
-  vector<Layer *> layers;
+protected:
+  int width, height;
 
 public:
-  explicit LayerSystem(int width, int height, int amount);
+  vector<Layer *> layersGroup;
+  LayerSystem(int width, int height);
   //-------------------------//
   bool createNewLayer(string name, bool ground); // ตรวจสอบชื่อซ้ำเพื่อไม่ให้มีชื่อซ้ำ
   bool removeLayer(string name); // มี layer นั้นๆให้ลบไหม
@@ -300,14 +243,6 @@ public:
   inline int getLayerSize();
 };
 
-// no
-class Biome : public LayerSystem {
-private:
-public:
-  explicit Biome(vector<Layer *>);
-  //-------------------------//
-  bool changeLayer(GameObject *, string, string); // ไปทับใครไหม
-  void update();
-};
+class Command {};
 
 #endif

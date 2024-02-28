@@ -427,11 +427,12 @@ int Land::getX() { return x; }
 int Land::getY() { return y; }
 
 //-------------------Layer-------------------// clean!
-Layer::Layer(LayerSystem *parent, int width, int height) : parent(*parent)
+Layer::Layer(LayerSystem *parent, int width, int height, string name) : parent(*parent)
 {
   for (int y = 0; y < height; y++)
   {
     vector<GameObject *> row;
+
     for (int x = 0; x < width; x++)
     {
       row.push_back(nullptr);
@@ -457,7 +458,7 @@ void Layer::action()
 
 // void inline Layer::setName(const string nameInput) { name = nameInput; }
 
-// string inline Layer::getName() { return name; }
+string inline Layer::getName() { return name; }
 
 LayerSystem inline &Layer::getParent() { return parent; }
 
@@ -495,51 +496,51 @@ LayerSystem::LayerSystem(int width, int height, int amount) : width(width), heig
 
 bool LayerSystem::createNewLayer(string name)
 { // ต้องสร้าง layer ที่หนาดเท่ากับ layer ที่มีอยูแล้วด้วย
-  // for (Layer *l : layers)
-  // {
-  //   if (l->getName() == name)
-  //   {
-  //     return false;
-  //   }
-  // }
-  Layer *layer = new Layer(this, width, height);
+  for (Layer *l : layers)
+  {
+    if (l->getName() == name)
+    {
+      return false;
+    }
+  }
+  Layer *layer = new Layer(this, width, height, name);
   layers.push_back(layer);
   return true;
 }
 
 Ground LayerSystem::getGround() { return ground; }
 
-// bool LayerSystem::removeLayer(string name)
-// {
-//   for (int i = 0; i < layers.size(); i++)
-//   {
-//     if (layers.at(i)->getName() == name)
-//     {
-//       layers.erase(layers.begin() + i);
-//       return true;
-//     }
-//   }
-//   return false;
-// }
+bool LayerSystem::removeLayer(string name)
+{
+  for (int i = 0; i < layers.size(); i++)
+  {
+    if (layers.at(i)->getName() == name)
+    {
+      layers.erase(layers.begin() + i);
+      return true;
+    }
+  }
+  return false;
+}
 
-// Layer inline *LayerSystem::getLayer(string name)
-// {
-//   for (Layer *l : layers)
-//   {
-//     if (l->getName() == name)
-//     {
-//       return l;
-//     }
-//   }
-//   return nullptr;
-// }
+Layer inline *LayerSystem::getLayer(string name)
+{
+  for (Layer *l : layers)
+  {
+    if (l->getName() == name)
+    {
+      return l;
+    }
+  }
+  return nullptr;
+}
 
-// Layer inline *LayerSystem::getLayer(int i) { return layers.at(i); }
+Layer inline *LayerSystem::getLayer(int i) { return layers.at(i); }
 
-// string inline LayerSystem::getLayerName(int i)
-// {
-//   return layers.at(i)->getName();
-// }
+string inline LayerSystem::getLayerName(int i)
+{
+  return layers.at(i)->getName();
+}
 
 vector<Layer *> *LayerSystem::getLayers() { return &layers; }
 int inline LayerSystem::getLayerSize() { return layers.size(); }

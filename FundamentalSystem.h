@@ -24,9 +24,10 @@ class Feild;
 #ifndef FUNDAMENTALSYSTEM_H
 #define FUNDAMENTALSYSTEM_H
 
-class StatParam {
+class StatParam
+{
 protected:
-  static const string name; // ไปกำหนดเองตอนสร้าง classs
+  static const string name;     // ไปกำหนดเองตอนสร้าง classs
   static const int targetValue; // ไปกำหนดเองตอนสร้าง class
   vector<pair<Ability *, int> *> stackInfo;
   int rawValue, value;
@@ -39,8 +40,8 @@ protected:
 public:
   StatParam(StatusBlock *parent, Ability *createBy, int rawValue);
   StatParam(GameObject *target, Ability *createBy, int rawValue);
-  void virtual setRawTo(int i);      // คนใช้คือ Ability
-  bool virtual changeValueBy(int i); // คนใช้คือ Affliction
+  void virtual setRawTo(int i);                     // คนใช้คือ Ability
+  bool virtual changeValueBy(int i);                // คนใช้คือ Affliction
   void pushStackInfo(pair<Ability *, int> *target); // คนใช้คือ Ability
   //----------------------------//
   void resetValue() { value = rawValue; }
@@ -52,10 +53,11 @@ public:
   inline StatusBlock *getParent() { return parent; }
 };
 
-class Ability { // statParam ทั้งหมดที่ Ability จะใช้ต้องถูกสร้างโดยตัว Ability เองทั้งหมด
+class Ability
+{ // statParam ทั้งหมดที่ Ability จะใช้ต้องถูกสร้างโดยตัว Ability เองทั้งหมด
 protected:
   static const string name; // ไปกำหนดเองตอนสร้าง classs
-  static Var3DGraph data; // ไปกำหนดเองตอนสร้าง classs
+  static Var3DGraph data;   // ไปกำหนดเองตอนสร้าง classs
   AbilitySystem *parent;
   void virtual passiveAction(vector<GameObject *> *) = 0;
   bool virtual canActiveAction(vector<GameObject *> *) = 0;
@@ -77,13 +79,14 @@ public:
   inline AbilitySystem *getParent() { return parent; }
 };
 
-class Affliction {
+class Affliction
+{
 protected:
   static const string name, targetValue; // ไปกำหนดเองตอนสร้าง class
-  static const Var3DGraph data; // ไปกำหนดเองตอนสร้าง classs
+  static const Var3DGraph data;          // ไปกำหนดเองตอนสร้าง classs
   static const int duration,
-      valueIncrese; // ไปกำหนดเองตอนสร้าง classs valueIncrese ถ้าเป็น 0
-                    // คือการทำงานประเภทครั้งเดียว
+      valueIncrese;      // ไปกำหนดเองตอนสร้าง classs valueIncrese ถ้าเป็น 0
+                         // คือการทำงานประเภทครั้งเดียว
   static bool permanant; // ไปกำหนดเองตอนสร้าง classs
   int passedTime, value = 0;
   AfflictionSystem *parent;
@@ -105,7 +108,8 @@ public:
   AfflictionSystem *getParent() { return parent; }
 };
 
-class AbilitySystem {
+class AbilitySystem
+{
 protected:
   GameObject *parent;
   bool isInAbility(string name);
@@ -118,7 +122,8 @@ public:
   inline GameObject *getParent() { return parent; };
 };
 
-class AfflictionSystem {
+class AfflictionSystem
+{
 protected:
   GameObject *parent;
 
@@ -134,7 +139,8 @@ public:
   GameObject *getParent() { return parent; };
 };
 
-class StatusBlock : public AbilitySystem, public AfflictionSystem {
+class StatusBlock : public AbilitySystem, public AfflictionSystem
+{
 protected:
   GameObject *parent;
 
@@ -145,13 +151,14 @@ public:
   bool isInParam(string name);
   void resetValue();
   bool addStat(StatParam *statParam); // คำนวน aff value ใหม่ทั้งหมดด้วยหลังจากทำเสร็จ
-  int getParamValueRaw(string name); // ถึงแม้จะไม่มีสแตดก็รีเทิร์น 0 ออกมา
-  int getParamValue(string name); // ถึงแม้จะไม่มีสแตดก็รีเทิร์น 0 ออกมา
+  int getParamValueRaw(string name);  // ถึงแม้จะไม่มีสแตดก็รีเทิร์น 0 ออกมา
+  int getParamValue(string name);     // ถึงแม้จะไม่มีสแตดก็รีเทิร์น 0 ออกมา
   StatParam *getParam(string name);
   inline GameObject *getParent() { return parent; };
 };
 
-class GameObject { // จะสร้างซักตัวก็ต้องสร้าง abilty, stat ของมันให้พร้อมนะ
+class GameObject
+{ // จะสร้างซักตัวก็ต้องสร้าง abilty, stat ของมันให้พร้อมนะ
 protected:
   static Var3DGraph sur, env, repo; // กำหนดเองตอนสร้าง class
   string name, represent;
@@ -169,19 +176,23 @@ public:
   int virtual getEnv() = 0;
   int virtual getRepo() = 0;
   void virtual update(); // เล่นเทิร์น
-  pair<int, int> getPosition();
   inline void setName(string stringInput) { name = stringInput; }
   void setRepresent(string stringInput) { represent = stringInput; }
   inline string getName() { return name; }
   inline string getRepresent() { return represent; }
   inline StatusBlock *getStat() { return stat; }
   inline Layer *getParent() { return parent; }
+  pair<int, int> getVectorIndex();
+  pair<int, int> getCoord();
+  bool canAct(GameObject *);
 };
 
-class Feild : public GameObject {
+class Feild : public GameObject
+{
 public:
   Feild(Layer *parent, string name = "Feild") : GameObject(name, parent) {}
-  GameObject virtual *createItSelf() override {
+  GameObject virtual *createItSelf() override
+  {
     return new Feild(parent, "Feild");
   }
   int virtual getSur() override { return 0; }
@@ -190,59 +201,88 @@ public:
   void virtual update() override { return; }
 };
 
-class Land : public Feild {
+class Land : public Feild
+{
 public:
   Land(Layer *parent, string name = "Land") : Feild(parent, name) {}
-  GameObject virtual *createItSelf() override {
+  GameObject virtual *createItSelf() override
+  {
     return new Land(parent, "Land");
   }
   void virtual update() override { return; }
 };
 
-class Layer {
-protected:
+class Layer
+{ // ต้องทำการเรียงให้มีตำแหน่งติดลบด้วย
+private:
+  vector<vector<GameObject *>> layer;
+  GameObject *default_value;
+  LayerSystem &parent;
   string name;
-  int width, height;
-  GameObject *defaultValue;
-  LayerSystem *parent;
-  inline bool isInPosition(int x, int y) {
-    return insideLayer[x][y] != nullptr ? true : false;
-  }
-  inline int realX(int x) { return x + floor(width / 2); }
-  inline int realY(int y) { return y + floor(height / 2); }
 
 public:
-  vector<vector<GameObject *>> insideLayer;
-  Layer(string name, LayerSystem *parent, GameObject *defaultValue = nullptr,
-        int width = 200, int height = 200);
-  void updateLayer();
-  bool addToLayer(GameObject *target, int x, int y);
-  inline void remove(int x, int y) {
-    insideLayer[realX(x)][realY(y)] = defaultValue->createItSelf();
-  }
-  inline void setName(string n) { name = n; };
-  inline string getName() { return name; };
-  inline LayerSystem *getParent() { return parent; };
+  explicit Layer(LayerSystem *parent, int width, int height, string name);
+  //-------------------------//
+  void action();
+  inline LayerSystem &getParent();
+  inline string getName();
+  void setLayer(int layer_num);
+  vector<vector<GameObject *>> getLayer();
 };
 
-class LayerSystem {
-protected:
-  int width, height;
+class Ground;
+
+class Land
+{
+private:
+  Ground *parent;
+  string represent;
+  int x, y;
 
 public:
-  vector<Layer *> layersGroup;
-  LayerSystem(int width, int height);
+  explicit Land(Ground *parentInput, string representInput,
+                int xValueInput = 0, int yValueInput = 0);
+  void update();
+  int getX();
+  int getY();
+};
+
+class Ground
+{
+private:
+  vector<vector<Land>> layer;
+  LayerSystem &parent;
+
+public:
+  explicit Ground(LayerSystem *p, int width, int height);
+  inline vector<vector<Land>> getLayer();
+};
+
+class LayerSystem
+{
+private:
+  int width;
+  int height;
+  vector<Layer *> layers;
+  Ground ground;
+
+public:
+  explicit LayerSystem(int width, int height, int amount);
   //-------------------------//
-  bool createNewLayer(string name, bool ground); // ตรวจสอบชื่อซ้ำเพื่อไม่ให้มีชื่อซ้ำ
+  bool createNewLayer(string name); // ตรวจสอบชื่อซ้ำเพื่อไม่ให้มีชื่อซ้ำ
+  bool createGround();
   bool removeLayer(string name); // มี layer นั้นๆให้ลบไหม
   //-------------------------//
   inline Layer *getLayer(string name);
   inline Layer *getLayer(int i);
+  inline Ground getGround();
   vector<Layer *> *getLayers();
   inline string getLayerName(int i);
   inline int getLayerSize();
 };
 
-class Command {};
+class Command
+{
+};
 
 #endif

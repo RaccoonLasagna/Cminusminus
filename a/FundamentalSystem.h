@@ -294,12 +294,14 @@ private:
   vector<vector<GameObject *>> layer;
   GameObject *default_value;
   LayerSystem &parent;
+  string name;
 
 public:
-  explicit Layer(LayerSystem *parent, int width, int height);
+  explicit Layer(LayerSystem *parent, int width, int height, string name);
   //-------------------------//
   void action();
   inline LayerSystem &getParent();
+  inline string getName();
   void setLayer(int layer_num);
   vector<vector<GameObject *>> getLayer();
 };

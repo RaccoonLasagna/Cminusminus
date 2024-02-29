@@ -376,6 +376,8 @@ void Layer::addToLayer(GameObject *target, int x, int y) {
 
 void Layer::removeFromLayer(int x, int y) { insideLayer.at(y).at(x) = nullptr; }
 
+
+
 string Layer::getName() { return name; }
 void Layer::setName(string nameInput) { name = nameInput; }
 GameObject *Layer::getFromLayer(int x, int y) {
@@ -443,6 +445,16 @@ bool LayerSystem::removeLayer(string name) {
     }
   }
   return false;
+}
+
+int LayerSystem::getDistance(GameObject *a, GameObject *b) {
+  pair<int, int> aCoord = a->getCoord();
+  pair<int, int> bCoord = b->getCoord();
+  return getDistance(aCoord.first, aCoord.second, bCoord.first, bCoord.second);
+}
+
+int LayerSystem::getDistance(int x1, int y1, int x2, int y2) {
+  return floor(abs(x1 - x2) + abs(y1 - y2));
 }
 
 Layer *LayerSystem::getLayer(string name) {

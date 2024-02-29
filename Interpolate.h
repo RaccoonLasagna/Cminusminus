@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 #include <vector>
 #include <array>
@@ -12,7 +13,18 @@ protected:
     vector<array<int, 4>> exampleData;
 
 public:
-    Var3DGraph(const vector<array<int, 4>>& exampleData) : exampleData(exampleData) {}
+    Var3DGraph(const vector<array<int, 4>>& exampleData) {
+        // กำหนด exampleData โดยเรียงจากน้อยไปมากตาม x, y, z
+        this->exampleData = exampleData;
+        sort(this->exampleData.begin(), this->exampleData.end(), [](const auto& a, const auto& b) {
+            if (a[0] != b[0]) // เรียงตาม x ถ้าไม่เท่ากัน
+                return a[0] < b[0];
+            else if (a[1] != b[1]) // เรียงตาม y ถ้า x เท่ากันและ y ไม่เท่ากัน
+                return a[1] < b[1];
+            else // เรียงตาม z ถ้า x และ y เท่ากัน
+                return a[2] < b[2];
+        });
+    }
 
     int interpolate(int x, int y, int z) {
         // ตรวจสอบว่าจุดอยู่นอกขอบเขตข้อมูลหรือไม่

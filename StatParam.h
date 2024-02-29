@@ -2,8 +2,8 @@
 
 using namespace std;
 
-#ifndef ABILITY_CPP
-#define ABILITY_CPP
+#ifndef STATPARAM_H
+#define STATPARAM_H
 
 class Turn : public StatParam {
     protected:

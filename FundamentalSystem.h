@@ -220,6 +220,8 @@ public:
   //-------------------------//
   bool createNewLayer(string name); // ตรวจสอบชื่อซ้ำเพื่อไม่ให้มีชื่อซ้ำ
   bool removeLayer(string name); // มี layer นั้นๆให้ลบไหม
+  int getDistance(GameObject *a, GameObject *b);
+  int getDistance(int x1, int y1, int x2, int y2);
   //-------------------------//
   Layer *getLayer(string name);
   inline Layer *getLayer(int i);

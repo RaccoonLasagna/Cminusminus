@@ -9,8 +9,8 @@ using namespace std;
 
 //----------------------------//
 
-bool StatParam::isAction(int fristScope, int secondScope) {
-  if (fristScope > targetValue && targetValue >= secondScope) {
+bool StatParam::isAction(int i) {
+  if (i >= targetValue) {
     action();
     return true;
   }
@@ -49,11 +49,8 @@ void StatParam::setRawTo(int i) {
 }
 
 bool StatParam::changeValueBy(int i) {
-  int valueBeforeChange, valueAfterChange;
-  valueBeforeChange = value;
   value + i < 0 ? value = 0 : value += i;
-  valueAfterChange = value;
-  return isAction(valueBeforeChange, valueAfterChange);
+  return isAction(value);
 }
 
 void StatParam::pushStackInfo(pair<string, int> *target) {

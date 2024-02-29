@@ -3,11 +3,12 @@
     {
       "name": "windows-gcc-x64",
       "includePath": [
-        "${workspaceFolder}/**"
+        "${workspaceFolder}/**",
+        "C:/Users/ADMIN/Documents/libraries/SFML-2.6.1/include"
       ],
       "compilerPath": "C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/gcc.exe",
-      "cStandard": "c23",
-      "cppStandard": "c++23",
+      "cStandard": "c17",
+      "cppStandard": "c++17",
       "intelliSenseMode": "windows-gcc-x64",
       "compilerArgs": [
         ""

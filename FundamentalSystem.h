@@ -32,7 +32,7 @@ protected:
   vector<pair<string, int>> stackInfo;
   StatusBlock *parent;
   void virtual action() = 0; // ส่งผลกับตัวเองยังไง
-  bool isAction(int fristScope, int secondScope);
+  bool isAction(int i);
   void updateStackInfo();
 
 public:
@@ -75,10 +75,9 @@ public:
 class Affliction {
 protected:
   string name, targetValue; // ไปกำหนดเองตอนสร้าง class
-  Var3DGraph *data; // ไปกำหนดเองตอนสร้าง classs
-  int duration, valueIncrese; // ไปกำหนดเองตอนสร้าง classs
+  int duration, valueIncrese, value; // ไปกำหนดเองตอนสร้าง classs
   bool permanant; // ไปกำหนดเองตอนสร้าง classs
-  int passedTime, value = 0;
+  int passedTime = 0;
   AfflictionSystem *parent;
   bool virtual tick();
 

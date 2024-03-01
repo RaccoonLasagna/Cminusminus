@@ -5,6 +5,10 @@ using namespace std;
 #ifndef ABILITY_CPP
 #define ABILITY_CPP
 
+class TurnEater : public Affliction {
+
+};
+
 class Full : public Affliction {
     protected:
     string name = "Food";

@@ -57,6 +57,7 @@ protected:
   AbilitySystem *parent;
   void virtual produceAffliction() = 0; // สร้าง aff ใส่ศรัทตรู
   void virtual createStatParam() { return; } // สร้าง Instant Class StatParam
+  vector<GameObject*>
   // ตามประเภทที่ ability นี้ต้องใช้ อันนี้ไป override ด้วยนะ
 
 public:
@@ -163,6 +164,7 @@ public:
   inline string getRepresent();
   inline StatusBlock *getStat();
   inline Layer *getParent();
+  vector<GameObject*> findTargetInRange(int range);
   // bool canAct(GameObject *);
 };
 

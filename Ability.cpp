@@ -29,6 +29,10 @@ vector<GameObject *> PlayTurn::findTargetForActive() {
 
 bool PlayTurn::canActive(vector<GameObject *> target) { return false; }
 
+void PlayTurn::passive(vector<GameObject *> target) {
+  return;
+}
+
 //--------------------------EAT----------------------------//
 
 void Eat::produceAffliction() { return; }
@@ -100,3 +104,11 @@ void Rest::createStatParam() {
   StatParam *aff = new Stemina(getParent()->getParent(), this, 100);
 }
 
+//---------------------------ATTACK----------------------------//
+
+// Attack::Attack(AbilitySystem *parent) : Ability(parent) {}
+
+void Attack::produceAffliction() {
+
+  return;
+  }

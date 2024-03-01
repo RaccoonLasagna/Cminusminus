@@ -1,6 +1,7 @@
 #include "FundamentalSystem.h"
 #include <algorithm>
 #include <cmath>
+#include <cstddef>
 #include <string>
 #include <utility>
 #include <vector>
@@ -346,6 +347,34 @@ string GameObject::getRepresent() { return represent; }
 StatusBlock *GameObject::getStat() { return stat; }
 Layer *GameObject::getParent() { return parent; }
 
+vector<GameObject *> GameObject::findTargetInRange(int range) {
+  vector<GameObject *> target;
+  pair<int, int> selfIndex = getVectorIndex();
+  for (double i{0}; i <= range; i++) {
+    for (double j{0}; j <= range; j++) {
+      if (sqrt(pow(i, 2.) + pow(j, 2.)) <= range && (i != 0 || j != 0)) {
+        if (selfIndex.first - i >= 0 && selfIndex.second - j >= 0) {
+          GameObject *targetObject =
+              parent->getFromLayer(selfIndex.first - i, selfIndex.second - j);
+          if (targetObject != nullptr) {
+            target.push_back(targetObject);
+          }
+        }
+        if (selfIndex.first + i < parent->insideLayer.size() &&
+            selfIndex.second + j < parent->insideLayer.size()) {
+          GameObject *targetObject =
+              parent->getFromLayer(selfIndex.first + i, selfIndex.second + j);
+          if (targetObject != nullptr) {
+            target.push_back(targetObject);
+          }
+        }
+      }
+    }
+  }
+
+  return target;
+}
+
 //----------------------------//
 
 Layer::Layer(string name, LayerSystem *parent, int width, int height)
@@ -375,8 +404,6 @@ void Layer::addToLayer(GameObject *target, int x, int y) {
 }
 
 void Layer::removeFromLayer(int x, int y) { insideLayer.at(y).at(x) = nullptr; }
-
-
 
 string Layer::getName() { return name; }
 void Layer::setName(string nameInput) { name = nameInput; }

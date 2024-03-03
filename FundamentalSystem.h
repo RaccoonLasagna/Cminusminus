@@ -16,8 +16,9 @@ class Affliction;
 class AfflictionSystem;
 class StatusBlock;
 class GameObject;
-class Ground;
 class Layer;
+class Land;
+class Ground;
 class LayerSystem;
 class Command;
 
@@ -28,7 +29,7 @@ class StatParam {
 protected:
   string name; // ไปกำหนดเองตอนสร้าง classs
   int targetValue; // ไปกำหนดเองตอนสร้าง class
-  int rawValue, value;
+  int defaultValue, value;
   vector<pair<string, int>> stackInfo;
   StatusBlock *parent;
   void virtual action() = 0; // ส่งผลกับตัวเองยังไง
@@ -36,15 +37,15 @@ protected:
   void updateStackInfo();
 
 public:
-  StatParam(StatusBlock *parent, Ability *createBy, int rawValue);
-  StatParam(GameObject *target, Ability *createBy, int rawValue);
-  void virtual setRawTo(int i);      // คนใช้คือ Ability
+  StatParam(StatusBlock *parent, Ability *createBy, int defaultValue);
+  StatParam(GameObject *target, Ability *createBy, int defaultValue);
+  void virtual setDefaultTo(int i);      // คนใช้คือ Ability
   bool virtual changeValueBy(int i); // คนใช้คือ Affliction
   void pushStackInfo(pair<string, int> *target); // คนใช้คือ Ability
   //----------------------------//
   void resetValue();
   inline string getName();
-  inline int getRawValue();
+  inline int getDefaultValue();
   inline int getValue();
   inline vector<pair<string, int>> getStackInfo();
   inline StatusBlock *getParent();
@@ -106,7 +107,7 @@ public:
   vector<Ability *> abilityGroup;
   AbilitySystem(GameObject *parent);
   bool addAbility(Ability *ability);
-  void decisionMakeing(int sur, int env, int repro);
+  void decisionMaking(int sur, int env, int repro);
   inline GameObject *getParent();
 };
 
@@ -136,7 +137,7 @@ public:
   bool isInParam(string name);
   void resetValue();
   bool addStat(StatParam *statParam); // คำนวน aff value ใหม่ทั้งหมดด้วยหลังจากทำเสร็จ
-  int getParamValueRaw(string name); // ถึงแม้จะไม่มีสแตดก็รีเทิร์น 0 ออกมา
+  int getParamValueDefault(string name); // ถึงแม้จะไม่มีสแตดก็รีเทิร์น 0 ออกมา
   int getParamValue(string name); // ถึงแม้จะไม่มีสแตดก็รีเทิร์น 0 ออกมา
   StatParam *getParam(string name);
   inline GameObject *getParent();

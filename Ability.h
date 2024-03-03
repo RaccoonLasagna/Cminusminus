@@ -30,7 +30,7 @@ class Eat : public Ability {
 protected:
   string name = "Eat";
   bool eatPlants;
-  bool animalPlants;
+  bool eatAnimals;
   Var3DGraph *data = new Var3DGraph({{0, 0, 0, 0},
                                      {0, 100, 0, 100},
                                      {100, 100, 0, 40},
@@ -49,6 +49,8 @@ public:
   void virtual passive(vector<GameObject *> targets) override;
   void virtual active(vector<GameObject *> targets) override;
 };
+
+
 
 //--------------------------- Rest ---------------------------
 

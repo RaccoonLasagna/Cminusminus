@@ -26,33 +26,32 @@ void StatParam::updateStackInfo() {
       highest = value;
     }
   }
-  setRawTo(highest);
+  setDefaultTo(highest);
 }
 
-StatParam::StatParam(StatusBlock *parent, Ability *createBy, int rawValue)
+StatParam::StatParam(StatusBlock *parent, Ability *createBy, int defaultValue)
     : parent(parent) {
-  pair<string, int> pair = make_pair(createBy->getName(), rawValue);
+  pair<string, int> pair = make_pair(createBy->getName(), defaultValue);
   stackInfo.push_back(pair);
   updateStackInfo();
   parent->addStat(this);
 }
 
-StatParam::StatParam(GameObject *target, Ability *createBy, int rawValue)
-    : StatParam(target->getStat(), createBy, rawValue) {}
+StatParam::StatParam(GameObject *target, Ability *createBy, int defaultValue)
+    : StatParam(target->getStat(), createBy, defaultValue) {}
 
-void StatParam::setRawTo(int i) {
+void StatParam::setDefaultTo(int i) {
   if (i < 0) {
-    rawValue = 0;
+    defaultValue = 0;
   } else {
-    rawValue = i;
+    defaultValue = i;
   }
-  value = rawValue;
+  value = defaultValue;
 }
 
 bool StatParam::changeValueBy(int i) {
   int before = value;
   value + i < 0 ? value = 0 : value += i;
-  return isAction(before ,value);
   return isAction(before, value);
 }
 
@@ -66,9 +65,9 @@ void StatParam::pushStackInfo(pair<string, int> *target) {
   updateStackInfo();
 }
 
-void StatParam::resetValue() { value = rawValue; }
+void StatParam::resetValue() { value = defaultValue; }
 string StatParam::getName() { return name; }
-int StatParam::getRawValue() { return rawValue; }
+int StatParam::getDefaultValue() { return defaultValue; }
 int StatParam::getValue() { return value; }
 vector<pair<string, int>> StatParam::getStackInfo() { return stackInfo; }
 StatusBlock *StatParam::getParent() { return parent; }
@@ -147,7 +146,7 @@ bool AbilitySystem::addAbility(Ability *target) {
   return false;
 }
 
-void AbilitySystem::decisionMakeing(int sur, int env, int repo) {
+void AbilitySystem::decisionMaking(int sur, int env, int repo) {
   int maxValue, indexMax, index, value = 0;
   for (Ability *ability : abilityGroup) {
     index++;
@@ -275,10 +274,10 @@ bool StatusBlock::addStat(StatParam *target) {
   }
 }
 
-int StatusBlock::getParamValueRaw(string name) {
+int StatusBlock::getParamValueDefault(string name) {
   for (StatParam *stat : statParamGroup) {
     if (name == stat->getName()) {
-      return stat->getRawValue();
+      return stat->getDefaultValue();
     }
   }
   return 0;

@@ -12,7 +12,7 @@ using namespace std;
 //-------------------------- Playturn ----------------------------//
 
 void PlayTurn::createStatParam() {
-  StatParam *aff = new Turn(getParent()->getParent(), this, 1);
+  new Turn(getParent()->getParent(), this, 1);
 }
 
 vector<GameObject *> PlayTurn::findTargetForPassive() {
@@ -149,7 +149,7 @@ void Attack::passive(vector<GameObject *> targets){
 void Attack::active(vector<GameObject *> targets){
   for (GameObject* target: targets)
   {
-    // target->getStat()->addAffliction(Bleed);
+    // new Bleed(target)
   }
 }
 

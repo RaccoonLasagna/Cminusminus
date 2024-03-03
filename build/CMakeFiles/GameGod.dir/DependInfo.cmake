@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/ADMIN/Documents/GitHub/Cminusminus/FundamentalSystem.cpp" "CMakeFiles/GameGod.dir/FundamentalSystem.obj" "gcc" "CMakeFiles/GameGod.dir/FundamentalSystem.obj.d"
+  "C:/Users/ADMIN/Documents/GitHub/Cminusminus/Gui.cpp" "CMakeFiles/GameGod.dir/gui.obj" "gcc" "CMakeFiles/GameGod.dir/gui.obj.d"
   "C:/Users/ADMIN/Documents/GitHub/Cminusminus/main.cpp" "CMakeFiles/GameGod.dir/main.obj" "gcc" "CMakeFiles/GameGod.dir/main.obj.d"
   )
 

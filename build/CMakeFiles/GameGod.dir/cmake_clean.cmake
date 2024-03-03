@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/GameGod.dir/FundamentalSystem.obj"
   "CMakeFiles/GameGod.dir/FundamentalSystem.obj.d"
+  "CMakeFiles/GameGod.dir/Gui.obj"
+  "CMakeFiles/GameGod.dir/Gui.obj.d"
   "CMakeFiles/GameGod.dir/main.obj"
   "CMakeFiles/GameGod.dir/main.obj.d"
   "GameGod.exe"

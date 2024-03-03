@@ -10,8 +10,8 @@ using namespace std;
 
 //----------------------------//
 
-bool StatParam::isAction(int i) {
-  if (i >= targetValue) {
+bool StatParam::isAction(int before, int after) {
+  if (before > targetValue && targetValue >= after) {
     action();
     return true;
   }
@@ -50,8 +50,9 @@ void StatParam::setRawTo(int i) {
 }
 
 bool StatParam::changeValueBy(int i) {
+  int before = value;
   value + i < 0 ? value = 0 : value += i;
-  return isAction(value);
+  return isAction(before ,value);
 }
 
 void StatParam::pushStackInfo(pair<string, int> *target) {

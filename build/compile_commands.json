@@ -7,6 +7,12 @@
 },
 {
   "directory": "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build",
+  "command": "C:\\Users\\ADMIN\\STUDY\\MingGW_Compiler\\mingw64\\bin\\g++.exe -DSFML_STATIC @CMakeFiles/GameGod.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\GameGod.dir\\Gui.obj -c C:\\Users\\ADMIN\\Documents\\GitHub\\Cminusminus\\Gui.cpp",
+  "file": "C:/Users/ADMIN/Documents/GitHub/Cminusminus/Gui.cpp",
+  "output": "CMakeFiles/GameGod.dir/Gui.obj"
+},
+{
+  "directory": "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build",
   "command": "C:\\Users\\ADMIN\\STUDY\\MingGW_Compiler\\mingw64\\bin\\g++.exe -DSFML_STATIC @CMakeFiles/GameGod.dir/includes_CXX.rsp -g -std=gnu++17 -o CMakeFiles\\GameGod.dir\\main.obj -c C:\\Users\\ADMIN\\Documents\\GitHub\\Cminusminus\\main.cpp",
   "file": "C:/Users/ADMIN/Documents/GitHub/Cminusminus/main.cpp",
   "output": "CMakeFiles/GameGod.dir/main.obj"

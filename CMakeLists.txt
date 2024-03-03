@@ -1,9 +1,9 @@
 project("Game")
 
 add_executable(GameGod "FundamentalSystem.cpp")
-
+add_executable(GameGod "Gui.h")
+add_executable(GameGod "Gui.cpp")
 add_executable(GameGod "main.cpp")
-
 
 set(BUILD_SHARED_LIBS FALSE CACHE INTERNAL "Use static linking for SFML")
 

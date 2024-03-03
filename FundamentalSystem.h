@@ -55,7 +55,6 @@ protected:
   string name; // ไปกำหนดเองตอนสร้าง classs
   Var3DGraph *data; // ไปกำหนดเองตอนสร้าง classs
   AbilitySystem *parent;
-  void virtual produceAffliction() = 0; // สร้าง aff ใส่ศรัทตรู
   void virtual createStatParam() { return; } // สร้าง Instant Class StatParam
   // vector<GameObject*>
   // ตามประเภทที่ ability นี้ต้องใช้ อันนี้ไป override ด้วยนะ
@@ -65,9 +64,9 @@ public:
   Ability(GameObject *target);
   vector<GameObject *> virtual findTargetForPassive() = 0;
   vector<GameObject *> virtual findTargetForActive() = 0;
-  bool virtual canActive(vector<GameObject *>) = 0;
-  void virtual passive(vector<GameObject *>) = 0;
-  void virtual active(vector<GameObject *>) = 0;
+  bool virtual canActive(vector<GameObject *> targets) = 0;
+  void virtual passive(vector<GameObject *> targets) = 0;
+  void virtual active(vector<GameObject *> targets) = 0;
   int decision(int sur, int env, int repro);
   inline string getName();
   inline AbilitySystem *getParent();
@@ -118,7 +117,7 @@ protected:
 public:
   vector<Affliction *> afflictionGroup;
   AfflictionSystem(GameObject *parent);
-  void reClaCulateValue();
+  void recalculateValue();
   bool addAffliction(Affliction *affliction);
   bool removeAffliction(string name);
   bool removeAllAffliction(string name);

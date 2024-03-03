@@ -35,14 +35,14 @@ class Health : public StatParam {
     Health(GameObject *target, Ability *createBy, int rawValue);
 };
 
-class Stemina : public StatParam {
+class Stamina : public StatParam {
     protected:
-    string name = "Stemina";
+    string name = "Stamina";
     int targetValue = 0;
     void virtual action() override;
     public:
-    Stemina(StatusBlock *parent, Ability *createBy, int rawValue);
-    Stemina(GameObject *target, Ability *createBy, int rawValue);
+    Stamina(StatusBlock *parent, Ability *createBy, int rawValue);
+    Stamina(GameObject *target, Ability *createBy, int rawValue);
 };
 
 class Atk : public StatParam {
@@ -65,14 +65,24 @@ class Def : public StatParam {
     Def(GameObject *target, Ability *createBy, int rawValue);
 };
 
-class Slight : public StatParam {
+class Sight : public StatParam {
     protected:
-    string name = "Slight";
+    string name = "Sight";
     int targetValue = 0;
     void virtual action() override;
     public:
-    Slight(StatusBlock *parent, Ability *createBy, int rawValue);
-    Slight(GameObject *target, Ability *createBy, int rawValue);
+    Sight(StatusBlock *parent, Ability *createBy, int rawValue);
+    Sight(GameObject *target, Ability *createBy, int rawValue);
+};
+
+class Speed : public StatParam {
+    protected:
+    string name = "Speed";
+    int targetValue = 0;
+    void virtual action() override;
+    public:
+    Speed(StatusBlock *parent, Ability *createBy, int rawValue);
+    Speed(GameObject *target, Ability *createBy, int rawValue);
 };
 
 #endif

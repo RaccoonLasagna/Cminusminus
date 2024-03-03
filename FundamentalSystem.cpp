@@ -53,6 +53,7 @@ bool StatParam::changeValueBy(int i) {
   int before = value;
   value + i < 0 ? value = 0 : value += i;
   return isAction(before ,value);
+  return isAction(before, value);
 }
 
 void StatParam::pushStackInfo(pair<string, int> *target) {
@@ -170,7 +171,7 @@ GameObject *AbilitySystem::getParent() { return parent; }
 AfflictionSystem::AfflictionSystem(GameObject *parent)
     : parent(parent), afflictionGroup({}) {}
 
-void AfflictionSystem::reClaCulateValue() {
+void AfflictionSystem::recalculateValue() {
   StatusBlock *statBlock = getParent()->getStat();
   string affName;
   StatParam *paramTarget;
@@ -185,13 +186,8 @@ void AfflictionSystem::reClaCulateValue() {
 }
 
 bool AfflictionSystem::addAffliction(Affliction *target) {
-  for (Affliction *aff : afflictionGroup) {
-    if (aff->getName() == target->getName() && target->getPermanant()) {
-      return false;
-    }
-  }
   afflictionGroup.push_back(target);
-  reClaCulateValue();
+  recalculateValue();
   return true;
 }
 
@@ -240,7 +236,7 @@ void AfflictionSystem::updateAffliction() {
       delete aff;
     }
   }
-  reClaCulateValue();
+  recalculateValue();
 }
 
 GameObject *AfflictionSystem::getParent() { return parent; }
@@ -270,11 +266,11 @@ bool StatusBlock::addStat(StatParam *target) {
   StatParam *oldStat = getParam(targetName);
   if (oldStat != nullptr) {
     oldStat->pushStackInfo(&(target->getStackInfo()[0]));
-    reClaCulateValue();
+    recalculateValue();
     return false;
   } else {
     statParamGroup.push_back(target);
-    reClaCulateValue();
+    recalculateValue();
     return true;
   }
 }
@@ -353,7 +349,7 @@ vector<GameObject *> GameObject::findTargetInRange(int range) {
   pair<int, int> selfIndex = getVectorIndex();
   for (double i{0}; i <= range; i++) {
     for (double j{0}; j <= range; j++) {
-      if (sqrt(pow(i, 2.) + pow(j, 2.)) <= range && (i != 0 || j != 0)) {
+      if (ceil(sqrt(pow(i, 2.) + pow(j, 2.))) <= range && (i != 0 || j != 0)) {
         if (selfIndex.first - i >= 0 && selfIndex.second - j >= 0) {
           GameObject *targetObject =
               parent->getFromLayer(selfIndex.first - i, selfIndex.second - j);

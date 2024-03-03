@@ -32,7 +32,7 @@ protected:
   vector<pair<string, int>> stackInfo;
   StatusBlock *parent;
   void virtual action() = 0; // ส่งผลกับตัวเองยังไง
-  bool isAction(int i);
+  bool isAction(int before, int after);
   void updateStackInfo();
 
 public:

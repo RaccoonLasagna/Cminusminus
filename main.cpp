@@ -1,27 +1,47 @@
-#include "SFML/Graphics.hpp"
-#include <iostream>
+// #include "SFML/Audio.hpp"
+// #include "SFML/Graphics.hpp"
+// #include "SFML/Network.hpp"
+// #include "SFML/System.hpp"
+// #include "SFML/Window.hpp"
+// #include "SFML/Graphics/Color.hpp"
+// #include "SFML/Graphics/RenderStates.hpp"
+// #include "SFML/Graphics/RenderWindow.hpp"
+// #include "SFML/Window/Event.hpp"
+// #include "SFML/Window/Keyboard.hpp"
+// #include "SFML/Window/VideoMode.hpp"
+// #include "SFML/Window/Window.hpp"
+// #include "SFML/Window/WindowStyle.hpp"
+// #include "Gui.h"
 
-int main()
-{
-    std::cout << "Hello World\n";
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-    sf::CircleShape shape(100.f);
-    shape.setFillColor(sf::Color::Green);
-    std::cout << "After SFML\n";
+// using namespace sf;
 
-    while (window.isOpen())
-    {
-        sf::Event event;
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
+// int main() {
 
-        window.clear();
-        window.draw(shape);
-        window.display();
-    }
+//   srand(time(NULL));
 
-    return 0;
+//   // window
+//   Game game;
+
+//   // Game loop
+//   while (game.runing() && !game.getEndGAme()) {
+//     game.update();
+//     game.render();
+//   }
+  
+//   return 0;
+// }
+
+#include "Gui.h"
+#include <ctime>
+
+using namespace sf;
+
+int main() {
+  srand(static_cast<unsigned>(time(0)));
+  Gui gui;
+  while (gui.runing()) {
+    gui.update();
+    gui.render();
+  }
+  return 0;
 }

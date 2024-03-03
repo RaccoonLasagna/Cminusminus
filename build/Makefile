@@ -287,6 +287,21 @@ FundamentalSystem.s:
 .PHONY : FundamentalSystem.s
 
 # target to build an object file
+Gui.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameGod.dir\build.make CMakeFiles/GameGod.dir/Gui.obj
+.PHONY : Gui.obj
+
+# target to preprocess a source file
+Gui.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameGod.dir\build.make CMakeFiles/GameGod.dir/Gui.i
+.PHONY : Gui.i
+
+# target to generate assembly for a file
+Gui.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameGod.dir\build.make CMakeFiles/GameGod.dir/Gui.s
+.PHONY : Gui.s
+
+# target to build an object file
 main.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameGod.dir\build.make CMakeFiles/GameGod.dir/main.obj
 .PHONY : main.obj
@@ -325,6 +340,9 @@ help:
 	@echo ... FundamentalSystem.obj
 	@echo ... FundamentalSystem.i
 	@echo ... FundamentalSystem.s
+	@echo ... Gui.obj
+	@echo ... Gui.i
+	@echo ... Gui.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

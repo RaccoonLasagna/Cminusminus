@@ -102,13 +102,7 @@ void virtual active(vector<GameObject *> targets) override;
 
 class Walk: public Ability{
 protected:
-string name = "Attack";
-Var3DGraph *data = new Var3DGraph({{0, 0, 0, 0},
-                                   {0, 100, 0, 100},
-                                   {100, 100, 0, 40},
-                                   {0, 0, 100, 10},
-                                   {30, 80, 5, 70},
-                                   {100, 100, 100, 25}}); // remember to change pls
+string name = "Walk";
 void createStatParam() override;
 
 public:
@@ -118,6 +112,34 @@ vector<GameObject *> virtual findTargetForPassive() override;
 vector<GameObject *> virtual findTargetForActive() override;
 bool virtual canActive(vector<GameObject *> targets) override;
 void virtual passive(vector<GameObject *> targets) override;
+void virtual active(vector<GameObject *> targets) override;
+};
+
+class WalkSeek: public Walk{
+protected:
+Var3DGraph *data = new Var3DGraph({{0, 0, 0, 0},
+                                   {0, 100, 0, 100},
+                                   {100, 100, 0, 40},
+                                   {0, 0, 100, 10},
+                                   {30, 80, 5, 70},
+                                   {100, 100, 100, 25}});
+public:
+WalkSeek(AbilitySystem *parent);
+WalkSeek(GameObject *target);
+void virtual active(vector<GameObject *> targets) override;
+};
+
+class WalkEscape: public Walk{
+protected:
+Var3DGraph *data = new Var3DGraph({{0, 0, 0, 0},
+                                   {0, 100, 0, 100},
+                                   {100, 100, 0, 40},
+                                   {0, 0, 100, 10},
+                                   {30, 80, 5, 70},
+                                   {100, 100, 100, 25}});
+public:
+WalkEscape(AbilitySystem *parent);
+WalkEscape(GameObject *target);
 void virtual active(vector<GameObject *> targets) override;
 };
 

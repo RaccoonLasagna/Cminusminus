@@ -164,7 +164,7 @@ public:
   inline string getRepresent();
   inline StatusBlock *getStat();
   inline Layer *getParent();
-  vector<GameObject*> findTargetInRange(int range);
+  vector<GameObject*> findTargetInRange(int range, bool allLayers);
   // bool canAct(GameObject *);
 };
 
@@ -178,7 +178,7 @@ public:
   vector<vector<GameObject *>> insideLayer;
   Layer(string name, LayerSystem *parent, int width, int height);
   void action();
-  void addToLayer(GameObject *target, int x, int y);
+  void setLayer(GameObject *target, int x, int y);
   void removeFromLayer(int x, int y);
   inline string getName();
   inline void setName(string nameInput);
@@ -225,10 +225,13 @@ public:
   int getDistance(GameObject *a, GameObject *b);
   int getDistance(int x1, int y1, int x2, int y2);
   //-------------------------//
-  Layer *getLayer(string name);
+  inline Layer *getLayer(string name);
   inline Layer *getLayer(int i);
   inline Ground getGround();
   inline string getLayerName(int i);
+  inline int getLayersAmount();
+  inline int getLayersWidth();
+  inline int getLayersHeight();
 };
 
 class Command {};

@@ -10,19 +10,24 @@ using namespace std;
 
 //----------------------------//
 
-bool StatParam::isAction(int before, int after) {
-  if (before > targetValue && targetValue >= after) {
+bool StatParam::isAction(int before, int after)
+{
+  if (before > targetValue && targetValue >= after)
+  {
     action();
     return true;
   }
   return false;
 }
 
-void StatParam::updateStackInfo() {
+void StatParam::updateStackInfo()
+{
   int highest = 0;
-  for (pair<string, int> pair : stackInfo) {
+  for (pair<string, int> pair : stackInfo)
+  {
     int value = pair.second;
-    if (value > highest) {
+    if (value > highest)
+    {
       highest = value;
     }
   }
@@ -30,7 +35,8 @@ void StatParam::updateStackInfo() {
 }
 
 StatParam::StatParam(StatusBlock *parent, Ability *createBy, int defaultValue)
-    : parent(parent) {
+    : parent(parent)
+{
   pair<string, int> pair = make_pair(createBy->getName(), defaultValue);
   stackInfo.push_back(pair);
   updateStackInfo();
@@ -40,24 +46,32 @@ StatParam::StatParam(StatusBlock *parent, Ability *createBy, int defaultValue)
 StatParam::StatParam(GameObject *target, Ability *createBy, int defaultValue)
     : StatParam(target->getStat(), createBy, defaultValue) {}
 
-void StatParam::setDefaultTo(int i) {
-  if (i < 0) {
+void StatParam::setDefaultTo(int i)
+{
+  if (i < 0)
+  {
     defaultValue = 0;
-  } else {
+  }
+  else
+  {
     defaultValue = i;
   }
   value = defaultValue;
 }
 
-bool StatParam::changeValueBy(int i) {
+bool StatParam::changeValueBy(int i)
+{
   int before = value;
   value + i < 0 ? value = 0 : value += i;
   return isAction(before, value);
 }
 
-void StatParam::pushStackInfo(pair<string, int> *target) {
-  for (pair<string, int> pair : stackInfo) {
-    if (pair.first == target->first) {
+void StatParam::pushStackInfo(pair<string, int> *target)
+{
+  for (pair<string, int> pair : stackInfo)
+  {
+    if (pair.first == target->first)
+    {
       return;
     }
   }
@@ -74,14 +88,16 @@ StatusBlock *StatParam::getParent() { return parent; }
 
 //----------------------------//
 
-Ability::Ability(AbilitySystem *parent) : parent(parent) {
+Ability::Ability(AbilitySystem *parent) : parent(parent)
+{
   parent->addAbility(this);
   createStatParam();
 }
 
 Ability::Ability(GameObject *target) : Ability(target->getStat()) {}
 
-int Ability::decision(int sur, int env, int repo) {
+int Ability::decision(int sur, int env, int repo)
+{
   return data->interpolate(sur, env, repo);
 }
 
@@ -90,26 +106,34 @@ AbilitySystem *Ability::getParent() { return parent; }
 
 //----------------------------//
 
-bool Affliction::tick() {
-  if (duration <= passedTime) {
-    if (!permanant) {
+bool Affliction::tick()
+{
+  if (duration <= passedTime)
+  {
+    if (!permanant)
+    {
       return false;
     }
-  } else {
+  }
+  else
+  {
     passedTime += 1;
   }
   value += valueIncrese;
   return true;
 }
 
-Affliction::Affliction(AfflictionSystem *parent) : parent(parent) {
+Affliction::Affliction(AfflictionSystem *parent) : parent(parent)
+{
   parent->addAffliction(this);
 }
 
 Affliction::Affliction(GameObject *target) : Affliction(target->getStat()) {}
 
-bool Affliction::update() {
-  if (tick()) {
+bool Affliction::update()
+{
+  if (tick())
+  {
     return true;
   }
   return false;
@@ -126,9 +150,12 @@ AfflictionSystem *Affliction::getParent() { return parent; }
 
 //----------------------------//
 
-bool AbilitySystem::isInAbility(string name) {
-  for (Ability *ability : abilityGroup) {
-    if (ability->getName() == name) {
+bool AbilitySystem::isInAbility(string name)
+{
+  for (Ability *ability : abilityGroup)
+  {
+    if (ability->getName() == name)
+    {
       return true;
     }
   }
@@ -138,22 +165,28 @@ bool AbilitySystem::isInAbility(string name) {
 AbilitySystem::AbilitySystem(GameObject *parent)
     : parent(parent), abilityGroup({}) {}
 
-bool AbilitySystem::addAbility(Ability *target) {
-  if (!isInAbility(target->getName())) {
+bool AbilitySystem::addAbility(Ability *target)
+{
+  if (!isInAbility(target->getName()))
+  {
     abilityGroup.push_back(target);
     return true;
   }
   return false;
 }
 
-void AbilitySystem::decisionMaking(int sur, int env, int repo) {
+void AbilitySystem::decisionMaking(int sur, int env, int repo)
+{
   int maxValue, indexMax, index, value = 0;
-  for (Ability *ability : abilityGroup) {
+  for (Ability *ability : abilityGroup)
+  {
     index++;
     ability->passive(ability->findTargetForPassive());
-    if (ability->canActive(ability->findTargetForActive())) {
+    if (ability->canActive(ability->findTargetForActive()))
+    {
       value = ability->decision(sur, env, repo);
-      if (maxValue < value) {
+      if (maxValue < value)
+      {
         maxValue = value;
         indexMax = index - 1;
       }
@@ -170,31 +203,38 @@ GameObject *AbilitySystem::getParent() { return parent; }
 AfflictionSystem::AfflictionSystem(GameObject *parent)
     : parent(parent), afflictionGroup({}) {}
 
-void AfflictionSystem::recalculateValue() {
+void AfflictionSystem::recalculateValue()
+{
   StatusBlock *statBlock = getParent()->getStat();
   string affName;
   StatParam *paramTarget;
   statBlock->resetValue();
-  for (Affliction *aff : afflictionGroup) {
+  for (Affliction *aff : afflictionGroup)
+  {
     affName = aff->getTargetValue();
     paramTarget = statBlock->getParam(affName);
-    if (paramTarget != nullptr) {
+    if (paramTarget != nullptr)
+    {
       paramTarget->changeValueBy(aff->getValue());
     }
   }
 }
 
-bool AfflictionSystem::addAffliction(Affliction *target) {
+bool AfflictionSystem::addAffliction(Affliction *target)
+{
   afflictionGroup.push_back(target);
   recalculateValue();
   return true;
 }
 
-bool AfflictionSystem::removeAffliction(string name) {
+bool AfflictionSystem::removeAffliction(string name)
+{
   int index = 0;
-  for (Affliction *aff : afflictionGroup) {
+  for (Affliction *aff : afflictionGroup)
+  {
     index++;
-    if (aff->getName() == name) {
+    if (aff->getName() == name)
+    {
       afflictionGroup.erase(afflictionGroup.begin() + index - 1);
       return true;
     }
@@ -202,12 +242,15 @@ bool AfflictionSystem::removeAffliction(string name) {
   return false;
 }
 
-bool AfflictionSystem::removeAllAffliction(string name) {
+bool AfflictionSystem::removeAllAffliction(string name)
+{
   int index = 0;
   bool have = false;
-  for (Affliction *aff : afflictionGroup) {
+  for (Affliction *aff : afflictionGroup)
+  {
     index++;
-    if (aff->getName() == name) {
+    if (aff->getName() == name)
+    {
       afflictionGroup.erase(afflictionGroup.begin() + index - 1);
       have = true;
     }
@@ -215,22 +258,28 @@ bool AfflictionSystem::removeAllAffliction(string name) {
   return have;
 }
 
-int AfflictionSystem::amountOfAffliction(string name) {
+int AfflictionSystem::amountOfAffliction(string name)
+{
   int amount = 0;
-  for (Affliction *aff : afflictionGroup) {
-    if (aff->getName() == name) {
+  for (Affliction *aff : afflictionGroup)
+  {
+    if (aff->getName() == name)
+    {
       amount++;
     }
   }
   return amount;
 }
 
-void AfflictionSystem::updateAffliction() {
+void AfflictionSystem::updateAffliction()
+{
   int index = 0;
-  for (Affliction *aff : afflictionGroup) {
-    if (!(aff->update())) { // เหตุผลที่ไม่ใช้ remove ของตัว class เองก็เพราะว่าการ
-                            // remove ของตัว class เองจะ remove ตัวแรกที่มันเจอ
-                            // ไม่ใช่ตัวที่เราต้องการ
+  for (Affliction *aff : afflictionGroup)
+  {
+    if (!(aff->update()))
+    { // เหตุผลที่ไม่ใช้ remove ของตัว class เองก็เพราะว่าการ
+      // remove ของตัว class เองจะ remove ตัวแรกที่มันเจอ
+      // ไม่ใช่ตัวที่เราต้องการ
       afflictionGroup.erase(afflictionGroup.begin() + index - 1);
       delete aff;
     }
@@ -245,56 +294,74 @@ GameObject *AfflictionSystem::getParent() { return parent; }
 StatusBlock::StatusBlock(GameObject *parent)
     : parent(parent), AbilitySystem(parent), AfflictionSystem(parent) {}
 
-bool StatusBlock::isInParam(string name) {
-  for (StatParam *param : statParamGroup) {
-    if (param->getName() == name) {
+bool StatusBlock::isInParam(string name)
+{
+  for (StatParam *param : statParamGroup)
+  {
+    if (param->getName() == name)
+    {
       return true;
     }
   }
   return false;
 }
 
-void StatusBlock::resetValue() {
-  for (StatParam *stat : statParamGroup) {
+void StatusBlock::resetValue()
+{
+  for (StatParam *stat : statParamGroup)
+  {
     stat->resetValue();
   }
 }
 
-bool StatusBlock::addStat(StatParam *target) {
+bool StatusBlock::addStat(StatParam *target)
+{
   string targetName = target->getName();
   StatParam *oldStat = getParam(targetName);
-  if (oldStat != nullptr) {
+  if (oldStat != nullptr)
+  {
     oldStat->pushStackInfo(&(target->getStackInfo()[0]));
     recalculateValue();
     return false;
-  } else {
+  }
+  else
+  {
     statParamGroup.push_back(target);
     recalculateValue();
     return true;
   }
 }
 
-int StatusBlock::getParamValueDefault(string name) {
-  for (StatParam *stat : statParamGroup) {
-    if (name == stat->getName()) {
+int StatusBlock::getParamValueDefault(string name)
+{
+  for (StatParam *stat : statParamGroup)
+  {
+    if (name == stat->getName())
+    {
       return stat->getDefaultValue();
     }
   }
   return 0;
 }
 
-int StatusBlock::getParamValue(string name) {
-  for (StatParam *stat : statParamGroup) {
-    if (name == stat->getName()) {
+int StatusBlock::getParamValue(string name)
+{
+  for (StatParam *stat : statParamGroup)
+  {
+    if (name == stat->getName())
+    {
       return stat->getValue();
     }
   }
   return 0;
 }
 
-StatParam *StatusBlock::getParam(string name) {
-  for (StatParam *param : statParamGroup) {
-    if (param->getName() == name) {
+StatParam *StatusBlock::getParam(string name)
+{
+  for (StatParam *param : statParamGroup)
+  {
+    if (param->getName() == name)
+    {
       return param;
     }
   }
@@ -305,17 +372,22 @@ GameObject *StatusBlock::getParent() { return parent; }
 
 //----------------------------//
 
-GameObject::GameObject(Layer *parent, int x, int y) : parent(parent) {
-  parent->addToLayer(this, x, y);
+GameObject::GameObject(Layer *parent, int x, int y) : parent(parent)
+{
+  parent->setLayer(this, x, y);
 }
 
-pair<int, int> GameObject::getVectorIndex() {
-  if (parent != nullptr) {
+pair<int, int> GameObject::getVectorIndex()
+{
+  if (parent != nullptr)
+  {
     const vector<vector<GameObject *>> layerVectors = parent->insideLayer;
-    for (size_t i = 0; i < layerVectors.size(); ++i) {
+    for (size_t i = 0; i < layerVectors.size(); ++i)
+    {
       const vector<GameObject *> &currentVector = layerVectors[i];
       auto it = find(currentVector.begin(), currentVector.end(), this);
-      if (it != currentVector.end()) {
+      if (it != currentVector.end())
+      {
         size_t j = distance(currentVector.begin(), it);
         return {static_cast<int>(j), static_cast<int>(i)};
       }
@@ -324,8 +396,10 @@ pair<int, int> GameObject::getVectorIndex() {
   // not found
   return {-2147483648, -2147483648};
 }
-pair<int, int> GameObject::getCoord() {
-  if (parent) {
+pair<int, int> GameObject::getCoord()
+{
+  if (parent)
+  {
     pair<int, int> vector_index = getVectorIndex();
     LayerSystem *ls = parent->getParent();
     Ground ground = ls->getGround();
@@ -343,41 +417,83 @@ string GameObject::getRepresent() { return represent; }
 StatusBlock *GameObject::getStat() { return stat; }
 Layer *GameObject::getParent() { return parent; }
 
-vector<GameObject *> GameObject::findTargetInRange(int range) {
+vector<GameObject *> GameObject::findTargetInRange(int range, bool allLayers)
+{
   vector<GameObject *> target;
   pair<int, int> selfIndex = getVectorIndex();
-  for (double i{0}; i <= range; i++) {
-    for (double j{0}; j <= range; j++) {
-      if (ceil(sqrt(pow(i, 2.) + pow(j, 2.))) <= range && (i != 0 || j != 0)) {
-        if (selfIndex.first - i >= 0 && selfIndex.second - j >= 0) {
-          GameObject *targetObject =
-              parent->getFromLayer(selfIndex.first - i, selfIndex.second - j);
-          if (targetObject != nullptr) {
-            target.push_back(targetObject);
+  for (double i{0}; i <= range; i++)
+  {
+    for (double j{0}; j <= range; j++)
+    {
+      // if the selected tile is within range and isn't the same tile as the GameObject:
+      if (ceil(sqrt(pow(i, 2.) + pow(j, 2.))) <= range && (i != 0 || j != 0))
+      {
+        // if the selected tile is more than or equal to 0 (not out of range)
+        if (selfIndex.first - i >= 0 && selfIndex.second - j >= 0)
+        {
+          if (allLayers) // all layers in the same layer system
+          {
+            LayerSystem *layersystem = parent->getParent();
+            for (size_t k = 0; k < layersystem->getLayersAmount(); k++)
+            {
+              Layer *layer = layersystem->getLayer(0);
+              GameObject *targetObject = layer->getFromLayer(selfIndex.first - i, selfIndex.second - j);
+              if (targetObject != nullptr)
+              {
+                target.push_back(targetObject);
+              }
+            }
+          }
+          else // GameObject's own layer only
+          {
+            GameObject *targetObject = parent->getFromLayer(selfIndex.first - i, selfIndex.second - j);
+            if (targetObject != nullptr)
+            {
+              target.push_back(targetObject);
+            }
           }
         }
-        if (selfIndex.first + i < parent->insideLayer.size() &&
-            selfIndex.second + j < parent->insideLayer.size()) {
-          GameObject *targetObject =
-              parent->getFromLayer(selfIndex.first + i, selfIndex.second + j);
-          if (targetObject != nullptr) {
-            target.push_back(targetObject);
+        // if the selected tile is less than the size (not out of range)
+        if (selfIndex.first + i < parent->insideLayer.size() && selfIndex.second + j < parent->insideLayer.size())
+        {
+          if (allLayers) // all layers in the same layer system
+          {
+            LayerSystem *layersystem = parent->getParent();
+            for (size_t k = 0; k < layersystem->getLayersAmount(); k++)
+            {
+              Layer *layer = layersystem->getLayer(0);
+              GameObject *targetObject = layer->getFromLayer(selfIndex.first + i, selfIndex.second + j);
+              if (targetObject != nullptr)
+              {
+                target.push_back(targetObject);
+              }
+            }
+          }
+          else // GameObject's own layer only
+          {
+            GameObject *targetObject = parent->getFromLayer(selfIndex.first + i, selfIndex.second + j);
+            if (targetObject != nullptr)
+            {
+              target.push_back(targetObject);
+            }
           }
         }
       }
     }
   }
-
   return target;
 }
 
 //----------------------------//
 
 Layer::Layer(string name, LayerSystem *parent, int width, int height)
-    : parent(parent), name(name) {
-  for (int y = 0; y < height; y++) {
+    : parent(parent), name(name)
+{
+  for (int y = 0; y < height; y++)
+  {
     vector<GameObject *> row;
-    for (int x = 0; x < width; x++) {
+    for (int x = 0; x < width; x++)
+    {
       row.push_back(nullptr);
     }
     insideLayer.push_back(row);
@@ -385,17 +501,22 @@ Layer::Layer(string name, LayerSystem *parent, int width, int height)
 }
 
 // update everything in the layer
-void Layer::action() {
-  for (int i = 0; i < insideLayer.size(); i++) {
-    for (int j = 0; j < insideLayer.at(i).size(); j++) {
-      if (insideLayer.at(i).at(j) != nullptr) {
+void Layer::action()
+{
+  for (int i = 0; i < insideLayer.size(); i++)
+  {
+    for (int j = 0; j < insideLayer.at(i).size(); j++)
+    {
+      if (insideLayer.at(i).at(j) != nullptr)
+      {
         insideLayer.at(i).at(j)->update();
       }
     }
   }
 }
 
-void Layer::addToLayer(GameObject *target, int x, int y) {
+void Layer::setLayer(GameObject *target, int x, int y)
+{
   insideLayer.at(y).at(x) = target;
 }
 
@@ -403,7 +524,8 @@ void Layer::removeFromLayer(int x, int y) { insideLayer.at(y).at(x) = nullptr; }
 
 string Layer::getName() { return name; }
 void Layer::setName(string nameInput) { name = nameInput; }
-GameObject *Layer::getFromLayer(int x, int y) {
+GameObject *Layer::getFromLayer(int x, int y)
+{
   return insideLayer.at(y).at(x);
 }
 LayerSystem *Layer::getParent() { return parent; }
@@ -412,13 +534,16 @@ LayerSystem *Layer::getParent() { return parent; }
 
 // ------------------Ground--------------------//
 
-Ground::Ground(LayerSystem *p, int width, int height) : parent(p) {
+Ground::Ground(LayerSystem *p, int width, int height) : parent(p)
+{
   int width_min = static_cast<int>(-floor(width / 2));
   int height_min = static_cast<int>(-floor(height / 2));
 
-  for (int y = height_min; y < height_min + height; y++) {
+  for (int y = height_min; y < height_min + height; y++)
+  {
     vector<Land> row;
-    for (int x = width_min; x < width_min + width; x++) {
+    for (int x = width_min; x < width_min + width; x++)
+    {
       // casts ground pointer to layer pointer so that Land can be constructed
       row.push_back(Land(this, "#", x, y));
     }
@@ -428,9 +553,12 @@ Ground::Ground(LayerSystem *p, int width, int height) : parent(p) {
 
 //-------------------LayerSystem-------------------//
 
-bool LayerSystem::isInLayer(string name) {
-  for (Layer *l : layers) {
-    if (l->getName() == name) {
+bool LayerSystem::isInLayer(string name)
+{
+  for (Layer *l : layers)
+  {
+    if (l->getName() == name)
+    {
       return true;
     }
   }
@@ -438,21 +566,26 @@ bool LayerSystem::isInLayer(string name) {
 }
 
 LayerSystem::LayerSystem(int width, int height, int amount)
-    : width(width), height(height), ground(Ground(this, width, height)) {
-  for (size_t lCount = 0; lCount < amount; lCount++) {
+    : width(width), height(height), ground(Ground(this, width, height))
+{
+  for (size_t lCount = 0; lCount < amount; lCount++)
+  {
     createNewLayer("layer" + to_string(lCount));
   }
 }
 
 LayerSystem::LayerSystem(int width, int height)
-    : width(width), height(height), ground(Ground(this, width, height)) {
+    : width(width), height(height), ground(Ground(this, width, height))
+{
   createNewLayer("Food");
   createNewLayer("Animal");
   createNewLayer("Environment");
 }
 
-bool LayerSystem::createNewLayer(string name) {
-  if (isInLayer(name)) {
+bool LayerSystem::createNewLayer(string name)
+{
+  if (isInLayer(name))
+  {
     return false;
   }
   Layer *layer = new Layer(name, this, width, height);
@@ -460,9 +593,12 @@ bool LayerSystem::createNewLayer(string name) {
   return true;
 }
 
-bool LayerSystem::removeLayer(string name) {
-  for (int i = 0; i < layers.size(); i++) {
-    if (layers.at(i)->getName() == name) {
+bool LayerSystem::removeLayer(string name)
+{
+  for (int i = 0; i < layers.size(); i++)
+  {
+    if (layers.at(i)->getName() == name)
+    {
       layers.erase(layers.begin() + i);
       return true;
     }
@@ -470,19 +606,24 @@ bool LayerSystem::removeLayer(string name) {
   return false;
 }
 
-int LayerSystem::getDistance(GameObject *a, GameObject *b) {
+int LayerSystem::getDistance(GameObject *a, GameObject *b)
+{
   pair<int, int> aCoord = a->getCoord();
   pair<int, int> bCoord = b->getCoord();
   return getDistance(aCoord.first, aCoord.second, bCoord.first, bCoord.second);
 }
 
-int LayerSystem::getDistance(int x1, int y1, int x2, int y2) {
+int LayerSystem::getDistance(int x1, int y1, int x2, int y2)
+{
   return floor(abs(x1 - x2) + abs(y1 - y2));
 }
 
-Layer *LayerSystem::getLayer(string name) {
-  for (Layer *l : layers) {
-    if (l->getName() == name) {
+Layer *LayerSystem::getLayer(string name)
+{
+  for (Layer *l : layers)
+  {
+    if (l->getName() == name)
+    {
       return l;
     }
   }
@@ -490,7 +631,13 @@ Layer *LayerSystem::getLayer(string name) {
 }
 
 Layer inline *LayerSystem::getLayer(int i) { return layers.at(i); }
+
 Ground LayerSystem::getGround() { return ground; }
-string inline LayerSystem::getLayerName(int i) {
-  return layers.at(i)->getName();
-}
+
+string inline LayerSystem::getLayerName(int i) { return layers.at(i)->getName(); }
+
+int inline LayerSystem::getLayersAmount() { return layers.size(); }
+
+int inline LayerSystem::getLayersWidth() { return width; }
+
+int inline LayerSystem::getLayersHeight() { return height; }

@@ -98,7 +98,7 @@ add_library(sfml-graphics STATIC IMPORTED)
 set_target_properties(sfml-graphics PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "SFML_STATIC"
   INTERFACE_INCLUDE_DIRECTORIES "C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include"
-  INTERFACE_LINK_LIBRARIES "sfml-window;\$<LINK_ONLY:Freetype>"
+  INTERFACE_LINK_LIBRARIES "sfml-window;\$<LINK_ONLY:legacy_stdio_definitions.lib>;\$<LINK_ONLY:Freetype>"
 )
 
 # Create imported target Freetype
@@ -106,7 +106,7 @@ add_library(Freetype INTERFACE IMPORTED)
 
 set_target_properties(Freetype PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers/freetype2"
-  INTERFACE_LINK_LIBRARIES "C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/libs-mingw/x64/libfreetype.a"
+  INTERFACE_LINK_LIBRARIES "C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/libs-msvc-universal/x64/freetype.lib"
 )
 
 # Create imported target OpenAL
@@ -114,7 +114,7 @@ add_library(OpenAL INTERFACE IMPORTED)
 
 set_target_properties(OpenAL PROPERTIES
   INTERFACE_INCLUDE_DIRECTORIES "C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers/AL"
-  INTERFACE_LINK_LIBRARIES "C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/libs-mingw/x64/libopenal32.a"
+  INTERFACE_LINK_LIBRARIES "C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/libs-msvc-universal/x64/openal32.lib"
 )
 
 # Create imported target VORBIS
@@ -123,7 +123,7 @@ add_library(VORBIS INTERFACE IMPORTED)
 set_target_properties(VORBIS PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "OV_EXCLUDE_STATIC_CALLBACKS"
   INTERFACE_INCLUDE_DIRECTORIES "C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers;C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers"
-  INTERFACE_LINK_LIBRARIES "C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/libs-mingw/x64/libvorbisenc.a;C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/libs-mingw/x64/libvorbisfile.a;C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/libs-mingw/x64/libvorbis.a;C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/libs-mingw/x64/libogg.a"
+  INTERFACE_LINK_LIBRARIES "C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/libs-msvc-universal/x64/vorbisenc.lib;C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/libs-msvc-universal/x64/vorbisfile.lib;C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/libs-msvc-universal/x64/vorbis.lib;C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/libs-msvc-universal/x64/ogg.lib"
 )
 
 # Create imported target FLAC
@@ -132,7 +132,7 @@ add_library(FLAC INTERFACE IMPORTED)
 set_target_properties(FLAC PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "FLAC__NO_DLL"
   INTERFACE_INCLUDE_DIRECTORIES "C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers"
-  INTERFACE_LINK_LIBRARIES "C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/libs-mingw/x64/libFLAC.a"
+  INTERFACE_LINK_LIBRARIES "C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/libs-msvc-universal/x64/flac.lib"
 )
 
 # Create imported target sfml-audio
@@ -148,42 +148,168 @@ set_target_properties(sfml-audio PROPERTIES
 set_property(TARGET sfml-system APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(sfml-system PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
-  IMPORTED_LOCATION_DEBUG "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/libsfml-system-s-d.a"
+  IMPORTED_LOCATION_DEBUG "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/Debug/sfml-system-s-d.lib"
   )
 
 # Import target "sfml-main" for configuration "Debug"
 set_property(TARGET sfml-main APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(sfml-main PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
-  IMPORTED_LOCATION_DEBUG "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/libsfml-main-d.a"
+  IMPORTED_LOCATION_DEBUG "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/Debug/sfml-main-d.lib"
   )
 
 # Import target "sfml-window" for configuration "Debug"
 set_property(TARGET sfml-window APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(sfml-window PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
-  IMPORTED_LOCATION_DEBUG "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/libsfml-window-s-d.a"
+  IMPORTED_LOCATION_DEBUG "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/Debug/sfml-window-s-d.lib"
   )
 
 # Import target "sfml-network" for configuration "Debug"
 set_property(TARGET sfml-network APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(sfml-network PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
-  IMPORTED_LOCATION_DEBUG "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/libsfml-network-s-d.a"
+  IMPORTED_LOCATION_DEBUG "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/Debug/sfml-network-s-d.lib"
   )
 
 # Import target "sfml-graphics" for configuration "Debug"
 set_property(TARGET sfml-graphics APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(sfml-graphics PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
-  IMPORTED_LOCATION_DEBUG "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/libsfml-graphics-s-d.a"
+  IMPORTED_LOCATION_DEBUG "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/Debug/sfml-graphics-s-d.lib"
   )
 
 # Import target "sfml-audio" for configuration "Debug"
 set_property(TARGET sfml-audio APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(sfml-audio PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
-  IMPORTED_LOCATION_DEBUG "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/libsfml-audio-s-d.a"
+  IMPORTED_LOCATION_DEBUG "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/Debug/sfml-audio-s-d.lib"
+  )
+
+# Import target "sfml-system" for configuration "Release"
+set_property(TARGET sfml-system APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(sfml-system PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/Release/sfml-system-s.lib"
+  )
+
+# Import target "sfml-main" for configuration "Release"
+set_property(TARGET sfml-main APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(sfml-main PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/Release/sfml-main.lib"
+  )
+
+# Import target "sfml-window" for configuration "Release"
+set_property(TARGET sfml-window APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(sfml-window PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/Release/sfml-window-s.lib"
+  )
+
+# Import target "sfml-network" for configuration "Release"
+set_property(TARGET sfml-network APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(sfml-network PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/Release/sfml-network-s.lib"
+  )
+
+# Import target "sfml-graphics" for configuration "Release"
+set_property(TARGET sfml-graphics APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(sfml-graphics PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/Release/sfml-graphics-s.lib"
+  )
+
+# Import target "sfml-audio" for configuration "Release"
+set_property(TARGET sfml-audio APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
+set_target_properties(sfml-audio PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
+  IMPORTED_LOCATION_RELEASE "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/Release/sfml-audio-s.lib"
+  )
+
+# Import target "sfml-system" for configuration "MinSizeRel"
+set_property(TARGET sfml-system APPEND PROPERTY IMPORTED_CONFIGURATIONS MINSIZEREL)
+set_target_properties(sfml-system PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_MINSIZEREL "CXX"
+  IMPORTED_LOCATION_MINSIZEREL "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/MinSizeRel/sfml-system-s.lib"
+  )
+
+# Import target "sfml-main" for configuration "MinSizeRel"
+set_property(TARGET sfml-main APPEND PROPERTY IMPORTED_CONFIGURATIONS MINSIZEREL)
+set_target_properties(sfml-main PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_MINSIZEREL "CXX"
+  IMPORTED_LOCATION_MINSIZEREL "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/MinSizeRel/sfml-main.lib"
+  )
+
+# Import target "sfml-window" for configuration "MinSizeRel"
+set_property(TARGET sfml-window APPEND PROPERTY IMPORTED_CONFIGURATIONS MINSIZEREL)
+set_target_properties(sfml-window PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_MINSIZEREL "CXX"
+  IMPORTED_LOCATION_MINSIZEREL "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/MinSizeRel/sfml-window-s.lib"
+  )
+
+# Import target "sfml-network" for configuration "MinSizeRel"
+set_property(TARGET sfml-network APPEND PROPERTY IMPORTED_CONFIGURATIONS MINSIZEREL)
+set_target_properties(sfml-network PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_MINSIZEREL "CXX"
+  IMPORTED_LOCATION_MINSIZEREL "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/MinSizeRel/sfml-network-s.lib"
+  )
+
+# Import target "sfml-graphics" for configuration "MinSizeRel"
+set_property(TARGET sfml-graphics APPEND PROPERTY IMPORTED_CONFIGURATIONS MINSIZEREL)
+set_target_properties(sfml-graphics PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_MINSIZEREL "CXX"
+  IMPORTED_LOCATION_MINSIZEREL "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/MinSizeRel/sfml-graphics-s.lib"
+  )
+
+# Import target "sfml-audio" for configuration "MinSizeRel"
+set_property(TARGET sfml-audio APPEND PROPERTY IMPORTED_CONFIGURATIONS MINSIZEREL)
+set_target_properties(sfml-audio PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_MINSIZEREL "CXX"
+  IMPORTED_LOCATION_MINSIZEREL "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/MinSizeRel/sfml-audio-s.lib"
+  )
+
+# Import target "sfml-system" for configuration "RelWithDebInfo"
+set_property(TARGET sfml-system APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
+set_target_properties(sfml-system PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELWITHDEBINFO "CXX"
+  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/RelWithDebInfo/sfml-system-s.lib"
+  )
+
+# Import target "sfml-main" for configuration "RelWithDebInfo"
+set_property(TARGET sfml-main APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
+set_target_properties(sfml-main PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELWITHDEBINFO "CXX"
+  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/RelWithDebInfo/sfml-main.lib"
+  )
+
+# Import target "sfml-window" for configuration "RelWithDebInfo"
+set_property(TARGET sfml-window APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
+set_target_properties(sfml-window PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELWITHDEBINFO "CXX"
+  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/RelWithDebInfo/sfml-window-s.lib"
+  )
+
+# Import target "sfml-network" for configuration "RelWithDebInfo"
+set_property(TARGET sfml-network APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
+set_target_properties(sfml-network PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELWITHDEBINFO "CXX"
+  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/RelWithDebInfo/sfml-network-s.lib"
+  )
+
+# Import target "sfml-graphics" for configuration "RelWithDebInfo"
+set_property(TARGET sfml-graphics APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
+set_target_properties(sfml-graphics PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELWITHDEBINFO "CXX"
+  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/RelWithDebInfo/sfml-graphics-s.lib"
+  )
+
+# Import target "sfml-audio" for configuration "RelWithDebInfo"
+set_property(TARGET sfml-audio APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
+set_target_properties(sfml-audio PROPERTIES
+  IMPORTED_LINK_INTERFACE_LANGUAGES_RELWITHDEBINFO "CXX"
+  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/lib/RelWithDebInfo/sfml-audio-s.lib"
   )
 
 # This file does not depend on other imported targets which have

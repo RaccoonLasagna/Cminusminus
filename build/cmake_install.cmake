@@ -34,13 +34,12 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/llvm-objdump.exe")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
+  # Include the install script for the subdirectory.
   include("C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/cmake_install.cmake")
-
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)

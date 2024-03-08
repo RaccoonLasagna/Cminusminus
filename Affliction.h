@@ -18,7 +18,7 @@ class Full : public Affliction {
     int value = 20;
     bool permanent = false;
     public:
-    Full(StatusBlock *parent);
+    Full(StatusBlock *parent, int i);
     Full(GameObject *target);
 };
 

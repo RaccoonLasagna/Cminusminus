@@ -19,14 +19,10 @@
 BUILD_SHARED_LIBS:BOOL=FALSE
 
 //Path to a program.
-CMAKE_ADDR2LINE:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/addr2line.exe
+CMAKE_ADDR2LINE:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/llvm-addr2line.exe
 
 //Path to a program.
-CMAKE_AR:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/ar.exe
-
-//For backwards compatibility, what version of CMake commands and
-// syntax should this version of CMake try to support.
-CMAKE_BACKWARDS_COMPATIBILITY:STRING=2.4
+CMAKE_AR:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/llvm-ar.exe
 
 //Choose the type of build (Debug or Release)
 CMAKE_BUILD_TYPE:STRING=Debug
@@ -35,15 +31,16 @@ CMAKE_BUILD_TYPE:STRING=Debug
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //No help, variable specified on the command line.
-CMAKE_CXX_COMPILER:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/g++.exe
+CMAKE_CXX_COMPILER:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/clang++.exe
 
-//A wrapper around 'ar' adding the appropriate '--plugin' option
-// for the GCC compiler
-CMAKE_CXX_COMPILER_AR:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/gcc-ar.exe
+//LLVM archiver
+CMAKE_CXX_COMPILER_AR:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/llvm-ar.exe
 
-//A wrapper around 'ranlib' adding the appropriate '--plugin' option
-// for the GCC compiler
-CMAKE_CXX_COMPILER_RANLIB:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/gcc-ranlib.exe
+//`clang-scan-deps` dependency scanner
+CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/clang-scan-deps.exe
+
+//Generate index for LLVM archive
+CMAKE_CXX_COMPILER_RANLIB:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/llvm-ranlib.exe
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -64,15 +61,16 @@ CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 CMAKE_CXX_STANDARD_LIBRARIES:STRING=-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
 
 //No help, variable specified on the command line.
-CMAKE_C_COMPILER:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/gcc.exe
+CMAKE_C_COMPILER:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/clang.exe
 
-//A wrapper around 'ar' adding the appropriate '--plugin' option
-// for the GCC compiler
-CMAKE_C_COMPILER_AR:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/gcc-ar.exe
+//LLVM archiver
+CMAKE_C_COMPILER_AR:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/llvm-ar.exe
 
-//A wrapper around 'ranlib' adding the appropriate '--plugin' option
-// for the GCC compiler
-CMAKE_C_COMPILER_RANLIB:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/gcc-ranlib.exe
+//`clang-scan-deps` dependency scanner
+CMAKE_C_COMPILER_CLANG_SCAN_DEPS:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/clang-scan-deps.exe
+
+//Generate index for LLVM archive
+CMAKE_C_COMPILER_RANLIB:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/llvm-ranlib.exe
 
 //Flags used by the C compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -93,7 +91,7 @@ CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 CMAKE_C_STANDARD_LIBRARIES:STRING=-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
 
 //Path to a program.
-CMAKE_DLLTOOL:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/dlltool.exe
+CMAKE_DLLTOOL:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/llvm-dlltool.exe
 
 //Flags used by the linker during all build types.
 CMAKE_EXE_LINKER_FLAGS:STRING=
@@ -171,7 +169,7 @@ CMAKE_INSTALL_SHAREDSTATEDIR:PATH=com
 CMAKE_INSTALL_SYSCONFDIR:PATH=etc
 
 //Path to a program.
-CMAKE_LINKER:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/ld.exe
+CMAKE_LINKER:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/ld.lld.exe
 
 //Path to a program.
 CMAKE_MAKE_PROGRAM:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/mingw32-make.exe
@@ -197,13 +195,13 @@ CMAKE_MODULE_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
-CMAKE_NM:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/nm.exe
+CMAKE_NM:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/llvm-nm.exe
 
 //Path to a program.
-CMAKE_OBJCOPY:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/objcopy.exe
+CMAKE_OBJCOPY:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/llvm-objcopy.exe
 
 //Path to a program.
-CMAKE_OBJDUMP:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/objdump.exe
+CMAKE_OBJDUMP:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/llvm-objdump.exe
 
 //Value Computed by CMake
 CMAKE_PROJECT_DESCRIPTION:STATIC=
@@ -215,7 +213,7 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=Game
 
 //Path to a program.
-CMAKE_RANLIB:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/ranlib.exe
+CMAKE_RANLIB:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/llvm-ranlib.exe
 
 //RC compiler
 CMAKE_RC_COMPILER:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/windres.exe
@@ -236,7 +234,7 @@ CMAKE_RC_FLAGS_RELEASE:STRING=
 CMAKE_RC_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
-CMAKE_READELF:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/readelf.exe
+CMAKE_READELF:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/llvm-readelf.exe
 
 //Flags used by the linker during the creation of shared libraries
 // during all build types.
@@ -286,7 +284,7 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE:STRING=
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
 //Path to a program.
-CMAKE_STRIP:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/strip.exe
+CMAKE_STRIP:FILEPATH=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/llvm-strip.exe
 
 //Path to a program.
 CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
@@ -324,9 +322,6 @@ CPACK_SOURCE_7Z:BOOL=ON
 //Enable to build ZIP source packages
 CPACK_SOURCE_ZIP:BOOL=ON
 
-//Single output directory for building all executables.
-EXECUTABLE_OUTPUT_PATH:PATH=
-
 //Path to a file.
 FLAC_INCLUDE_DIR:PATH=C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers
 
@@ -350,9 +345,6 @@ Game_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 Game_SOURCE_DIR:STATIC=C:/Users/ADMIN/Documents/GitHub/Cminusminus
-
-//Single output directory for building all libraries.
-LIBRARY_OUTPUT_PATH:PATH=
 
 //Path to a file.
 OGG_INCLUDE_DIR:PATH=C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers
@@ -477,6 +469,8 @@ CMAKE_CTEST_COMMAND:INTERNAL=C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/bin/ct
 CMAKE_CXX_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_COMPILER_AR
 CMAKE_CXX_COMPILER_AR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS
+CMAKE_CXX_COMPILER_CLANG_SCAN_DEPS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_COMPILER_RANLIB
 CMAKE_CXX_COMPILER_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_CXX_FLAGS
@@ -495,6 +489,8 @@ CMAKE_CXX_STANDARD_LIBRARIES-ADVANCED:INTERNAL=1
 CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER_AR
 CMAKE_C_COMPILER_AR-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: CMAKE_C_COMPILER_CLANG_SCAN_DEPS
+CMAKE_C_COMPILER_CLANG_SCAN_DEPS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER_RANLIB
 CMAKE_C_COMPILER_RANLIB-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS
@@ -710,7 +706,7 @@ VORBIS_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: VORBIS_LIBRARY
 VORBIS_LIBRARY-ADVANCED:INTERNAL=1
 //linker supports push/pop state
-_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=TRUE
+_CMAKE_LINKER_PUSHPOP_STATE_SUPPORTED:INTERNAL=FALSE
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/Game
 

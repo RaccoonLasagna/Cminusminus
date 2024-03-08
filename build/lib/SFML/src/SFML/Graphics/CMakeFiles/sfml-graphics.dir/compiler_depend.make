@@ -101,23 +101,22 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/CircleShape.cpp.obj: C:/
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errno.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/limits.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/malloc.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/math.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/vadefs.h
 
@@ -163,16 +162,15 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Color.cpp.obj: C:/Users/
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errno.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/limits.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/malloc.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
@@ -260,22 +258,21 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ConvexShape.cpp.obj: C:/
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errno.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/limits.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/malloc.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/vadefs.h
 
@@ -449,18 +446,18 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.obj: C:/Users/A
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdarg.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdint.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_timeval.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt_startup.h \
@@ -487,8 +484,6 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Font.cpp.obj: C:/Users/A
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/setjmp.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdarg.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdint.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
@@ -605,11 +600,12 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cpp.obj: C:/User
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdint.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -638,7 +634,6 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLCheck.cpp.obj: C:/User
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdint.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
@@ -758,11 +753,12 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.obj: C:
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdint.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -792,7 +788,6 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/GLExtensions.cpp.obj: C:
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdint.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
@@ -856,16 +851,15 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Glsl.cpp.obj: C:/Users/A
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errno.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/limits.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/malloc.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
@@ -997,10 +991,11 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.obj: C:/Users/
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -1030,7 +1025,6 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Image.cpp.obj: C:/Users/
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/string.h \
@@ -1173,21 +1167,21 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.obj: C:/
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/emmintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mmintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xmmintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/emmintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mmintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdarg.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdint.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xmmintrin.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_timeval.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/assert.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt.h \
@@ -1214,8 +1208,6 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/ImageLoader.cpp.obj: C:/
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdarg.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdint.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
@@ -1323,23 +1315,22 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RectangleShape.cpp.obj: 
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errno.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/limits.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/malloc.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/math.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/vadefs.h
 
@@ -1392,22 +1383,21 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderStates.cpp.obj: C:
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errno.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/limits.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/malloc.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/vadefs.h
 
@@ -1569,11 +1559,12 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: C:
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdint.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -1603,7 +1594,6 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTarget.cpp.obj: C:
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdint.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
@@ -1760,10 +1750,11 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.obj: C
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -1792,7 +1783,6 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTexture.cpp.obj: C
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
@@ -1823,15 +1813,15 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplDefault
   C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Graphics/RenderTextureImpl.hpp \
   C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Graphics/RenderTextureImplDefault.hpp \
   C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Graphics/TextureSaver.hpp \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdint.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdint.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/vadefs.h
 
@@ -1981,11 +1971,12 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdint.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -2014,7 +2005,6 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderTextureImplFBO.cpp
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdint.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
@@ -2190,11 +2180,12 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: C:
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/messages_members.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/time_members.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdint.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -2223,7 +2214,6 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/RenderWindow.cpp.obj: C:
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdint.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
@@ -2388,11 +2378,12 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp.obj: C:/Users
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdint.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -2421,7 +2412,6 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shader.cpp.obj: C:/Users
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdint.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
@@ -2555,10 +2545,11 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shape.cpp.obj: C:/Users/
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++locale.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -2578,7 +2569,6 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Shape.cpp.obj: C:/Users/
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
@@ -2691,10 +2681,11 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Sprite.cpp.obj: C:/Users
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++locale.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -2713,7 +2704,6 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Sprite.cpp.obj: C:/Users
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
@@ -2888,10 +2878,11 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.obj: C:/Users/A
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/messages_members.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/time_members.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -2921,7 +2912,6 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Text.cpp.obj: C:/Users/A
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
@@ -3091,11 +3081,12 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.obj: C:/User
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/messages_members.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/time_members.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdint.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -3126,7 +3117,6 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Texture.cpp.obj: C:/User
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdint.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
@@ -3145,15 +3135,15 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/TextureSaver.cpp.obj: C:
   C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Graphics/GLCheck.hpp \
   C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Graphics/GLExtensions.hpp \
   C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Graphics/TextureSaver.hpp \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdint.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdint.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/vadefs.h
 
@@ -3219,16 +3209,15 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transform.cpp.obj: C:/Us
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errno.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/limits.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/malloc.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/math.h \
@@ -3300,16 +3289,15 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/Transformable.cpp.obj: C
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errno.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/limits.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/malloc.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/math.h \
@@ -3407,22 +3395,21 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.obj: C:/
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errno.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/limits.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/malloc.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/vadefs.h
 
@@ -3559,11 +3546,12 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: C:
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdint.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -3593,7 +3581,6 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexBuffer.cpp.obj: C:
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdint.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
@@ -3669,16 +3656,15 @@ lib/SFML/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/View.cpp.obj: C:/Users/A
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/crtdefs.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errno.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/limits.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/malloc.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/math.h \
@@ -3764,21 +3750,21 @@ C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Graphics/Verte
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Graphics/RenderTarget.hpp:
 
-C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Graphics/RectangleShape.hpp:
-
-C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Graphics/RectangleShape.cpp:
-
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers/freetype2/fterrdef.h:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers/freetype2/config/ftoption.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers/freetype2/config/ftheader.h:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Graphics/GLExtensions.cpp:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/fstream:
+
+C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers/freetype2/fterrors.h:
+
+C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Graphics/ConvexShape.hpp:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers/freetype2/fttypes.h:
 
@@ -3788,13 +3774,11 @@ C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Graphics/ConvexSha
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/charconv.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/tr1/bessel_function.tcc:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/ostream_insert.h:
-
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Graphics/TextureSaver.cpp:
 
@@ -3842,6 +3826,8 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/tr1/special_function_util.h:
 
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/locale_facets.h:
+
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/tr1/riemann_zeta.tcc:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/stl_algobase.h:
@@ -3858,17 +3844,23 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/tr1/gamma.tcc:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Graphics/CircleShape.cpp:
 
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/cmath:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/streambuf:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdint.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/tr1/bessel_function.tcc:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/ostream_insert.h:
+
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/stdlib.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/predefined_ops.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/ostream.tcc:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h:
-
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Graphics/Text.cpp:
 
@@ -3878,7 +3870,15 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/initializer_list
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Graphics/GLCheck.cpp:
 
+C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Graphics/VertexArray.cpp:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/ext/numeric_traits.h:
+
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Window/Window.hpp:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Graphics/Transformable.hpp:
 
@@ -3934,8 +3934,6 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/setjmp.h
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/tr1/hypergeometric.tcc:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h:
-
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bit:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Graphics/VertexBuffer.cpp:
@@ -3955,16 +3953,6 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/alloc_trait
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/algorithmfwd.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/move.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/streambuf:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/cmath:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/fstream:
-
-C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Graphics/ConvexShape.hpp:
-
-C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers/freetype2/fterrors.h:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/System/Vector2.inl:
 
@@ -4012,6 +4000,10 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/stl_bvector
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/exception.h:
 
+C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Graphics/RenderStates.cpp:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_timeval.h:
+
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Graphics/RenderTextureImplDefault.cpp:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/stl_iterator_base_types.h:
@@ -4024,13 +4016,13 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/stl_uniniti
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Graphics/BlendMode.hpp:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/memory_resource.h:
-
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Graphics/Color.hpp:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/range_access.h:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers/freetype2/ftsystem.h:
+
+C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/System/Vector2.hpp:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/System/String.hpp:
 
@@ -4076,13 +4068,11 @@ C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Graphics/RenderTex
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h:
 
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdarg.h:
+
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/tr1/ell_integral.tcc:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Graphics/RenderStates.hpp:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errno.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/debug/debug.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/stl_pair.h:
 
@@ -4094,11 +4084,9 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/exception_p
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/memoryfwd.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Config.hpp:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/hash_bytes.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/ios_base.h:
 
@@ -4108,6 +4096,12 @@ C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Graphics/Primi
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/assert.h:
 
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/memory_resource.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/debug/debug.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errno.h:
+
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/requires_hosted.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/stl_vector.h:
@@ -4115,6 +4109,8 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/stl_vector.
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/pstl/execution_defs.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/crtdefs.h:
 
@@ -4164,9 +4160,15 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/stdexcept:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/System/Err.hpp:
 
+C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Graphics/RectangleShape.cpp:
+
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/System/Export.hpp:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/System/InputStream.hpp:
+
+C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers/stb_image/stb_image_write.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/cstring:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/System/NonCopyable.hpp:
 
@@ -4181,6 +4183,10 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/basic_ios.h
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/basic_ios.tcc:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/hash_bytes.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mmintrin.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/basic_string.h:
 
@@ -4209,8 +4215,6 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/stringfwd.h
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/cctype:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/clocale:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/cwchar:
 
@@ -4252,18 +4256,6 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/typeinfo:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/atomic_word.h:
 
-C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Graphics/VertexArray.cpp:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/ext/numeric_traits.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h:
-
-C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/System/Vector2.hpp:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h:
-
-C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/System/Vector3.hpp:
-
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/streambuf.tcc:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h:
@@ -4298,10 +4290,6 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/locale_facets.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdarg.h:
-
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sys/timeb.h:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Window/WindowBase.hpp:
@@ -4318,13 +4306,13 @@ C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Window/Context
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Graphics/Glsl.hpp:
 
+C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/System/Vector3.hpp:
+
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/System/Vector3.inl:
 
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/emmintrin.h:
+
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers/stb_image/stb_image.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/cstring:
-
-C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers/stb_image/stb_image_write.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/cwctype:
 
@@ -4332,12 +4320,6 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/stream_iter
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/math.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/emmintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xmmintrin.h:
 
-C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Graphics/RenderStates.cpp:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_timeval.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mmintrin.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xmmintrin.h:
+C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Graphics/RectangleShape.hpp:

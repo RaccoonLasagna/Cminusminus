@@ -203,8 +203,8 @@ private:
   LayerSystem *parent;
 
 public:
+Ground(LayerSystem *p = nullptr, int width = 0, int height = 0);
   vector<vector<Land>> insideLayer;
-  Ground(LayerSystem *p = nullptr, int width = 0, int height = 0);
 };
 
 class LayerSystem {
@@ -219,17 +219,17 @@ public:
   LayerSystem(int width, int height, int amount);
   LayerSystem(int width, int height);
   //-------------------------//
+  void update();
   bool createNewLayer(string name); // ตรวจสอบชื่อซ้ำเพื่อไม่ให้มีชื่อซ้ำ
   bool removeLayer(string name); // มี layer นั้นๆให้ลบไหม
-  int getDistance(GameObject *a, GameObject *b);
-  int getDistance(int x1, int y1, int x2, int y2);
+  double getDistance(GameObject *a, GameObject *b);
+  double getDistance(int x1, int y1, int x2, int y2);
   //-------------------------//
   Layer *getLayer(string name);
   inline Layer *getLayer(int i);
   inline Ground getGround();
   inline string getLayerName(int i);
+  vector<vector<GameObject *>> getOverAllLayer();
 };
-
-class Command {};
 
 #endif

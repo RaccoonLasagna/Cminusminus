@@ -111,10 +111,11 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h
@@ -143,7 +144,6 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Err.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/swprintf.inl
@@ -230,10 +230,11 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++locale.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h
@@ -252,7 +253,6 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/FileInputStream.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/swprintf.inl
@@ -281,16 +281,15 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/MemoryInputStream.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/crtdefs.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errno.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/limits.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/malloc.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h
@@ -314,114 +313,119 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/adxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/ammintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxbf16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxcomplexintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxfp16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxint8intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxtileintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx2intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx5124fmapsintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx5124vnniwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bf16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bf16vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bitalgintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512cdintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512dqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512erintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fp16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fp16vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512ifmaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512ifmavlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512pfintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmi2intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmi2vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmiintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmivlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vlbwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vldqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vnniintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vnnivlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vp2intersectintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vp2intersectvlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vpopcntdqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vpopcntdqvlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxifmaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxneconvertintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxvnniint8intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxvnniintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/bmi2intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/bmiintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cetintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cldemoteintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clflushoptintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clwbintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clzerointrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cmpccxaddintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/emmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/enqcmdintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/f16cintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fma4intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fmaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fxsrintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/gfniintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/hresetintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/ia32intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/immintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/keylockerintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/lwpintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/lzcntintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm3dnow.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/movdirintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mwaitintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mwaitxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pconfigintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pkuintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/popcntintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/prfchiintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/prfchwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/raointintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/rdseedintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/rtmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/serializeintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/sgxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/shaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/smmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tbmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tsxldtrkintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/uintrintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/vaesintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/vpclmulqdqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/waitpkgintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/wbnoinvdintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/wmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/x86gprintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/x86intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xopintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsavecintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsaveintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsaveoptintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsavesintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xtestintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__wmmintrin_aes.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__wmmintrin_pclmul.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/adxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ammintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxcomplexintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxfp16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bf16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bitalgintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bwintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512cdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512dqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512erintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512fintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512fp16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512ifmaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512ifmavlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512pfintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmi2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmiintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmivlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbf16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbitalgintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbwintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlcdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vldqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlfp16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvbmi2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvnniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvp2intersectintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vnniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vp2intersectintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vpopcntdqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vpopcntdqvlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxifmaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxneconvertintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniint16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniint8intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/bmi2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/bmiintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cetintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cldemoteintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clflushoptintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clwbintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clzerointrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cmpccxaddintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/crc32intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/emmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/enqcmdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/f16cintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fma4intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fmaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fxsrintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/gfniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/hresetintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ia32intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/immintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/invpcidintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/keylockerintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/lwpintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/lzcntintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm3dnow.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/movdirintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mwaitxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pconfigintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pkuintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/popcntintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/prfchiintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/prfchwintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ptwriteintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/raointintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rdpruintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rdseedintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rtmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/serializeintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sgxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sha512intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/shaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sm3intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sm4intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/smmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdarg.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tbmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tsxldtrkintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/uintrintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vaesintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vpclmulqdqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/waitpkgintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/wbnoinvdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/wmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/x86gprintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/x86intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xopintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsavecintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsaveintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsaveoptintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsavesintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xtestintrin.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_bsd_types.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_unicode.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_timeval.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/apiset.h
@@ -446,7 +450,6 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/dpapi.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/driverspecs.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errhandlingapi.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errno.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/excpt.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/fibersapi.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/fileapi.h
@@ -529,8 +532,6 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Mutex.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/servprov.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/shellapi.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/specstrings.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdarg.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stralign.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/string.h
@@ -703,10 +704,11 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/messages_members.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/time_members.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h
@@ -736,7 +738,6 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/String.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/string.h
@@ -763,114 +764,119 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/adxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/ammintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxbf16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxcomplexintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxfp16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxint8intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxtileintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx2intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx5124fmapsintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx5124vnniwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bf16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bf16vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bitalgintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512cdintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512dqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512erintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fp16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fp16vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512ifmaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512ifmavlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512pfintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmi2intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmi2vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmiintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmivlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vlbwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vldqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vnniintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vnnivlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vp2intersectintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vp2intersectvlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vpopcntdqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vpopcntdqvlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxifmaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxneconvertintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxvnniint8intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxvnniintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/bmi2intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/bmiintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cetintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cldemoteintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clflushoptintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clwbintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clzerointrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cmpccxaddintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/emmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/enqcmdintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/f16cintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fma4intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fmaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fxsrintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/gfniintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/hresetintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/ia32intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/immintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/keylockerintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/lwpintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/lzcntintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm3dnow.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/movdirintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mwaitintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mwaitxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pconfigintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pkuintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/popcntintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/prfchiintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/prfchwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/raointintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/rdseedintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/rtmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/serializeintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/sgxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/shaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/smmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tbmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tsxldtrkintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/uintrintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/vaesintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/vpclmulqdqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/waitpkgintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/wbnoinvdintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/wmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/x86gprintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/x86intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xopintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsavecintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsaveintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsaveoptintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsavesintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xtestintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__wmmintrin_aes.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__wmmintrin_pclmul.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/adxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ammintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxcomplexintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxfp16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bf16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bitalgintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bwintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512cdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512dqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512erintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512fintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512fp16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512ifmaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512ifmavlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512pfintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmi2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmiintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmivlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbf16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbitalgintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbwintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlcdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vldqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlfp16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvbmi2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvnniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvp2intersectintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vnniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vp2intersectintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vpopcntdqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vpopcntdqvlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxifmaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxneconvertintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniint16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniint8intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/bmi2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/bmiintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cetintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cldemoteintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clflushoptintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clwbintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clzerointrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cmpccxaddintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/crc32intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/emmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/enqcmdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/f16cintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fma4intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fmaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fxsrintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/gfniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/hresetintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ia32intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/immintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/invpcidintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/keylockerintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/lwpintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/lzcntintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm3dnow.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/movdirintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mwaitxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pconfigintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pkuintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/popcntintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/prfchiintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/prfchwintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ptwriteintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/raointintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rdpruintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rdseedintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rtmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/serializeintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sgxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sha512intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/shaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sm3intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sm4intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/smmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdarg.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tbmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tsxldtrkintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/uintrintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vaesintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vpclmulqdqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/waitpkgintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/wbnoinvdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/wmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/x86gprintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/x86intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xopintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsavecintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsaveintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsaveoptintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsavesintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xtestintrin.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_bsd_types.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_unicode.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_timeval.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/apiset.h
@@ -895,7 +901,6 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/dpapi.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/driverspecs.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errhandlingapi.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errno.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/excpt.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/fibersapi.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/fileapi.h
@@ -978,8 +983,6 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Thread.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/servprov.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/shellapi.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/specstrings.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdarg.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stralign.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/string.h
@@ -1039,114 +1042,119 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/ThreadLocal.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/adxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/ammintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxbf16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxcomplexintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxfp16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxint8intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxtileintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx2intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx5124fmapsintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx5124vnniwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bf16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bf16vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bitalgintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512cdintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512dqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512erintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fp16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fp16vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512ifmaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512ifmavlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512pfintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmi2intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmi2vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmiintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmivlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vlbwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vldqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vnniintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vnnivlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vp2intersectintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vp2intersectvlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vpopcntdqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vpopcntdqvlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxifmaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxneconvertintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxvnniint8intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxvnniintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/bmi2intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/bmiintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cetintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cldemoteintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clflushoptintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clwbintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clzerointrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cmpccxaddintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/emmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/enqcmdintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/f16cintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fma4intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fmaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fxsrintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/gfniintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/hresetintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/ia32intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/immintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/keylockerintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/lwpintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/lzcntintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm3dnow.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/movdirintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mwaitintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mwaitxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pconfigintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pkuintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/popcntintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/prfchiintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/prfchwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/raointintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/rdseedintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/rtmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/serializeintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/sgxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/shaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/smmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tbmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tsxldtrkintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/uintrintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/vaesintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/vpclmulqdqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/waitpkgintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/wbnoinvdintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/wmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/x86gprintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/x86intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xopintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsavecintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsaveintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsaveoptintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsavesintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xtestintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__wmmintrin_aes.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__wmmintrin_pclmul.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/adxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ammintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxcomplexintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxfp16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bf16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bitalgintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bwintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512cdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512dqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512erintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512fintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512fp16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512ifmaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512ifmavlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512pfintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmi2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmiintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmivlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbf16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbitalgintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbwintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlcdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vldqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlfp16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvbmi2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvnniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvp2intersectintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vnniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vp2intersectintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vpopcntdqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vpopcntdqvlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxifmaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxneconvertintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniint16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniint8intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/bmi2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/bmiintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cetintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cldemoteintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clflushoptintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clwbintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clzerointrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cmpccxaddintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/crc32intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/emmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/enqcmdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/f16cintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fma4intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fmaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fxsrintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/gfniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/hresetintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ia32intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/immintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/invpcidintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/keylockerintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/lwpintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/lzcntintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm3dnow.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/movdirintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mwaitxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pconfigintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pkuintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/popcntintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/prfchiintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/prfchwintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ptwriteintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/raointintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rdpruintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rdseedintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rtmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/serializeintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sgxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sha512intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/shaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sm3intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sm4intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/smmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdarg.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tbmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tsxldtrkintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/uintrintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vaesintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vpclmulqdqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/waitpkgintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/wbnoinvdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/wmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/x86gprintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/x86intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xopintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsavecintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsaveintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsaveoptintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsavesintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xtestintrin.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_bsd_types.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_unicode.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_timeval.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/apiset.h
@@ -1171,7 +1179,6 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/ThreadLocal.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/dpapi.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/driverspecs.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errhandlingapi.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errno.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/excpt.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/fibersapi.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/fileapi.h
@@ -1254,8 +1261,6 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/ThreadLocal.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/servprov.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/shellapi.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/specstrings.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdarg.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stralign.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/string.h
@@ -1323,114 +1328,119 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ClockImpl.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/adxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/ammintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxbf16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxcomplexintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxfp16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxint8intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxtileintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx2intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx5124fmapsintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx5124vnniwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bf16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bf16vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bitalgintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512cdintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512dqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512erintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fp16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fp16vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512ifmaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512ifmavlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512pfintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmi2intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmi2vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmiintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmivlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vlbwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vldqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vnniintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vnnivlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vp2intersectintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vp2intersectvlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vpopcntdqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vpopcntdqvlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxifmaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxneconvertintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxvnniint8intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxvnniintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/bmi2intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/bmiintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cetintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cldemoteintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clflushoptintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clwbintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clzerointrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cmpccxaddintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/emmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/enqcmdintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/f16cintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fma4intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fmaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fxsrintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/gfniintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/hresetintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/ia32intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/immintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/keylockerintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/lwpintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/lzcntintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm3dnow.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/movdirintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mwaitintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mwaitxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pconfigintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pkuintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/popcntintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/prfchiintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/prfchwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/raointintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/rdseedintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/rtmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/serializeintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/sgxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/shaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/smmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tbmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tsxldtrkintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/uintrintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/vaesintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/vpclmulqdqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/waitpkgintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/wbnoinvdintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/wmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/x86gprintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/x86intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xopintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsavecintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsaveintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsaveoptintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsavesintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xtestintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__wmmintrin_aes.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__wmmintrin_pclmul.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/adxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ammintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxcomplexintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxfp16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bf16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bitalgintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bwintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512cdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512dqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512erintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512fintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512fp16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512ifmaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512ifmavlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512pfintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmi2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmiintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmivlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbf16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbitalgintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbwintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlcdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vldqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlfp16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvbmi2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvnniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvp2intersectintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vnniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vp2intersectintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vpopcntdqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vpopcntdqvlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxifmaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxneconvertintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniint16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniint8intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/bmi2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/bmiintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cetintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cldemoteintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clflushoptintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clwbintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clzerointrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cmpccxaddintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/crc32intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/emmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/enqcmdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/f16cintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fma4intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fmaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fxsrintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/gfniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/hresetintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ia32intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/immintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/invpcidintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/keylockerintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/lwpintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/lzcntintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm3dnow.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/movdirintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mwaitxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pconfigintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pkuintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/popcntintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/prfchiintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/prfchwintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ptwriteintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/raointintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rdpruintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rdseedintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rtmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/serializeintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sgxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sha512intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/shaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sm3intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sm4intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/smmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdarg.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tbmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tsxldtrkintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/uintrintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vaesintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vpclmulqdqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/waitpkgintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/wbnoinvdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/wmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/x86gprintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/x86intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xopintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsavecintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsaveintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsaveoptintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsavesintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xtestintrin.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_bsd_types.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_unicode.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_timeval.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/apiset.h
@@ -1455,7 +1465,6 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ClockImpl.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/dpapi.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/driverspecs.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errhandlingapi.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errno.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/excpt.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/fibersapi.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/fileapi.h
@@ -1538,8 +1547,6 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ClockImpl.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/servprov.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/shellapi.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/specstrings.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdarg.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stralign.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/string.h
@@ -1598,114 +1605,119 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/MutexImpl.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/adxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/ammintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxbf16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxcomplexintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxfp16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxint8intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxtileintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx2intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx5124fmapsintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx5124vnniwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bf16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bf16vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bitalgintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512cdintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512dqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512erintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fp16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fp16vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512ifmaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512ifmavlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512pfintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmi2intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmi2vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmiintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmivlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vlbwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vldqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vnniintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vnnivlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vp2intersectintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vp2intersectvlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vpopcntdqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vpopcntdqvlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxifmaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxneconvertintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxvnniint8intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxvnniintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/bmi2intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/bmiintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cetintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cldemoteintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clflushoptintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clwbintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clzerointrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cmpccxaddintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/emmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/enqcmdintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/f16cintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fma4intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fmaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fxsrintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/gfniintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/hresetintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/ia32intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/immintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/keylockerintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/lwpintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/lzcntintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm3dnow.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/movdirintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mwaitintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mwaitxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pconfigintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pkuintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/popcntintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/prfchiintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/prfchwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/raointintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/rdseedintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/rtmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/serializeintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/sgxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/shaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/smmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tbmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tsxldtrkintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/uintrintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/vaesintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/vpclmulqdqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/waitpkgintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/wbnoinvdintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/wmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/x86gprintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/x86intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xopintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsavecintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsaveintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsaveoptintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsavesintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xtestintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__wmmintrin_aes.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__wmmintrin_pclmul.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/adxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ammintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxcomplexintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxfp16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bf16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bitalgintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bwintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512cdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512dqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512erintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512fintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512fp16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512ifmaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512ifmavlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512pfintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmi2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmiintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmivlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbf16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbitalgintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbwintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlcdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vldqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlfp16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvbmi2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvnniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvp2intersectintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vnniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vp2intersectintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vpopcntdqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vpopcntdqvlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxifmaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxneconvertintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniint16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniint8intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/bmi2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/bmiintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cetintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cldemoteintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clflushoptintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clwbintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clzerointrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cmpccxaddintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/crc32intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/emmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/enqcmdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/f16cintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fma4intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fmaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fxsrintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/gfniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/hresetintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ia32intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/immintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/invpcidintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/keylockerintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/lwpintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/lzcntintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm3dnow.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/movdirintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mwaitxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pconfigintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pkuintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/popcntintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/prfchiintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/prfchwintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ptwriteintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/raointintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rdpruintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rdseedintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rtmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/serializeintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sgxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sha512intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/shaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sm3intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sm4intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/smmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdarg.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tbmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tsxldtrkintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/uintrintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vaesintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vpclmulqdqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/waitpkgintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/wbnoinvdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/wmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/x86gprintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/x86intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xopintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsavecintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsaveintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsaveoptintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsavesintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xtestintrin.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_bsd_types.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_unicode.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_timeval.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/apiset.h
@@ -1730,7 +1742,6 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/MutexImpl.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/dpapi.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/driverspecs.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errhandlingapi.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errno.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/excpt.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/fibersapi.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/fileapi.h
@@ -1813,8 +1824,6 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/MutexImpl.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/servprov.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/shellapi.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/specstrings.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdarg.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stralign.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/string.h
@@ -1873,114 +1882,119 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/SleepImpl.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/adxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/ammintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxbf16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxcomplexintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxfp16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxint8intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxtileintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx2intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx5124fmapsintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx5124vnniwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bf16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bf16vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bitalgintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512cdintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512dqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512erintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fp16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fp16vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512ifmaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512ifmavlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512pfintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmi2intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmi2vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmiintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmivlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vlbwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vldqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vnniintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vnnivlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vp2intersectintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vp2intersectvlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vpopcntdqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vpopcntdqvlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxifmaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxneconvertintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxvnniint8intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxvnniintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/bmi2intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/bmiintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cetintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cldemoteintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clflushoptintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clwbintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clzerointrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cmpccxaddintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/emmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/enqcmdintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/f16cintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fma4intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fmaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fxsrintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/gfniintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/hresetintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/ia32intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/immintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/keylockerintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/lwpintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/lzcntintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm3dnow.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/movdirintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mwaitintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mwaitxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pconfigintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pkuintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/popcntintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/prfchiintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/prfchwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/raointintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/rdseedintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/rtmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/serializeintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/sgxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/shaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/smmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tbmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tsxldtrkintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/uintrintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/vaesintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/vpclmulqdqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/waitpkgintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/wbnoinvdintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/wmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/x86gprintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/x86intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xopintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsavecintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsaveintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsaveoptintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsavesintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xtestintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__wmmintrin_aes.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__wmmintrin_pclmul.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/adxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ammintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxcomplexintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxfp16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bf16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bitalgintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bwintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512cdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512dqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512erintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512fintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512fp16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512ifmaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512ifmavlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512pfintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmi2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmiintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmivlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbf16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbitalgintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbwintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlcdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vldqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlfp16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvbmi2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvnniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvp2intersectintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vnniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vp2intersectintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vpopcntdqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vpopcntdqvlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxifmaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxneconvertintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniint16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniint8intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/bmi2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/bmiintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cetintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cldemoteintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clflushoptintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clwbintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clzerointrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cmpccxaddintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/crc32intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/emmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/enqcmdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/f16cintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fma4intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fmaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fxsrintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/gfniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/hresetintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ia32intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/immintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/invpcidintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/keylockerintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/lwpintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/lzcntintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm3dnow.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/movdirintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mwaitxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pconfigintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pkuintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/popcntintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/prfchiintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/prfchwintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ptwriteintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/raointintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rdpruintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rdseedintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rtmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/serializeintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sgxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sha512intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/shaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sm3intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sm4intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/smmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdarg.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tbmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tsxldtrkintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/uintrintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vaesintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vpclmulqdqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/waitpkgintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/wbnoinvdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/wmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/x86gprintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/x86intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xopintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsavecintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsaveintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsaveoptintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsavesintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xtestintrin.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_bsd_types.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_unicode.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_timeval.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/apiset.h
@@ -2005,7 +2019,6 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/SleepImpl.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/dpapi.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/driverspecs.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errhandlingapi.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errno.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/excpt.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/fibersapi.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/fileapi.h
@@ -2088,8 +2101,6 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/SleepImpl.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/servprov.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/shellapi.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/specstrings.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdarg.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stralign.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/string.h
@@ -2242,116 +2253,123 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ThreadImpl.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/adxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/ammintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxbf16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxcomplexintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxfp16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxint8intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxtileintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx2intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx5124fmapsintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx5124vnniwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bf16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bf16vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bitalgintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512cdintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512dqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512erintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fp16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fp16vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512ifmaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512ifmavlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512pfintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmi2intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmi2vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmiintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmivlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vlbwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vldqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vnniintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vnnivlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vp2intersectintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vp2intersectvlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vpopcntdqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vpopcntdqvlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxifmaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxneconvertintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxvnniint8intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxvnniintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/bmi2intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/bmiintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cetintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cldemoteintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clflushoptintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clwbintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clzerointrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cmpccxaddintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/emmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/enqcmdintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/f16cintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fma4intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fmaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fxsrintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/gfniintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/hresetintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/ia32intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/immintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/keylockerintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/lwpintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/lzcntintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm3dnow.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/movdirintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mwaitintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mwaitxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pconfigintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pkuintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/popcntintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/prfchiintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/prfchwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/raointintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/rdseedintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/rtmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/serializeintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/sgxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/shaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/smmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tbmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tsxldtrkintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/uintrintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/vaesintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/vpclmulqdqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/waitpkgintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/wbnoinvdintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/wmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/x86gprintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/x86intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xopintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsavecintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsaveintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsaveoptintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsavesintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xtestintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__wmmintrin_aes.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__wmmintrin_pclmul.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/adxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ammintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxcomplexintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxfp16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bf16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bitalgintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bwintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512cdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512dqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512erintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512fintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512fp16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512ifmaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512ifmavlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512pfintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmi2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmiintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmivlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbf16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbitalgintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbwintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlcdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vldqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlfp16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvbmi2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvnniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvp2intersectintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vnniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vp2intersectintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vpopcntdqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vpopcntdqvlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxifmaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxneconvertintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniint16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniint8intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/bmi2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/bmiintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cetintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cldemoteintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clflushoptintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clwbintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clzerointrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cmpccxaddintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/crc32intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/emmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/enqcmdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/f16cintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fma4intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fmaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fxsrintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/gfniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/hresetintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ia32intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/immintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/invpcidintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/keylockerintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/lwpintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/lzcntintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm3dnow.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/movdirintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mwaitxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pconfigintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pkuintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/popcntintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/prfchiintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/prfchwintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ptwriteintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/raointintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rdpruintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rdseedintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rtmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/serializeintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sgxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sha512intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/shaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sm3intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sm4intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/smmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdarg.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tbmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tsxldtrkintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/uintrintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vaesintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vpclmulqdqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/waitpkgintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/wbnoinvdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/wmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/x86gprintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/x86intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xopintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsavecintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsaveintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsaveoptintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsavesintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xtestintrin.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_bsd_types.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_unicode.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_timeval.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/apiset.h
@@ -2473,8 +2491,6 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ThreadImpl.cpp.obj
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/shellapi.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/specstrings.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdarg.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stralign.h
@@ -2540,114 +2556,119 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ThreadLocalImpl.cpp.ob
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++config.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/adxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/ammintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxbf16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxcomplexintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxfp16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxint8intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxtileintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx2intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx5124fmapsintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx5124vnniwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bf16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bf16vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bitalgintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512cdintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512dqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512erintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fp16intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fp16vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512ifmaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512ifmavlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512pfintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmi2intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmi2vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmiintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmivlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vlbwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vldqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vnniintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vnnivlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vp2intersectintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vp2intersectvlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vpopcntdqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vpopcntdqvlintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxifmaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxneconvertintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxvnniint8intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxvnniintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/bmi2intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/bmiintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cetintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cldemoteintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clflushoptintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clwbintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clzerointrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cmpccxaddintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/emmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/enqcmdintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/f16cintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fma4intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fmaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fxsrintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/gfniintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/hresetintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/ia32intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/immintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/keylockerintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/lwpintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/lzcntintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm3dnow.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/movdirintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mwaitintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mwaitxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pconfigintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pkuintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/popcntintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/prfchiintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/prfchwintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/raointintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/rdseedintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/rtmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/serializeintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/sgxintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/shaintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/smmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdarg.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tbmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tsxldtrkintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/uintrintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/vaesintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/vpclmulqdqintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/waitpkgintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/wbnoinvdintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/wmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/x86gprintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/x86intrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xmmintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xopintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsavecintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsaveintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsaveoptintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsavesintrin.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xtestintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__wmmintrin_aes.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__wmmintrin_pclmul.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/adxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ammintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxcomplexintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxfp16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bf16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bitalgintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bwintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512cdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512dqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512erintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512fintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512fp16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512ifmaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512ifmavlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512pfintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmi2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmiintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmivlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbf16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbitalgintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbwintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlcdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vldqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlfp16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvbmi2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvnniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvp2intersectintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vnniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vp2intersectintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vpopcntdqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vpopcntdqvlintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxifmaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxneconvertintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniint16intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniint8intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/bmi2intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/bmiintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cetintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cldemoteintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clflushoptintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clwbintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clzerointrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cmpccxaddintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/crc32intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/emmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/enqcmdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/f16cintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fma4intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fmaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fxsrintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/gfniintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/hresetintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ia32intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/immintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/invpcidintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/keylockerintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/lwpintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/lzcntintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm3dnow.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/movdirintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mwaitxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pconfigintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pkuintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/popcntintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/prfchiintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/prfchwintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ptwriteintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/raointintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rdpruintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rdseedintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rtmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/serializeintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sgxintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sha512intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/shaintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sm3intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sm4intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/smmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdarg.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tbmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tsxldtrkintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/uintrintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vaesintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vpclmulqdqintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/waitpkgintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/wbnoinvdintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/wmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/x86gprintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/x86intrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xmmintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xopintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsavecintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsaveintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsaveoptintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsavesintrin.h
+ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xtestintrin.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_bsd_types.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_stdarg.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_unicode.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_timeval.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/apiset.h
@@ -2672,7 +2693,6 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ThreadLocalImpl.cpp.ob
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/dpapi.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/driverspecs.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errhandlingapi.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errno.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/excpt.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/fibersapi.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/fileapi.h
@@ -2755,8 +2775,6 @@ lib/SFML/src/SFML/System/CMakeFiles/sfml-system.dir/Win32/ThreadLocalImpl.cpp.ob
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/servprov.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/shellapi.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/specstrings.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdarg.h
- C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stralign.h
  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/string.h

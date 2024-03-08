@@ -68,63 +68,63 @@ include CMakeFiles/GameGod.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/GameGod.dir/flags.make
 
-CMakeFiles/GameGod.dir/FundamentalSystem.obj: CMakeFiles/GameGod.dir/flags.make
-CMakeFiles/GameGod.dir/FundamentalSystem.obj: CMakeFiles/GameGod.dir/includes_CXX.rsp
-CMakeFiles/GameGod.dir/FundamentalSystem.obj: C:/Users/ADMIN/Documents/GitHub/Cminusminus/FundamentalSystem.cpp
-CMakeFiles/GameGod.dir/FundamentalSystem.obj: CMakeFiles/GameGod.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GameGod.dir/FundamentalSystem.obj"
-	C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameGod.dir/FundamentalSystem.obj -MF CMakeFiles\GameGod.dir\FundamentalSystem.obj.d -o CMakeFiles\GameGod.dir\FundamentalSystem.obj -c C:\Users\ADMIN\Documents\GitHub\Cminusminus\FundamentalSystem.cpp
+CMakeFiles/GameGod.dir/Gui.cpp.obj: CMakeFiles/GameGod.dir/flags.make
+CMakeFiles/GameGod.dir/Gui.cpp.obj: CMakeFiles/GameGod.dir/includes_CXX.rsp
+CMakeFiles/GameGod.dir/Gui.cpp.obj: C:/Users/ADMIN/Documents/GitHub/Cminusminus/Gui.cpp
+CMakeFiles/GameGod.dir/Gui.cpp.obj: CMakeFiles/GameGod.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/GameGod.dir/Gui.cpp.obj"
+	C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameGod.dir/Gui.cpp.obj -MF CMakeFiles\GameGod.dir\Gui.cpp.obj.d -o CMakeFiles\GameGod.dir\Gui.cpp.obj -c C:\Users\ADMIN\Documents\GitHub\Cminusminus\Gui.cpp
 
-CMakeFiles/GameGod.dir/FundamentalSystem.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GameGod.dir/FundamentalSystem.i"
-	C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ADMIN\Documents\GitHub\Cminusminus\FundamentalSystem.cpp > CMakeFiles\GameGod.dir\FundamentalSystem.i
+CMakeFiles/GameGod.dir/Gui.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GameGod.dir/Gui.cpp.i"
+	C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ADMIN\Documents\GitHub\Cminusminus\Gui.cpp > CMakeFiles\GameGod.dir\Gui.cpp.i
 
-CMakeFiles/GameGod.dir/FundamentalSystem.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GameGod.dir/FundamentalSystem.s"
-	C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ADMIN\Documents\GitHub\Cminusminus\FundamentalSystem.cpp -o CMakeFiles\GameGod.dir\FundamentalSystem.s
+CMakeFiles/GameGod.dir/Gui.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GameGod.dir/Gui.cpp.s"
+	C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ADMIN\Documents\GitHub\Cminusminus\Gui.cpp -o CMakeFiles\GameGod.dir\Gui.cpp.s
 
-CMakeFiles/GameGod.dir/Gui.obj: CMakeFiles/GameGod.dir/flags.make
-CMakeFiles/GameGod.dir/Gui.obj: CMakeFiles/GameGod.dir/includes_CXX.rsp
-CMakeFiles/GameGod.dir/Gui.obj: C:/Users/ADMIN/Documents/GitHub/Cminusminus/Gui.cpp
-CMakeFiles/GameGod.dir/Gui.obj: CMakeFiles/GameGod.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GameGod.dir/Gui.obj"
-	C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameGod.dir/Gui.obj -MF CMakeFiles\GameGod.dir\Gui.obj.d -o CMakeFiles\GameGod.dir\Gui.obj -c C:\Users\ADMIN\Documents\GitHub\Cminusminus\Gui.cpp
+CMakeFiles/GameGod.dir/FundamentalSystem.cpp.obj: CMakeFiles/GameGod.dir/flags.make
+CMakeFiles/GameGod.dir/FundamentalSystem.cpp.obj: CMakeFiles/GameGod.dir/includes_CXX.rsp
+CMakeFiles/GameGod.dir/FundamentalSystem.cpp.obj: C:/Users/ADMIN/Documents/GitHub/Cminusminus/FundamentalSystem.cpp
+CMakeFiles/GameGod.dir/FundamentalSystem.cpp.obj: CMakeFiles/GameGod.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/GameGod.dir/FundamentalSystem.cpp.obj"
+	C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameGod.dir/FundamentalSystem.cpp.obj -MF CMakeFiles\GameGod.dir\FundamentalSystem.cpp.obj.d -o CMakeFiles\GameGod.dir\FundamentalSystem.cpp.obj -c C:\Users\ADMIN\Documents\GitHub\Cminusminus\FundamentalSystem.cpp
 
-CMakeFiles/GameGod.dir/Gui.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GameGod.dir/Gui.i"
-	C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ADMIN\Documents\GitHub\Cminusminus\Gui.cpp > CMakeFiles\GameGod.dir\Gui.i
+CMakeFiles/GameGod.dir/FundamentalSystem.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GameGod.dir/FundamentalSystem.cpp.i"
+	C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ADMIN\Documents\GitHub\Cminusminus\FundamentalSystem.cpp > CMakeFiles\GameGod.dir\FundamentalSystem.cpp.i
 
-CMakeFiles/GameGod.dir/Gui.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GameGod.dir/Gui.s"
-	C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ADMIN\Documents\GitHub\Cminusminus\Gui.cpp -o CMakeFiles\GameGod.dir\Gui.s
+CMakeFiles/GameGod.dir/FundamentalSystem.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GameGod.dir/FundamentalSystem.cpp.s"
+	C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ADMIN\Documents\GitHub\Cminusminus\FundamentalSystem.cpp -o CMakeFiles\GameGod.dir\FundamentalSystem.cpp.s
 
-CMakeFiles/GameGod.dir/main.obj: CMakeFiles/GameGod.dir/flags.make
-CMakeFiles/GameGod.dir/main.obj: CMakeFiles/GameGod.dir/includes_CXX.rsp
-CMakeFiles/GameGod.dir/main.obj: C:/Users/ADMIN/Documents/GitHub/Cminusminus/main.cpp
-CMakeFiles/GameGod.dir/main.obj: CMakeFiles/GameGod.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GameGod.dir/main.obj"
-	C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameGod.dir/main.obj -MF CMakeFiles\GameGod.dir\main.obj.d -o CMakeFiles\GameGod.dir\main.obj -c C:\Users\ADMIN\Documents\GitHub\Cminusminus\main.cpp
+CMakeFiles/GameGod.dir/main.cpp.obj: CMakeFiles/GameGod.dir/flags.make
+CMakeFiles/GameGod.dir/main.cpp.obj: CMakeFiles/GameGod.dir/includes_CXX.rsp
+CMakeFiles/GameGod.dir/main.cpp.obj: C:/Users/ADMIN/Documents/GitHub/Cminusminus/main.cpp
+CMakeFiles/GameGod.dir/main.cpp.obj: CMakeFiles/GameGod.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/GameGod.dir/main.cpp.obj"
+	C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/GameGod.dir/main.cpp.obj -MF CMakeFiles\GameGod.dir\main.cpp.obj.d -o CMakeFiles\GameGod.dir\main.cpp.obj -c C:\Users\ADMIN\Documents\GitHub\Cminusminus\main.cpp
 
-CMakeFiles/GameGod.dir/main.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GameGod.dir/main.i"
-	C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ADMIN\Documents\GitHub\Cminusminus\main.cpp > CMakeFiles\GameGod.dir\main.i
+CMakeFiles/GameGod.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/GameGod.dir/main.cpp.i"
+	C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\ADMIN\Documents\GitHub\Cminusminus\main.cpp > CMakeFiles\GameGod.dir\main.cpp.i
 
-CMakeFiles/GameGod.dir/main.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GameGod.dir/main.s"
-	C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ADMIN\Documents\GitHub\Cminusminus\main.cpp -o CMakeFiles\GameGod.dir\main.s
+CMakeFiles/GameGod.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/GameGod.dir/main.cpp.s"
+	C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\clang++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\ADMIN\Documents\GitHub\Cminusminus\main.cpp -o CMakeFiles\GameGod.dir\main.cpp.s
 
 # Object files for target GameGod
 GameGod_OBJECTS = \
-"CMakeFiles/GameGod.dir/FundamentalSystem.obj" \
-"CMakeFiles/GameGod.dir/Gui.obj" \
-"CMakeFiles/GameGod.dir/main.obj"
+"CMakeFiles/GameGod.dir/Gui.cpp.obj" \
+"CMakeFiles/GameGod.dir/FundamentalSystem.cpp.obj" \
+"CMakeFiles/GameGod.dir/main.cpp.obj"
 
 # External object files for target GameGod
 GameGod_EXTERNAL_OBJECTS =
 
-GameGod.exe: CMakeFiles/GameGod.dir/FundamentalSystem.obj
-GameGod.exe: CMakeFiles/GameGod.dir/Gui.obj
-GameGod.exe: CMakeFiles/GameGod.dir/main.obj
+GameGod.exe: CMakeFiles/GameGod.dir/Gui.cpp.obj
+GameGod.exe: CMakeFiles/GameGod.dir/FundamentalSystem.cpp.obj
+GameGod.exe: CMakeFiles/GameGod.dir/main.cpp.obj
 GameGod.exe: CMakeFiles/GameGod.dir/build.make
 GameGod.exe: lib/SFML/lib/libsfml-graphics-s-d.a
 GameGod.exe: lib/SFML/lib/libsfml-window-s-d.a

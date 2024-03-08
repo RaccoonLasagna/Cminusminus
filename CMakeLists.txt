@@ -1,14 +1,21 @@
+cmake_minimum_required(VERSION 3.20.0)
 project("Game")
 
-add_executable(GameGod "FundamentalSystem.cpp")
-add_executable(GameGod "Gui.h")
-add_executable(GameGod "Gui.cpp")
-add_executable(GameGod "main.cpp")
+add_executable(GameGod 
+    "Gui.h"
+    "Gui.cpp"
+    "FundamentalSystem.cpp"
+    "main.cpp"
+)
 
 set(BUILD_SHARED_LIBS FALSE CACHE INTERNAL "Use static linking for SFML")
 
 add_subdirectory("lib/SFML")
 
-target_link_libraries(GameGod sfml-graphics sfml-window sfml-system)
+target_link_libraries(GameGod PRIVATE sfml-graphics sfml-window sfml-system)
+# Link against the MinGW runtime library
+target_link_libraries(GameGod PRIVATE mingw32)
 
-set_property(TARGET GameGod PROPERTY CXX_STANDARD 17)
+set_target_properties(GameGod PROPERTIES CXX_STANDARD 17)
+set_target_properties(GameGod PROPERTIES CXX_STANDARD_REQUIRED TRUE)
+

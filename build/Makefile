@@ -271,50 +271,77 @@ sfml-audio/fast:
 	$(MAKE) $(MAKESILENT) -f lib\SFML\src\SFML\Audio\CMakeFiles\sfml-audio.dir\build.make lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/build
 .PHONY : sfml-audio/fast
 
-# target to build an object file
-FundamentalSystem.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameGod.dir\build.make CMakeFiles/GameGod.dir/FundamentalSystem.obj
+FundamentalSystem.obj: FundamentalSystem.cpp.obj
 .PHONY : FundamentalSystem.obj
 
-# target to preprocess a source file
-FundamentalSystem.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameGod.dir\build.make CMakeFiles/GameGod.dir/FundamentalSystem.i
+# target to build an object file
+FundamentalSystem.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameGod.dir\build.make CMakeFiles/GameGod.dir/FundamentalSystem.cpp.obj
+.PHONY : FundamentalSystem.cpp.obj
+
+FundamentalSystem.i: FundamentalSystem.cpp.i
 .PHONY : FundamentalSystem.i
 
-# target to generate assembly for a file
-FundamentalSystem.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameGod.dir\build.make CMakeFiles/GameGod.dir/FundamentalSystem.s
+# target to preprocess a source file
+FundamentalSystem.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameGod.dir\build.make CMakeFiles/GameGod.dir/FundamentalSystem.cpp.i
+.PHONY : FundamentalSystem.cpp.i
+
+FundamentalSystem.s: FundamentalSystem.cpp.s
 .PHONY : FundamentalSystem.s
 
-# target to build an object file
-Gui.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameGod.dir\build.make CMakeFiles/GameGod.dir/Gui.obj
+# target to generate assembly for a file
+FundamentalSystem.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameGod.dir\build.make CMakeFiles/GameGod.dir/FundamentalSystem.cpp.s
+.PHONY : FundamentalSystem.cpp.s
+
+Gui.obj: Gui.cpp.obj
 .PHONY : Gui.obj
 
-# target to preprocess a source file
-Gui.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameGod.dir\build.make CMakeFiles/GameGod.dir/Gui.i
+# target to build an object file
+Gui.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameGod.dir\build.make CMakeFiles/GameGod.dir/Gui.cpp.obj
+.PHONY : Gui.cpp.obj
+
+Gui.i: Gui.cpp.i
 .PHONY : Gui.i
 
-# target to generate assembly for a file
-Gui.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameGod.dir\build.make CMakeFiles/GameGod.dir/Gui.s
+# target to preprocess a source file
+Gui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameGod.dir\build.make CMakeFiles/GameGod.dir/Gui.cpp.i
+.PHONY : Gui.cpp.i
+
+Gui.s: Gui.cpp.s
 .PHONY : Gui.s
 
-# target to build an object file
-main.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameGod.dir\build.make CMakeFiles/GameGod.dir/main.obj
+# target to generate assembly for a file
+Gui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameGod.dir\build.make CMakeFiles/GameGod.dir/Gui.cpp.s
+.PHONY : Gui.cpp.s
+
+main.obj: main.cpp.obj
 .PHONY : main.obj
 
-# target to preprocess a source file
-main.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameGod.dir\build.make CMakeFiles/GameGod.dir/main.i
+# target to build an object file
+main.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameGod.dir\build.make CMakeFiles/GameGod.dir/main.cpp.obj
+.PHONY : main.cpp.obj
+
+main.i: main.cpp.i
 .PHONY : main.i
 
-# target to generate assembly for a file
-main.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameGod.dir\build.make CMakeFiles/GameGod.dir/main.s
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameGod.dir\build.make CMakeFiles/GameGod.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
 .PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\GameGod.dir\build.make CMakeFiles/GameGod.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 # Help Target
 help:

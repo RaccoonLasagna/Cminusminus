@@ -1,0 +1,10 @@
+C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\src\SFML\Network\Ftp.cpp;C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\lib\SFML\src\SFML\Network\sfml-network.dir\Debug\Ftp.obj
+C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\src\SFML\Network\Http.cpp;C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\lib\SFML\src\SFML\Network\sfml-network.dir\Debug\Http.obj
+C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\src\SFML\Network\IpAddress.cpp;C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\lib\SFML\src\SFML\Network\sfml-network.dir\Debug\IpAddress.obj
+C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\src\SFML\Network\Packet.cpp;C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\lib\SFML\src\SFML\Network\sfml-network.dir\Debug\Packet.obj
+C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\src\SFML\Network\Socket.cpp;C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\lib\SFML\src\SFML\Network\sfml-network.dir\Debug\Socket.obj
+C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\src\SFML\Network\SocketSelector.cpp;C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\lib\SFML\src\SFML\Network\sfml-network.dir\Debug\SocketSelector.obj
+C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\src\SFML\Network\TcpListener.cpp;C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\lib\SFML\src\SFML\Network\sfml-network.dir\Debug\TcpListener.obj
+C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\src\SFML\Network\TcpSocket.cpp;C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\lib\SFML\src\SFML\Network\sfml-network.dir\Debug\TcpSocket.obj
+C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\src\SFML\Network\UdpSocket.cpp;C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\lib\SFML\src\SFML\Network\sfml-network.dir\Debug\UdpSocket.obj
+C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\src\SFML\Network\Win32\SocketImpl.cpp;C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\lib\SFML\src\SFML\Network\sfml-network.dir\Debug\SocketImpl.obj

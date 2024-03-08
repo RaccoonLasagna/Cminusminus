@@ -105,10 +105,11 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.obj: C:/Users/ADMI
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -137,7 +138,6 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/ALCheck.cpp.obj: C:/Users/ADMI
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
@@ -235,10 +235,11 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.obj: C:/Users/A
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++locale.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -257,7 +258,6 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AlResource.cpp.obj: C:/Users/A
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
@@ -385,10 +385,11 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.obj: C:/Users/
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -417,7 +418,6 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/AudioDevice.cpp.obj: C:/Users/
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
@@ -555,10 +555,11 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.obj: C:/Use
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -587,7 +588,6 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/InputSoundFile.cpp.obj: C:/Use
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
@@ -681,10 +681,11 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.obj: C:/Users/ADM
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++locale.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -703,7 +704,6 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Listener.cpp.obj: C:/Users/ADM
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
@@ -848,10 +848,11 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.obj: C:/Users/ADMIN/
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -880,7 +881,6 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Music.cpp.obj: C:/Users/ADMIN/
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
@@ -974,10 +974,11 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.obj: C:/Us
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++locale.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -996,7 +997,6 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/OutputSoundFile.cpp.obj: C:/Us
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
@@ -1098,10 +1098,11 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.obj: C:/Users/ADMIN/
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++locale.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -1120,7 +1121,6 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/Sound.cpp.obj: C:/Users/ADMIN/
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
@@ -1270,11 +1270,12 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.obj: C:/Users/
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdint.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -1303,7 +1304,6 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBuffer.cpp.obj: C:/Users/
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdint.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
@@ -1436,10 +1436,11 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.obj: C
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -1468,7 +1469,6 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundBufferRecorder.cpp.obj: C
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
@@ -1619,11 +1619,12 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.obj: C:/U
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdint.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -1652,7 +1653,6 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileFactory.cpp.obj: C:/U
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdint.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
@@ -1779,11 +1779,12 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.obj: C
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdint.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -1813,7 +1814,6 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderFlac.cpp.obj: C
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdint.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
@@ -1946,104 +1946,105 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.obj: C:
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/adxintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxbf16intrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxcomplexintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxfp16intrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxint8intrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxtileintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx2intrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx5124fmapsintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx5124vnniwintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bf16intrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bf16vlintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bitalgintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bwintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512cdintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512dqintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512erintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fp16intrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fp16vlintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512ifmaintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512ifmavlintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512pfintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmi2intrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmi2vlintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmiintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmivlintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vlbwintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vldqintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vlintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vnniintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vnnivlintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vp2intersectintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vp2intersectvlintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vpopcntdqintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vpopcntdqvlintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxifmaintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxneconvertintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxvnniint8intrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxvnniintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/bmi2intrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/bmiintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cetintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cldemoteintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clflushoptintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clwbintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clzerointrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cmpccxaddintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/emmintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/enqcmdintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/f16cintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fmaintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fxsrintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/gfniintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/hresetintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/ia32intrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/immintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/keylockerintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/lwpintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/lzcntintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mmintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/movdirintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mwaitintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mwaitxintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pconfigintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pkuintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pmmintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/popcntintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/prfchiintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/prfchwintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/raointintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/rdseedintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/rtmintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/serializeintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/sgxintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/shaintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/smmintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tbmintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tmmintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tsxldtrkintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/uintrintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/vaesintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/vpclmulqdqintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/waitpkgintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/wbnoinvdintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/wmmintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/x86gprintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xmmintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsavecintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsaveintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsaveoptintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsavesintrin.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xtestintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__wmmintrin_aes.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__wmmintrin_pclmul.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/adxintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxcomplexintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxfp16intrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx2intrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bf16intrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bitalgintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bwintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512cdintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512dqintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512erintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512fintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512fp16intrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512ifmaintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512ifmavlintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512pfintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmi2intrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmiintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmivlintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbf16intrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbitalgintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbwintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlcdintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vldqintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlfp16intrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvbmi2intrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvnniintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvp2intersectintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vnniintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vp2intersectintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vpopcntdqintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vpopcntdqvlintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxifmaintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxneconvertintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniint16intrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniint8intrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/bmi2intrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/bmiintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cetintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cldemoteintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clflushoptintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clwbintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cmpccxaddintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/crc32intrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/emmintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/enqcmdintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/f16cintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fmaintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fxsrintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/gfniintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/hresetintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/immintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/invpcidintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/keylockerintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/lzcntintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mmintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/movdirintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pconfigintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pkuintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pmmintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/popcntintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/prfchiintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ptwriteintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/raointintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rdseedintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rtmintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/serializeintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sgxintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sha512intrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/shaintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sm3intrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sm4intrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/smmintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdint.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tmmintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tsxldtrkintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/uintrintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vaesintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vpclmulqdqintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/waitpkgintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/wbnoinvdintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/wmmintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/x86gprintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xmmintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsavecintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsaveintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsaveoptintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsavesintrin.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xtestintrin.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -2073,7 +2074,6 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderMp3.cpp.obj: C:
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdint.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
@@ -2205,10 +2205,11 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.obj: C:
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -2238,7 +2239,6 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderOgg.cpp.obj: C:
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
@@ -2364,10 +2364,11 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.obj: C:
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -2398,7 +2399,6 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileReaderWav.cpp.obj: C:
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/string.h \
@@ -2533,11 +2533,12 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.obj: C
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdint.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -2567,7 +2568,6 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterFlac.cpp.obj: C
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdint.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
@@ -2703,10 +2703,11 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.obj: C:
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -2736,7 +2737,6 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterOgg.cpp.obj: C:
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
@@ -2867,10 +2867,11 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.obj: C:
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -2900,7 +2901,6 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundFileWriterWav.cpp.obj: C:
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
@@ -3040,10 +3040,11 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.obj: C:/User
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -3074,7 +3075,6 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundRecorder.cpp.obj: C:/User
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/string.h \
@@ -3222,10 +3222,11 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.obj: C:/Users/
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/os_defines.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h \
+  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_mac.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_off_t.h \
@@ -3254,7 +3255,6 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.obj: C:/Users/
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h \
-  C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h \
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
@@ -3266,7 +3266,11 @@ lib/SFML/src/SFML/Audio/CMakeFiles/sfml-audio.dir/SoundStream.cpp.obj: C:/Users/
   C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/wctype.h
 
 
+C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Audio/SoundStream.cpp:
+
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/System/Sleep.hpp:
+
+C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Audio/SoundRecorder.cpp:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Audio/SoundFileWriterWav.cpp:
 
@@ -3274,139 +3278,123 @@ C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Audio/SoundFileWri
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Audio/SoundFileReaderWav.cpp:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xtestintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsaveoptintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsavesintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsavecintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsaveoptintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/wbnoinvdintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xmmintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/waitpkgintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/x86gprintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vaesintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/wbnoinvdintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsavesintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/vaesintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sm4intrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/uintrintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sm3intrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tsxldtrkintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sgxintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/shaintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/serializeintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/sgxintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rdseedintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/rtmintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/raointintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/rdseedintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/ptwriteintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/prfchwintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/wmmintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/prfchiintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/prfchiintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/popcntintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pmmintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pmmintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pkuintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pkuintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/pconfigintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/pconfigintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/movdirintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mwaitxintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/immintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mwaitintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/hresetintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/movdirintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fxsrintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/lwpintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/enqcmdintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/keylockerintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/emmintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/immintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/crc32intrin.h:
 
-C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Audio/SoundRecorder.cpp:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cmpccxaddintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/ia32intrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clwbintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fmaintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/clflushoptintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/emmintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cldemoteintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cmpccxaddintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/cetintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clflushoptintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/bmiintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cldemoteintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/cetintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniint8intrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/bmi2intrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxvnniint16intrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxvnniintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxneconvertintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vpopcntdqintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vp2intersectintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vpopcntdqvlintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vnniintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vpopcntdqintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvp2intersectintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vp2intersectintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvnniintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vnniintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/uintrintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vlintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlvbmi2intrin.h:
 
-C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Audio/SoundStream.cpp:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/raointintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbwintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vlbwintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbf16intrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmiintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512pfintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmi2intrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xtestintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512ifmavlintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512ifmavlintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512ifmaintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlcdintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fp16vlintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512fp16intrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512pfintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512fintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512erintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512erintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512dqintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512dqintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bwintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512cdintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bitalgintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bwintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx2intrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bitalgintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clzerointrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxfp16intrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vldqintrin.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bf16vlintrin.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512bf16intrin.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx5124fmapsintrin.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/enqcmdintrin.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx2intrin.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxtileintrin.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxint8intrin.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mmintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/f16cintrin.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_timeval.h:
 
@@ -3416,11 +3404,15 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/stl_bvector
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/atomic_lockfree_defines.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/mm_malloc.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vpopcntdqvlintrin.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mm_malloc.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/limits.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++locale.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/keylockerintrin.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/pstl/pstl_config.h:
 
@@ -3430,25 +3422,25 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/ctype.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stddef.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/waitpkgintrin.h:
-
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/ctype_inline.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sec_api/string_s.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/ext/alloc_traits.h:
 
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlfp16intrin.h:
+
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/char_traits.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt_startup.h:
 
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__stddef_max_align_t.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/lzcntintrin.h:
+
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/type_traits:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_secapi.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vnnivlintrin.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/erase_if.h:
 
@@ -3468,23 +3460,15 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/stdexcept:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/ostream:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsavecintrin.h:
-
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/allocated_ptr.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/limits.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/vpclmulqdqintrin.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/new:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/basic_string.tcc:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Audio/SoundSource.cpp:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxneconvertintrin.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/iosfwd:
 
@@ -3494,9 +3478,9 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/locale.h
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/ext/type_traits.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/ext/string_conversions.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vldqintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/bmiintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/ext/string_conversions.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/gthr.h:
 
@@ -3509,6 +3493,8 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/ext/atomicity.h:
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/uses_allocator.h:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Audio/Export.hpp:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmivlintrin.h:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Audio/Listener.cpp:
 
@@ -3526,6 +3512,14 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/cstdlib:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/shared_ptr.h:
 
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vpclmulqdqintrin.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/cpu_defines.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/cwchar:
+
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/pthread_time.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/cstddef:
@@ -3534,7 +3528,7 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers/FLAC/stream_encoder.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tbmintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/amxcomplexintrin.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/clocale:
 
@@ -3542,21 +3536,27 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/cassert:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/cerrno:
 
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/smmintrin.h:
+
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/debug/assertions.h:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Audio/SoundFileReaderFlac.cpp:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/mmintrin.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/hash_bytes.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/streambuf:
 
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stdint.h:
+
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/invoke.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/ptr_traits.h:
 
-C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Audio/SoundSource.hpp:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512cdintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/pthread_compat.h:
+C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Audio/SoundSource.hpp:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/range_access.h:
 
@@ -3566,19 +3566,17 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_o
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/streambuf.tcc:
 
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512bf16intrin.h:
+
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/ctype_base.h:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Audio/SoundFileReader.hpp:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxfp16intrin.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/debug/debug.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/errno.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/memory_resource.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/f16cintrin.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/cctype:
 
@@ -3588,15 +3586,25 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/charconv.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/vadefs.h:
 
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/x86gprintrin.h:
+
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/ext/aligned_buffer.h:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers/FLAC/export.h:
 
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avxifmaintrin.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__wmmintrin_aes.h:
+
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/locale_facets.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/fmaintrin.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/initializer_list:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers/ogg/os_types.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/shaintrin.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/pthread.h:
 
@@ -3608,15 +3616,17 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/typeinfo:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/basic_string.h:
 
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/exception_ptr.h:
+
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/stl_pair.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/corecrt_wstdlib.h:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Audio/SoundFileWriterFlac.cpp:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/gfniintrin.h:
-
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/stringfwd.h:
+
+C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/System/Err.hpp:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Audio/Sound.cpp:
 
@@ -3630,13 +3640,7 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/cpp_type_tr
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/pstl/glue_algorithm_defs.h:
 
-C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers/minimp3/minimp3.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmi2vlintrin.h:
-
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx5124vnniwintrin.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/c++allocator.h:
 
@@ -3650,13 +3654,15 @@ C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers/minimp3/min
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/string.h:
 
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmiintrin.h:
+
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Audio/ALCheck.cpp:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/cxxabi_init_exception.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/memoryfwd.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/stddef.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/stdint.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/memoryfwd.h:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Config.hpp:
 
@@ -3670,9 +3676,9 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/allocator.h
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers/AL/al.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tmmintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/clwbintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdio.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/basic_file.h:
 
@@ -3684,19 +3690,9 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/basic_ios.t
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers/AL/alc.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512fp16intrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/popcntintrin.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/alloc_traits.h:
-
-C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/System/Err.hpp:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/adxintrin.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxifmaintrin.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/cwchar:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/syslimits.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/stl_iterator_base_funcs.h:
 
@@ -3704,17 +3700,15 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/malloc.h
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/basic_ios.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/wmmintrin.h:
-
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/functexcept.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/gfniintrin.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/swprintf.inl:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/stl_set.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/locale_classes.tcc:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/serializeintrin.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/x86_64-w64-mingw32/bits/atomic_word.h:
 
@@ -3725,8 +3719,6 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/localefwd.h
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/node_handle.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/hresetintrin.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/locale_facets.tcc:
 
@@ -3740,13 +3732,17 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/stl_raw_sto
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/refwrap.h:
 
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/tsxldtrkintrin.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/invpcidintrin.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/bmi2intrin.h:
+
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/codecvt.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bit:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Audio/SoundFileFactory.inl:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vbmivlintrin.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/stl_vector.h:
 
@@ -3756,11 +3752,11 @@ C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Audio/AudioDevice.
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/ostream_insert.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stddef.h:
-
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/stl_algobase.h:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Audio/SoundFileFactory.hpp:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/vadefs.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/crtdefs.h:
 
@@ -3772,9 +3768,19 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/stdlib.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/ext/concurrence.h:
 
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vlbitalgintrin.h:
+
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/stl_function.h:
 
+C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers/minimp3/minimp3.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/limits.h:
+
+C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/System/Lock.hpp:
+
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/streambuf_iterator.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/pthread_compat.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/pthread_signal.h:
 
@@ -3784,9 +3790,13 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/string_view
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/pthread_unistd.h:
 
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/rtmintrin.h:
+
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sdks/_mingw_ddk.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdint.h:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512ifmaintrin.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/requires_hosted.h:
 
@@ -3802,6 +3812,8 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/signal.h
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/stdlib.h:
 
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/avx512vbmi2intrin.h:
+
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/sys/timeb.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/time.h:
@@ -3810,15 +3822,13 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/x86_64-w64-mingw32/include/wctype.h
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Audio/AlResource.cpp:
 
-C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/System/Lock.hpp:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/__wmmintrin_pclmul.h:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/System/Mutex.hpp:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Audio/SoundRecorder.hpp:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/System/NonCopyable.hpp:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxbf16intrin.h:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Audio/SoundBuffer.hpp:
 
@@ -3834,13 +3844,13 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/stl_multise
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/stl_tree.h:
 
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xsaveintrin.h:
+
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Audio/Sound.hpp:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/utility.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/set:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/xsaveintrin.h:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Audio/SoundFileReaderMp3.cpp:
 
@@ -3854,8 +3864,6 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/stl_uniniti
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/vector.tcc:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avx512vp2intersectvlintrin.h:
-
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/algorithm:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/backward/auto_ptr.h:
@@ -3867,6 +3875,8 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/fstream:
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/System/FileInputStream.hpp:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/System/InputStream.hpp:
+
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/sha512intrin.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/cstring:
 
@@ -3900,13 +3910,11 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/backward/binders
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Audio/SoundStream.hpp:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/lzcntintrin.h:
-
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/System/Thread.hpp:
 
-C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/System/Thread.inl:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/xmmintrin.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/tmmintrin.h:
+C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/System/Thread.inl:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/include/SFML/Audio/SoundFileWriter.hpp:
 
@@ -3917,8 +3925,6 @@ C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/locale_clas
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/pstl/glue_memory_defs.h:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Audio/SoundFileWriterFlac.hpp:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/avxvnniint8intrin.h:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Audio/SoundBuffer.cpp:
 
@@ -3935,8 +3941,6 @@ C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Audio/SoundFileWri
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/src/SFML/Audio/SoundFileWriterWav.hpp:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/shared_ptr_base.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/smmintrin.h:
 
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/postypes.h:
 
@@ -3970,12 +3974,8 @@ C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers/vorbis/code
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers/vorbis/vorbisenc.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/fxsrintrin.h:
-
 C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/uses_allocator_args.h:
 
 C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/extlibs/headers/vorbis/vorbisfile.h:
 
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/include/c++/13.2.0/bits/exception_ptr.h:
-
-C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/gcc/x86_64-w64-mingw32/13.2.0/include/amxcomplexintrin.h:
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/lib/clang/17/include/adxintrin.h:

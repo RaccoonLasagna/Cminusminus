@@ -1,5 +1,5 @@
 #include "FundamentalSystem.h"
-#include "FundamentalSystem.cpp"
+// #include "FundamentalSystem.cpp"
 using namespace std;
 
 #ifndef LIVINGTHING_H
@@ -39,5 +39,20 @@ class LivingThing : public GameObject{
     private:
     public:
 };
+
+class TestLivingThing: public GameObject{
+    private:
+    public:
+    TestLivingThing(Layer *parent, int x, int y);
+    int getSur();
+    int getEnv();
+    int getRepo();
+    void update();
+};
+
+// method_test.cpp(11, 9): pure virtual function "GameObject::getSur" has no overrider
+// method_test.cpp(11, 9): pure virtual function "GameObject::getEnv" has no overrider
+// method_test.cpp(11, 9): pure virtual function "GameObject::getRepo" has no overrider
+// method_test.cpp(11, 9): pure virtual function "GameObject::update" has no overrider
 
 #endif

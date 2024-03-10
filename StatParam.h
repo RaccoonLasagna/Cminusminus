@@ -5,16 +5,6 @@ using namespace std;
 #ifndef STATPARAM_H
 #define STATPARAM_H
 
-class Turn : public StatParam {
-    protected:
-    string name = "Turn";
-    int targetValue = 0;
-    void virtual action() override;
-    public:
-    Turn(StatusBlock *parent, Ability *createBy, int rawValue);
-    Turn(GameObject *target, Ability *createBy, int rawValue);
-};
-
 class Hunger : public StatParam {
     protected:
     string name = "Hunger";
@@ -53,16 +43,6 @@ class Atk : public StatParam {
     public:
     Atk(StatusBlock *parent, Ability *createBy, int rawValue);
     Atk(GameObject *target, Ability *createBy, int rawValue);
-};
-
-class Def : public StatParam {
-    protected:
-    string name = "Def";
-    int targetValue = 0;
-    void virtual action() override;
-    public:
-    Def(StatusBlock *parent, Ability *createBy, int rawValue);
-    Def(GameObject *target, Ability *createBy, int rawValue);
 };
 
 class Sight : public StatParam {

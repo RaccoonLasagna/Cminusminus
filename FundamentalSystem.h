@@ -26,7 +26,7 @@ class Command;
 #define FUNDAMENTALSYSTEM_H
 
 class StatParam {
-protected:
+protected:    
   string name; // ไปกำหนดเองตอนสร้าง classs
   int targetValue; // ไปกำหนดเองตอนสร้าง class
   int defaultValue, value;
@@ -125,6 +125,7 @@ public:
   int amountOfAffliction(string name);
   void updateAffliction();
   GameObject *getParent();
+  bool isInAffliction(string name);
 };
 
 class StatusBlock : public AbilitySystem, public AfflictionSystem {
@@ -165,10 +166,9 @@ public:
   inline StatusBlock *getStat();
   inline Layer *getParent();
   vector<GameObject*> findTargetInRange(int range, bool allLayers);
-  // bool canAct(GameObject *);
 };
 
-class Layer { // ต้องทำการเรียงให้มีตำแหน่งติดลบด้วย
+class Layer {
 private:
   string name;
   GameObject *default_value;
@@ -182,7 +182,8 @@ public:
   void removeFromLayer(int x, int y);
   inline string getName();
   inline void setName(string nameInput);
-  inline GameObject *getFromLayer(int x, int y);
+  inline GameObject *getFromLayerIndex(int x, int y);
+  GameObject *getFromLayerCoord(int x, int y);
   LayerSystem *getParent();
 };
 
@@ -193,10 +194,9 @@ private:
   int x, y;
 
 public:
-  explicit Land(Ground *parentInput, string representInput, int xValueInput = 0,
-                int yValueInput = 0);
-  int getX();
-  int getY();
+  explicit Land(Ground *parent, string represent, int x, int y);
+  inline int getX();
+  inline int getY();
 };
 
 class Ground {
@@ -204,8 +204,9 @@ private:
   LayerSystem *parent;
 
 public:
-  vector<vector<Land>> insideLayer;
   Ground(LayerSystem *p = nullptr, int width = 0, int height = 0);
+  vector<vector<Land>> insideLayer;
+  pair<int, int> getVectorIndex(int x, int y);
 };
 
 class LayerSystem {
@@ -217,7 +218,6 @@ private:
 
 public:
   vector<Layer *> layers;
-  LayerSystem(int width, int height, int amount);
   LayerSystem(int width, int height);
   //-------------------------//
   bool createNewLayer(string name); // ตรวจสอบชื่อซ้ำเพื่อไม่ให้มีชื่อซ้ำ
@@ -227,11 +227,13 @@ public:
   //-------------------------//
   inline Layer *getLayer(string name);
   inline Layer *getLayer(int i);
+  inline Layer *getRandomLayer();
   inline Ground getGround();
   inline string getLayerName(int i);
   inline int getLayersAmount();
   inline int getLayersWidth();
   inline int getLayersHeight();
+  void printLayer();
 };
 
 class Command {};

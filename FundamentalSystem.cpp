@@ -8,7 +8,7 @@
 
 using namespace std;
 
-//----------------------------//
+// ------------------StatParam--------------------//
 
 bool StatParam::isAction(int before, int after)
 {
@@ -86,7 +86,7 @@ int StatParam::getValue() { return value; }
 vector<pair<string, int>> StatParam::getStackInfo() { return stackInfo; }
 StatusBlock *StatParam::getParent() { return parent; }
 
-//----------------------------//
+// ------------------Ability--------------------//
 
 Ability::Ability(AbilitySystem *parent) : parent(parent)
 {
@@ -104,7 +104,7 @@ int Ability::decision(int sur, int env, int repo)
 string Ability::getName() { return name; }
 AbilitySystem *Ability::getParent() { return parent; }
 
-//----------------------------//
+// ------------------Affliction--------------------//
 
 bool Affliction::tick()
 {
@@ -148,7 +148,7 @@ int Affliction::getPassedTime() { return passedTime; }
 int Affliction::getValue() { return value; }
 AfflictionSystem *Affliction::getParent() { return parent; }
 
-//----------------------------//
+// ------------------AbilitySystem--------------------//
 
 bool AbilitySystem::isInAbility(string name)
 {
@@ -198,7 +198,7 @@ void AbilitySystem::decisionMaking(int sur, int env, int repo)
 
 GameObject *AbilitySystem::getParent() { return parent; }
 
-//----------------------------//
+// ------------------Affliction--------------------//
 
 AfflictionSystem::AfflictionSystem(GameObject *parent)
     : parent(parent), afflictionGroup({}) {}
@@ -289,7 +289,16 @@ void AfflictionSystem::updateAffliction()
 
 GameObject *AfflictionSystem::getParent() { return parent; }
 
-//----------------------------//
+bool AfflictionSystem::isInAffliction(string name){
+  for (Affliction *aff : afflictionGroup){
+    if (aff->getName() == name){
+      return true;
+    }
+  }
+  return false;
+}
+
+// ------------------StatusBlock--------------------//
 
 StatusBlock::StatusBlock(GameObject *parent)
     : parent(parent), AbilitySystem(parent), AfflictionSystem(parent) {}
@@ -370,7 +379,7 @@ StatParam *StatusBlock::getParam(string name)
 
 GameObject *StatusBlock::getParent() { return parent; }
 
-//----------------------------//
+// ------------------GameObject--------------------//
 
 GameObject::GameObject(Layer *parent, int x, int y) : parent(parent)
 {
@@ -417,6 +426,7 @@ string GameObject::getRepresent() { return represent; }
 StatusBlock *GameObject::getStat() { return stat; }
 Layer *GameObject::getParent() { return parent; }
 
+// returns only GameObjects
 vector<GameObject *> GameObject::findTargetInRange(int range, bool allLayers)
 {
   vector<GameObject *> target;
@@ -437,7 +447,7 @@ vector<GameObject *> GameObject::findTargetInRange(int range, bool allLayers)
             for (size_t k = 0; k < layersystem->getLayersAmount(); k++)
             {
               Layer *layer = layersystem->getLayer(0);
-              GameObject *targetObject = layer->getFromLayer(selfIndex.first - i, selfIndex.second - j);
+              GameObject *targetObject = layer->getFromLayerIndex(selfIndex.first - i, selfIndex.second - j);
               if (targetObject != nullptr)
               {
                 target.push_back(targetObject);
@@ -446,7 +456,7 @@ vector<GameObject *> GameObject::findTargetInRange(int range, bool allLayers)
           }
           else // GameObject's own layer only
           {
-            GameObject *targetObject = parent->getFromLayer(selfIndex.first - i, selfIndex.second - j);
+            GameObject *targetObject = parent->getFromLayerIndex(selfIndex.first - i, selfIndex.second - j);
             if (targetObject != nullptr)
             {
               target.push_back(targetObject);
@@ -462,7 +472,7 @@ vector<GameObject *> GameObject::findTargetInRange(int range, bool allLayers)
             for (size_t k = 0; k < layersystem->getLayersAmount(); k++)
             {
               Layer *layer = layersystem->getLayer(0);
-              GameObject *targetObject = layer->getFromLayer(selfIndex.first + i, selfIndex.second + j);
+              GameObject *targetObject = layer->getFromLayerIndex(selfIndex.first + i, selfIndex.second + j);
               if (targetObject != nullptr)
               {
                 target.push_back(targetObject);
@@ -471,7 +481,7 @@ vector<GameObject *> GameObject::findTargetInRange(int range, bool allLayers)
           }
           else // GameObject's own layer only
           {
-            GameObject *targetObject = parent->getFromLayer(selfIndex.first + i, selfIndex.second + j);
+            GameObject *targetObject = parent->getFromLayerIndex(selfIndex.first + i, selfIndex.second + j);
             if (targetObject != nullptr)
             {
               target.push_back(targetObject);
@@ -484,7 +494,7 @@ vector<GameObject *> GameObject::findTargetInRange(int range, bool allLayers)
   return target;
 }
 
-//----------------------------//
+// ------------------Layer--------------------//
 
 Layer::Layer(string name, LayerSystem *parent, int width, int height)
     : parent(parent), name(name)
@@ -522,15 +532,26 @@ void Layer::setLayer(GameObject *target, int x, int y)
 
 void Layer::removeFromLayer(int x, int y) { insideLayer.at(y).at(x) = nullptr; }
 
-string Layer::getName() { return name; }
+inline string Layer::getName() { return name; }
 void Layer::setName(string nameInput) { name = nameInput; }
-GameObject *Layer::getFromLayer(int x, int y)
+GameObject *Layer::getFromLayerIndex(int x, int y)
 {
   return insideLayer.at(y).at(x);
 }
+
+GameObject *Layer::getFromLayerCoord(int x, int y){
+  pair<int, int> targetIndex = parent->getGround().getVectorIndex(x, y);
+  return getFromLayerIndex(targetIndex.first, targetIndex.second);
+}
+
 LayerSystem *Layer::getParent() { return parent; }
 
-//----------------------------//
+// ------------------Land--------------------//
+
+Land::Land(Ground *parent, string represent, int x, int y): parent(parent), represent(represent), x(x), y(y){}
+
+inline int Land::getX() { return x; }
+inline int Land::getY() { return y; }
 
 // ------------------Ground--------------------//
 
@@ -551,6 +572,19 @@ Ground::Ground(LayerSystem *p, int width, int height) : parent(p)
   }
 }
 
+pair<int, int> Ground::getVectorIndex(int x, int y) {
+    for (int i = 0; i < insideLayer.size(); ++i) {
+        for (int j = 0; j < insideLayer[i].size(); ++j) {
+            if (insideLayer[i][j].getX() == x && insideLayer[i][j].getY() == y) {
+                return make_pair(j, i);
+            }
+        }
+    }
+
+    // -1 = not found
+    return make_pair(-1, -1);
+}
+
 //-------------------LayerSystem-------------------//
 
 bool LayerSystem::isInLayer(string name)
@@ -563,15 +597,6 @@ bool LayerSystem::isInLayer(string name)
     }
   }
   return false;
-}
-
-LayerSystem::LayerSystem(int width, int height, int amount)
-    : width(width), height(height), ground(Ground(this, width, height))
-{
-  for (size_t lCount = 0; lCount < amount; lCount++)
-  {
-    createNewLayer("layer" + to_string(lCount));
-  }
 }
 
 LayerSystem::LayerSystem(int width, int height)
@@ -618,7 +643,7 @@ int LayerSystem::getDistance(int x1, int y1, int x2, int y2)
   return floor(abs(x1 - x2) + abs(y1 - y2));
 }
 
-Layer *LayerSystem::getLayer(string name)
+inline Layer *LayerSystem::getLayer(string name)
 {
   for (Layer *l : layers)
   {
@@ -630,7 +655,9 @@ Layer *LayerSystem::getLayer(string name)
   return nullptr;
 }
 
-Layer inline *LayerSystem::getLayer(int i) { return layers.at(i); }
+inline Layer *LayerSystem::getLayer(int i) { return layers.at(i); }
+
+inline Layer *LayerSystem::getRandomLayer() {return layers.at(rand() % layers.size());}
 
 Ground LayerSystem::getGround() { return ground; }
 
@@ -641,3 +668,24 @@ int inline LayerSystem::getLayersAmount() { return layers.size(); }
 int inline LayerSystem::getLayersWidth() { return width; }
 
 int inline LayerSystem::getLayersHeight() { return height; }
+
+void LayerSystem::printLayer() {
+  Layer *env_layer = getLayer("Environment");
+  Layer *animal_layer = getLayer("Animal");
+  Layer *food_layer = getLayer("Food");
+
+  for (int column = 0; column < height; column++) {
+    for (int row = 0; row < width; row++) {
+      if (env_layer->getFromLayerIndex(column, row) != nullptr) {
+        cout << env_layer->getFromLayerIndex(column, row) << ' ';
+      } else if (animal_layer->getFromLayerIndex(column, row) != nullptr) {
+        cout << animal_layer->getFromLayerIndex(column, row) << ' ';
+      } else if (food_layer->getFromLayerIndex(column, row) != nullptr) {
+        cout << food_layer->getFromLayerIndex(column, row) << ' ';
+      } else {
+        cout << "x ";
+      }
+    }
+    cout << endl;
+  }
+}

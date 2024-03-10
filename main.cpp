@@ -31,17 +31,17 @@
 //   return 0;
 // }
 
-#include "Gui.h"
-#include <ctime>
+// #include "Gui.h"
+// #include <ctime>
 
-using namespace sf;
+// using namespace sf;
 
-int main() {
-  srand(static_cast<unsigned>(time(0)));
-  Gui gui;
-  while (gui.runing()) {
-    gui.update();
-    gui.render();
-  }
-  return 0;
-}
+// int main() {
+//   srand(static_cast<unsigned>(time(0)));
+//   Gui gui;
+//   while (gui.runing()) {
+//     gui.update();
+//     gui.render();
+//   }
+//   return 0;
+// }

@@ -1,4 +1,6 @@
 #include "StatParam.h"
+#include "LivingThing.h"
+#include "Affliction.h"
 #include <iostream>
 
 using namespace std;
@@ -16,7 +18,11 @@ void Hunger::action()
     currentLayer->insideLayer[currentIndex.second][currentIndex.first] = nullptr;
     if (foodLayer->insideLayer[currentIndex.second][currentIndex.first] == nullptr)
     {
-        // create a corpse
+        GameObject* corpseptr = new Corpse(foodLayer, currentIndex.first, currentIndex.second);
+        // if animal is poisonous, give corpseptr poisonous too
+        if (parent->isInAffliction("Poisonous")){
+            new Poisonous(corpseptr);
+        }
     }
     // kill this animal :(
     delete parent->getParent();
@@ -36,20 +42,15 @@ void Health::action()
     currentLayer->insideLayer[currentIndex.second][currentIndex.first] = nullptr;
     if (foodLayer->insideLayer[currentIndex.second][currentIndex.first] == nullptr)
     {
-        // create a corpse
+        GameObject* corpseptr = new Corpse(foodLayer, currentIndex.first, currentIndex.second);
+        // if animal is poisonous, give corpseptr poisonous too
+        if (parent->isInAffliction("Poisonous")){
+            new Poisonous(corpseptr);
+        }
     }
     // kill this animal :(
     delete parent->getParent();
     return;
-    return;
-}
-
-Stamina::Stamina(StatusBlock *parent, Ability *createBy, int rawValue) : StatParam(parent, createBy, rawValue) {}
-
-Stamina::Stamina(GameObject *target, Ability *createBy, int rawValue) : StatParam(target, createBy, rawValue) {}
-
-void Stamina::action()
-{
     return;
 }
 

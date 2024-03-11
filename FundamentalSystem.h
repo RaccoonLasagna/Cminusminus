@@ -152,10 +152,10 @@ protected:
 
 public:
   GameObject(Layer *parent, int x, int y);
-  int virtual getSur() = 0;
-  int virtual getEnv() = 0;
-  int virtual getRepo() = 0;
-  void update() { return;}
+  int getSur();
+  int getEnv();
+  int getRepo();
+  void update(); // เล่นเทิร์น
   pair<int, int> getVectorIndex();
   pair<int, int> getCoord();
   inline void setName(string stringInput);
@@ -239,6 +239,11 @@ public:
   int getLayersHeight() { return height; }
   int getLayersAmount();
   inline string getLayerName(int i);
+  inline int getLayersAmount();
+  inline int getLayersWidth();
+  inline int getLayersHeight();
+  void printLayer();
+  void randomGenerateLayers();
   vector<vector<GameObject *>> getOverAllLayer() {
     vector<vector<GameObject *>> temp;
     for (int row = 0; row < height; row++) {

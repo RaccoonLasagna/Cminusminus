@@ -1,4 +1,5 @@
 #include "FundamentalSystem.h"
+#include "LivingThing.h"
 #include <algorithm>
 #include <cmath>
 #include <cstddef>
@@ -706,5 +707,36 @@ void LayerSystem::printLayer()
       }
     }
     cout << endl;
+  }
+}
+
+void LayerSystem::randomGenerateLayers()
+{
+  Layer *env_layer = getLayer("Environment");
+  Layer *animal_layer = getLayer("Animal");
+  Layer *food_layer = getLayer("Food");
+
+  for (int column = 0; column < height; column++)
+  {
+    for (int row = 0; row < width; row++)
+    {
+      int rand_animal = rand() % 100;
+      int rand_food = rand() % 100;
+      int rand_env = rand() % 100;
+      if (rand_animal < 10){
+        new Deer(animal_layer, row, column);
+      }
+      if (rand_food < 1){
+        new Corpse(food_layer, row, column);
+      }
+      if (rand_env < 10){
+        int rand_plant = rand() % 2;
+        if (rand_plant == 0){
+          new Bush(env_layer, row, column);
+        } else {
+          new Apple_tree(env_layer, row, column);
+        }
+      }
+    }
   }
 }

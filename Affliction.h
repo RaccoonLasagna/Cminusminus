@@ -12,7 +12,7 @@ class Health_Aff : public Affliction {
     string name = "Health_Aff";
     string targetValue = "Health";
     int duration,valueIncrease,value;
-    bool permanent = false;
+    bool permanent = true;
     public:
     Health_Aff(StatusBlock *parent, int duration, int valueIncrease, int value);
     Health_Aff(GameObject *target, int duration, int valueIncrease, int value);
@@ -76,15 +76,15 @@ class MateCooldown : public Affliction {
     MateCooldown(GameObject *target, int duration);
 };
 
-class Fruit : public Affliction{
+class EatTimes : public Affliction{
     protected:
     string name = "FruitionCooldown";
     string targetValue = "";
     int duration, valueIncrease = 0, value = 0;
     bool permanent = true;
     public:
-    Fruit(StatusBlock *parent, int duration);
-    Fruit(GameObject *target, int duration);
+    EatTimes(StatusBlock *parent);
+    EatTimes(GameObject *target);
 };
 
 class FruitionCooldown : public Affliction {
@@ -105,8 +105,8 @@ class Poisonous : public Affliction {
     int duration, valueIncrease = 0, value = 0;
     bool permanent = false;
     public:
-    Poisonous(StatusBlock *parent, int duration);
-    Poisonous(GameObject *target, int duration);
+    Poisonous(StatusBlock *parent);
+    Poisonous(GameObject *target);
 };
 
 // class Hunger_Decrease : public Affliction {

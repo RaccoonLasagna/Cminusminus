@@ -5,6 +5,8 @@
 #include "FundamentalSystem.h"
 #include "StatParam.h"
 #include "StatParam.cpp"
+#include "LivingThing.h"
+// #include "LivingThing.cpp"
 #include <cstddef>
 #include <cstdlib>
 #include <ctime>
@@ -15,110 +17,135 @@ using namespace std;
 
 //-------------------------- Eat ----------------------------//
 
-Eat::Eat(AbilitySystem *parent) : Ability(parent) {}
+Eat::Eat(AbilitySystem *parent, int max_hunger, bool eatPlants, bool eatEarthworms, bool eatAnimals) : Ability(parent), max_hunger(max_hunger), eatPlants(eatPlants), eatEarthworms(eatEarthworms), eatAnimals(eatAnimals) {}
 
-Eat::Eat(GameObject *target) : Ability(target) {}
+Eat::Eat(GameObject *target, int max_hunger, bool eatPlants, bool eatEarthworms, bool eatAnimals) : Ability(target), max_hunger(max_hunger), eatPlants(eatPlants), eatEarthworms(eatEarthworms), eatAnimals(eatAnimals) {}
 
 void Eat::createStatParam()
 {
-  new Hunger(getParent()->getParent(), this, 100);
+  new Hunger(getParent()->getParent(), this, max_hunger);
+  new Hunger_Aff(getParent()->getParent(), max_hunger, -1, -1);
 }
 
-// Eating earthworms is passive
-vector<GameObject *> Eat::findTargetForPassive() { 
+// Get earthworms
+vector<GameObject *> Eat::findTargetForPassive()
+{
+  if (!eatEarthworms)
+  {
+    return {};
+  }
   vector<GameObject *> targetInRange = parent->getParent()->findTargetInRange(1, false);
   while (targetInRange.size() > 0)
   {
     if (targetInRange[0]->getName() != "Earthworm")
     {
       targetInRange.erase(targetInRange.begin());
-    } else {
+    }
+    else
+    {
       break;
     }
   }
-  
-  if (targetInRange.size() > 0){
-    GameObject* target = targetInRange[0];
-    pair<int, int> targetPosition = target->getVectorIndex();
-    Layer* currentLayer = parent->getParent()->getParent();
-    // kill the earthworm
-    currentLayer->insideLayer[targetPosition.second][targetPosition.first] = nullptr;
-    delete target;
-    // reduced hunger
-    getParent()->getParent()->getStat()->removeAffliction("Hungry");
-  }
-  return {}; 
+  return {targetInRange[0]};
 }
 
+// get corpses or plant
 vector<GameObject *> Eat::findTargetForActive()
 {
   vector<GameObject *> target = {};
-  Layer *foodLayer =
-      getParent()->getParent()->getParent()->getParent()->getLayer("Food");
   GameObject *self = getParent()->getParent();
-  for (vector<GameObject *> row : foodLayer->insideLayer)
+  pair<int, int> selfIndex = self->getVectorIndex();
+  if (eatAnimals)
   {
-    for (GameObject *food : row)
+    Layer *foodLayer = getParent()->getParent()->getParent()->getParent()->getLayer("Food");
+    for (int coordX : {selfIndex.first - 1, selfIndex.first, selfIndex.first + 1})
     {
-      if (foodLayer->getParent()->getDistance(food, getParent()->getParent()) <=
-              1 &&
-          food != self)
+      for (int coordY : {selfIndex.second - 1, selfIndex.second, selfIndex.second + 1})
       {
-        target.push_back(food);
+        if (foodLayer->insideLayer[coordY][coordX]->getName() == "Corpse")
+        {
+          target.push_back(foodLayer->insideLayer[coordY][coordX]);
+        }
       }
     }
   }
+
+  if (eatPlants)
+  {
+    Layer *envLayer = getParent()->getParent()->getParent()->getParent()->getLayer("Environment");
+    for (int coordX : {selfIndex.first - 1, selfIndex.first, selfIndex.first + 1})
+    {
+      for (int coordY : {selfIndex.second - 1, selfIndex.second, selfIndex.second + 1})
+      {
+        GameObject *currentObj = envLayer->insideLayer[coordY][coordX];
+        if (currentObj != nullptr)
+        {
+          if (currentObj->getName() == "Bush" || currentObj->getName() == "Apple tree" || currentObj->getName() == "Mushroom")
+          {
+            target.push_back(currentObj);
+          }
+        }
+      }
+    }
+  }
+
   return target;
 }
 
 bool Eat::canActive(vector<GameObject *> target)
 {
-  Layer *foodLayer =
-      getParent()->getParent()->getParent()->getParent()->getLayer("Food");
-  GameObject *self = getParent()->getParent();
-  for (vector<GameObject *> row : foodLayer->insideLayer)
-  {
-    for (GameObject *food : row)
-    {
-      if (foodLayer->getParent()->getDistance(food, getParent()->getParent()) <=
-              1 &&
-          food != self)
-      {
-        return true;
-      }
-    }
-  }
-  return false;
+  return findTargetForActive().size() > 0;
 }
 
+// Eating earthworms is passive
 void Eat::passive(vector<GameObject *> target)
 {
-  Hunger_Aff *hungry = new Hunger_Aff(getParent()->getParent(), 1, 1, 0);
+  int increase_amount = 20;
+  if (target.size() > 0)
+  {
+    GameObject *worm = target[0];
+    pair<int, int> targetPosition = worm->getVectorIndex();
+    Layer *currentLayer = parent->getParent()->getParent();
+    // kill the earthworm
+    currentLayer->insideLayer[targetPosition.second][targetPosition.first] = nullptr;
+    delete worm;
+    // increase hunger points
+    new Hunger_Aff(parent->getParent(), 1, 20, 0);
+  }
   return;
 }
 
 void Eat::active(vector<GameObject *> target)
 {
-  srand(time(NULL));
+  if (target.size() <= 0)
+  {
+    return;
+  }
   GameObject *realTarget = target[rand() % target.size()];
-  pair<int, int> coord = realTarget->getCoord();
-  getParent()
-      ->getParent()
-      ->getParent()
-      ->getParent()
-      ->getLayer("Food")
-      ->removeFromLayer(coord.first, coord.second);
-  getParent()->getParent()->getStat()->removeAffliction("Hungry");
-  // Full *full = new Full(getParent()->getParent());
-  return;
+  Layer *foodLayer = getParent()->getParent()->getParent()->getParent()->getLayer("Food");
+  // reset hunger
+  getParent()->getParent()->getStat()->removeAffliction("Hunger_Aff");
+  new Hunger_Aff(getParent()->getParent(), max_hunger, -1, -1);
+  // heal
+  new Health_Aff(getParent()->getParent(), 10, 5, 5);
+  // if the target is poisonous, reduce health
+  if (realTarget->getStat()->isInAffliction("Poisonous")){
+    new Health_Aff(parent->getParent(), 20, -10, -10);
+  }
+  // remove a stack of EatTimes
+  realTarget->getStat()->removeAffliction("EatTimes");    
 }
 
 //--------------------------- Attack ----------------------------//
 
+Attack::Attack(AbilitySystem *parent, int atk_amount) : Ability(parent), atk_amount(atk_amount) {};
+
+Attack::Attack(GameObject *target, int atk_amount) : Ability(parent), atk_amount(atk_amount) {};
+
 // you need atk to attack
 void Attack::createStatParam()
 {
-  new Atk(getParent()->getParent(), this, 100);
+  new Atk(getParent()->getParent(), this, atk_amount);
 }
 
 // no passives
@@ -151,7 +178,7 @@ void Attack::active(vector<GameObject *> targets)
   for (GameObject *target : targets)
   {
     int atkValue = parent->getParent()->getStat()->getParamValue("Atk");
-    // new Bleed(target, atkValue, atkValue/10, 5)
+    new Health_Aff(target, atkValue, -atkValue, -atkValue);
   }
 }
 
@@ -298,9 +325,9 @@ void WalkSeek::active(vector<GameObject *> targets)
   {
     nextX = currentX - 1;
   }
-  if (yDiff > 0) // target above
+  if (yDiff > 0) // target below (go down = increased Y)
   {
-    nextY = currentY + 1; // walk up
+    nextY = currentY + 1; // walk down
   }
   if (yDiff < 0)
   {
@@ -317,6 +344,10 @@ void WalkSeek::active(vector<GameObject *> targets)
 }
 
 // --------------------------- WalkEscape ---------------------------
+
+WalkEscape::WalkEscape(AbilitySystem *parent) : Walk(parent) {}
+
+WalkEscape::WalkEscape(GameObject *target) : Walk(parent) {}
 
 void WalkEscape::active(vector<GameObject *> targets)
 {
@@ -373,13 +404,13 @@ void WalkEscape::active(vector<GameObject *> targets)
   {
     nextX = currentX + 1;
   }
-  if (yDiff > 0) // currently above the target
+  if (yDiff > 0) // currently below the target
   {
-    nextY = currentY - 1; // walk down
+    nextY = currentY + 1; // walk down
   }
   if (yDiff < 0)
   {
-    nextY = currentY + 1;
+    nextY = currentY - 1;
   }
 
   // if target position is in bounds and is empty, move there
@@ -395,6 +426,10 @@ void WalkEscape::active(vector<GameObject *> targets)
 }
 
 //--------------------------- Mate ---------------------------
+
+Mate::Mate(AbilitySystem *parent) : Ability(parent) {};
+
+Mate::Mate(GameObject *target) : Ability(parent) {}
 
 // no stats neede
 void Mate::createStatParam()
@@ -416,6 +451,7 @@ vector<GameObject *> Mate::findTargetForActive()
   vector<GameObject *> targets;
   for (GameObject *target : animals_in_range)
   {
+    // if same species
     if (target->getName() == parent->getParent()->getName())
     {
       targets.push_back(target);
@@ -462,7 +498,6 @@ void Mate::passive(vector<GameObject *> targets)
 
 void Mate::active(vector<GameObject *> targets)
 {
-  
   // find all nullptr tiles in the 8 tiles around
   vector<pair<int, int>> possibleTargets;
 
@@ -503,6 +538,71 @@ void Mate::active(vector<GameObject *> targets)
   }
 }
 
+// ===================================== CORPSES =====================================
+
+//--------------------------- Rot ---------------------------
+
+Rot::Rot(AbilitySystem *target) : Ability(target) {}
+
+Rot::Rot(GameObject *target) : Ability(target) {}
+
+void Rot::createStatParam(){};
+
+vector<GameObject *> Rot::findTargetForPassive()
+{
+  return {};
+}
+
+vector<GameObject *> Rot::findTargetForActive()
+{
+  return {};
+}
+
+bool Rot::canActive(vector<GameObject *> targets) { return false; }
+
+void Rot::passive(vector<GameObject *> targets) {
+  rot_timer++;
+  Layer *animalLayer = parent->getParent()->getParent()->getParent()->getLayer("Animal");
+  Layer *EnvironmentLayer = parent->getParent()->getParent()->getParent()->getLayer("Environment");
+
+  vector<pair<int, int>> possibleFoodCoord;
+  vector<pair<int, int>> possibleEnvCoord;
+  // when rot timer is reached, spawn mushroom and earthworm
+  if (rot_timer == 60){
+    pair<int, int> selfCoord = parent->getParent()->getVectorIndex();
+    int currentX = selfCoord.first;
+    int currentY = selfCoord.second;
+    for (int coordY : {currentY - 1, currentY, currentY + 1})
+    {
+      for (int coordX : {currentX - 1, currentX, currentX + 1})
+      {
+        // if coord in range
+        if (coordX >= 0 && coordX < parent->getParent()->getParent()->getParent()->getLayersWidth() && coordY >= 0 && coordY < parent->getParent()->getParent()->getParent()->getLayersHeight()){
+          if (animalLayer->insideLayer[coordY][coordX] == nullptr){
+            possibleFoodCoord.push_back({coordX, coordY});
+          }
+          if (EnvironmentLayer->insideLayer[coordY][coordX] == nullptr){
+            possibleEnvCoord.push_back({coordX, coordY});
+          }
+        }
+      }
+    }
+  }
+  if (possibleFoodCoord.size() > 0){
+    pair<int, int> foodCoord = possibleFoodCoord[rand() % possibleFoodCoord.size()];
+  }
+  if (possibleEnvCoord.size() > 0)
+  {
+    pair<int, int> envCoord = possibleEnvCoord[rand() % possibleEnvCoord.size()];
+    new Mushroom(EnvironmentLayer, envCoord.first, envCoord.second);
+  }
+  
+  
+  
+}
+
+void Rot::active(vector<GameObject *> targets) {}
+
 // ===================================== PLANTS =====================================
 
 // --------------------------- Fruition ---------------------------
@@ -510,6 +610,8 @@ void Mate::active(vector<GameObject *> targets)
 Fruition::Fruition(AbilitySystem *target) : Ability(target) {}
 
 Fruition::Fruition(GameObject *target) : Ability(target) {}
+
+void Fruition::createStatParam(){};
 
 vector<GameObject *> Fruition::findTargetForPassive()
 {
@@ -521,29 +623,64 @@ vector<GameObject *> Fruition::findTargetForActive()
   return {};
 };
 
-bool Fruition::canActive(vector<GameObject *> targets){
-  return true;
+// no active, always false
+bool Fruition::canActive(vector<GameObject *> targets)
+{
+  return false;
 }
 
 // Ima store fruits as afflictions actually
 void Fruition::passive(vector<GameObject *> targets)
 {
-  if (!parent->getParent()->getStat()->isInAffliction("FruitionCooldown")){ // if not on cooldown
+  if (!parent->getParent()->getStat()->isInAffliction("FruitionCooldown"))
+  { // if not on cooldown
     int fruitAmount = parent->getParent()->getStat()->amountOfAffliction("Fruit");
-    if (fruitAmount < 20){
+    if (fruitAmount < 3)
+    {
       // generate fruits, set ability on cooldown
       new FruitionCooldown(parent->getParent(), 200);
-      for (size_t i = 0; i < 5; i++)
-      {
-        new Fruit(parent->getParent(), 1);
-      }
+      new EatTimes(parent->getParent());
     }
   }
   return;
 }
 
-void Fruition::active(vector<GameObject *> targets)
+void Fruition::active(vector<GameObject *> targets) { return; }
+
+// --------------------------- SingleEat ---------------------------
+
+SingleEat::SingleEat(AbilitySystem *target) : Ability(target) {}
+
+SingleEat::SingleEat(GameObject *target) : Ability(target) {}
+
+void SingleEat::createStatParam(){ return; }
+
+vector<GameObject *> SingleEat::findTargetForPassive()
 {
-  return;
+  return {};
 }
 
+vector<GameObject *> SingleEat::findTargetForActive()
+{
+  return {};
+}
+
+// no active, always false
+bool SingleEat::canActive(vector<GameObject *> targets)
+{
+  return false;
+}
+
+// death when eaten
+void SingleEat::passive(vector<GameObject *> targets){
+  StatusBlock *statBlock = parent->getParent()->getStat();
+  if (statBlock->amountOfAffliction("EatTimes") <= 0){
+    Layer *selfLayer = parent->getParent()->getParent();
+    pair<int, int> selfCoord = parent->getParent()->getVectorIndex();
+    selfLayer->insideLayer[selfCoord.second][selfCoord.first] = nullptr;
+    delete parent->getParent();
+  }
+}
+
+// no active
+void SingleEat::active(vector<GameObject *> targets){}

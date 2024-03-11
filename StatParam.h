@@ -26,16 +26,6 @@ class Health : public StatParam {
     Health(GameObject *target, Ability *createBy, int rawValue);
 };
 
-class Stamina : public StatParam {
-    protected:
-    string name = "Stamina";
-    int targetValue = 0;
-    void virtual action() override;
-    public:
-    Stamina(StatusBlock *parent, Ability *createBy, int rawValue);
-    Stamina(GameObject *target, Ability *createBy, int rawValue);
-};
-
 class Atk : public StatParam {
     protected:
     string name = "Atk";

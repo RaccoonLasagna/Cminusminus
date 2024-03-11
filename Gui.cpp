@@ -172,13 +172,11 @@ ZoomOut::ZoomOut(Vector2f position, int radius) : ZoomIn(position, radius) {
 void ZoomOut::zoomOut(Map &map) {
   Vector2i mapRowColumn = map.getRowColumn();
   Vector2i mapCenter = map.getCenter();
-  int xMin = mapCenter.x - floor(mapRowColumn.x + 30 / 2);
-  int xMax = mapCenter.x + ceil(mapRowColumn.x + 30 / 2);
-  int yMin = mapCenter.y - floor(mapRowColumn.y + 18 / 2);
-  int yMax = mapCenter.y + ceil(mapRowColumn.y + 18 / 2);
-
-  if (xMin < 0 || yMin < 0 || xMax > map.getDataMap().size() ||
-      yMax > map.getDataMap()[0].size()) {
+  if (mapCenter.x - floor(mapRowColumn.x + 30 / 2) < 0 ||
+      mapCenter.y - floor(mapRowColumn.y + 18 / 2) < 0 ||
+      mapCenter.x + ceil(mapRowColumn.x + 30 / 2) > map.getDataMap().size() ||
+      mapCenter.y + ceil(mapRowColumn.y + 18 / 2) >
+          map.getDataMap()[0].size()) {
     return;
   }
   map.setRowColumn(Vector2i(mapRowColumn.x + 18, mapRowColumn.y + 30));
@@ -485,8 +483,8 @@ Log::Log(Vector2f position, Vector2f size)
 //---------------------------------SelectedList---------------------------------
 
 void SelectedList::update() {
-  for (int i = 0; i < showText.size(); i++) {
-    if (showTextIndex + i < allObject.size() && allObject[showTextIndex + i]) {
+  for (int i = 0; i < showTextCapacity; i++) {
+    if (showTextIndex + i < allObject.size()) {
       showText[i].setString(allObject[showTextIndex + i]->getRepresent());
     } else {
       showText[i].setString(" ");
@@ -495,20 +493,17 @@ void SelectedList::update() {
 }
 
 SelectedList::SelectedList(Vector2f position, Vector2f size,
-                           vector<GameObject *> allObject, int textCapacity,
-                           int showTextCapacity)
-    : textCapacity(textCapacity), showTextIndex(0) {
+                           vector<GameObject *> allObject, int showTextCapacity)
+    : showTextIndex(0), showTextCapacity(showTextCapacity),
+      allObject(allObject) {
   font.loadFromFile(FONT_PATH);
   shape.setPosition(position);
   shape.setSize(size);
   shape.setFillColor(COLOR1);
   shape.setOutlineColor(COLOR5);
   shape.setOutlineThickness(2.0f);
-  for (int i = 0; i < textCapacity; i++) {
-    Text tempText;
-    RectangleShape tempShape;
+  for (int i = 0; i < showTextCapacity; i++) {
     tempText.setFont(font);
-    /*คำนวนขนาด text ตาม size ของ textBox*/
     tempShape.setSize(Vector2f(size.x, size.y / showTextCapacity));
     tempShape.setPosition(position.x,
                           position.y + (size.y * i / showTextCapacity));
@@ -516,19 +511,13 @@ SelectedList::SelectedList(Vector2f position, Vector2f size,
     tempShape.setOutlineColor(COLOR5);
     tempShape.setOutlineThickness(3.0f);
     showShape.push_back(tempShape);
-    tempText.setCharacterSize(24);
-    tempText.setFillColor(Color::White);
+    tempText.setCharacterSize(size.y / showTextCapacity);
+    tempText.setFillColor(COLOR5);
     tempText.setPosition(position.x + 10,
                          position.y + (size.y * i / showTextCapacity));
     showText.push_back(tempText);
   }
-  for (int i = 0; i < textCapacity && i < allObject.size(); i++) {
-    if (i < allObject.size()) {
-      showText[i].setString(allObject[i]->getRepresent());
-    } else {
-      showText[i].setString(" ");
-    }
-  }
+  update();
   up.setSize(Vector2f(20, 20));
   up.setPosition(Vector2f(position.x + size.x - 20, position.y));
   up.setFillColor(Color::Green);
@@ -567,12 +556,8 @@ void SelectedList::draw(RenderWindow &window) {
 
 void SelectedList::dumbObject(GameObject *object) {
   allObject.push_back(object);
-  if (allObject.size() > textCapacity) {
-    allObject.erase(allObject.begin());
-  }
-  if (showTextIndex < allObject.size() - textCapacity) {
-    showTextIndex = allObject.size() - textCapacity;
-  }
+  showTextIndex = allObject.size() - 1;
+  update();
 }
 
 RectangleShape SelectedList::getShape() { return shape; }
@@ -580,36 +565,30 @@ RectangleShape SelectedList::getShape() { return shape; }
 void SelectedList::shiftShowTextUp() {
   if (showTextIndex > 0) {
     showTextIndex--;
-    for (int i = 0; i < textCapacity; i++) {
-      if (showTextIndex + i < allObject.size()) {
-        showText[i].setString(allObject[showTextIndex + i]->getRepresent());
-      } else {
-        showText[i].setString(" ");
-      }
-    }
+    update();
   }
 }
 
 void SelectedList::shiftShowTextDown() {
-  if (showTextIndex < allObject.size() - textCapacity) {
+  if (showTextIndex < allObject.size() - showTextCapacity) {
     showTextIndex++;
-    for (int i = 0; i < textCapacity; i++) {
-      if (showTextIndex + i < allObject.size()) {
-        showText[i].setString(allObject[showTextIndex + i]->getRepresent());
-      } else {
-        showText[i].setString(" ");
-      }
-    }
+    update();
   }
 }
 
 GameObject *SelectedList::click(Vector2f position) {
-  for (int i = 0; i < showShape.size(); i++) {
-    if (showShape[i].getGlobalBounds().contains(position)) {
+  for (int i = 0; i < showTextCapacity; i++) {
+    if (showShape[i].getGlobalBounds().contains(position) && showTextIndex + i < allObject.size()) {
       return allObject[showTextIndex + i];
     }
   }
   return nullptr;
+}
+
+void SelectedList::clear() {
+  allObject.clear();
+  showTextIndex = 0;
+  update();
 }
 
 //---------------------------------CommandList---------------------------------
@@ -828,7 +807,6 @@ void Gui::updateLayerSheet() {
             mousePositionView)) {
       if (clickAbleCheck()) {
         layerSheet->setSelectedButton(i);
-        cout << "Choose Layer: " << i << endl;
         break;
       }
     }
@@ -840,17 +818,17 @@ void Gui::renderLayerSheet() { layerSheet->draw(*window); }
 
 void Gui::updateMapCenter() {
   if (key == Keyboard::Up) {
-    pressAbleCheck ? map->changeCenter(map->getCenter() + Vector2(0, 1))
-                   : void();
+    pressAbleCheck() ? map->changeCenter(map->getCenter() + Vector2(0, 1))
+                     : void();
   } else if (key == Keyboard::Down) {
-    pressAbleCheck ? map->changeCenter(map->getCenter() + Vector2(0, -1))
-                   : void();
+    pressAbleCheck() ? map->changeCenter(map->getCenter() + Vector2(0, -1))
+                     : void();
   } else if (key == Keyboard::Left) {
-    pressAbleCheck ? map->changeCenter(map->getCenter() + Vector2(1, 0))
-                   : void();
+    pressAbleCheck() ? map->changeCenter(map->getCenter() + Vector2(1, 0))
+                     : void();
   } else if (key == Keyboard::Right) {
-    pressAbleCheck ? map->changeCenter(map->getCenter() + Vector2(-1, 0))
-                   : void();
+    pressAbleCheck() ? map->changeCenter(map->getCenter() + Vector2(-1, 0))
+                     : void();
   }
 }
 
@@ -925,40 +903,37 @@ void Gui::updateLog() {
 void Gui::renderLog() { log->draw(*window); }
 
 void Gui::updateSelectedList() {
-  if (clickAbleCheck()) {
-    if (map->getBorder().getGlobalBounds().contains(mousePositionView)) {
-      GameObject *object = map->getObject(mousePositionView);
-      if (object) {
-        selectedList->dumbObject(object);
-      }
-    }
-  }
   if (map->getBorder().getGlobalBounds().contains(mousePositionView) &&
-      key == Keyboard::LShift) {
-    if (Mouse::isButtonPressed(Mouse::Left)) {
+      key == Keyboard::LControl) {
+    if (clickAbleCheck()) {
       GameObject *object = map->getObject(mousePositionView);
-      if (object) {
-        selectedList->dumbObject(object);
-      }
+      object ? selectedList->dumbObject(object) : void();
     }
   } else if (map->getBorder().getGlobalBounds().contains(mousePositionView)) {
-    if (Mouse::isButtonPressed(Mouse::Left)) {
+    if (clickAbleCheck()) {
       GameObject *object = map->getObject(mousePositionView);
-      if (object) {
-        selectedList->allObject.clear();
-        selectedList->dumbObject(object);
-      }
+      selectedList->clear();
+      object ? selectedList->dumbObject(object) : void();
     }
   } else if (selectedList->getUp().getGlobalBounds().contains(
                  mousePositionView)) {
-    selectedList->shiftShowTextUp();
+    clickAbleCheck() ? selectedList->shiftShowTextUp() : void();
   } else if (selectedList->getDown().getGlobalBounds().contains(
                  mousePositionView)) {
-    selectedList->shiftShowTextDown();
+    clickAbleCheck() ? selectedList->shiftShowTextDown() : void();
   }
 }
 
 void Gui::renderSelectedList() { selectedList->draw(*window); }
+
+void Gui::updateCommandList() {
+  if (commandList->getUp().getGlobalBounds().contains(mousePositionView)) {
+    clickAbleCheck() ? commandList->shiftShowTextUp() : void();
+  } else if (commandList->getDown().getGlobalBounds().contains(
+                 mousePositionView)) {
+    clickAbleCheck() ? commandList->shiftShowTextDown() : void();
+  }
+}
 
 void Gui::renderCommandList() { commandList->draw(*window); }
 
@@ -966,7 +941,7 @@ Gui::Gui() {
   this->window =
       new RenderWindow(VideoMode(1920, 1080), "Ecosystem Simulation");
   font.loadFromFile(FONT_PATH);
-  window->setFramerateLimit(120); // ตรงนี้เดี๋ยวค่อยมาแก้ เพราะไม่สำคัญเท่าไหร่
+  window->setFramerateLimit(120);
   layerSheet = new LayerSheet(new LayerSystem(255, 153), Vector2f(0, 0),
                               Vector2f(1920, 100));
   map = new Map(Vector2f(1291, 775), Vector2f(629, 150),
@@ -1010,6 +985,7 @@ void Gui::update() {
   updateLayerSystem();
   updateSelectedList();
   updateDetail();
+  updateCommandList();
   updateLog();
 }
 

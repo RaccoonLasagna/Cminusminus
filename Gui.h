@@ -189,18 +189,19 @@ public:
 };
 
 class SelectedList {
+  Text tempText;
+  RectangleShape tempShape;
   RectangleShape shape, up, down;
   vector<Text> showText; // จำนวนจะเปลี่ยนไปตามขนาดของ TextBox
   vector<RectangleShape> showShape;
   Text textUp, textDown;
   Font font;
-  int showTextIndex, textCapacity;
+  int showTextIndex, showTextCapacity;
 
 public:
   vector<GameObject *> allObject;
   SelectedList(Vector2f position, Vector2f size,
-               vector<GameObject *> allObject = {}, int textCapacity = 5,
-               int showTextCapacity = 5);
+               vector<GameObject *> allObject = {}, int showTextCapacity = 5);
   void draw(RenderWindow &window);
   void dumbObject(GameObject *object);
   RectangleShape getShape();
@@ -210,6 +211,7 @@ public:
   void shiftShowTextDown();
   GameObject *click(Vector2f position);
   void update();
+  void clear();
   void setAllObject(vector<GameObject *> object) { allObject = object; }
 };
 
@@ -309,6 +311,7 @@ private:
 
   // ส่วนของการคำสั่ง
   CommandList *commandList;
+  void updateCommandList();
   void renderCommandList();
 
 public:

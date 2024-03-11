@@ -1,43 +1,162 @@
 #include "FundamentalSystem.h"
-#include "FundamentalSystem.cpp"
+
 using namespace std;
 
-#ifndef LIVINGTHING_H
+#ifndef LIVING_THING_H
 #define LIVINGTHING_H
 
-// class GameObject {
-// private:
-//   string represent;
-//   string name;
-//   StatusSystem *stat; // stat ต้องเป็น pointer เพราะว่ามันสามาถเปลี่ยนเป็นตัวอื่นได้
-//   Layer *parent; // stat ต้องเป็น pointer เพราะว่ามันสามาถเปลี่ยนย้าย layer ได้
+// All animals can WalkSeek, WalkEscape, Attack, Eat,
+class Animal : public GameObject {
+protected:
+public:
+    Animal(Layer *parent, int x, int y);
+};
 
-// public:
-//   explicit GameObject(Layer *, string, string, int, int, int, int, int, int,
-//                       vector<StatParameterMax *> *, vector<Ability *> *,
-//                       vector<Affliction *> *); // ต้องมี parent ใน stat ด้วย
-//   //-------------------------//
-//   void virtual update() = 0; // ให้ class ลูกไปเขียนเองเพราะบางอย่าง เช่น พื้นดิน
-//                              // ก็ไม่ต้องตัดสินใจเหมือนสัตว์
-//   //-------------------------//
-//   inline void setName(const string n);
-//   inline void setRepresent(const string r);
-//   void setStat(StatusSystem *statInput); // ไปแย่งเอา stat ของตัวอื่นมาใช้
-//                                          // จะเอามาใช้สำหรับกรณีสัตว์วิวัฒนาการ
-//   void setParent(Layer *p); // เปลี่ยนแบบไม่สนว่าที่ตรงนั้นจะไปทับใครใน layer เดียวกันไหม
-//   //-------------------------//
-//   string getRepresent();
-//   string getName();
-//   StatusSystem *getStat();
-//   Layer *getParent();
-//   //-------------------------//
-//   int getX();
-//   int getY();
-// };
 
-class LivingThing : public GameObject{
-    private:
-    public:
+class Plant : public GameObject {
+
+protected:
+public:
+    Plant(Layer *parent, int x, int y);
+};
+
+
+class Corpse : public GameObject {
+
+protected:
+    int hunger_yield;
+    string name = "Corpse";
+
+public:
+    Corpse(Layer *parent, int x, int y, int hunger_yield);
+};
+
+
+class Lion : public Animal {
+protected:
+    string name = "Lion";
+    string diet_type = "Carnivore";
+
+public:
+    Lion(Layer *parent, int x, int y);
+};
+
+
+class Bear : public Animal {
+protected:
+    string name = "Bear";
+    string diet_type = "Carnivore";
+
+public:
+    Bear(Layer *parent, int x, int y);
+};
+
+
+class Cheetah : public Animal {
+protected:
+    string name = "Cheetah";
+    string diet_type = "Carnivore";
+
+public:
+    Cheetah(Layer *parent, int x, int y);
+};
+
+
+class Giant_Snake : public Animal {
+protected:
+    string name = "Giant Snake";
+    string diet_type = "Carnivore";
+
+public:
+    Giant_Snake(Layer *parent, int x, int y);
+};
+
+
+class Rabbit : public Animal {
+protected:
+    string name = "Rabbit";
+    string diet_type = "Herbivore";
+
+public:
+    Rabbit(Layer *parent, int x, int y);
+};
+
+
+class Goat : public Animal {
+protected:
+    string name = "Goat";
+    string diet_type = "Herbivore";
+
+public:
+    Goat(Layer *parent, int x, int y);
+};
+
+
+class Deer : public Animal {
+protected:
+    string name = "Deer";
+    string diet_type = "Herbivore";
+
+public:
+    Deer(Layer *parent, int x, int y);
+};
+
+
+class Chicken : public Animal {
+protected:
+    string name = "Chicken";
+    string diet_type = "Omnivore";
+
+public:
+    Chicken(Layer *parent, int x, int y);
+};
+
+
+class Poison_Frog : public Animal {
+protected:
+    string name = "Poison Frog";
+    string diet_type = "Omnivore";
+
+public:
+    Poison_Frog(Layer *parent, int x, int y);
+};
+
+
+class EarthWorm : public Animal {
+protected:
+    string name = "EarthWorm";
+
+public:
+    EarthWorm(Layer *parent, int x, int y);
+};
+
+
+class Bush : public Plant {
+protected:
+    string name = "Bush";
+    
+public:
+    Bush(Layer *parent, int x, int y);
+};
+
+
+class Apple_tree : public Plant {
+protected:
+    string name = "Apple tree";
+    
+public:
+    Apple_tree(Layer *parent, int x, int y);
+};
+
+
+class Mushroom : public Plant {
+protected:
+    int Health,hunger_yield;
+    string name = "Mushroom";
+    
+public:
+    Mushroom(Layer *parent, int x, int y);
 };
 
 #endif
+//

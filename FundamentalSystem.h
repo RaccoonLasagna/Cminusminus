@@ -16,8 +16,9 @@ class Affliction;
 class AfflictionSystem;
 class StatusBlock;
 class GameObject;
-class Ground;
 class Layer;
+class Land;
+class Ground;
 class LayerSystem;
 class Command;
 
@@ -25,10 +26,10 @@ class Command;
 #define FUNDAMENTALSYSTEM_H
 
 class StatParam {
-protected:
+protected:    
   string name; // ไปกำหนดเองตอนสร้าง classs
   int targetValue; // ไปกำหนดเองตอนสร้าง class
-  int rawValue, value;
+  int defaultValue, value;
   vector<pair<string, int>> stackInfo;
   StatusBlock *parent;
   void virtual action() = 0; // ส่งผลกับตัวเองยังไง
@@ -36,15 +37,15 @@ protected:
   void updateStackInfo();
 
 public:
-  StatParam(StatusBlock *parent, Ability *createBy, int rawValue);
-  StatParam(GameObject *target, Ability *createBy, int rawValue);
-  void virtual setRawTo(int i);      // คนใช้คือ Ability
+  StatParam(StatusBlock *parent, Ability *createBy, int defaultValue);
+  StatParam(GameObject *target, Ability *createBy, int defaultValue);
+  void virtual setDefaultTo(int i);      // คนใช้คือ Ability
   bool virtual changeValueBy(int i); // คนใช้คือ Affliction
   void pushStackInfo(pair<string, int> *target); // คนใช้คือ Ability
   //----------------------------//
   void resetValue();
   inline string getName();
-  inline int getRawValue();
+  inline int getDefaultValue();
   inline int getValue();
   inline vector<pair<string, int>> getStackInfo();
   inline StatusBlock *getParent();
@@ -106,7 +107,7 @@ public:
   vector<Ability *> abilityGroup;
   AbilitySystem(GameObject *parent);
   bool addAbility(Ability *ability);
-  void decisionMakeing(int sur, int env, int repro);
+  void decisionMaking(int sur, int env, int repro);
   inline GameObject *getParent();
 };
 
@@ -124,6 +125,7 @@ public:
   int amountOfAffliction(string name);
   void updateAffliction();
   GameObject *getParent();
+  bool isInAffliction(string name);
 };
 
 class StatusBlock : public AbilitySystem, public AfflictionSystem {
@@ -136,7 +138,7 @@ public:
   bool isInParam(string name);
   void resetValue();
   bool addStat(StatParam *statParam); // คำนวน aff value ใหม่ทั้งหมดด้วยหลังจากทำเสร็จ
-  int getParamValueRaw(string name); // ถึงแม้จะไม่มีสแตดก็รีเทิร์น 0 ออกมา
+  int getParamValueDefault(string name); // ถึงแม้จะไม่มีสแตดก็รีเทิร์น 0 ออกมา
   int getParamValue(string name); // ถึงแม้จะไม่มีสแตดก็รีเทิร์น 0 ออกมา
   StatParam *getParam(string name);
   inline GameObject *getParent();
@@ -153,7 +155,7 @@ public:
   int virtual getSur() = 0;
   int virtual getEnv() = 0;
   int virtual getRepo() = 0;
-  void virtual update() = 0; // เล่นเทิร์น
+  void update(); // เล่นเทิร์น
   pair<int, int> getVectorIndex();
   pair<int, int> getCoord();
   inline void setName(string stringInput);
@@ -167,7 +169,7 @@ public:
   // bool canAct(GameObject *);
 };
 
-class Layer { // ต้องทำการเรียงให้มีตำแหน่งติดลบด้วย
+class Layer {
 private:
   string name;
   GameObject *default_value;
@@ -177,11 +179,12 @@ public:
   vector<vector<GameObject *>> insideLayer;
   Layer(string name, LayerSystem *parent, int width, int height);
   void action();
-  void addToLayer(GameObject *target, int x, int y);
+  void setLayer(GameObject *target, int x, int y);
   void removeFromLayer(int x, int y);
   inline string getName();
   inline void setName(string nameInput);
-  inline GameObject *getFromLayer(int x, int y);
+  inline GameObject *getFromLayerIndex(int x, int y);
+  GameObject *getFromLayerCoord(int x, int y);
   LayerSystem *getParent();
 };
 
@@ -205,6 +208,7 @@ private:
 public:
   Ground(LayerSystem *p = nullptr, int width = 0, int height = 0);
   vector<vector<Land>> insideLayer;
+  pair<int, int> getVectorIndex(int x, int y);
 };
 
 class LayerSystem {
@@ -226,8 +230,9 @@ public:
   double getDistance(GameObject *a, GameObject *b);
   double getDistance(int x1, int y1, int x2, int y2);
   //-------------------------//
-  Layer *getLayer(string name);
+  inline Layer *getLayer(string name);
   inline Layer *getLayer(int i);
+  inline Layer *getRandomLayer();
   inline Ground getGround();
   inline string getLayerName(int i);
   vector<vector<GameObject *>> getOverAllLayer() {

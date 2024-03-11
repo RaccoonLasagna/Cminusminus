@@ -2,7 +2,7 @@
 #include <vector>
 #include "Gui.h"
 
-using namespace sf;
+// using namespace sf;
 
 int main() {
     Gui game;

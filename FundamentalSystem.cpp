@@ -176,11 +176,11 @@ bool AbilitySystem::addAbility(Ability *target)
   return false;
 }
 
-void AbilitySystem::decisionMaking(int sur, int env, int repo)
-{
-  int maxValue, indexMax = -1, index, value = 0;
-  for (Ability *ability : abilityGroup)
-  {
+void AbilitySystem::decisionMakeing(int sur, int env, int repo) {
+  int maxValue, indexMax, index, value;
+  maxValue = index = value = 0;
+  indexMax = -1;
+  for (Ability *ability : abilityGroup) {
     index++;
     ability->passive(ability->findTargetForPassive());
     if (ability->canActive(ability->findTargetForActive()))
@@ -193,8 +193,7 @@ void AbilitySystem::decisionMaking(int sur, int env, int repo)
       }
     }
   }
-  if (indexMax > -1)
-  {
+  if (indexMax > -1) {
     Ability *choosenAction = abilityGroup[indexMax];
     choosenAction->active(choosenAction->findTargetForActive());
   }
@@ -420,16 +419,16 @@ pair<int, int> GameObject::getCoord()
     LayerSystem *ls = parent->getParent();
     Ground ground = ls->getGround();
     Land floor = ground.insideLayer[vector_index.second][vector_index.first];
-    return {floor.getX(), floor.getY()};
+    return make_pair(floor.getX(), floor.getY());
   }
   // not found
-  return {-2147483648, -2147483648};
+  return make_pair(-2147483648, -2147483648);
 }
 
 void GameObject::setName(string stringInput) { name = stringInput; }
 void GameObject::setRepresent(string stringInput) { represent = stringInput; }
 string GameObject::getName() { return name; }
-string GameObject::getRepresent() { return represent; }
+// inline string GameObject::getRepresent() { return represent; }
 StatusBlock *GameObject::getStat() { return stat; }
 Layer *GameObject::getParent() { return parent; }
 
@@ -538,7 +537,6 @@ void Layer::setLayer(GameObject *target, int x, int y)
 }
 
 void Layer::removeFromLayer(int x, int y) { insideLayer.at(y).at(x) = nullptr; }
-
 inline string Layer::getName() { return name; }
 void Layer::setName(string nameInput) { name = nameInput; }
 GameObject *Layer::getFromLayerIndex(int x, int y)
@@ -616,7 +614,7 @@ LayerSystem::LayerSystem(int width, int height)
 {
   createNewLayer("Food");
   createNewLayer("Animal");
-  createNewLayer("Environment");
+  createNewLayer("Plant");
 }
 
 bool LayerSystem::createNewLayer(string name)
@@ -643,15 +641,13 @@ bool LayerSystem::removeLayer(string name)
   return false;
 }
 
-int LayerSystem::getDistance(GameObject *a, GameObject *b)
-{
+double LayerSystem::getDistance(GameObject *a, GameObject *b) {
   pair<int, int> aCoord = a->getCoord();
   pair<int, int> bCoord = b->getCoord();
   return getDistance(aCoord.first, aCoord.second, bCoord.first, bCoord.second);
 }
 
-int LayerSystem::getDistance(int x1, int y1, int x2, int y2)
-{
+double LayerSystem::getDistance(int x1, int y1, int x2, int y2) {
   return floor(abs(x1 - x2) + abs(y1 - y2));
 }
 
@@ -665,6 +661,12 @@ inline Layer *LayerSystem::getLayer(string name)
     }
   }
   return nullptr;
+}
+
+void LayerSystem::update() {
+  for (Layer *l : layers) {
+    l->action();
+  }
 }
 
 inline Layer *LayerSystem::getLayer(int i) { return layers.at(i); }

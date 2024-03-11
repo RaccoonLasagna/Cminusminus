@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|x64">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|x64">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{1BD64AC2-F4B1-3AB5-A0FD-E6398BC9B8AA}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>x64</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/ADMIN/Documents/GitHub/Cminusminus/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\cmake.exe -SC:/Users/ADMIN/Documents/GitHub/Cminusminus -BC:/Users/ADMIN/Documents/GitHub/Cminusminus/build --check-stamp-file C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles\3.27.8\CMakeCCompiler.cmake;C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles\3.27.8\CMakeCXXCompiler.cmake;C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles\3.27.8\CMakeRCCompiler.cmake;C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles\3.27.8\CMakeSystem.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeCInformation.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeCXXInformation.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeGenericSystem.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeInitializeConfigs.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeLanguageInformation.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeRCInformation.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Compiler\MSVC-C.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Compiler\MSVC-CXX.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Compiler\MSVC.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Platform\Windows-Initialize.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Platform\Windows-MSVC.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Platform\Windows.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/ADMIN/Documents/GitHub/Cminusminus/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\cmake.exe -SC:/Users/ADMIN/Documents/GitHub/Cminusminus -BC:/Users/ADMIN/Documents/GitHub/Cminusminus/build --check-stamp-file C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles\3.27.8\CMakeCCompiler.cmake;C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles\3.27.8\CMakeCXXCompiler.cmake;C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles\3.27.8\CMakeRCCompiler.cmake;C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles\3.27.8\CMakeSystem.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeCInformation.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeCXXInformation.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeGenericSystem.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeInitializeConfigs.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeLanguageInformation.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeRCInformation.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Compiler\MSVC-C.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Compiler\MSVC-CXX.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Compiler\MSVC.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Platform\Windows-Initialize.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Platform\Windows-MSVC.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Platform\Windows.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/ADMIN/Documents/GitHub/Cminusminus/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\cmake.exe -SC:/Users/ADMIN/Documents/GitHub/Cminusminus -BC:/Users/ADMIN/Documents/GitHub/Cminusminus/build --check-stamp-file C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles\3.27.8\CMakeCCompiler.cmake;C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles\3.27.8\CMakeCXXCompiler.cmake;C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles\3.27.8\CMakeRCCompiler.cmake;C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles\3.27.8\CMakeSystem.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeCInformation.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeCXXInformation.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeGenericSystem.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeInitializeConfigs.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeLanguageInformation.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeRCInformation.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Compiler\MSVC-C.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Compiler\MSVC-CXX.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Compiler\MSVC.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Platform\Windows-Initialize.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Platform\Windows-MSVC.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Platform\Windows.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/ADMIN/Documents/GitHub/Cminusminus/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\cmake.exe -SC:/Users/ADMIN/Documents/GitHub/Cminusminus -BC:/Users/ADMIN/Documents/GitHub/Cminusminus/build --check-stamp-file C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles\3.27.8\CMakeCCompiler.cmake;C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles\3.27.8\CMakeCXXCompiler.cmake;C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles\3.27.8\CMakeRCCompiler.cmake;C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles\3.27.8\CMakeSystem.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeCInformation.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeCXXInformation.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeCommonLanguageInclude.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeGenericSystem.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeInitializeConfigs.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeLanguageInformation.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeRCInformation.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeSystemSpecificInformation.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakeSystemSpecificInitialize.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Compiler\MSVC-C.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Compiler\MSVC-CXX.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Compiler\MSVC.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Platform\Windows-Initialize.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Platform\Windows-MSVC-C.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Platform\Windows-MSVC.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Platform\Windows.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\Platform\WindowsPaths.cmake;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\ZERO_CHECK.vcxproj">
+      <Project>{1862FD9D-BF7B-3C9A-8428-26218C4B8A13}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\GameGod.vcxproj">
+      <Project>{D09E3307-F0F3-3DE8-970B-91C9D59DFF6E}</Project>
+      <Name>GameGod</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\lib\SFML\src\SFML\Audio\sfml-audio.vcxproj">
+      <Project>{F59B3159-B1B9-30E0-B9CE-16B554E808A3}</Project>
+      <Name>sfml-audio</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\lib\SFML\src\SFML\Graphics\sfml-graphics.vcxproj">
+      <Project>{ABEF791E-F3B0-37A7-9A70-B2FA0B36EB64}</Project>
+      <Name>sfml-graphics</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\lib\SFML\src\SFML\Main\sfml-main.vcxproj">
+      <Project>{20B4F236-7F6B-37BA-BFA2-FC235C6ADE47}</Project>
+      <Name>sfml-main</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\lib\SFML\src\SFML\Network\sfml-network.vcxproj">
+      <Project>{4797DAE3-896B-38BE-AAEF-A6FB6145852E}</Project>
+      <Name>sfml-network</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\lib\SFML\src\SFML\System\sfml-system.vcxproj">
+      <Project>{3581FE81-9041-31BF-976A-4D8BCB08E33F}</Project>
+      <Name>sfml-system</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\lib\SFML\src\SFML\Window\sfml-window.vcxproj">
+      <Project>{D7D6E2C5-ABB8-3CFD-9351-7327D19DF6A9}</Project>
+      <Name>sfml-window</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

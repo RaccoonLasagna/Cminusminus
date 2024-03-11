@@ -161,10 +161,12 @@ public:
   inline void setName(string stringInput);
   void setRepresent(string stringInput);
   inline string getName();
-  inline string getRepresent();
+  inline string getRepresent() { return represent; }
   inline StatusBlock *getStat();
   inline Layer *getParent();
-  vector<GameObject*> findTargetInRange(int range, bool allLayers);
+  vector<GameObject *> findTargetInRange(int range, bool allLayers);
+  vector<string> getDetail() { return {}; }
+  // bool canAct(GameObject *);
 };
 
 class Layer {
@@ -193,9 +195,10 @@ private:
   int x, y;
 
 public:
-  explicit Land(Ground *parent, string represent, int x, int y);
-  inline int getX();
-  inline int getY();
+  explicit Land(Ground *parentInput, string representInput, int xValueInput = 0,
+                int yValueInput = 0);
+  int getX() { return x; };
+  int getY() { return y; };
 };
 
 class Ground {
@@ -217,12 +220,15 @@ private:
 
 public:
   vector<Layer *> layers;
+  vector<string> logActionData;
+  LayerSystem(int width, int height, int amount);
   LayerSystem(int width, int height);
   //-------------------------//
+  void update();
   bool createNewLayer(string name); // ตรวจสอบชื่อซ้ำเพื่อไม่ให้มีชื่อซ้ำ
   bool removeLayer(string name); // มี layer นั้นๆให้ลบไหม
-  int getDistance(GameObject *a, GameObject *b);
-  int getDistance(int x1, int y1, int x2, int y2);
+  double getDistance(GameObject *a, GameObject *b);
+  double getDistance(int x1, int y1, int x2, int y2);
   //-------------------------//
   inline Layer *getLayer(string name);
   inline Layer *getLayer(int i);
@@ -234,8 +240,25 @@ public:
   inline int getLayersHeight();
   void printLayer();
   void randomGenerateLayers();
+  vector<vector<GameObject *>> getOverAllLayer() {
+    vector<vector<GameObject *>> temp;
+    for (int row = 0; row < height; row++) {
+      vector<GameObject *> tempRow;
+      for (int col = 0; col < width; col++) {
+        for (int i = 0; i < layers.size(); i++) {
+          if (layers[i]->insideLayer[row][col] != nullptr) {
+            tempRow.push_back(layers[i]->insideLayer[row][col]);
+            break;
+          }
+          if (i == layers.size() - 1) {
+            tempRow.push_back(nullptr);
+          }
+        }
+      }
+      temp.push_back(tempRow);
+    }
+    return temp;
+  }
 };
-
-class Command {};
 
 #endif

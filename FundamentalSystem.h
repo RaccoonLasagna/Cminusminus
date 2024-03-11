@@ -155,7 +155,7 @@ public:
   int virtual getSur() = 0;
   int virtual getEnv() = 0;
   int virtual getRepo() = 0;
-  void update(); // เล่นเทิร์น
+  void update() { return;}
   pair<int, int> getVectorIndex();
   pair<int, int> getCoord();
   inline void setName(string stringInput);
@@ -164,7 +164,7 @@ public:
   inline string getRepresent() { return represent; }
   inline StatusBlock *getStat();
   inline Layer *getParent();
-  vector<GameObject *> findTargetInRange(int range);
+  vector<GameObject *> findTargetInRange(int range, bool allLayers);
   vector<string> getDetail() { return {}; }
   // bool canAct(GameObject *);
 };
@@ -197,8 +197,8 @@ private:
 public:
   explicit Land(Ground *parentInput, string representInput, int xValueInput = 0,
                 int yValueInput = 0);
-  int getX() { return x; };
-  int getY() { return y; };
+  int getX();
+  int getY();
 };
 
 class Ground {
@@ -234,6 +234,10 @@ public:
   inline Layer *getLayer(int i);
   inline Layer *getRandomLayer();
   inline Ground getGround();
+  void printLayer();
+  int getLayersWidth() { return width; }
+  int getLayersHeight() { return height; }
+  int getLayersAmount();
   inline string getLayerName(int i);
   vector<vector<GameObject *>> getOverAllLayer() {
     vector<vector<GameObject *>> temp;

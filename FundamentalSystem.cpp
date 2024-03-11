@@ -175,7 +175,7 @@ bool AbilitySystem::addAbility(Ability *target)
   return false;
 }
 
-void AbilitySystem::decisionMakeing(int sur, int env, int repo) {
+void AbilitySystem::decisionMaking(int sur, int env, int repo) {
   int maxValue, indexMax, index, value;
   maxValue = index = value = 0;
   indexMax = -1;
@@ -677,10 +677,6 @@ Ground LayerSystem::getGround() { return ground; }
 string inline LayerSystem::getLayerName(int i) { return layers.at(i)->getName(); }
 
 int inline LayerSystem::getLayersAmount() { return layers.size(); }
-
-int inline LayerSystem::getLayersWidth() { return width; }
-
-int inline LayerSystem::getLayersHeight() { return height; }
 
 void LayerSystem::printLayer()
 {

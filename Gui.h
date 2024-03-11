@@ -31,8 +31,6 @@ class Grid {
 private:
   RectangleShape shape;
   GameObject *object;
-  Font font;
-  Text text;
 
 public:
   Grid(Vector2f size, Vector2f position, GameObject *object);
@@ -42,15 +40,18 @@ public:
 
 class Map { // แสดงเฉพาะส่วน
 private:
+  Font font;
+  Text tempText;
   float width, height; /*จำเป็นในการตีตาราง*/
   int row, column; /*จำเป็นในการตีตาราง*/
   Vector2i center; /*จุดกึ่งกลางของการแสดงผล*/
   RectangleShape border;        /*shape ที่กำหนด position*/
   vector<vector<Grid>> gridMap; /*เวลาซูม เคลียแล้วสร้างใหม่หมดเลยง่ายกว่า*/
   vector<vector<GameObject *>> dataMap; /*ต้องไปดึงมาทุกเทิร์น*/
-  void update(); /*สร้าง gird และลงทะเบียน grid ทั้งหมดใหม่โดยใช้ข้อมูลที่มีอยู่ในปัจจุบัน*/
+  vector<vector<Text>> showText;
 
 public:
+  void update();
   Map(Vector2f size, Vector2f position, vector<vector<GameObject *>> dataMap);
   void draw(RenderWindow &window);
   void setDataMap(vector<vector<GameObject *>> dataMap);
@@ -181,9 +182,9 @@ public:
 class Log : public TextBox {
 protected:
   float DefaultHeight;
-  void update();
 
 public:
+  void update();
   Log(Vector2f position, Vector2f size);
 };
 
@@ -223,10 +224,10 @@ protected:
 
 public:
   vector<string> allObject;
-  CommandList(Vector2f position, Vector2f size, vector<string> allObject = {}, int textCapacity = 5,
-               int showTextCapacity = 5);
+  CommandList(Vector2f position, Vector2f size, vector<string> allObject = {},
+              int textCapacity = 5, int showTextCapacity = 5);
   void draw(RenderWindow &window);
-  RectangleShape getShape() {return shape;}
+  RectangleShape getShape() { return shape; }
   RectangleShape getUp() { return up; }
   RectangleShape getDown() { return down; }
   void shiftShowTextUp();
@@ -236,55 +237,84 @@ public:
 
 class Gui {
 private:
-  int turnCount = 0;
+  // ส่วนของการสร้างหน้าต่าง
   RenderWindow *window;
   Text turn;
   Font font;
+  Sprite sprite;
+  Texture spriteTexture;
+  void renderAny();
+
+  // ส่วนของการรับข้อมูลจากผู้ใช้
   Event event;
+  void pollEvent();
+
+  // ส่วนของการเช็คการคลิก
+  bool clickAble;
   Vector2i mousePosition;
   Vector2f mousePositionView;
-  Keyboard::Key key;
-  bool play, run;
-  bool detailShow, SelectedListShow, CommandListShow;
-  Sprite MiniMap;
-  Texture MiniMapTexture;
+  void updateMousePosition();
+  bool clickAbleCheck();
+  void updateClickAble();
 
-protected:
-  LayerSheet *layerSheet;
-  Map *map;
-  ZoomIn *zoomIn;
-  ZoomOut *zoomOut;
+  // ส่วนของการเช็คการกดปุ่ม
+  bool pressAble;
+  Keyboard::Key key;
+  void updateKeyboard();
+  bool pressAbleCheck();
+  void updatePressAble();
+
+  // ส่วนของการรันเกม
   StopButton *stopButton;
   PlayButton *playButton;
   RunButton *runButton;
-  Detail *detail;
-  Log *log;
-  SelectedList *selectedList;
-  CommandList *commandList;
+  bool play, run = false;
+  void updateUpdateButton();
+  void updateLayerSystem();
+  void renderUpdateButton();
 
+  // ส่วนของการดึงข้อมูลจาก FundamentalSystem
+  int turnCount = 0;
   vector<LayerButton> layerButtons;
-  vector<vector<GameObject *>> dataMap;
-  vector<GameObject *> selectedObject;
-  vector<string> commandListText;
-  vector<string> logText;
+  LayerSheet *layerSheet;
+  void updateLayerSheet();
+  void renderLayerSheet();
+
+  // ส่วนของการสร้างและแสดงข้อมูล
+  Map *map;
+  void updateMapCenter();
+  void renderMap();
+
+  // ส่วนของการซูม
+  ZoomIn *zoomIn;
+  ZoomOut *zoomOut;
+  void updateZoomButton();
+  void renderZoomButton();
+
+  // ส่วนของการแสดงข้อมูล
+  bool detailShow = false;
+  Detail *detail;
+  void updateDetail();
+  void renderDetail();
+
+  // ส่วนของการแสดงข้อมูลทั้งหมด
+  Log *log;
+  void updateLog();
+  void renderLog();
+
+  // ส่วนของการเลือก
+  SelectedList *selectedList;
+  void updateSelectedList();
+  void renderSelectedList();
+
+  // ส่วนของการคำสั่ง
+  CommandList *commandList;
+  void renderCommandList();
 
 public:
   Gui();
   bool isOpen();
-  void updateMousePosition();
-  void updateKeyboard();
-  void updateUpdateButton();
-  void updateLayerSystem();
-  void updateLayerSheet();
-  void updateSelectedList();
-  void updateZoomButton();
-  void updateDetail();
-  void updateMapCenter();
-  void updateLog();
   void update();
-  void pollEvent();
-
-  void renderDetail();
   void render();
 };
 

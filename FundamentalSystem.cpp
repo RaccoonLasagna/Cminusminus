@@ -176,7 +176,7 @@ bool AbilitySystem::addAbility(Ability *target)
   return false;
 }
 
-void AbilitySystem::decisionMakeing(int sur, int env, int repo) {
+void AbilitySystem::decisionMaking(int sur, int env, int repo) {
   int maxValue, indexMax, index, value;
   maxValue = index = value = 0;
   indexMax = -1;

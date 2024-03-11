@@ -147,7 +147,6 @@ public:
 class GameObject { // จะสร้างซักตัวก็ต้องสร้าง abilty, stat ของมันให้พร้อมนะ
 protected:
   string name, represent;
-  Var3DGraph *sur, *env, *repo; // กำหนดเองตอนสร้าง class
   StatusBlock *stat;
   Layer *parent;
 
@@ -156,7 +155,7 @@ public:
   int virtual getSur() = 0;
   int virtual getEnv() = 0;
   int virtual getRepo() = 0;
-  void virtual update() = 0; // เล่นเทิร์น
+  void update(); // เล่นเทิร์น
   pair<int, int> getVectorIndex();
   pair<int, int> getCoord();
   inline void setName(string stringInput);

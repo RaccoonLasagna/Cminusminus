@@ -113,46 +113,6 @@ void Eat::active(vector<GameObject *> target)
   return;
 }
 
-//-------------------------- Rest ----------------------------//
-
-// sleeping replenishes stamina, so give animals stamina
-void Rest::createStatParam()
-{
-  new Stamina(getParent()->getParent(), this, 100);
-}
-
-// no passives
-vector<GameObject *> Rest::findTargetForPassive()
-{
-  return {};
-}
-
-// no targets
-vector<GameObject *> Rest::findTargetForActive()
-{
-  return {};
-}
-
-// An animal can always rest
-bool Rest::canActive(vector<GameObject *> targets)
-{
-  return true;
-}
-
-// no passives :(
-void Rest::passive(vector<GameObject *> targets)
-{
-  return;
-}
-
-// resting removes a stack of fatigue
-void Rest::active(vector<GameObject *> targets)
-{
-  GameObject *animal = parent->getParent();
-  StatusBlock *stats = animal->getStat();
-  stats->removeAffliction("Fatigue");
-}
-
 //--------------------------- Attack ----------------------------//
 
 // you need atk to attack

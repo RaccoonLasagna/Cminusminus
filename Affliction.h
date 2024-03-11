@@ -30,18 +30,6 @@ class Hunger_Aff : public Affliction {
     Hunger_Aff(GameObject *target, int duration, int valueIncrease, int value);
 };
 
-class Stamina_Aff : public Affliction {
-    protected:
-    string name = "Stamina_Aff";
-    string targetValue = "Stamina";
-    int duration,valueIncrease,value;
-    bool permanent = false;
-    public:
-    Stamina_Aff(StatusBlock *parent, int duration, int valueIncrease, int value);
-    Stamina_Aff(GameObject *target, int duration, int valueIncrease, int value);
-};
-
-
 class Attack_Aff : public Affliction {
     protected:
     string name = "Attack_Aff";

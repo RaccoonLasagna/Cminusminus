@@ -16,13 +16,6 @@ Hunger_Aff::Hunger_Aff(GameObject *target, int duration, int valueIncrease, int 
 : Affliction(target), duration(duration),valueIncrease(valueIncrease),value(value)
 {}
 
-Stamina_Aff::Stamina_Aff(StatusBlock *parent, int duration, int valueIncrease, int value) 
-: Affliction(parent), duration(duration),valueIncrease(valueIncrease),value(value)
-{}
-Stamina_Aff::Stamina_Aff(GameObject *target, int duration, int valueIncrease, int value) 
-: Affliction(target), duration(duration),valueIncrease(valueIncrease),value(value)
-{}
-
 Attack_Aff::Attack_Aff(StatusBlock *parent, int duration, int valueIncrease, int value) 
 : Affliction(parent), duration(duration),valueIncrease(valueIncrease),value(value)
 {}

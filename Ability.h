@@ -36,30 +36,6 @@ public:
   void virtual active(vector<GameObject *> targets) override;
 };
 
-//--------------------------- Rest ---------------------------
-
-class Rest : public Ability
-{
-protected:
-  string name = "Rest";
-  Var3DGraph data = Var3DGraph({{0, 0, 0, 0},
-                                {0, 100, 0, 100},
-                                {100, 100, 0, 40},
-                                {0, 0, 100, 10},
-                                {30, 80, 5, 70},
-                                {100, 100, 100, 25}}); // เดี๋ยวค่อยคิดใหม่
-  void createStatParam() override;
-
-public:
-  Rest(AbilitySystem *parent);
-  Rest(GameObject *target);
-  vector<GameObject *> virtual findTargetForPassive() override;
-  vector<GameObject *> virtual findTargetForActive() override;
-  bool virtual canActive(vector<GameObject *> targets) override;
-  void virtual passive(vector<GameObject *> targets) override;
-  void virtual active(vector<GameObject *> targets) override;
-};
-
 //--------------------------- Attack ---------------------------
 
 class Attack : public Ability
@@ -190,7 +166,7 @@ public:
   bool virtual canActive(vector<GameObject *> targets) override;
   void virtual passive(vector<GameObject *> targets) override;
   void virtual active(vector<GameObject *> targets) override;
-}
+};
 
 #endif
 

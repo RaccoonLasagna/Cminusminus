@@ -15,6 +15,7 @@ class Hunger : public StatParam {
     Hunger(GameObject *target, Ability *createBy, int rawValue);
 };
 
+// No abilities create this, include for all living things
 class Health : public StatParam {
     protected:
     string name = "Health";

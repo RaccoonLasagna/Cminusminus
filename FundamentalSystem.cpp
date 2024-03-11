@@ -177,7 +177,7 @@ bool AbilitySystem::addAbility(Ability *target)
 
 void AbilitySystem::decisionMaking(int sur, int env, int repo)
 {
-  int maxValue, indexMax, index, value = 0;
+  int maxValue, indexMax = -1, index, value = 0;
   for (Ability *ability : abilityGroup)
   {
     index++;
@@ -192,8 +192,11 @@ void AbilitySystem::decisionMaking(int sur, int env, int repo)
       }
     }
   }
-  Ability *choosenAction = abilityGroup[indexMax];
-  choosenAction->active(choosenAction->findTargetForActive());
+  if (indexMax > -1)
+  {
+    Ability *choosenAction = abilityGroup[indexMax];
+    choosenAction->active(choosenAction->findTargetForActive());
+  }
 }
 
 GameObject *AbilitySystem::getParent() { return parent; }
@@ -289,9 +292,12 @@ void AfflictionSystem::updateAffliction()
 
 GameObject *AfflictionSystem::getParent() { return parent; }
 
-bool AfflictionSystem::isInAffliction(string name){
-  for (Affliction *aff : afflictionGroup){
-    if (aff->getName() == name){
+bool AfflictionSystem::isInAffliction(string name)
+{
+  for (Affliction *aff : afflictionGroup)
+  {
+    if (aff->getName() == name)
+    {
       return true;
     }
   }
@@ -539,7 +545,8 @@ GameObject *Layer::getFromLayerIndex(int x, int y)
   return insideLayer.at(y).at(x);
 }
 
-GameObject *Layer::getFromLayerCoord(int x, int y){
+GameObject *Layer::getFromLayerCoord(int x, int y)
+{
   pair<int, int> targetIndex = parent->getGround().getVectorIndex(x, y);
   return getFromLayerIndex(targetIndex.first, targetIndex.second);
 }
@@ -548,7 +555,7 @@ LayerSystem *Layer::getParent() { return parent; }
 
 // ------------------Land--------------------//
 
-Land::Land(Ground *parent, string represent, int x, int y): parent(parent), represent(represent), x(x), y(y){}
+Land::Land(Ground *parent, string represent, int x, int y) : parent(parent), represent(represent), x(x), y(y) {}
 
 inline int Land::getX() { return x; }
 inline int Land::getY() { return y; }
@@ -572,17 +579,21 @@ Ground::Ground(LayerSystem *p, int width, int height) : parent(p)
   }
 }
 
-pair<int, int> Ground::getVectorIndex(int x, int y) {
-    for (int i = 0; i < insideLayer.size(); ++i) {
-        for (int j = 0; j < insideLayer[i].size(); ++j) {
-            if (insideLayer[i][j].getX() == x && insideLayer[i][j].getY() == y) {
-                return make_pair(j, i);
-            }
-        }
+pair<int, int> Ground::getVectorIndex(int x, int y)
+{
+  for (int i = 0; i < insideLayer.size(); ++i)
+  {
+    for (int j = 0; j < insideLayer[i].size(); ++j)
+    {
+      if (insideLayer[i][j].getX() == x && insideLayer[i][j].getY() == y)
+      {
+        return make_pair(j, i);
+      }
     }
+  }
 
-    // -1 = not found
-    return make_pair(-1, -1);
+  // -1 = not found
+  return make_pair(-1, -1);
 }
 
 //-------------------LayerSystem-------------------//
@@ -657,7 +668,7 @@ inline Layer *LayerSystem::getLayer(string name)
 
 inline Layer *LayerSystem::getLayer(int i) { return layers.at(i); }
 
-inline Layer *LayerSystem::getRandomLayer() {return layers.at(rand() % layers.size());}
+inline Layer *LayerSystem::getRandomLayer() { return layers.at(rand() % layers.size()); }
 
 Ground LayerSystem::getGround() { return ground; }
 
@@ -669,20 +680,30 @@ int inline LayerSystem::getLayersWidth() { return width; }
 
 int inline LayerSystem::getLayersHeight() { return height; }
 
-void LayerSystem::printLayer() {
+void LayerSystem::printLayer()
+{
   Layer *env_layer = getLayer("Environment");
   Layer *animal_layer = getLayer("Animal");
   Layer *food_layer = getLayer("Food");
 
-  for (int column = 0; column < height; column++) {
-    for (int row = 0; row < width; row++) {
-      if (env_layer->getFromLayerIndex(column, row) != nullptr) {
+  for (int column = 0; column < height; column++)
+  {
+    for (int row = 0; row < width; row++)
+    {
+      if (env_layer->getFromLayerIndex(column, row) != nullptr)
+      {
         cout << env_layer->getFromLayerIndex(column, row) << ' ';
-      } else if (animal_layer->getFromLayerIndex(column, row) != nullptr) {
+      }
+      else if (animal_layer->getFromLayerIndex(column, row) != nullptr)
+      {
         cout << animal_layer->getFromLayerIndex(column, row) << ' ';
-      } else if (food_layer->getFromLayerIndex(column, row) != nullptr) {
+      }
+      else if (food_layer->getFromLayerIndex(column, row) != nullptr)
+      {
         cout << food_layer->getFromLayerIndex(column, row) << ' ';
-      } else {
+      }
+      else
+      {
         cout << "x ";
       }
     }

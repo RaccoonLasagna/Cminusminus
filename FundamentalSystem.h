@@ -197,8 +197,8 @@ private:
 public:
   explicit Land(Ground *parentInput, string representInput, int xValueInput = 0,
                 int yValueInput = 0);
-  int getX() { return x; };
-  int getY() { return y; };
+  int getX();
+  int getY();
 };
 
 class Ground {
@@ -234,6 +234,10 @@ public:
   inline Layer *getLayer(int i);
   inline Layer *getRandomLayer();
   inline Ground getGround();
+  void printLayer();
+  int getLayersWidth() { return width; }
+  int getLayersHeight() { return height; }
+  int getLayersAmount();
   inline string getLayerName(int i);
   inline int getLayersAmount();
   inline int getLayersWidth();

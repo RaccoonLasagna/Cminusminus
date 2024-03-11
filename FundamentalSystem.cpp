@@ -679,10 +679,6 @@ string inline LayerSystem::getLayerName(int i) { return layers.at(i)->getName();
 
 int inline LayerSystem::getLayersAmount() { return layers.size(); }
 
-int inline LayerSystem::getLayersWidth() { return width; }
-
-int inline LayerSystem::getLayersHeight() { return height; }
-
 void LayerSystem::printLayer()
 {
   Layer *env_layer = getLayer("Environment");

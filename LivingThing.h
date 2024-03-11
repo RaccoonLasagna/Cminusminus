@@ -24,18 +24,16 @@ public:
 class Corpse : public GameObject {
 
 protected:
-    int hunger_yield;
     string name = "Corpse";
 
 public:
-    Corpse(Layer *parent, int x, int y, int hunger_yield);
+    Corpse(Layer *parent, int x, int y);
 };
 
 
 class Lion : public Animal {
 protected:
     string name = "Lion";
-    string diet_type = "Carnivore";
 
 public:
     Lion(Layer *parent, int x, int y);
@@ -45,7 +43,6 @@ public:
 class Bear : public Animal {
 protected:
     string name = "Bear";
-    string diet_type = "Carnivore";
 
 public:
     Bear(Layer *parent, int x, int y);
@@ -55,7 +52,6 @@ public:
 class Cheetah : public Animal {
 protected:
     string name = "Cheetah";
-    string diet_type = "Carnivore";
 
 public:
     Cheetah(Layer *parent, int x, int y);
@@ -65,7 +61,6 @@ public:
 class Giant_Snake : public Animal {
 protected:
     string name = "Giant Snake";
-    string diet_type = "Carnivore";
 
 public:
     Giant_Snake(Layer *parent, int x, int y);
@@ -75,7 +70,6 @@ public:
 class Rabbit : public Animal {
 protected:
     string name = "Rabbit";
-    string diet_type = "Herbivore";
 
 public:
     Rabbit(Layer *parent, int x, int y);
@@ -85,7 +79,6 @@ public:
 class Goat : public Animal {
 protected:
     string name = "Goat";
-    string diet_type = "Herbivore";
 
 public:
     Goat(Layer *parent, int x, int y);
@@ -95,7 +88,6 @@ public:
 class Deer : public Animal {
 protected:
     string name = "Deer";
-    string diet_type = "Herbivore";
 
 public:
     Deer(Layer *parent, int x, int y);
@@ -105,7 +97,6 @@ public:
 class Chicken : public Animal {
 protected:
     string name = "Chicken";
-    string diet_type = "Omnivore";
 
 public:
     Chicken(Layer *parent, int x, int y);
@@ -115,20 +106,12 @@ public:
 class Poison_Frog : public Animal {
 protected:
     string name = "Poison Frog";
-    string diet_type = "Omnivore";
 
 public:
     Poison_Frog(Layer *parent, int x, int y);
 };
 
 
-class EarthWorm : public Animal {
-protected:
-    string name = "EarthWorm";
-
-public:
-    EarthWorm(Layer *parent, int x, int y);
-};
 
 
 class Bush : public Plant {
@@ -139,24 +122,33 @@ public:
     Bush(Layer *parent, int x, int y);
 };
 
-
-class Apple_tree : public Plant {
-protected:
-    string name = "Apple tree";
-    
-public:
-    Apple_tree(Layer *parent, int x, int y);
-};
-
-
 class Mushroom : public Plant {
 protected:
-    int Health,hunger_yield;
     string name = "Mushroom";
     
 public:
     Mushroom(Layer *parent, int x, int y);
 };
 
+
+class Apple_tree : public Plant {
+protected:
+    string name = "Apple tree";
+    string represent = "";
+    
+public:
+    Apple_tree(Layer *parent, int x, int y);
+};
+
+// not even considered an animal, since it should only be able to walk
+class EarthWorm : public GameObject {
+protected:
+    string name = "EarthWorm";
+
+public:
+    EarthWorm(Layer *parent, int x, int y);
+};
+
 #endif
+
 //

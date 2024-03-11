@@ -152,9 +152,9 @@ protected:
 
 public:
   GameObject(Layer *parent, int x, int y);
-  int virtual getSur() = 0;
-  int virtual getEnv() = 0;
-  int virtual getRepo() = 0;
+  int getSur();
+  int getEnv();
+  int getRepo();
   void update(); // เล่นเทิร์น
   pair<int, int> getVectorIndex();
   pair<int, int> getCoord();
@@ -233,6 +233,7 @@ public:
   inline int getLayersWidth();
   inline int getLayersHeight();
   void printLayer();
+  void randomGenerateLayers();
 };
 
 class Command {};

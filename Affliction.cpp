@@ -43,3 +43,10 @@ MateCooldown::MateCooldown(StatusBlock *parent, int duration)
 MateCooldown::MateCooldown(GameObject *target, int duration) 
 : Affliction(target), duration(duration)
 {}
+
+EatTimes::EatTimes(StatusBlock *parent) 
+: Affliction(parent)
+{}
+EatTimes::EatTimes(GameObject *target) 
+: Affliction(target)
+{}

@@ -15,8 +15,8 @@ class Eat : public Ability
 {
 protected:
   string name = "Eat";
-  bool eatPlants;
-  bool eatAnimals;
+  int max_hunger;
+  bool eatPlants, eatEarthworms, eatAnimals;
   Var3DGraph data = Var3DGraph({{0, 0, 0, 0},
                                 {0, 100, 0, 100},
                                 {100, 100, 0, 40},
@@ -27,8 +27,8 @@ protected:
   void createStatParam() override;
 
 public:
-  Eat(AbilitySystem *parent);
-  Eat(GameObject *target);
+  Eat(AbilitySystem *parent, int max_hunger, bool eatPlants, bool eatEarthworms, bool eatAnimals);
+  Eat(GameObject *target, int max_hunger, bool eatPlants, bool eatEarthworms, bool eatAnimals);
   vector<GameObject *> virtual findTargetForPassive() override;
   vector<GameObject *> virtual findTargetForActive() override;
   bool virtual canActive(vector<GameObject *> targets) override;
@@ -42,6 +42,7 @@ class Attack : public Ability
 {
 protected:
   string name = "Attack";
+  int atk_amount;
   Var3DGraph data = Var3DGraph({{0, 0, 0, 0},
                                 {0, 100, 0, 100},
                                 {100, 100, 0, 40},
@@ -51,8 +52,8 @@ protected:
   void createStatParam() override;
 
 public:
-  Attack(AbilitySystem *parent);
-  Attack(GameObject *target);
+  Attack(AbilitySystem *parent, int atk_amount);
+  Attack(GameObject *target, int atk_amount);
   vector<GameObject *> virtual findTargetForPassive() override;
   vector<GameObject *> virtual findTargetForActive() override;
   bool virtual canActive(vector<GameObject *> targets) override;
@@ -136,6 +137,7 @@ class Rot : public Ability
 {
 protected:
   string name = "Mate";
+  int rot_timer = 0;
   void createStatParam() override;
 
 public:
@@ -161,6 +163,22 @@ protected:
 public:
   Fruition(AbilitySystem *parent);
   Fruition(GameObject *target);
+  vector<GameObject *> virtual findTargetForPassive() override;
+  vector<GameObject *> virtual findTargetForActive() override;
+  bool virtual canActive(vector<GameObject *> targets) override;
+  void virtual passive(vector<GameObject *> targets) override;
+  void virtual active(vector<GameObject *> targets) override;
+};
+
+class SingleEat : public Ability
+{
+protected:
+  string name = "SingleEat";
+  void createStatParam() override;
+
+public:
+  SingleEat(AbilitySystem *parent);
+  SingleEat(GameObject *target);
   vector<GameObject *> virtual findTargetForPassive() override;
   vector<GameObject *> virtual findTargetForActive() override;
   bool virtual canActive(vector<GameObject *> targets) override;

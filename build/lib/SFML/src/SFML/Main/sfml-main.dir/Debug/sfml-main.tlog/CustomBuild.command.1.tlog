@@ -1,0 +1,10 @@
+^C:\USERS\ADMIN\DOCUMENTS\GITHUB\CMINUSMINUS\LIB\SFML\SRC\SFML\MAIN\CMAKELISTS.TXT
+setlocal
+C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\cmake.exe -SC:/Users/ADMIN/Documents/GitHub/Cminusminus -BC:/Users/ADMIN/Documents/GitHub/Cminusminus/build --check-stamp-file C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/src/SFML/Main/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

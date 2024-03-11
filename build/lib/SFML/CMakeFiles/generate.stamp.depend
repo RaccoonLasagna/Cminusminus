@@ -1,0 +1,15 @@
+# CMake generation dependency list for this directory.
+C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/CMakeLists.txt
+C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/cmake/Config.cmake
+C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/cmake/SFMLConfig.cmake.in
+C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/cmake/SFMLConfigDependencies.cmake.in
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/share/cmake-3.27/Modules/BasicConfigVersion-SameMajorVersion.cmake.in
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/share/cmake-3.27/Modules/CMakePackageConfigHelpers.cmake
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/share/cmake-3.27/Modules/CPack.cmake
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/share/cmake-3.27/Modules/CPackComponent.cmake
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/share/cmake-3.27/Modules/CheckIncludeFile.cmake
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/share/cmake-3.27/Modules/CheckIncludeFileCXX.cmake
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/share/cmake-3.27/Modules/CheckTypeSize.cmake
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/share/cmake-3.27/Modules/GNUInstallDirs.cmake
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/share/cmake-3.27/Modules/WriteBasicConfigVersionFile.cmake
+C:/Users/ADMIN/STUDY/MingGW_Compiler/mingw64/share/cmake-3.27/Templates/CPackConfig.cmake.in

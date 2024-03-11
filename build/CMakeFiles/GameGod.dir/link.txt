@@ -1,3 +1,0 @@
-C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\cmake.exe -E rm -f CMakeFiles\GameGod.dir/objects.a
-C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\ar.exe qc CMakeFiles\GameGod.dir/objects.a @CMakeFiles\GameGod.dir\objects1.rsp
-C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\GameGod.dir/objects.a -Wl,--no-whole-archive -o GameGod.exe -Wl,--out-implib,libGameGod.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\GameGod.dir\linkLibs.rsp

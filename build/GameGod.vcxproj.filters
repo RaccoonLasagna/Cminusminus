@@ -7,12 +7,42 @@
     <ClCompile Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\FundamentalSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\Ability.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\Affliction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\LivingThing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\StatParam.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\Gui.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\FundamentalSystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\Ability.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\Affliction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\Interpolate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\LivingThing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\StatParam.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

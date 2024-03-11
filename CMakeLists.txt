@@ -4,7 +4,17 @@ project("Game")
 add_executable(GameGod 
     "Gui.h"
     "Gui.cpp"
+    "FundamentalSystem.h"
     "FundamentalSystem.cpp"
+    "Ability.h"
+    "Ability.cpp"
+    "Affliction.h"
+    "Affliction.cpp"
+    "Interpolate.h"
+    "LivingThing.h"
+    "LivingThing.cpp"
+    "StatParam.h"  
+    "StatParam.cpp"
     "main.cpp"
 )
 

@@ -311,7 +311,17 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClInclude Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\Gui.h" />
     <ClCompile Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\Gui.cpp" />
+    <ClInclude Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\FundamentalSystem.h" />
     <ClCompile Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\FundamentalSystem.cpp" />
+    <ClInclude Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\Ability.h" />
+    <ClCompile Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\Ability.cpp" />
+    <ClInclude Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\Affliction.h" />
+    <ClCompile Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\Affliction.cpp" />
+    <ClInclude Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\Interpolate.h" />
+    <ClInclude Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\LivingThing.h" />
+    <ClCompile Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\LivingThing.cpp" />
+    <ClInclude Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\StatParam.h" />
+    <ClCompile Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\StatParam.cpp" />
     <ClCompile Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\main.cpp" />
   </ItemGroup>
   <ItemGroup>

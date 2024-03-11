@@ -239,10 +239,6 @@ public:
   int getLayersHeight() { return height; }
   int getLayersAmount();
   inline string getLayerName(int i);
-  inline int getLayersAmount();
-  inline int getLayersWidth();
-  inline int getLayersHeight();
-  void printLayer();
   void randomGenerateLayers();
   vector<vector<GameObject *>> getOverAllLayer() {
     vector<vector<GameObject *>> temp;

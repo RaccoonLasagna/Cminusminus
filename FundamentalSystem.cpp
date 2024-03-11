@@ -615,6 +615,7 @@ LayerSystem::LayerSystem(int width, int height)
   createNewLayer("Food");
   createNewLayer("Animal");
   createNewLayer("Plant");
+  randomGenerateLayers();
 }
 
 bool LayerSystem::createNewLayer(string name)

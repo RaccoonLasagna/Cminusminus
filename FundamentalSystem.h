@@ -85,8 +85,83 @@ public:
   inline int getYMin();
 };
 
+<<<<<<< Updated upstream
 class Ability
 { // แล้วไอตัวนี้มันจะถูกทำลายตอน stat ถูกทำลาย
+=======
+class AbilitySystem {
+protected:
+  GameObject *parent;
+
+public:
+  bool isInAbility(string name);
+  vector<Ability *> abilityGroup;
+  AbilitySystem(GameObject *parent);
+  bool addAbility(Ability *ability);
+  void decisionMaking(int sur, int env, int repro);
+  inline GameObject *getParent();
+};
+
+class AfflictionSystem {
+protected:
+  GameObject *parent;
+
+public:
+  vector<Affliction *> afflictionGroup;
+  AfflictionSystem(GameObject *parent);
+  void recalculateValue();
+  bool addAffliction(Affliction *affliction);
+  bool removeAffliction(string name);
+  bool removeAllAffliction(string name);
+  int amountOfAffliction(string name);
+  void updateAffliction();
+  GameObject *getParent();
+  bool isInAffliction(string name);
+};
+
+class StatusBlock : public AbilitySystem, public AfflictionSystem {
+protected:
+  GameObject *parent;
+
+public:
+  vector<StatParam *> statParamGroup;
+  StatusBlock(GameObject *parent);
+  bool isInParam(string name);
+  void resetValue();
+  bool addStat(StatParam *statParam); // คำนวน aff value ใหม่ทั้งหมดด้วยหลังจากทำเสร็จ
+  int getParamValueDefault(string name); // ถึงแม้จะไม่มีสแตดก็รีเทิร์น 0 ออกมา
+  int getParamValue(string name); // ถึงแม้จะไม่มีสแตดก็รีเทิร์น 0 ออกมา
+  StatParam *getParam(string name);
+  inline GameObject *getParent();
+};
+
+class GameObject { // จะสร้างซักตัวก็ต้องสร้าง abilty, stat ของมันให้พร้อมนะ
+protected:
+  string name, represent;
+  StatusBlock *stat;
+  Layer *parent;
+
+public:
+  GameObject(Layer *parent, int x, int y);
+  int getSur();
+  int getEnv();
+  int getRepo();
+  void update(); // เล่นเทิร์น
+  pair<int, int> getVectorIndex();
+  pair<int, int> getCoord();
+  inline void setName(string stringInput);
+  void setRepresent(string stringInput);
+  inline string getName();
+  inline string getRepresent() { return represent; }
+  inline StatusBlock *getStat();
+  inline Layer *getParent();
+  vector<GameObject *> findTargetInRange(int range, bool allLayers);
+  vector<string> getDetail() { return {}; }
+  // bool canAct(GameObject *);
+};
+
+class Layer {
+>>>>>>> Stashed changes
 private:
   string name;
   AbilitySystem &parent;

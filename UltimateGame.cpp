@@ -49,10 +49,10 @@ class Command;
 
 class Var3DGraph {
 protected:
-  vector<array<int, 4>> exampleData;
+  std::vector<std::array<int, 4>> exampleData;
 
 public:
-  Var3DGraph(const vector<array<int, 4>> &exampleData) {
+  Var3DGraph(const std::vector<std::array<int, 4>> &exampleData) {
     // กำหนด exampleData โดยเรียงจากน้อยไปมากตาม x, y, z
     this->exampleData = exampleData;
     sort(this->exampleData.begin(), this->exampleData.end(),
@@ -110,10 +110,10 @@ public:
 
 class StatParam {
 protected:
-  string name; // ไปกำหนดเองตอนสร้าง classs
+  std::string name; // ไปกำหนดเองตอนสร้าง classs
   int targetValue; // ไปกำหนดเองตอนสร้าง class
   int defaultValue, value;
-  vector<pair<string, int>> stackInfo;
+  std::vector<std::pair<std::string, int>> stackInfo;
   StatusBlock *parent;
   void virtual action() = 0; // ส่งผลกับตัวเองยังไง
   bool isAction(int before, int after);
@@ -124,19 +124,19 @@ public:
   StatParam(GameObject *target, Ability *createBy, int defaultValue);
   void virtual setDefaultTo(int i);  // คนใช้คือ Ability
   bool virtual changeValueBy(int i); // คนใช้คือ Affliction
-  void pushStackInfo(pair<string, int> *target); // คนใช้คือ Ability
+  void pushStackInfo(std::pair<std::string, int> *target); // คนใช้คือ Ability
   //----------------------------//
   void resetValue();
-  inline string getName();
+  inline std::string getName();
   inline int getDefaultValue();
   inline int getValue();
-  inline vector<pair<string, int>> getStackInfo();
+  inline std::vector<std::pair<std::string, int>> getStackInfo();
   inline StatusBlock *getParent();
 };
 
 class Ability { // statParam ทั้งหมดที่ Ability จะใช้ต้องถูกสร้างโดยตัว Ability เองทั้งหมด
 protected:
-  string name; // ไปกำหนดเองตอนสร้าง classs
+  std::string name; // ไปกำหนดเองตอนสร้าง classs
   Var3DGraph *data; // ไปกำหนดเองตอนสร้าง classs
   AbilitySystem *parent;
   void virtual createStatParam() { return; } // สร้าง Instant Class StatParam
@@ -146,19 +146,19 @@ protected:
 public:
   Ability(AbilitySystem *parent);
   Ability(GameObject *target);
-  vector<GameObject *> virtual findTargetForPassive() = 0;
-  vector<GameObject *> virtual findTargetForActive() = 0;
-  bool virtual canActive(vector<GameObject *> targets) = 0;
-  void virtual passive(vector<GameObject *> targets) = 0;
-  void virtual active(vector<GameObject *> targets) = 0;
+  std::vector<GameObject *> virtual findTargetForPassive() = 0;
+  std::vector<GameObject *> virtual findTargetForActive() = 0;
+  bool virtual canActive(std::vector<GameObject *> targets) = 0;
+  void virtual passive(std::vector<GameObject *> targets) = 0;
+  void virtual active(std::vector<GameObject *> targets) = 0;
   int decision(int sur, int env, int repro);
-  inline string getName();
+  inline std::string getName();
   inline AbilitySystem *getParent();
 };
 
 class Affliction {
 protected:
-  string name, targetValue; // ไปกำหนดเองตอนสร้าง class
+  std::string name, targetValue; // ไปกำหนดเองตอนสร้าง class
   int duration, valueIncrese, value; // ไปกำหนดเองตอนสร้าง classs
   bool permanant; // ไปกำหนดเองตอนสร้าง classs
   int passedTime = 0;
@@ -172,8 +172,8 @@ public:
                  // มันก็จะเอาอันนี้ออกจาก afflictionSystem
   //----------------------------//
   bool getPermanant();
-  string getName();
-  string getTargetValue();
+  std::string getName();
+  std::string getTargetValue();
   int getDuration();
   int getValueIncrese();
   int getPassedTime();
@@ -186,8 +186,8 @@ protected:
   GameObject *parent;
 
 public:
-  vector<Ability *> abilityGroup = {nullptr};
-  bool isInAbility(string name);
+  std::vector<Ability *> abilityGroup;
+  bool isInAbility(std::string name);
   AbilitySystem(GameObject *parent);
   bool addAbility(Ability *ability);
   void decisionMaking(int sur, int env, int repro);
@@ -199,7 +199,7 @@ protected:
   GameObject *parent;
 
 public:
-  vector<Affliction *> afflictionGroup;
+  vector<Affliction *> afflictionGroup = {};
   AfflictionSystem(GameObject *parent);
   void recalculateValue();
   bool addAffliction(Affliction *affliction);
@@ -1228,22 +1228,26 @@ bool AbilitySystem::isInAbility(string name) {
   //   cout << "WE wil return\n";
   //   return false;
   // }
-  // cout << "ACess ability groub\n";
-  // for (Ability *ability : abilityGroup)
-  // { cout << "start condition\n";
-  //   if (ability->getName() == name)
-  //   {
-  //     cout << "find same\n";
-  //     return true;
-  //   }
-  // }
-  cout << abilityGroup.size() << endl;
+  cout << "ACess ability groub\n";
+  for (Ability *ability : abilityGroup)
+  { cout << "start condition\n";
+    if (ability->getName() == name)
+    {
+      cout << "find same\n";
+      return true;
+    }
+  }
+  // cout << "YOOOOOOO\n";
+  // abilityGroup.size();
+ 
+
+  // cout << abilityGroup.size() << endl;
   cout << "finish loop\n";
   return false;
 }
 
 AbilitySystem::AbilitySystem(GameObject *parent)
-    : parent(parent), abilityGroup({}) {}
+    : parent(parent), abilityGroup({nullptr}) {}
 
 bool AbilitySystem::addAbility(Ability *target) {
   cout << "AbilitySystem::addAbility(Ability *target)\n";
@@ -1283,7 +1287,7 @@ GameObject *AbilitySystem::getParent() { return parent; }
 // ------------------Affliction--------------------//
 
 AfflictionSystem::AfflictionSystem(GameObject *parent)
-    : parent(parent), afflictionGroup({}) {}
+    : parent(parent) {}
 
 void AfflictionSystem::recalculateValue() {
   StatusBlock *statBlock = getParent()->getStat();
@@ -3579,6 +3583,8 @@ void Gui::render() {
 }
 
 int main() {
+  vector<Ability *> ability;
+  cout << ability.size() << endl;
   srand(time(NULL));
   Gui game;
   while (game.isOpen()) {

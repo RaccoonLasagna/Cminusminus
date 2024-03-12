@@ -1,10 +1,11 @@
 #include <array>
 #include <cmath>
+#include <iostream>
 #include <stdexcept>
 #include <string>
 #include <utility>
 #include <vector>
-#include <iostream>
+
 
 #include "SFML/Graphics/CircleShape.hpp"
 #include "SFML/Graphics/Color.hpp"
@@ -48,64 +49,67 @@ class Command;
 
 class Var3DGraph {
 protected:
-    vector<array<int, 4>> exampleData;
+  vector<array<int, 4>> exampleData;
 
 public:
-    Var3DGraph(const vector<array<int, 4>>& exampleData) {
-        // กำหนด exampleData โดยเรียงจากน้อยไปมากตาม x, y, z
-        this->exampleData = exampleData;
-        sort(this->exampleData.begin(), this->exampleData.end(), [](const auto& a, const auto& b) {
-            if (a[0] != b[0]) // เรียงตาม x ถ้าไม่เท่ากัน
-                return a[0] < b[0];
-            else if (a[1] != b[1]) // เรียงตาม y ถ้า x เท่ากันและ y ไม่เท่ากัน
-                return a[1] < b[1];
-            else // เรียงตาม z ถ้า x และ y เท่ากัน
-                return a[2] < b[2];
-        });
+  Var3DGraph(const vector<array<int, 4>> &exampleData) {
+    // กำหนด exampleData โดยเรียงจากน้อยไปมากตาม x, y, z
+    this->exampleData = exampleData;
+    sort(this->exampleData.begin(), this->exampleData.end(),
+         [](const auto &a, const auto &b) {
+           if (a[0] != b[0]) // เรียงตาม x ถ้าไม่เท่ากัน
+             return a[0] < b[0];
+           else if (a[1] != b[1]) // เรียงตาม y ถ้า x เท่ากันและ y ไม่เท่ากัน
+             return a[1] < b[1];
+           else // เรียงตาม z ถ้า x และ y เท่ากัน
+             return a[2] < b[2];
+         });
+  }
+
+  int interpolate(int x, int y, int z) {
+    // ตรวจสอบว่าจุดอยู่นอกขอบเขตข้อมูลหรือไม่
+    if (x < exampleData.front()[0] || x > exampleData.back()[0] ||
+        y < exampleData.front()[1] || y > exampleData.back()[1] ||
+        z < exampleData.front()[2] || z > exampleData.back()[2]) {
+      return 0;
     }
 
-    int interpolate(int x, int y, int z) {
-        // ตรวจสอบว่าจุดอยู่นอกขอบเขตข้อมูลหรือไม่
-        if (x < exampleData.front()[0] || x > exampleData.back()[0] ||
-            y < exampleData.front()[1] || y > exampleData.back()[1] ||
-            z < exampleData.front()[2] || z > exampleData.back()[2]) {
-            return 0;
-        }
-
-        // หาตำแหน่งข้อมูลที่อยู่ระหว่าง x, y, z
-        size_t i = 0;
-        while (i < exampleData.size() - 1 && exampleData[i][0] < x) {
-            ++i;
-        }
-
-        // ทำ interpolation แยกตามแต่ละมิติ
-        int x1 = exampleData[i][0], y1 = exampleData[i][1], z1 = exampleData[i][2], val1 = exampleData[i][3];
-        int x2 = exampleData[i + 1][0], y2 = exampleData[i + 1][1], z2 = exampleData[i + 1][2], val2 = exampleData[i + 1][3];
-
-        // คำนวณอัตราส่วนของ interpolation สำหรับแต่ละมิติ
-        double alpha_x = static_cast<double>(x - x1) / (x2 - x1);
-        double alpha_y = static_cast<double>(y - y1) / (y2 - y1);
-        double alpha_z = static_cast<double>(z - z1) / (z2 - z1);
-
-        // ทำ interpolation แยกตามแต่ละมิติ
-        int val_x1 = val1 + alpha_x * (val2 - val1);
-        int val_x2 = val1 + alpha_x * (val2 - val1);
-        int val_y1 = val1 + alpha_y * (val2 - val1);
-        int val_y2 = val1 + alpha_y * (val2 - val1);
-        int val_z1 = val1 + alpha_z * (val2 - val1);
-        int val_z2 = val1 + alpha_z * (val2 - val1);
-
-        // ทำ interpolation สุดท้าย
-        int val_xy1 = val_x1 + alpha_y * (val_x2 - val_x1);
-        int val_xy2 = val_y1 + alpha_y * (val_y2 - val_y1);
-        int val_xyz1 = val_xy1 + alpha_z * (val_xy2 - val_xy1);
-
-        return val_xyz1;
+    // หาตำแหน่งข้อมูลที่อยู่ระหว่าง x, y, z
+    size_t i = 0;
+    while (i < exampleData.size() - 1 && exampleData[i][0] < x) {
+      ++i;
     }
+
+    // ทำ interpolation แยกตามแต่ละมิติ
+    int x1 = exampleData[i][0], y1 = exampleData[i][1], z1 = exampleData[i][2],
+        val1 = exampleData[i][3];
+    int x2 = exampleData[i + 1][0], y2 = exampleData[i + 1][1],
+        z2 = exampleData[i + 1][2], val2 = exampleData[i + 1][3];
+
+    // คำนวณอัตราส่วนของ interpolation สำหรับแต่ละมิติ
+    double alpha_x = static_cast<double>(x - x1) / (x2 - x1);
+    double alpha_y = static_cast<double>(y - y1) / (y2 - y1);
+    double alpha_z = static_cast<double>(z - z1) / (z2 - z1);
+
+    // ทำ interpolation แยกตามแต่ละมิติ
+    int val_x1 = val1 + alpha_x * (val2 - val1);
+    int val_x2 = val1 + alpha_x * (val2 - val1);
+    int val_y1 = val1 + alpha_y * (val2 - val1);
+    int val_y2 = val1 + alpha_y * (val2 - val1);
+    int val_z1 = val1 + alpha_z * (val2 - val1);
+    int val_z2 = val1 + alpha_z * (val2 - val1);
+
+    // ทำ interpolation สุดท้าย
+    int val_xy1 = val_x1 + alpha_y * (val_x2 - val_x1);
+    int val_xy2 = val_y1 + alpha_y * (val_y2 - val_y1);
+    int val_xyz1 = val_xy1 + alpha_z * (val_xy2 - val_xy1);
+
+    return val_xyz1;
+  }
 };
 
 class StatParam {
-protected:    
+protected:
   string name; // ไปกำหนดเองตอนสร้าง classs
   int targetValue; // ไปกำหนดเองตอนสร้าง class
   int defaultValue, value;
@@ -118,7 +122,7 @@ protected:
 public:
   StatParam(StatusBlock *parent, Ability *createBy, int defaultValue);
   StatParam(GameObject *target, Ability *createBy, int defaultValue);
-  void virtual setDefaultTo(int i);      // คนใช้คือ Ability
+  void virtual setDefaultTo(int i);  // คนใช้คือ Ability
   bool virtual changeValueBy(int i); // คนใช้คือ Affliction
   void pushStackInfo(pair<string, int> *target); // คนใช้คือ Ability
   //----------------------------//
@@ -182,8 +186,8 @@ protected:
   GameObject *parent;
 
 public:
+  vector<Ability *> abilityGroup = {nullptr};
   bool isInAbility(string name);
-  vector<Ability *> abilityGroup;
   AbilitySystem(GameObject *parent);
   bool addAbility(Ability *ability);
   void decisionMaking(int sur, int env, int repro);
@@ -225,7 +229,8 @@ public:
 
 class GameObject { // จะสร้างซักตัวก็ต้องสร้าง abilty, stat ของมันให้พร้อมนะ
 protected:
-  string name, represent;
+  string name;
+  string represent = " ";
   StatusBlock *stat;
   Layer *parent;
 
@@ -341,160 +346,172 @@ public:
 };
 
 class Health_Aff : public Affliction {
-    protected:
-    string name = "Health_Aff";
-    string targetValue = "Health";
-    int duration,valueIncrease,value;
-    bool permanent = true;
-    public:
-    Health_Aff(StatusBlock *parent, int duration, int valueIncrease, int value);
-    Health_Aff(GameObject *target, int duration, int valueIncrease, int value);
+protected:
+  string name = "Health_Aff";
+  string targetValue = "Health";
+  int duration, valueIncrease, value;
+  bool permanent = true;
+
+public:
+  Health_Aff(StatusBlock *parent, int duration, int valueIncrease, int value);
+  Health_Aff(GameObject *target, int duration, int valueIncrease, int value);
 };
 
 // Hunger is permanent, it is removed when an animal eats
 class Hunger_Aff : public Affliction {
-    protected:
-    string name = "Hunger_Aff";
-    string targetValue = "Hunger";
-    int duration,valueIncrease,value;
-    bool permanent = true;
-    public:
-    Hunger_Aff(StatusBlock *parent, int duration, int valueIncrease, int value);
-    Hunger_Aff(GameObject *target, int duration, int valueIncrease, int value);
+protected:
+  string name = "Hunger_Aff";
+  string targetValue = "Hunger";
+  int duration, valueIncrease, value;
+  bool permanent = true;
+
+public:
+  Hunger_Aff(StatusBlock *parent, int duration, int valueIncrease, int value);
+  Hunger_Aff(GameObject *target, int duration, int valueIncrease, int value);
 };
 
 class Attack_Aff : public Affliction {
-    protected:
-    string name = "Attack_Aff";
-    string targetValue = "Atk";
-    int duration,valueIncrease,value;
-    bool permanent = false;
-    public:
-    Attack_Aff(StatusBlock *parent, int duration, int valueIncrease, int value);
-    Attack_Aff(GameObject *target, int duration, int valueIncrease, int value);
+protected:
+  string name = "Attack_Aff";
+  string targetValue = "Atk";
+  int duration, valueIncrease, value;
+  bool permanent = false;
+
+public:
+  Attack_Aff(StatusBlock *parent, int duration, int valueIncrease, int value);
+  Attack_Aff(GameObject *target, int duration, int valueIncrease, int value);
 };
 
-//sight shouldn't be incremented alot so remove valIncrease
+// sight shouldn't be incremented alot so remove valIncrease
 class Sight_Aff : public Affliction {
-    protected:
-    string name = "Sight_Aff";
-    string targetValue = "Sight";
-    int duration,value;
-    bool permanent = false;
-    public:
-    Sight_Aff(StatusBlock *parent, int duration, int value);
-    Sight_Aff(GameObject *target, int duration, int value);
-};
+protected:
+  string name = "Sight_Aff";
+  string targetValue = "Sight";
+  int duration, value;
+  bool permanent = false;
 
+public:
+  Sight_Aff(StatusBlock *parent, int duration, int value);
+  Sight_Aff(GameObject *target, int duration, int value);
+};
 
 class Speed_Aff : public Affliction {
-    protected:
-    string name = "Speed_Aff";
-    string targetValue = "Speed";
-    int duration,valueIncrease,value;
-    bool permanent = false;
-    public:
-    Speed_Aff(StatusBlock *parent, int duration, int valueIncrease, int value);
-    Speed_Aff(GameObject *target, int duration, int valueIncrease, int value);
+protected:
+  string name = "Speed_Aff";
+  string targetValue = "Speed";
+  int duration, valueIncrease, value;
+  bool permanent = false;
+
+public:
+  Speed_Aff(StatusBlock *parent, int duration, int valueIncrease, int value);
+  Speed_Aff(GameObject *target, int duration, int valueIncrease, int value);
 };
 
 class MateCooldown : public Affliction {
-    protected:
-    string name = "MateCooldown";
-    string targetValue = "";
-    int duration, valueIncrease = 0, value = 0;
-    bool permanent = false;
-    public:
-    MateCooldown(StatusBlock *parent, int duration);
-    MateCooldown(GameObject *target, int duration);
+protected:
+  string name = "MateCooldown";
+  string targetValue = "";
+  int duration, valueIncrease = 0, value = 0;
+  bool permanent = false;
+
+public:
+  MateCooldown(StatusBlock *parent, int duration);
+  MateCooldown(GameObject *target, int duration);
 };
 
-class EatTimes : public Affliction{
-    protected:
-    string name = "FruitionCooldown";
-    string targetValue = "";
-    int duration, valueIncrease = 0, value = 0;
-    bool permanent = true;
-    public:
-    EatTimes(StatusBlock *parent);
-    EatTimes(GameObject *target);
+class EatTimes : public Affliction {
+protected:
+  string name = "FruitionCooldown";
+  string targetValue = "";
+  int duration, valueIncrease = 0, value = 0;
+  bool permanent = true;
+
+public:
+  EatTimes(StatusBlock *parent);
+  EatTimes(GameObject *target);
 };
 
 class FruitionCooldown : public Affliction {
-    protected:
-    string name = "FruitionCooldown";
-    string targetValue = "";
-    int duration, valueIncrease = 0, value = 0;
-    bool permanent = false;
-    public:
-    FruitionCooldown(StatusBlock *parent, int duration);
-    FruitionCooldown(GameObject *target, int duration);
+protected:
+  string name = "FruitionCooldown";
+  string targetValue = "";
+  int duration, valueIncrease = 0, value = 0;
+  bool permanent = false;
+
+public:
+  FruitionCooldown(StatusBlock *parent, int duration);
+  FruitionCooldown(GameObject *target, int duration);
 };
 
 class Poisonous : public Affliction {
-    protected:
-    string name = "Poisonous";
-    string targetValue = "";
-    int duration, valueIncrease = 0, value = 0;
-    bool permanent = false;
-    public:
-    Poisonous(StatusBlock *parent);
-    Poisonous(GameObject *target);
+protected:
+  string name = "Poisonous";
+  string targetValue = "";
+  int duration, valueIncrease = 0, value = 0;
+  bool permanent = false;
+
+public:
+  Poisonous(StatusBlock *parent);
+  Poisonous(GameObject *target);
 };
 
 class Hunger : public StatParam {
-    protected:
-    string name = "Hunger";
-    int targetValue = 0;
-    void virtual action() override;
-    public:
-    Hunger(StatusBlock *parent, Ability *createBy, int rawValue);
-    Hunger(GameObject *target, Ability *createBy, int rawValue);
+protected:
+  string name = "Hunger";
+  int targetValue = 0;
+  void virtual action() override;
+
+public:
+  Hunger(StatusBlock *parent, Ability *createBy, int rawValue);
+  Hunger(GameObject *target, Ability *createBy, int rawValue);
 };
 
 // No abilities create this, include for all living things
 class Health : public StatParam {
-    protected:
-    string name = "Health";
-    int targetValue = 0;
-    void virtual action() override;
-    public:
-    Health(StatusBlock *parent, Ability *createBy, int rawValue);
-    Health(GameObject *target, Ability *createBy, int rawValue);
+protected:
+  string name = "Health";
+  int targetValue = 0;
+  void virtual action() override;
+
+public:
+  Health(StatusBlock *parent, Ability *createBy, int rawValue);
+  Health(GameObject *target, Ability *createBy, int rawValue);
 };
 
 class Atk : public StatParam {
-    protected:
-    string name = "Atk";
-    int targetValue = 0;
-    void virtual action() override;
-    public:
-    Atk(StatusBlock *parent, Ability *createBy, int rawValue);
-    Atk(GameObject *target, Ability *createBy, int rawValue);
+protected:
+  string name = "Atk";
+  int targetValue = 0;
+  void virtual action() override;
+
+public:
+  Atk(StatusBlock *parent, Ability *createBy, int rawValue);
+  Atk(GameObject *target, Ability *createBy, int rawValue);
 };
 
 class Sight : public StatParam {
-    protected:
-    string name = "Sight";
-    int targetValue = 0;
-    void virtual action() override;
-    public:
-    Sight(StatusBlock *parent, Ability *createBy, int rawValue);
-    Sight(GameObject *target, Ability *createBy, int rawValue);
+protected:
+  string name = "Sight";
+  int targetValue = 0;
+  void virtual action() override;
+
+public:
+  Sight(StatusBlock *parent, Ability *createBy, int rawValue);
+  Sight(GameObject *target, Ability *createBy, int rawValue);
 };
 
 class Speed : public StatParam {
-    protected:
-    string name = "Speed";
-    int targetValue = 0;
-    void virtual action() override;
-    public:
-    Speed(StatusBlock *parent, Ability *createBy, int rawValue);
-    Speed(GameObject *target, Ability *createBy, int rawValue);
+protected:
+  string name = "Speed";
+  int targetValue = 0;
+  void virtual action() override;
+
+public:
+  Speed(StatusBlock *parent, Ability *createBy, int rawValue);
+  Speed(GameObject *target, Ability *createBy, int rawValue);
 };
 
-class Eat : public Ability
-{
+class Eat : public Ability {
 protected:
   string name = "Eat";
   int max_hunger;
@@ -509,8 +526,10 @@ protected:
   void createStatParam() override;
 
 public:
-  Eat(AbilitySystem *parent, int max_hunger, bool eatPlants, bool eatEarthworms, bool eatAnimals);
-  Eat(GameObject *target, int max_hunger, bool eatPlants, bool eatEarthworms, bool eatAnimals);
+  Eat(AbilitySystem *parent, int max_hunger, bool eatPlants, bool eatEarthworms,
+      bool eatAnimals);
+  Eat(GameObject *target, int max_hunger, bool eatPlants, bool eatEarthworms,
+      bool eatAnimals);
   vector<GameObject *> virtual findTargetForPassive() override;
   vector<GameObject *> virtual findTargetForActive() override;
   bool virtual canActive(vector<GameObject *> targets) override;
@@ -520,8 +539,7 @@ public:
 
 //--------------------------- Attack ---------------------------
 
-class Attack : public Ability
-{
+class Attack : public Ability {
 protected:
   string name = "Attack";
   int atk_amount;
@@ -545,8 +563,7 @@ public:
 
 //--------------------------- Walk ---------------------------
 
-class Walk : public Ability
-{
+class Walk : public Ability {
 protected:
   string name = "Walk";
   void createStatParam() override;
@@ -561,8 +578,7 @@ public:
   void virtual active(vector<GameObject *> targets) = 0;
 };
 
-class WalkSeek : public Walk
-{
+class WalkSeek : public Walk {
 protected:
   Var3DGraph data = Var3DGraph({{0, 0, 0, 0},
                                 {0, 100, 0, 100},
@@ -577,8 +593,7 @@ public:
   void virtual active(vector<GameObject *> targets) override;
 };
 
-class WalkEscape : public Walk
-{
+class WalkEscape : public Walk {
 protected:
   Var3DGraph data = Var3DGraph({{0, 0, 0, 0},
                                 {0, 100, 0, 100},
@@ -595,8 +610,7 @@ public:
 
 //--------------------------- Mate ---------------------------
 
-class Mate : public Ability
-{
+class Mate : public Ability {
 protected:
   string name = "Mate";
   void createStatParam() override;
@@ -611,12 +625,12 @@ public:
   void virtual active(vector<GameObject *> targets) override;
 };
 
-// ===================================== CORPSES =====================================
+// ===================================== CORPSES
+// =====================================
 
 //--------------------------- Rot ---------------------------
 
-class Rot : public Ability
-{
+class Rot : public Ability {
 protected:
   string name = "Mate";
   int rot_timer = 0;
@@ -632,12 +646,12 @@ public:
   void virtual active(vector<GameObject *> targets) override;
 };
 
-// ===================================== PLANTS =====================================
+// ===================================== PLANTS
+// =====================================
 
 // --------------------------- Fruition ---------------------------
 
-class Fruition : public Ability
-{
+class Fruition : public Ability {
 protected:
   string name = "Fruition";
   void createStatParam() override;
@@ -652,8 +666,7 @@ public:
   void virtual active(vector<GameObject *> targets) override;
 };
 
-class SingleEat : public Ability
-{
+class SingleEat : public Ability {
 protected:
   string name = "SingleEat";
   void createStatParam() override;
@@ -671,144 +684,129 @@ public:
 class Animal : public GameObject {
 protected:
 public:
-    Animal(Layer *parent, int x, int y);
+  Animal(Layer *parent, int x, int y);
 };
-
 
 class Plant : public GameObject {
 
 protected:
 public:
-    Plant(Layer *parent, int x, int y);
+  Plant(Layer *parent, int x, int y);
 };
-
 
 class Corpse : public GameObject {
 
 protected:
-    string name = "Corpse";
+  string name = "Corpse";
 
 public:
-    Corpse(Layer *parent, int x, int y);
+  Corpse(Layer *parent, int x, int y);
 };
-
 
 class Lion : public Animal {
 protected:
-    string name = "Lion";
+  string name = "Lion";
 
 public:
-    Lion(Layer *parent, int x, int y);
+  Lion(Layer *parent, int x, int y);
 };
-
 
 class Bear : public Animal {
 protected:
-    string name = "Bear";
+  string name = "Bear";
 
 public:
-    Bear(Layer *parent, int x, int y);
+  Bear(Layer *parent, int x, int y);
 };
-
 
 class Cheetah : public Animal {
 protected:
-    string name = "Cheetah";
+  string name = "Cheetah";
 
 public:
-    Cheetah(Layer *parent, int x, int y);
+  Cheetah(Layer *parent, int x, int y);
 };
-
 
 class Giant_Snake : public Animal {
 protected:
-    string name = "Giant Snake";
+  string name = "Giant Snake";
 
 public:
-    Giant_Snake(Layer *parent, int x, int y);
+  Giant_Snake(Layer *parent, int x, int y);
 };
-
 
 class Rabbit : public Animal {
 protected:
-    string name = "Rabbit";
+  string name = "Rabbit";
 
 public:
-    Rabbit(Layer *parent, int x, int y);
+  Rabbit(Layer *parent, int x, int y);
 };
-
 
 class Goat : public Animal {
 protected:
-    string name = "Goat";
+  string name = "Goat";
 
 public:
-    Goat(Layer *parent, int x, int y);
+  Goat(Layer *parent, int x, int y);
 };
-
 
 class Deer : public Animal {
 protected:
-    string name = "Deer";
+  string name = "Deer";
 
 public:
-    Deer(Layer *parent, int x, int y);
+  Deer(Layer *parent, int x, int y);
 };
-
 
 class Chicken : public Animal {
 protected:
-    string name = "Chicken";
+  string name = "Chicken";
 
 public:
-    Chicken(Layer *parent, int x, int y);
+  Chicken(Layer *parent, int x, int y);
 };
-
 
 class Poison_Frog : public Animal {
 protected:
-    string name = "Poison Frog";
+  string name = "Poison Frog";
 
 public:
-    Poison_Frog(Layer *parent, int x, int y);
+  Poison_Frog(Layer *parent, int x, int y);
 };
-
-
-
 
 class Bush : public Plant {
 protected:
-    string name = "Bush";
-    
+  string name = "Bush";
+
 public:
-    Bush(Layer *parent, int x, int y);
+  Bush(Layer *parent, int x, int y);
 };
 
 class Mushroom : public Plant {
 protected:
-    string name = "Mushroom";
-    
-public:
-    Mushroom(Layer *parent, int x, int y);
-};
+  string name = "Mushroom";
 
+public:
+  Mushroom(Layer *parent, int x, int y);
+};
 
 class Apple_tree : public Plant {
 protected:
-    string name = "Apple tree";
-    string represent = "";
-    
+  string name = "Apple tree";
+  string represent = "";
+
 public:
-    Apple_tree(Layer *parent, int x, int y);
+  Apple_tree(Layer *parent, int x, int y);
 };
 
 // not even considered an animal, since it should only be able to walk
 class EarthWorm : public GameObject {
 protected:
-    string name = "EarthWorm";
+  string name = "EarthWorm";
 
 public:
-    EarthWorm(Layer *parent, int x, int y);
+  EarthWorm(Layer *parent, int x, int y);
 };
 
 class Grid {
@@ -1106,24 +1104,19 @@ public:
 };
 
 //------------------------------------------------------------------------------------//
-bool StatParam::isAction(int before, int after)
-{
-  if (before > targetValue && targetValue >= after)
-  {
+bool StatParam::isAction(int before, int after) {
+  if (before > targetValue && targetValue >= after) {
     action();
     return true;
   }
   return false;
 }
 
-void StatParam::updateStackInfo()
-{
+void StatParam::updateStackInfo() {
   int highest = 0;
-  for (pair<string, int> pair : stackInfo)
-  {
+  for (pair<string, int> pair : stackInfo) {
     int value = pair.second;
-    if (value > highest)
-    {
+    if (value > highest) {
       highest = value;
     }
   }
@@ -1131,8 +1124,7 @@ void StatParam::updateStackInfo()
 }
 
 StatParam::StatParam(StatusBlock *parent, Ability *createBy, int defaultValue)
-    : parent(parent)
-{
+    : parent(parent) {
   pair<string, int> pair = make_pair(createBy->getName(), defaultValue);
   stackInfo.push_back(pair);
   updateStackInfo();
@@ -1142,32 +1134,24 @@ StatParam::StatParam(StatusBlock *parent, Ability *createBy, int defaultValue)
 StatParam::StatParam(GameObject *target, Ability *createBy, int defaultValue)
     : StatParam(target->getStat(), createBy, defaultValue) {}
 
-void StatParam::setDefaultTo(int i)
-{
-  if (i < 0)
-  {
+void StatParam::setDefaultTo(int i) {
+  if (i < 0) {
     defaultValue = 0;
-  }
-  else
-  {
+  } else {
     defaultValue = i;
   }
   value = defaultValue;
 }
 
-bool StatParam::changeValueBy(int i)
-{
+bool StatParam::changeValueBy(int i) {
   int before = value;
   value + i < 0 ? value = 0 : value += i;
   return isAction(before, value);
 }
 
-void StatParam::pushStackInfo(pair<string, int> *target)
-{
-  for (pair<string, int> pair : stackInfo)
-  {
-    if (pair.first == target->first)
-    {
+void StatParam::pushStackInfo(pair<string, int> *target) {
+  for (pair<string, int> pair : stackInfo) {
+    if (pair.first == target->first) {
       return;
     }
   }
@@ -1182,17 +1166,18 @@ int StatParam::getValue() { return value; }
 vector<pair<string, int>> StatParam::getStackInfo() { return stackInfo; }
 StatusBlock *StatParam::getParent() { return parent; }
 
-
-Ability::Ability(AbilitySystem *parent) : parent(parent)
-{
+Ability::Ability(AbilitySystem *parent) : parent(parent) {
+  cout << "Ability::Ability(AbilitySystem *parent) : parent(parent)\n";
   parent->addAbility(this);
+  cout
+      << "Ability::Ability(AbilitySystem *parent) : parent->addAbility(this)\n";
   createStatParam();
+  cout << "Ability::Ability(AbilitySystem *parent) : createStatParam()\n";
 }
 
 Ability::Ability(GameObject *target) : Ability(target->getStat()) {}
 
-int Ability::decision(int sur, int env, int repo)
-{
+int Ability::decision(int sur, int env, int repo) {
   return data->interpolate(sur, env, repo);
 }
 
@@ -1201,34 +1186,26 @@ AbilitySystem *Ability::getParent() { return parent; }
 
 // ------------------Affliction--------------------//
 
-bool Affliction::tick()
-{
-  if (duration <= passedTime)
-  {
-    if (!permanant)
-    {
+bool Affliction::tick() {
+  if (duration <= passedTime) {
+    if (!permanant) {
       return false;
     }
-  }
-  else
-  {
+  } else {
     passedTime += 1;
   }
   value += valueIncrese;
   return true;
 }
 
-Affliction::Affliction(AfflictionSystem *parent) : parent(parent)
-{
+Affliction::Affliction(AfflictionSystem *parent) : parent(parent) {
   parent->addAffliction(this);
 }
 
 Affliction::Affliction(GameObject *target) : Affliction(target->getStat()) {}
 
-bool Affliction::update()
-{
-  if (tick())
-  {
+bool Affliction::update() {
+  if (tick()) {
     return true;
   }
   return false;
@@ -1245,28 +1222,38 @@ AfflictionSystem *Affliction::getParent() { return parent; }
 
 // ------------------AbilitySystem--------------------//
 
-bool AbilitySystem::isInAbility(string name)
-{
-  for (Ability *ability : abilityGroup)
-  {
-    if (ability->getName() == name)
-    {
-      return true;
-    }
-  }
+bool AbilitySystem::isInAbility(string name) {
+  cout << "start isinability\n";
+  // if (abilityGroup.size() < 1) {
+  //   cout << "WE wil return\n";
+  //   return false;
+  // }
+  // cout << "ACess ability groub\n";
+  // for (Ability *ability : abilityGroup)
+  // { cout << "start condition\n";
+  //   if (ability->getName() == name)
+  //   {
+  //     cout << "find same\n";
+  //     return true;
+  //   }
+  // }
+  cout << abilityGroup.size() << endl;
+  cout << "finish loop\n";
   return false;
 }
 
 AbilitySystem::AbilitySystem(GameObject *parent)
     : parent(parent), abilityGroup({}) {}
 
-bool AbilitySystem::addAbility(Ability *target)
-{
-  if (!isInAbility(target->getName()))
-  {
+bool AbilitySystem::addAbility(Ability *target) {
+  cout << "AbilitySystem::addAbility(Ability *target)\n";
+  if (!isInAbility(target->getName())) {
+    cout << "add ability passed\n";
     abilityGroup.push_back(target);
+    cout << "pushback finish\n";
     return true;
   }
+  cout << "add ability failed\n";
   return false;
 }
 
@@ -1277,11 +1264,9 @@ void AbilitySystem::decisionMaking(int sur, int env, int repo) {
   for (Ability *ability : abilityGroup) {
     index++;
     ability->passive(ability->findTargetForPassive());
-    if (ability->canActive(ability->findTargetForActive()))
-    {
+    if (ability->canActive(ability->findTargetForActive())) {
       value = ability->decision(sur, env, repo);
-      if (maxValue < value)
-      {
+      if (maxValue < value) {
         maxValue = value;
         indexMax = index - 1;
       }
@@ -1300,38 +1285,31 @@ GameObject *AbilitySystem::getParent() { return parent; }
 AfflictionSystem::AfflictionSystem(GameObject *parent)
     : parent(parent), afflictionGroup({}) {}
 
-void AfflictionSystem::recalculateValue()
-{
+void AfflictionSystem::recalculateValue() {
   StatusBlock *statBlock = getParent()->getStat();
   string affName;
   StatParam *paramTarget;
   statBlock->resetValue();
-  for (Affliction *aff : afflictionGroup)
-  {
+  for (Affliction *aff : afflictionGroup) {
     affName = aff->getTargetValue();
     paramTarget = statBlock->getParam(affName);
-    if (paramTarget != nullptr)
-    {
+    if (paramTarget != nullptr) {
       paramTarget->changeValueBy(aff->getValue());
     }
   }
 }
 
-bool AfflictionSystem::addAffliction(Affliction *target)
-{
+bool AfflictionSystem::addAffliction(Affliction *target) {
   afflictionGroup.push_back(target);
   recalculateValue();
   return true;
 }
 
-bool AfflictionSystem::removeAffliction(string name)
-{
+bool AfflictionSystem::removeAffliction(string name) {
   int index = 0;
-  for (Affliction *aff : afflictionGroup)
-  {
+  for (Affliction *aff : afflictionGroup) {
     index++;
-    if (aff->getName() == name)
-    {
+    if (aff->getName() == name) {
       afflictionGroup.erase(afflictionGroup.begin() + index - 1);
       return true;
     }
@@ -1339,15 +1317,12 @@ bool AfflictionSystem::removeAffliction(string name)
   return false;
 }
 
-bool AfflictionSystem::removeAllAffliction(string name)
-{
+bool AfflictionSystem::removeAllAffliction(string name) {
   int index = 0;
   bool have = false;
-  for (Affliction *aff : afflictionGroup)
-  {
+  for (Affliction *aff : afflictionGroup) {
     index++;
-    if (aff->getName() == name)
-    {
+    if (aff->getName() == name) {
       afflictionGroup.erase(afflictionGroup.begin() + index - 1);
       have = true;
     }
@@ -1355,26 +1330,20 @@ bool AfflictionSystem::removeAllAffliction(string name)
   return have;
 }
 
-int AfflictionSystem::amountOfAffliction(string name)
-{
+int AfflictionSystem::amountOfAffliction(string name) {
   int amount = 0;
-  for (Affliction *aff : afflictionGroup)
-  {
-    if (aff->getName() == name)
-    {
+  for (Affliction *aff : afflictionGroup) {
+    if (aff->getName() == name) {
       amount++;
     }
   }
   return amount;
 }
 
-void AfflictionSystem::updateAffliction()
-{
+void AfflictionSystem::updateAffliction() {
   int index = 0;
-  for (Affliction *aff : afflictionGroup)
-  {
-    if (!(aff->update()))
-    { // เหตุผลที่ไม่ใช้ remove ของตัว class เองก็เพราะว่าการ
+  for (Affliction *aff : afflictionGroup) {
+    if (!(aff->update())) { // เหตุผลที่ไม่ใช้ remove ของตัว class เองก็เพราะว่าการ
       // remove ของตัว class เองจะ remove ตัวแรกที่มันเจอ
       // ไม่ใช่ตัวที่เราต้องการ
       afflictionGroup.erase(afflictionGroup.begin() + index - 1);
@@ -1386,12 +1355,9 @@ void AfflictionSystem::updateAffliction()
 
 GameObject *AfflictionSystem::getParent() { return parent; }
 
-bool AfflictionSystem::isInAffliction(string name)
-{
-  for (Affliction *aff : afflictionGroup)
-  {
-    if (aff->getName() == name)
-    {
+bool AfflictionSystem::isInAffliction(string name) {
+  for (Affliction *aff : afflictionGroup) {
+    if (aff->getName() == name) {
       return true;
     }
   }
@@ -1403,74 +1369,56 @@ bool AfflictionSystem::isInAffliction(string name)
 StatusBlock::StatusBlock(GameObject *parent)
     : parent(parent), AbilitySystem(parent), AfflictionSystem(parent) {}
 
-bool StatusBlock::isInParam(string name)
-{
-  for (StatParam *param : statParamGroup)
-  {
-    if (param->getName() == name)
-    {
+bool StatusBlock::isInParam(string name) {
+  for (StatParam *param : statParamGroup) {
+    if (param->getName() == name) {
       return true;
     }
   }
   return false;
 }
 
-void StatusBlock::resetValue()
-{
-  for (StatParam *stat : statParamGroup)
-  {
+void StatusBlock::resetValue() {
+  for (StatParam *stat : statParamGroup) {
     stat->resetValue();
   }
 }
 
-bool StatusBlock::addStat(StatParam *target)
-{
+bool StatusBlock::addStat(StatParam *target) {
   string targetName = target->getName();
   StatParam *oldStat = getParam(targetName);
-  if (oldStat != nullptr)
-  {
+  if (oldStat != nullptr) {
     oldStat->pushStackInfo(&(target->getStackInfo()[0]));
     recalculateValue();
     return false;
-  }
-  else
-  {
+  } else {
     statParamGroup.push_back(target);
     recalculateValue();
     return true;
   }
 }
 
-int StatusBlock::getParamValueDefault(string name)
-{
-  for (StatParam *stat : statParamGroup)
-  {
-    if (name == stat->getName())
-    {
+int StatusBlock::getParamValueDefault(string name) {
+  for (StatParam *stat : statParamGroup) {
+    if (name == stat->getName()) {
       return stat->getDefaultValue();
     }
   }
   return 0;
 }
 
-int StatusBlock::getParamValue(string name)
-{
-  for (StatParam *stat : statParamGroup)
-  {
-    if (name == stat->getName())
-    {
+int StatusBlock::getParamValue(string name) {
+  for (StatParam *stat : statParamGroup) {
+    if (name == stat->getName()) {
       return stat->getValue();
     }
   }
   return 0;
 }
 
-StatParam *StatusBlock::getParam(string name)
-{
-  for (StatParam *param : statParamGroup)
-  {
-    if (param->getName() == name)
-    {
+StatParam *StatusBlock::getParam(string name) {
+  for (StatParam *param : statParamGroup) {
+    if (param->getName() == name) {
       return param;
     }
   }
@@ -1481,60 +1429,64 @@ GameObject *StatusBlock::getParent() { return parent; }
 
 // ------------------GameObject--------------------//
 
-GameObject::GameObject(Layer *parent, int x, int y) : parent(parent)
-{
+GameObject::GameObject(Layer *parent, int x, int y) : parent(parent) {
   parent->setLayer(this, x, y);
 }
 
-int GameObject::getSur(){
+int GameObject::getSur() {
   int current_health = stat->getParamValue("Health");
-  int health_percentage = current_health * 100 / stat->getParamValueDefault("Health");
+  int health_percentage =
+      current_health * 100 / stat->getParamValueDefault("Health");
   int inverted_percentage = 100 - health_percentage;
 
-  if (!stat->isInParam("Sight")){ return inverted_percentage > 100 ? 100: inverted_percentage; }
+  if (!stat->isInParam("Sight")) {
+    return inverted_percentage > 100 ? 100 : inverted_percentage;
+  }
 
   int sight = stat->getParamValue("Sight");
   vector<GameObject *> animals_in_range = findTargetInRange(sight, false);
-  int sur = animals_in_range.size() > 0? inverted_percentage-20: inverted_percentage;
-  if (sur > 100){
+  int sur = animals_in_range.size() > 0 ? inverted_percentage - 20
+                                        : inverted_percentage;
+  if (sur > 100) {
     sur = 100;
   }
-  if (sur < 0){
+  if (sur < 0) {
     sur = 0;
   }
   return sur;
 }
 
-int GameObject::getEnv(){
+int GameObject::getEnv() {
   int current_hunger = stat->getParamValue("Hunger");
-  int hunger_percentage = current_hunger * 100 / stat->getParamValueDefault("Hunger");
+  int hunger_percentage =
+      current_hunger * 100 / stat->getParamValueDefault("Hunger");
   int inverted_percentage = 100 - hunger_percentage;
-  return inverted_percentage > 100 ? 100: inverted_percentage;
+  return inverted_percentage > 100 ? 100 : inverted_percentage;
 }
 
-int GameObject::getRepo(){
+int GameObject::getRepo() {
   // If can't mate or on cooldown, get out
-  if (!stat->isInAbility("Mate")){return 0;}
-  if (stat->isInAffliction("MateCooldown")){return 0;}
+  if (!stat->isInAbility("Mate")) {
+    return 0;
+  }
+  if (stat->isInAffliction("MateCooldown")) {
+    return 0;
+  }
 
   return 70;
 }
 
-void GameObject::update(){
+void GameObject::update() {
   stat->decisionMaking(getSur(), getEnv(), getRepo());
 }
 
-pair<int, int> GameObject::getVectorIndex()
-{
-  if (parent != nullptr)
-  {
+pair<int, int> GameObject::getVectorIndex() {
+  if (parent != nullptr) {
     const vector<vector<GameObject *>> layerVectors = parent->insideLayer;
-    for (size_t i = 0; i < layerVectors.size(); ++i)
-    {
+    for (size_t i = 0; i < layerVectors.size(); ++i) {
       const vector<GameObject *> &currentVector = layerVectors[i];
       auto it = find(currentVector.begin(), currentVector.end(), this);
-      if (it != currentVector.end())
-      {
+      if (it != currentVector.end()) {
         size_t j = distance(currentVector.begin(), it);
         return {static_cast<int>(j), static_cast<int>(i)};
       }
@@ -1543,10 +1495,8 @@ pair<int, int> GameObject::getVectorIndex()
   // not found
   return {-2147483648, -2147483648};
 }
-pair<int, int> GameObject::getCoord()
-{
-  if (parent)
-  {
+pair<int, int> GameObject::getCoord() {
+  if (parent) {
     pair<int, int> vector_index = getVectorIndex();
     LayerSystem *ls = parent->getParent();
     Ground ground = ls->getGround();
@@ -1565,63 +1515,55 @@ StatusBlock *GameObject::getStat() { return stat; }
 Layer *GameObject::getParent() { return parent; }
 
 // returns only GameObjects
-vector<GameObject *> GameObject::findTargetInRange(int range, bool allLayers)
-{
+vector<GameObject *> GameObject::findTargetInRange(int range, bool allLayers) {
   vector<GameObject *> target;
   pair<int, int> selfIndex = getVectorIndex();
-  for (double i{0}; i <= range; i++)
-  {
-    for (double j{0}; j <= range; j++)
-    {
-      // if the selected tile is within range and isn't the same tile as the GameObject:
-      if (ceil(sqrt(pow(i, 2.) + pow(j, 2.))) <= range && (i != 0 || j != 0))
-      {
+  for (double i{0}; i <= range; i++) {
+    for (double j{0}; j <= range; j++) {
+      // if the selected tile is within range and isn't the same tile as the
+      // GameObject:
+      if (ceil(sqrt(pow(i, 2.) + pow(j, 2.))) <= range && (i != 0 || j != 0)) {
         // if the selected tile is more than or equal to 0 (not out of range)
-        if (selfIndex.first - i >= 0 && selfIndex.second - j >= 0)
-        {
+        if (selfIndex.first - i >= 0 && selfIndex.second - j >= 0) {
           if (allLayers) // all layers in the same layer system
           {
             LayerSystem *layersystem = parent->getParent();
-            for (size_t k = 0; k < layersystem->getLayersAmount(); k++)
-            {
+            for (size_t k = 0; k < layersystem->getLayersAmount(); k++) {
               Layer *layer = layersystem->getLayer(0);
-              GameObject *targetObject = layer->getFromLayerIndex(selfIndex.first - i, selfIndex.second - j);
-              if (targetObject != nullptr)
-              {
+              GameObject *targetObject = layer->getFromLayerIndex(
+                  selfIndex.first - i, selfIndex.second - j);
+              if (targetObject != nullptr) {
                 target.push_back(targetObject);
               }
             }
-          }
-          else // GameObject's own layer only
+          } else // GameObject's own layer only
           {
-            GameObject *targetObject = parent->getFromLayerIndex(selfIndex.first - i, selfIndex.second - j);
-            if (targetObject != nullptr)
-            {
+            GameObject *targetObject = parent->getFromLayerIndex(
+                selfIndex.first - i, selfIndex.second - j);
+            if (targetObject != nullptr) {
               target.push_back(targetObject);
             }
           }
         }
         // if the selected tile is less than the size (not out of range)
-        if (selfIndex.first + i < parent->insideLayer.size() && selfIndex.second + j < parent->insideLayer.size())
-        {
+        if (selfIndex.first + i < parent->insideLayer.size() &&
+            selfIndex.second + j < parent->insideLayer.size()) {
           if (allLayers) // all layers in the same layer system
           {
             LayerSystem *layersystem = parent->getParent();
-            for (size_t k = 0; k < layersystem->getLayersAmount(); k++)
-            {
+            for (size_t k = 0; k < layersystem->getLayersAmount(); k++) {
               Layer *layer = layersystem->getLayer(0);
-              GameObject *targetObject = layer->getFromLayerIndex(selfIndex.first + i, selfIndex.second + j);
-              if (targetObject != nullptr)
-              {
+              GameObject *targetObject = layer->getFromLayerIndex(
+                  selfIndex.first + i, selfIndex.second + j);
+              if (targetObject != nullptr) {
                 target.push_back(targetObject);
               }
             }
-          }
-          else // GameObject's own layer only
+          } else // GameObject's own layer only
           {
-            GameObject *targetObject = parent->getFromLayerIndex(selfIndex.first + i, selfIndex.second + j);
-            if (targetObject != nullptr)
-            {
+            GameObject *targetObject = parent->getFromLayerIndex(
+                selfIndex.first + i, selfIndex.second + j);
+            if (targetObject != nullptr) {
               target.push_back(targetObject);
             }
           }
@@ -1635,13 +1577,10 @@ vector<GameObject *> GameObject::findTargetInRange(int range, bool allLayers)
 // ------------------Layer--------------------//
 
 Layer::Layer(string name, LayerSystem *parent, int width, int height)
-    : parent(parent), name(name)
-{
-  for (int y = 0; y < height; y++)
-  {
+    : parent(parent), name(name) {
+  for (int y = 0; y < height; y++) {
     vector<GameObject *> row;
-    for (int x = 0; x < width; x++)
-    {
+    for (int x = 0; x < width; x++) {
       row.push_back(nullptr);
     }
     insideLayer.push_back(row);
@@ -1649,35 +1588,28 @@ Layer::Layer(string name, LayerSystem *parent, int width, int height)
 }
 
 // update everything in the layer
-void Layer::action()
-{
-  for (int i = 0; i < insideLayer.size(); i++)
-  {
-    for (int j = 0; j < insideLayer.at(i).size(); j++)
-    {
-      if (insideLayer.at(i).at(j) != nullptr)
-      {
+void Layer::action() {
+  for (int i = 0; i < insideLayer.size(); i++) {
+    for (int j = 0; j < insideLayer.at(i).size(); j++) {
+      if (insideLayer.at(i).at(j) != nullptr) {
         insideLayer.at(i).at(j)->update();
       }
     }
   }
 }
 
-void Layer::setLayer(GameObject *target, int x, int y)
-{
+void Layer::setLayer(GameObject *target, int x, int y) {
   insideLayer.at(y).at(x) = target;
 }
 
 void Layer::removeFromLayer(int x, int y) { insideLayer.at(y).at(x) = nullptr; }
 inline string Layer::getName() { return name; }
 void Layer::setName(string nameInput) { name = nameInput; }
-GameObject *Layer::getFromLayerIndex(int x, int y)
-{
+GameObject *Layer::getFromLayerIndex(int x, int y) {
   return insideLayer.at(y).at(x);
 }
 
-GameObject *Layer::getFromLayerCoord(int x, int y)
-{
+GameObject *Layer::getFromLayerCoord(int x, int y) {
   pair<int, int> targetIndex = parent->getGround().getVectorIndex(x, y);
   return getFromLayerIndex(targetIndex.first, targetIndex.second);
 }
@@ -1686,23 +1618,21 @@ LayerSystem *Layer::getParent() { return parent; }
 
 // ------------------Land--------------------//
 
-Land::Land(Ground *parent, string represent, int x, int y) : parent(parent), represent(represent), x(x), y(y) {}
+Land::Land(Ground *parent, string represent, int x, int y)
+    : parent(parent), represent(represent), x(x), y(y) {}
 
 inline int Land::getX() { return x; }
 inline int Land::getY() { return y; }
 
 // ------------------Ground--------------------//
 
-Ground::Ground(LayerSystem *p, int width, int height) : parent(p)
-{
+Ground::Ground(LayerSystem *p, int width, int height) : parent(p) {
   int width_min = static_cast<int>(-floor(width / 2));
   int height_min = static_cast<int>(-floor(height / 2));
 
-  for (int y = height_min; y < height_min + height; y++)
-  {
+  for (int y = height_min; y < height_min + height; y++) {
     vector<Land> row;
-    for (int x = width_min; x < width_min + width; x++)
-    {
+    for (int x = width_min; x < width_min + width; x++) {
       // casts ground pointer to layer pointer so that Land can be constructed
       row.push_back(Land(this, "#", x, y));
     }
@@ -1710,14 +1640,10 @@ Ground::Ground(LayerSystem *p, int width, int height) : parent(p)
   }
 }
 
-pair<int, int> Ground::getVectorIndex(int x, int y)
-{
-  for (int i = 0; i < insideLayer.size(); ++i)
-  {
-    for (int j = 0; j < insideLayer[i].size(); ++j)
-    {
-      if (insideLayer[i][j].getX() == x && insideLayer[i][j].getY() == y)
-      {
+pair<int, int> Ground::getVectorIndex(int x, int y) {
+  for (int i = 0; i < insideLayer.size(); ++i) {
+    for (int j = 0; j < insideLayer[i].size(); ++j) {
+      if (insideLayer[i][j].getX() == x && insideLayer[i][j].getY() == y) {
         return make_pair(j, i);
       }
     }
@@ -1729,12 +1655,9 @@ pair<int, int> Ground::getVectorIndex(int x, int y)
 
 //-------------------LayerSystem-------------------//
 
-bool LayerSystem::isInLayer(string name)
-{
-  for (Layer *l : layers)
-  {
-    if (l->getName() == name)
-    {
+bool LayerSystem::isInLayer(string name) {
+  for (Layer *l : layers) {
+    if (l->getName() == name) {
       return true;
     }
   }
@@ -1742,17 +1665,17 @@ bool LayerSystem::isInLayer(string name)
 }
 
 LayerSystem::LayerSystem(int width, int height)
-    : width(width), height(height), ground(Ground(this, width, height))
-{
+    : width(width), height(height), ground(Ground(this, width, height)) {
   createNewLayer("Food");
   createNewLayer("Animal");
   createNewLayer("Plant");
+  cout << "start random generate\n";
+  randomGenerateLayers();
+  cout << "finish random generate\n";
 }
 
-bool LayerSystem::createNewLayer(string name)
-{
-  if (isInLayer(name))
-  {
+bool LayerSystem::createNewLayer(string name) {
+  if (isInLayer(name)) {
     return false;
   }
   Layer *layer = new Layer(name, this, width, height);
@@ -1760,12 +1683,9 @@ bool LayerSystem::createNewLayer(string name)
   return true;
 }
 
-bool LayerSystem::removeLayer(string name)
-{
-  for (int i = 0; i < layers.size(); i++)
-  {
-    if (layers.at(i)->getName() == name)
-    {
+bool LayerSystem::removeLayer(string name) {
+  for (int i = 0; i < layers.size(); i++) {
+    if (layers.at(i)->getName() == name) {
       layers.erase(layers.begin() + i);
       return true;
     }
@@ -1783,12 +1703,9 @@ double LayerSystem::getDistance(int x1, int y1, int x2, int y2) {
   return floor(abs(x1 - x2) + abs(y1 - y2));
 }
 
-inline Layer *LayerSystem::getLayer(string name)
-{
-  for (Layer *l : layers)
-  {
-    if (l->getName() == name)
-    {
+inline Layer *LayerSystem::getLayer(string name) {
+  for (Layer *l : layers) {
+    if (l->getName() == name) {
       return l;
     }
   }
@@ -1803,38 +1720,32 @@ void LayerSystem::update() {
 
 inline Layer *LayerSystem::getLayer(int i) { return layers.at(i); }
 
-inline Layer *LayerSystem::getRandomLayer() { return layers.at(rand() % layers.size()); }
+inline Layer *LayerSystem::getRandomLayer() {
+  return layers.at(rand() % layers.size());
+}
 
 Ground LayerSystem::getGround() { return ground; }
 
-string inline LayerSystem::getLayerName(int i) { return layers.at(i)->getName(); }
+string inline LayerSystem::getLayerName(int i) {
+  return layers.at(i)->getName();
+}
 
 int inline LayerSystem::getLayersAmount() { return layers.size(); }
 
-void LayerSystem::printLayer()
-{
+void LayerSystem::printLayer() {
   Layer *env_layer = getLayer("Environment");
   Layer *animal_layer = getLayer("Animal");
   Layer *food_layer = getLayer("Food");
 
-  for (int column = 0; column < height; column++)
-  {
-    for (int row = 0; row < width; row++)
-    {
-      if (env_layer->getFromLayerIndex(column, row) != nullptr)
-      {
+  for (int column = 0; column < height; column++) {
+    for (int row = 0; row < width; row++) {
+      if (env_layer->getFromLayerIndex(column, row) != nullptr) {
         cout << env_layer->getFromLayerIndex(column, row) << ' ';
-      }
-      else if (animal_layer->getFromLayerIndex(column, row) != nullptr)
-      {
+      } else if (animal_layer->getFromLayerIndex(column, row) != nullptr) {
         cout << animal_layer->getFromLayerIndex(column, row) << ' ';
-      }
-      else if (food_layer->getFromLayerIndex(column, row) != nullptr)
-      {
+      } else if (food_layer->getFromLayerIndex(column, row) != nullptr) {
         cout << food_layer->getFromLayerIndex(column, row) << ' ';
-      }
-      else
-      {
+      } else {
         cout << "x ";
       }
     }
@@ -1842,204 +1753,210 @@ void LayerSystem::printLayer()
   }
 }
 
-void LayerSystem::randomGenerateLayers()
-{
+void LayerSystem::randomGenerateLayers() {
+
   Layer *env_layer = getLayer("Environment");
   Layer *animal_layer = getLayer("Animal");
   Layer *food_layer = getLayer("Food");
 
-  for (int column = 0; column < height; column++)
-  {
-    for (int row = 0; row < width; row++)
-    {
+  cout << "finish get layer\n";
+
+  for (int column = 0; column < height; column++) {
+    for (int row = 0; row < width; row++) {
       int rand_animal = rand() % 100;
       int rand_food = rand() % 100;
       int rand_env = rand() % 100;
-      if (rand_animal < 10){
+
+      cout << "finish get random\n";
+
+      if (rand_animal < 10) {
+        cout << "create obj\n";
         new Deer(animal_layer, row, column);
+        cout << "create obj finished\n";
       }
-      if (rand_food < 1){
-        new Corpse(food_layer, row, column);
-      }
-      if (rand_env < 10){
-        int rand_plant = rand() % 2;
-        if (rand_plant == 0){
-          new Bush(env_layer, row, column);
-        } else {
-          new Apple_tree(env_layer, row, column);
-        }
-      }
+      // if (rand_food < 1){
+      //   cout << "create obj\n";
+      //   new Corpse(food_layer, row, column);
+      //   cout << "create obj finished\n";
+      // }
+      // if (rand_env < 10){
+      //   int rand_plant = rand() % 2;
+      //   if (rand_plant == 0){
+      //     cout << "create obj\n";
+      //     new Bush(env_layer, row, column);
+      //     cout << "create obj finished\n";
+      //   } else {
+      //     cout << "create obj\n";
+      //     new Apple_tree(env_layer, row, column);
+      //     cout << "create obj finished\n";
+      //   }
+      // }
     }
   }
 }
 
-Health_Aff::Health_Aff(StatusBlock *parent, int duration, int valueIncrease, int value) 
-: Affliction(parent), duration(duration),valueIncrease(valueIncrease),value(value)
-{}
-Health_Aff::Health_Aff(GameObject *target, int duration, int valueIncrease, int value) 
-: Affliction(target), duration(duration),valueIncrease(valueIncrease),value(value)
-{}
+Health_Aff::Health_Aff(StatusBlock *parent, int duration, int valueIncrease,
+                       int value)
+    : Affliction(parent), duration(duration), valueIncrease(valueIncrease),
+      value(value) {}
+Health_Aff::Health_Aff(GameObject *target, int duration, int valueIncrease,
+                       int value)
+    : Affliction(target), duration(duration), valueIncrease(valueIncrease),
+      value(value) {}
 
-Hunger_Aff::Hunger_Aff(StatusBlock *parent, int duration, int valueIncrease, int value) 
-: Affliction(parent), duration(duration),valueIncrease(valueIncrease),value(value)
-{}
-Hunger_Aff::Hunger_Aff(GameObject *target, int duration, int valueIncrease, int value) 
-: Affliction(target), duration(duration),valueIncrease(valueIncrease),value(value)
-{}
+Hunger_Aff::Hunger_Aff(StatusBlock *parent, int duration, int valueIncrease,
+                       int value)
+    : Affliction(parent), duration(duration), valueIncrease(valueIncrease),
+      value(value) {}
+Hunger_Aff::Hunger_Aff(GameObject *target, int duration, int valueIncrease,
+                       int value)
+    : Affliction(target), duration(duration), valueIncrease(valueIncrease),
+      value(value) {}
 
-Attack_Aff::Attack_Aff(StatusBlock *parent, int duration, int valueIncrease, int value) 
-: Affliction(parent), duration(duration),valueIncrease(valueIncrease),value(value)
-{}
-Attack_Aff::Attack_Aff(GameObject *target, int duration, int valueIncrease, int value) 
-: Affliction(target), duration(duration),valueIncrease(valueIncrease),value(value)
-{}
+Attack_Aff::Attack_Aff(StatusBlock *parent, int duration, int valueIncrease,
+                       int value)
+    : Affliction(parent), duration(duration), valueIncrease(valueIncrease),
+      value(value) {}
+Attack_Aff::Attack_Aff(GameObject *target, int duration, int valueIncrease,
+                       int value)
+    : Affliction(target), duration(duration), valueIncrease(valueIncrease),
+      value(value) {}
 
-Sight_Aff::Sight_Aff(StatusBlock *parent, int duration, int value) 
-: Affliction(parent), duration(duration),value(value)
-{}
-Sight_Aff::Sight_Aff(GameObject *target, int duration, int value) 
-: Affliction(target), duration(duration),value(value)
-{}
+Sight_Aff::Sight_Aff(StatusBlock *parent, int duration, int value)
+    : Affliction(parent), duration(duration), value(value) {}
+Sight_Aff::Sight_Aff(GameObject *target, int duration, int value)
+    : Affliction(target), duration(duration), value(value) {}
 
-Speed_Aff::Speed_Aff(StatusBlock *parent, int duration, int valueIncrease, int value) 
-: Affliction(parent), duration(duration),valueIncrease(valueIncrease),value(value)
-{}
-Speed_Aff::Speed_Aff(GameObject *target, int duration, int valueIncrease, int value) 
-: Affliction(target), duration(duration),valueIncrease(valueIncrease),value(value)
-{}
+Speed_Aff::Speed_Aff(StatusBlock *parent, int duration, int valueIncrease,
+                     int value)
+    : Affliction(parent), duration(duration), valueIncrease(valueIncrease),
+      value(value) {}
+Speed_Aff::Speed_Aff(GameObject *target, int duration, int valueIncrease,
+                     int value)
+    : Affliction(target), duration(duration), valueIncrease(valueIncrease),
+      value(value) {}
 
-MateCooldown::MateCooldown(StatusBlock *parent, int duration) 
-: Affliction(parent), duration(duration)
-{}
-MateCooldown::MateCooldown(GameObject *target, int duration) 
-: Affliction(target), duration(duration)
-{}
+MateCooldown::MateCooldown(StatusBlock *parent, int duration)
+    : Affliction(parent), duration(duration) {}
+MateCooldown::MateCooldown(GameObject *target, int duration)
+    : Affliction(target), duration(duration) {}
 
-EatTimes::EatTimes(StatusBlock *parent) 
-: Affliction(parent)
-{}
-EatTimes::EatTimes(GameObject *target) 
-: Affliction(target)
-{}
+EatTimes::EatTimes(StatusBlock *parent) : Affliction(parent) {}
+EatTimes::EatTimes(GameObject *target) : Affliction(target) {}
 
 FruitionCooldown::FruitionCooldown(StatusBlock *parent, int duration)
-: Affliction(parent), duration(duration)
-{}
+    : Affliction(parent), duration(duration) {}
 
 FruitionCooldown::FruitionCooldown(GameObject *target, int duration)
-: Affliction(target), duration(duration)
-{}
+    : Affliction(target), duration(duration) {}
 
-Poisonous::Poisonous(StatusBlock *parent)
-: Affliction(parent)
-{}
+Poisonous::Poisonous(StatusBlock *parent) : Affliction(parent) {}
 
-Poisonous::Poisonous(GameObject *target)
-: Affliction(target)
-{}
+Poisonous::Poisonous(GameObject *target) : Affliction(target) {}
 
-Hunger::Hunger(StatusBlock *parent, Ability *createBy, int rawValue) : StatParam(parent, createBy, rawValue) {}
+Hunger::Hunger(StatusBlock *parent, Ability *createBy, int rawValue)
+    : StatParam(parent, createBy, rawValue) {}
 
-Hunger::Hunger(GameObject *target, Ability *createBy, int rawValue) : StatParam(target, createBy, rawValue) {}
+Hunger::Hunger(GameObject *target, Ability *createBy, int rawValue)
+    : StatParam(target, createBy, rawValue) {}
 
-void Hunger::action()
-{
-    // Animal dies here
-    Layer *currentLayer = parent->getParent()->getParent();
-    Layer *foodLayer = currentLayer->getParent()->getLayer("Food");
-    pair<int, int> currentIndex = parent->getParent()->getVectorIndex();
-    currentLayer->insideLayer[currentIndex.second][currentIndex.first] = nullptr;
-    if (foodLayer->insideLayer[currentIndex.second][currentIndex.first] == nullptr)
-    {
-        GameObject* corpseptr = new Corpse(foodLayer, currentIndex.first, currentIndex.second);
-        // if animal is poisonous, give corpseptr poisonous too
-        if (parent->isInAffliction("Poisonous")){
-            new Poisonous(corpseptr);
-        }
+void Hunger::action() {
+  // Animal dies here
+  Layer *currentLayer = parent->getParent()->getParent();
+  Layer *foodLayer = currentLayer->getParent()->getLayer("Food");
+  pair<int, int> currentIndex = parent->getParent()->getVectorIndex();
+  currentLayer->insideLayer[currentIndex.second][currentIndex.first] = nullptr;
+  if (foodLayer->insideLayer[currentIndex.second][currentIndex.first] ==
+      nullptr) {
+    GameObject *corpseptr =
+        new Corpse(foodLayer, currentIndex.first, currentIndex.second);
+    // if animal is poisonous, give corpseptr poisonous too
+    if (parent->isInAffliction("Poisonous")) {
+      new Poisonous(corpseptr);
     }
-    // kill this animal :(
-    delete parent->getParent();
-    return;
+  }
+  // kill this animal :(
+  delete parent->getParent();
+  return;
 };
 
-Health::Health(StatusBlock *parent, Ability *createBy, int rawValue) : StatParam(parent, createBy, rawValue) {}
+Health::Health(StatusBlock *parent, Ability *createBy, int rawValue)
+    : StatParam(parent, createBy, rawValue) {}
 
-Health::Health(GameObject *target, Ability *createBy, int rawValue) : StatParam(target, createBy, rawValue) {}
+Health::Health(GameObject *target, Ability *createBy, int rawValue)
+    : StatParam(target, createBy, rawValue) {}
 
-void Health::action()
-{
-    // Animal dies here
-    Layer *currentLayer = parent->getParent()->getParent();
-    Layer *foodLayer = currentLayer->getParent()->getLayer("Food");
-    pair<int, int> currentIndex = parent->getParent()->getVectorIndex();
-    currentLayer->insideLayer[currentIndex.second][currentIndex.first] = nullptr;
-    if (foodLayer->insideLayer[currentIndex.second][currentIndex.first] == nullptr)
-    {
-        GameObject* corpseptr = new Corpse(foodLayer, currentIndex.first, currentIndex.second);
-        // if animal is poisonous, give corpseptr poisonous too
-        if (parent->isInAffliction("Poisonous")){
-            new Poisonous(corpseptr);
-        }
+void Health::action() {
+  // Animal dies here
+  Layer *currentLayer = parent->getParent()->getParent();
+  Layer *foodLayer = currentLayer->getParent()->getLayer("Food");
+  pair<int, int> currentIndex = parent->getParent()->getVectorIndex();
+  currentLayer->insideLayer[currentIndex.second][currentIndex.first] = nullptr;
+  if (foodLayer->insideLayer[currentIndex.second][currentIndex.first] ==
+      nullptr) {
+    GameObject *corpseptr =
+        new Corpse(foodLayer, currentIndex.first, currentIndex.second);
+    // if animal is poisonous, give corpseptr poisonous too
+    if (parent->isInAffliction("Poisonous")) {
+      new Poisonous(corpseptr);
     }
-    // kill this animal :(
-    delete parent->getParent();
-    return;
-    return;
+  }
+  // kill this animal :(
+  delete parent->getParent();
+  return;
+  return;
 }
 
-Atk::Atk(StatusBlock *parent, Ability *createBy, int rawValue) : StatParam(parent, createBy, rawValue) {}
+Atk::Atk(StatusBlock *parent, Ability *createBy, int rawValue)
+    : StatParam(parent, createBy, rawValue) {}
 
-Atk::Atk(GameObject *target, Ability *createBy, int rawValue) : StatParam(target, createBy, rawValue) {}
+Atk::Atk(GameObject *target, Ability *createBy, int rawValue)
+    : StatParam(target, createBy, rawValue) {}
 
-void Atk::action()
-{
-    return;
-}
+void Atk::action() { return; }
 
-Sight::Sight(StatusBlock *parent, Ability *createBy, int rawValue) : StatParam(parent, createBy, rawValue) {}
+Sight::Sight(StatusBlock *parent, Ability *createBy, int rawValue)
+    : StatParam(parent, createBy, rawValue) {}
 
-Sight::Sight(GameObject *target, Ability *createBy, int rawValue) : StatParam(target, createBy, rawValue) {}
+Sight::Sight(GameObject *target, Ability *createBy, int rawValue)
+    : StatParam(target, createBy, rawValue) {}
 
-void Sight::action()
-{
-    return;
-}
+void Sight::action() { return; }
 
-Speed::Speed(StatusBlock *parent, Ability *createBy, int rawValue) : StatParam(parent, createBy, rawValue) {}
+Speed::Speed(StatusBlock *parent, Ability *createBy, int rawValue)
+    : StatParam(parent, createBy, rawValue) {}
 
-Speed::Speed(GameObject *target, Ability *createBy, int rawValue) : StatParam(target, createBy, rawValue) {}
+Speed::Speed(GameObject *target, Ability *createBy, int rawValue)
+    : StatParam(target, createBy, rawValue) {}
 
-void Speed::action()
-{
-    return;
-}
+void Speed::action() { return; }
 
-Eat::Eat(AbilitySystem *parent, int max_hunger, bool eatPlants, bool eatEarthworms, bool eatAnimals) : Ability(parent), max_hunger(max_hunger), eatPlants(eatPlants), eatEarthworms(eatEarthworms), eatAnimals(eatAnimals) {}
+Eat::Eat(AbilitySystem *parent, int max_hunger, bool eatPlants,
+         bool eatEarthworms, bool eatAnimals)
+    : Ability(parent), max_hunger(max_hunger), eatPlants(eatPlants),
+      eatEarthworms(eatEarthworms), eatAnimals(eatAnimals) {}
 
-Eat::Eat(GameObject *target, int max_hunger, bool eatPlants, bool eatEarthworms, bool eatAnimals) : Ability(target), max_hunger(max_hunger), eatPlants(eatPlants), eatEarthworms(eatEarthworms), eatAnimals(eatAnimals) {}
+Eat::Eat(GameObject *target, int max_hunger, bool eatPlants, bool eatEarthworms,
+         bool eatAnimals)
+    : Ability(target), max_hunger(max_hunger), eatPlants(eatPlants),
+      eatEarthworms(eatEarthworms), eatAnimals(eatAnimals) {}
 
-void Eat::createStatParam()
-{
+void Eat::createStatParam() {
   new Hunger(getParent()->getParent(), this, max_hunger);
   new Hunger_Aff(getParent()->getParent(), max_hunger, -1, -1);
 }
 
 // Get earthworms
-vector<GameObject *> Eat::findTargetForPassive()
-{
-  if (!eatEarthworms)
-  {
+vector<GameObject *> Eat::findTargetForPassive() {
+  if (!eatEarthworms) {
     return {};
   }
-  vector<GameObject *> targetInRange = parent->getParent()->findTargetInRange(1, false);
-  while (targetInRange.size() > 0)
-  {
-    if (targetInRange[0]->getName() != "Earthworm")
-    {
+  vector<GameObject *> targetInRange =
+      parent->getParent()->findTargetInRange(1, false);
+  while (targetInRange.size() > 0) {
+    if (targetInRange[0]->getName() != "Earthworm") {
       targetInRange.erase(targetInRange.begin());
-    }
-    else
-    {
+    } else {
       break;
     }
   }
@@ -2047,38 +1964,37 @@ vector<GameObject *> Eat::findTargetForPassive()
 }
 
 // get corpses or plant
-vector<GameObject *> Eat::findTargetForActive()
-{
+vector<GameObject *> Eat::findTargetForActive() {
   vector<GameObject *> target = {};
   GameObject *self = getParent()->getParent();
   pair<int, int> selfIndex = self->getVectorIndex();
-  if (eatAnimals)
-  {
-    Layer *foodLayer = getParent()->getParent()->getParent()->getParent()->getLayer("Food");
-    for (int coordX : {selfIndex.first - 1, selfIndex.first, selfIndex.first + 1})
-    {
-      for (int coordY : {selfIndex.second - 1, selfIndex.second, selfIndex.second + 1})
-      {
-        if (foodLayer->insideLayer[coordY][coordX]->getName() == "Corpse")
-        {
+  if (eatAnimals) {
+    Layer *foodLayer =
+        getParent()->getParent()->getParent()->getParent()->getLayer("Food");
+    for (int coordX :
+         {selfIndex.first - 1, selfIndex.first, selfIndex.first + 1}) {
+      for (int coordY :
+           {selfIndex.second - 1, selfIndex.second, selfIndex.second + 1}) {
+        if (foodLayer->insideLayer[coordY][coordX]->getName() == "Corpse") {
           target.push_back(foodLayer->insideLayer[coordY][coordX]);
         }
       }
     }
   }
 
-  if (eatPlants)
-  {
-    Layer *envLayer = getParent()->getParent()->getParent()->getParent()->getLayer("Environment");
-    for (int coordX : {selfIndex.first - 1, selfIndex.first, selfIndex.first + 1})
-    {
-      for (int coordY : {selfIndex.second - 1, selfIndex.second, selfIndex.second + 1})
-      {
+  if (eatPlants) {
+    Layer *envLayer =
+        getParent()->getParent()->getParent()->getParent()->getLayer(
+            "Environment");
+    for (int coordX :
+         {selfIndex.first - 1, selfIndex.first, selfIndex.first + 1}) {
+      for (int coordY :
+           {selfIndex.second - 1, selfIndex.second, selfIndex.second + 1}) {
         GameObject *currentObj = envLayer->insideLayer[coordY][coordX];
-        if (currentObj != nullptr)
-        {
-          if (currentObj->getName() == "Bush" || currentObj->getName() == "Apple tree" || currentObj->getName() == "Mushroom")
-          {
+        if (currentObj != nullptr) {
+          if (currentObj->getName() == "Bush" ||
+              currentObj->getName() == "Apple tree" ||
+              currentObj->getName() == "Mushroom") {
             target.push_back(currentObj);
           }
         }
@@ -2089,22 +2005,20 @@ vector<GameObject *> Eat::findTargetForActive()
   return target;
 }
 
-bool Eat::canActive(vector<GameObject *> target)
-{
+bool Eat::canActive(vector<GameObject *> target) {
   return findTargetForActive().size() > 0;
 }
 
 // Eating earthworms is passive
-void Eat::passive(vector<GameObject *> target)
-{
+void Eat::passive(vector<GameObject *> target) {
   int increase_amount = 20;
-  if (target.size() > 0)
-  {
+  if (target.size() > 0) {
     GameObject *worm = target[0];
     pair<int, int> targetPosition = worm->getVectorIndex();
     Layer *currentLayer = parent->getParent()->getParent();
     // kill the earthworm
-    currentLayer->insideLayer[targetPosition.second][targetPosition.first] = nullptr;
+    currentLayer->insideLayer[targetPosition.second][targetPosition.first] =
+        nullptr;
     delete worm;
     // increase hunger points
     new Hunger_Aff(parent->getParent(), 1, 20, 0);
@@ -2112,68 +2026,60 @@ void Eat::passive(vector<GameObject *> target)
   return;
 }
 
-void Eat::active(vector<GameObject *> target)
-{
-  if (target.size() <= 0)
-  {
+void Eat::active(vector<GameObject *> target) {
+  if (target.size() <= 0) {
     return;
   }
   GameObject *realTarget = target[rand() % target.size()];
-  Layer *foodLayer = getParent()->getParent()->getParent()->getParent()->getLayer("Food");
+  Layer *foodLayer =
+      getParent()->getParent()->getParent()->getParent()->getLayer("Food");
   // reset hunger
   getParent()->getParent()->getStat()->removeAffliction("Hunger_Aff");
   new Hunger_Aff(getParent()->getParent(), max_hunger, -1, -1);
   // heal
   new Health_Aff(getParent()->getParent(), 10, 5, 5);
   // if the target is poisonous, reduce health
-  if (realTarget->getStat()->isInAffliction("Poisonous")){
+  if (realTarget->getStat()->isInAffliction("Poisonous")) {
     new Health_Aff(parent->getParent(), 20, -10, -10);
   }
   // remove a stack of EatTimes
-  realTarget->getStat()->removeAffliction("EatTimes");    
+  realTarget->getStat()->removeAffliction("EatTimes");
 }
 
 //--------------------------- Attack ----------------------------//
 
-Attack::Attack(AbilitySystem *parent, int atk_amount) : Ability(parent), atk_amount(atk_amount) {};
+Attack::Attack(AbilitySystem *parent, int atk_amount)
+    : Ability(parent), atk_amount(atk_amount){};
 
-Attack::Attack(GameObject *target, int atk_amount) : Ability(parent), atk_amount(atk_amount) {};
+Attack::Attack(GameObject *target, int atk_amount)
+    : Ability(parent), atk_amount(atk_amount){};
 
 // you need atk to attack
-void Attack::createStatParam()
-{
+void Attack::createStatParam() {
   new Atk(getParent()->getParent(), this, atk_amount);
 }
 
 // no passives
-vector<GameObject *> Attack::findTargetForPassive()
-{
-  return {};
-}
+vector<GameObject *> Attack::findTargetForPassive() { return {}; }
 
-vector<GameObject *> Attack::findTargetForActive()
-{
-  vector<GameObject *> possible_targets = parent->getParent()->findTargetInRange(1, false);
+vector<GameObject *> Attack::findTargetForActive() {
+  vector<GameObject *> possible_targets =
+      parent->getParent()->findTargetInRange(1, false);
   return {possible_targets[rand() % possible_targets.size()]};
 }
 
-bool Attack::canActive(vector<GameObject *> targets)
-{
-  vector<GameObject *> possible_targets = parent->getParent()->findTargetInRange(1, false);
+bool Attack::canActive(vector<GameObject *> targets) {
+  vector<GameObject *> possible_targets =
+      parent->getParent()->findTargetInRange(1, false);
   return (possible_targets.size() > 0);
 }
 
 // no passives yet
-void Attack::passive(vector<GameObject *> targets)
-{
-  return;
-}
+void Attack::passive(vector<GameObject *> targets) { return; }
 
 // deal damage by inflicting bleed to all targets
-void Attack::active(vector<GameObject *> targets)
-{
-  for (GameObject *target : targets)
-  {
+void Attack::active(vector<GameObject *> targets) {
+  for (GameObject *target : targets) {
     int atkValue = parent->getParent()->getStat()->getParamValue("Atk");
     new Health_Aff(target, atkValue, -atkValue, -atkValue);
   }
@@ -2186,30 +2092,24 @@ Walk::Walk(AbilitySystem *parent) : Ability(parent) {}
 Walk::Walk(GameObject *target) : Ability(target) {}
 
 // walk doesn't scale with any stats, no stat creation needed
-void Walk::createStatParam()
-{
-  return;
-}
+void Walk::createStatParam() { return; }
 
 // Walking has no passives
-vector<GameObject *> Walk::findTargetForPassive()
-{
-  return {};
-}
+vector<GameObject *> Walk::findTargetForPassive() { return {}; }
 
 // Walk direction target is the closest target in sight
-vector<GameObject *> Walk::findTargetForActive()
-{
+vector<GameObject *> Walk::findTargetForActive() {
   int visionRange = parent->getParent()->getStat()->getParamValue("Vision");
-  vector<GameObject *> targets = parent->getParent()->findTargetInRange(visionRange, false);
+  vector<GameObject *> targets =
+      parent->getParent()->findTargetInRange(visionRange, false);
   GameObject *closestObj = targets[0];
-  for (GameObject *obj : targets)
-  {
+  for (GameObject *obj : targets) {
     int xDiff = parent->getParent()->getCoord().first - obj->getCoord().first;
     int yDiff = parent->getParent()->getCoord().second - obj->getCoord().second;
     int distance = sqrt(xDiff * xDiff + yDiff * yDiff);
-    if (distance < sqrt(closestObj->getCoord().first * closestObj->getCoord().first + closestObj->getCoord().second * closestObj->getCoord().second))
-    {
+    if (distance <
+        sqrt(closestObj->getCoord().first * closestObj->getCoord().first +
+             closestObj->getCoord().second * closestObj->getCoord().second)) {
       closestObj = obj;
     }
   }
@@ -2217,28 +2117,24 @@ vector<GameObject *> Walk::findTargetForActive()
 }
 
 // if you have 8 or more in range, you can't walk
-bool Walk::canActive(vector<GameObject *> targets)
-{
+bool Walk::canActive(vector<GameObject *> targets) {
   int unwalkableTileCount = 0;
   Layer *selfLayer = parent->getParent()->getParent();
   pair<int, int> selfCoord = parent->getParent()->getVectorIndex();
   int currentX = selfCoord.first;
   int currentY = selfCoord.second;
   // check 8 tiles around the animal
-  for (int coordY : {currentY - 1, currentY, currentY + 1})
-  {
-    for (int coordX : {currentX - 1, currentX, currentX + 1})
-    {
+  for (int coordY : {currentY - 1, currentY, currentY + 1}) {
+    for (int coordX : {currentX - 1, currentX, currentX + 1}) {
       // if the coordinate is within bounds,
-      if (coordX >= 0 && coordX < selfLayer->getParent()->getLayersWidth() && coordY >= 0 && coordY < selfLayer->getParent()->getLayersHeight())
-      {
+      if (coordX >= 0 && coordX < selfLayer->getParent()->getLayersWidth() &&
+          coordY >= 0 && coordY < selfLayer->getParent()->getLayersHeight()) {
         // if the tile isn't nullptr and the tile isnt the same as the animal
-        if (selfLayer->insideLayer[coordY][coordX] != nullptr && (coordX != currentX || coordY != currentY))
-        {
+        if (selfLayer->insideLayer[coordY][coordX] != nullptr &&
+            (coordX != currentX || coordY != currentY)) {
           unwalkableTileCount++;
         }
-      }
-      else // if the coordinate is out of bounds, it is unwalkable
+      } else // if the coordinate is out of bounds, it is unwalkable
       {
         unwalkableTileCount++;
       }
@@ -2249,10 +2145,7 @@ bool Walk::canActive(vector<GameObject *> targets)
 }
 
 // no passives
-void Walk::passive(vector<GameObject *> targets)
-{
-  return;
-}
+void Walk::passive(vector<GameObject *> targets) { return; }
 
 // --------------------------- WalkSeek ---------------------------
 
@@ -2260,49 +2153,47 @@ WalkSeek::WalkSeek(AbilitySystem *parent) : Walk(parent) {}
 
 WalkSeek::WalkSeek(GameObject *target) : Walk(parent) {}
 
-// walk by setting another unoccupied tile to be this object's pointer and set the previous tile to nullptr
-void WalkSeek::active(vector<GameObject *> targets)
-{
+// walk by setting another unoccupied tile to be this object's pointer and set
+// the previous tile to nullptr
+void WalkSeek::active(vector<GameObject *> targets) {
   Layer *currentLayer = parent->getParent()->getParent();
   int currentX = parent->getParent()->getVectorIndex().first;
   int currentY = parent->getParent()->getVectorIndex().second;
   // code to choose a target
   int targetX, targetY;
-  if (targets.size() > 0) // if there's a target, set target coords to the variables
+  if (targets.size() >
+      0) // if there's a target, set target coords to the variables
   {
     GameObject *target = targets[0];
     targetX = target->getVectorIndex().first;
     targetY = target->getVectorIndex().second;
-  }
-  else // else, set target coords a random 8 tile around the parent
+  } else // else, set target coords a random 8 tile around the parent
   {
     // all coordinates around the parent that isn't out of bounds
     vector<pair<int, int>> possibleTargets;
 
-    for (int coordY : {currentY - 1, currentY, currentY + 1})
-    {
-      for (int coordX : {currentX - 1, currentX, currentX + 1})
-      {
-        // if x and y are in range, if the tile is empty, and isn't the same as the parent
-        if (coordX >= 0 && coordX < currentLayer->getParent()->getLayersWidth() &&
-            coordY >= 0 && coordY < currentLayer->getParent()->getLayersHeight() &&
+    for (int coordY : {currentY - 1, currentY, currentY + 1}) {
+      for (int coordX : {currentX - 1, currentX, currentX + 1}) {
+        // if x and y are in range, if the tile is empty, and isn't the same as
+        // the parent
+        if (coordX >= 0 &&
+            coordX < currentLayer->getParent()->getLayersWidth() &&
+            coordY >= 0 &&
+            coordY < currentLayer->getParent()->getLayersHeight() &&
             currentLayer->insideLayer[coordY][coordX] == nullptr &&
-            (coordX != currentX || coordY != currentY))
-        {
+            (coordX != currentX || coordY != currentY)) {
           possibleTargets.push_back({coordX, coordY});
         }
       }
     }
 
     // randomize target coords
-    if (possibleTargets.size() > 0)
-    {
-      pair<int, int> targetPosition = possibleTargets[rand() % possibleTargets.size()];
+    if (possibleTargets.size() > 0) {
+      pair<int, int> targetPosition =
+          possibleTargets[rand() % possibleTargets.size()];
       targetX = targetPosition.first;
       targetY = targetPosition.second;
-    }
-    else
-    {
+    } else {
       targetX = currentX;
       targetY = currentY;
     }
@@ -2318,21 +2209,19 @@ void WalkSeek::active(vector<GameObject *> targets)
   {
     nextX = currentX + 1; // walk right
   }
-  if (xDiff < 0)
-  {
+  if (xDiff < 0) {
     nextX = currentX - 1;
   }
   if (yDiff > 0) // target below (go down = increased Y)
   {
     nextY = currentY + 1; // walk down
   }
-  if (yDiff < 0)
-  {
+  if (yDiff < 0) {
     nextY = currentY - 1;
   }
-  // if the next position is empty, set the next position to be the parent's pointer
-  if (currentLayer->insideLayer[nextY][nextX] == nullptr)
-  {
+  // if the next position is empty, set the next position to be the parent's
+  // pointer
+  if (currentLayer->insideLayer[nextY][nextX] == nullptr) {
     currentLayer->setLayer(parent->getParent(), nextX, nextY);
     currentLayer->setLayer(nullptr, currentX, currentY);
   }
@@ -2346,43 +2235,42 @@ WalkEscape::WalkEscape(AbilitySystem *parent) : Walk(parent) {}
 
 WalkEscape::WalkEscape(GameObject *target) : Walk(parent) {}
 
-void WalkEscape::active(vector<GameObject *> targets)
-{
+void WalkEscape::active(vector<GameObject *> targets) {
   Layer *currentLayer = parent->getParent()->getParent();
   int currentX = parent->getParent()->getVectorIndex().first;
   int currentY = parent->getParent()->getVectorIndex().second;
   // code to choose a target
   int targetX, targetY;
-  if (targets.size() > 0) // hopefully there's always going to be a target to escape from?
+  if (targets.size() >
+      0) // hopefully there's always going to be a target to escape from?
   {
     GameObject *target = targets[0];
     targetX = target->getVectorIndex().first;
     targetY = target->getVectorIndex().second;
-  }
-  else // else, set target coords a random 8 tile around the parent
+  } else // else, set target coords a random 8 tile around the parent
   {
     // all coordinates around the parent that isn't out of bounds
     vector<pair<int, int>> possibleTargets;
 
-    for (int coordY : {currentY - 1, currentY, currentY + 1})
-    {
-      for (int coordX : {currentX - 1, currentX, currentX + 1})
-      {
-        // if x and y are in range, if the tile is empty, and isn't the same as the parent
-        if (coordX >= 0 && coordX < currentLayer->getParent()->getLayersWidth() &&
-            coordY >= 0 && coordY < currentLayer->getParent()->getLayersHeight() &&
+    for (int coordY : {currentY - 1, currentY, currentY + 1}) {
+      for (int coordX : {currentX - 1, currentX, currentX + 1}) {
+        // if x and y are in range, if the tile is empty, and isn't the same as
+        // the parent
+        if (coordX >= 0 &&
+            coordX < currentLayer->getParent()->getLayersWidth() &&
+            coordY >= 0 &&
+            coordY < currentLayer->getParent()->getLayersHeight() &&
             currentLayer->insideLayer[coordY][coordX] == nullptr &&
-            coordX != currentX && coordY != currentY)
-        {
+            coordX != currentX && coordY != currentY) {
           possibleTargets.push_back({coordX, coordY});
         }
       }
     }
 
     // randomize target coords until they aren't the same as current coords
-    do
-    {
-      pair<int, int> targetPosition = possibleTargets[rand() % possibleTargets.size()];
+    do {
+      pair<int, int> targetPosition =
+          possibleTargets[rand() % possibleTargets.size()];
       targetX = targetPosition.first;
       targetY = targetPosition.second;
     } while (targetX == currentX && targetY == currentY);
@@ -2397,24 +2285,21 @@ void WalkEscape::active(vector<GameObject *> targets)
   {
     nextX = currentX - 1; // walk left
   }
-  if (xDiff < 0)
-  {
+  if (xDiff < 0) {
     nextX = currentX + 1;
   }
   if (yDiff > 0) // currently below the target
   {
     nextY = currentY + 1; // walk down
   }
-  if (yDiff < 0)
-  {
+  if (yDiff < 0) {
     nextY = currentY - 1;
   }
 
   // if target position is in bounds and is empty, move there
   if (nextX >= 0 && nextX < currentLayer->getParent()->getLayersWidth() &&
       nextY >= 0 && nextY < currentLayer->getParent()->getLayersHeight() &&
-      currentLayer->insideLayer[nextY][nextX] != nullptr)
-  {
+      currentLayer->insideLayer[nextY][nextX] != nullptr) {
     currentLayer->setLayer(parent->getParent(), nextX, nextY);
     currentLayer->setLayer(nullptr, currentX, currentY);
   }
@@ -2424,77 +2309,63 @@ void WalkEscape::active(vector<GameObject *> targets)
 
 //--------------------------- Mate ---------------------------
 
-Mate::Mate(AbilitySystem *parent) : Ability(parent) {};
+Mate::Mate(AbilitySystem *parent) : Ability(parent){};
 
 Mate::Mate(GameObject *target) : Ability(parent) {}
 
 // no stats neede
-void Mate::createStatParam()
-{
-  return;
-}
+void Mate::createStatParam() { return; }
 
 // no passives
-vector<GameObject *> Mate::findTargetForPassive()
-{
-  return {};
-}
+vector<GameObject *> Mate::findTargetForPassive() { return {}; }
 
 // 1 random target of the same species within range
-vector<GameObject *> Mate::findTargetForActive()
-{
+vector<GameObject *> Mate::findTargetForActive() {
   // get all animals in range
-  vector<GameObject *> animals_in_range = parent->getParent()->findTargetInRange(1, false);
+  vector<GameObject *> animals_in_range =
+      parent->getParent()->findTargetInRange(1, false);
   vector<GameObject *> targets;
-  for (GameObject *target : animals_in_range)
-  {
+  for (GameObject *target : animals_in_range) {
     // if same species
-    if (target->getName() == parent->getParent()->getName())
-    {
+    if (target->getName() == parent->getParent()->getName()) {
       targets.push_back(target);
     }
   }
   return targets;
 };
 
-// at least 1 tile around must be empty, contain the same species, and ability not on cooldown
-bool Mate::canActive(vector<GameObject *> targets)
-{
-  // same algorithm as canActive for walk, counting how many empty tiles there are around
+// at least 1 tile around must be empty, contain the same species, and ability
+// not on cooldown
+bool Mate::canActive(vector<GameObject *> targets) {
+  // same algorithm as canActive for walk, counting how many empty tiles there
+  // are around
   int unspawnableTile = 0;
   Layer *selfLayer = parent->getParent()->getParent();
   pair<int, int> selfCoord = parent->getParent()->getVectorIndex();
   int currentX = selfCoord.first;
   int currentY = selfCoord.second;
-  for (int coordY : {currentY - 1, currentY, currentY + 1})
-  {
-    for (int coordX : {currentX - 1, currentX, currentX + 1})
-    {
-      if (coordX >= 0 && coordX < selfLayer->getParent()->getLayersWidth() && coordY >= 0 && coordY < selfLayer->getParent()->getLayersHeight())
-      {
-        if (selfLayer->insideLayer[coordY][coordX] != nullptr && (coordX != currentX || coordY != currentY))
-        {
+  for (int coordY : {currentY - 1, currentY, currentY + 1}) {
+    for (int coordX : {currentX - 1, currentX, currentX + 1}) {
+      if (coordX >= 0 && coordX < selfLayer->getParent()->getLayersWidth() &&
+          coordY >= 0 && coordY < selfLayer->getParent()->getLayersHeight()) {
+        if (selfLayer->insideLayer[coordY][coordX] != nullptr &&
+            (coordX != currentX || coordY != currentY)) {
           unspawnableTile++;
         }
-      }
-      else
-      {
+      } else {
         unspawnableTile++;
       }
     }
   }
 
-  return !(parent->getParent()->getStat()->isInAffliction("MateCooldown")) && findTargetForActive().size() > 0 && unspawnableTile < 8;
+  return !(parent->getParent()->getStat()->isInAffliction("MateCooldown")) &&
+         findTargetForActive().size() > 0 && unspawnableTile < 8;
 };
 
 // no passives
-void Mate::passive(vector<GameObject *> targets)
-{
-  return;
-}
+void Mate::passive(vector<GameObject *> targets) { return; }
 
-void Mate::active(vector<GameObject *> targets)
-{
+void Mate::active(vector<GameObject *> targets) {
   // find all nullptr tiles in the 8 tiles around
   vector<pair<int, int>> possibleTargets;
 
@@ -2503,24 +2374,23 @@ void Mate::active(vector<GameObject *> targets)
   int currentY = selfCoord.second;
   Layer *currentLayer = parent->getParent()->getParent();
 
-  for (int coordY : {currentY - 1, currentY, currentY + 1})
-  {
-    for (int coordX : {currentX - 1, currentX, currentX + 1})
-    {
-      // if x and y are in range, if the tile is empty, and isn't the same as the parent
+  for (int coordY : {currentY - 1, currentY, currentY + 1}) {
+    for (int coordX : {currentX - 1, currentX, currentX + 1}) {
+      // if x and y are in range, if the tile is empty, and isn't the same as
+      // the parent
       if (coordX >= 0 && coordX < currentLayer->getParent()->getLayersWidth() &&
-          coordY >= 0 && coordY < currentLayer->getParent()->getLayersHeight() &&
+          coordY >= 0 &&
+          coordY < currentLayer->getParent()->getLayersHeight() &&
           currentLayer->insideLayer[coordY][coordX] == nullptr &&
-          (coordX != currentX || coordY != currentY))
-      {
+          (coordX != currentX || coordY != currentY)) {
         possibleTargets.push_back({coordX, coordY});
       }
     }
   }
 
-  if (possibleTargets.size() > 0)
-  {
-    pair<int, int> targetCoord = possibleTargets[rand() % possibleTargets.size()];
+  if (possibleTargets.size() > 0) {
+    pair<int, int> targetCoord =
+        possibleTargets[rand() % possibleTargets.size()];
     string animalType = parent->getParent()->getName();
     // apply cooldown affliction
     new MateCooldown(parent->getParent(), 100);
@@ -2535,7 +2405,8 @@ void Mate::active(vector<GameObject *> targets)
   }
 }
 
-// ===================================== CORPSES =====================================
+// ===================================== CORPSES
+// =====================================
 
 //--------------------------- Rot ---------------------------
 
@@ -2545,62 +2416,64 @@ Rot::Rot(GameObject *target) : Ability(target) {}
 
 void Rot::createStatParam(){};
 
-vector<GameObject *> Rot::findTargetForPassive()
-{
-  return {};
-}
+vector<GameObject *> Rot::findTargetForPassive() { return {}; }
 
-vector<GameObject *> Rot::findTargetForActive()
-{
-  return {};
-}
+vector<GameObject *> Rot::findTargetForActive() { return {}; }
 
 bool Rot::canActive(vector<GameObject *> targets) { return false; }
 
 void Rot::passive(vector<GameObject *> targets) {
   rot_timer++;
-  Layer *animalLayer = parent->getParent()->getParent()->getParent()->getLayer("Animal");
-  Layer *EnvironmentLayer = parent->getParent()->getParent()->getParent()->getLayer("Environment");
+  Layer *animalLayer =
+      parent->getParent()->getParent()->getParent()->getLayer("Animal");
+  Layer *EnvironmentLayer =
+      parent->getParent()->getParent()->getParent()->getLayer("Environment");
 
   vector<pair<int, int>> possibleFoodCoord;
   vector<pair<int, int>> possibleEnvCoord;
   // when rot timer is reached, spawn mushroom and earthworm
-  if (rot_timer == 60){
+  if (rot_timer == 60) {
     pair<int, int> selfCoord = parent->getParent()->getVectorIndex();
     int currentX = selfCoord.first;
     int currentY = selfCoord.second;
-    for (int coordY : {currentY - 1, currentY, currentY + 1})
-    {
-      for (int coordX : {currentX - 1, currentX, currentX + 1})
-      {
+    for (int coordY : {currentY - 1, currentY, currentY + 1}) {
+      for (int coordX : {currentX - 1, currentX, currentX + 1}) {
         // if coord in range
-        if (coordX >= 0 && coordX < parent->getParent()->getParent()->getParent()->getLayersWidth() && coordY >= 0 && coordY < parent->getParent()->getParent()->getParent()->getLayersHeight()){
-          if (animalLayer->insideLayer[coordY][coordX] == nullptr){
+        if (coordX >= 0 &&
+            coordX < parent->getParent()
+                         ->getParent()
+                         ->getParent()
+                         ->getLayersWidth() &&
+            coordY >= 0 &&
+            coordY < parent->getParent()
+                         ->getParent()
+                         ->getParent()
+                         ->getLayersHeight()) {
+          if (animalLayer->insideLayer[coordY][coordX] == nullptr) {
             possibleFoodCoord.push_back({coordX, coordY});
           }
-          if (EnvironmentLayer->insideLayer[coordY][coordX] == nullptr){
+          if (EnvironmentLayer->insideLayer[coordY][coordX] == nullptr) {
             possibleEnvCoord.push_back({coordX, coordY});
           }
         }
       }
     }
   }
-  if (possibleFoodCoord.size() > 0){
-    pair<int, int> foodCoord = possibleFoodCoord[rand() % possibleFoodCoord.size()];
+  if (possibleFoodCoord.size() > 0) {
+    pair<int, int> foodCoord =
+        possibleFoodCoord[rand() % possibleFoodCoord.size()];
   }
-  if (possibleEnvCoord.size() > 0)
-  {
-    pair<int, int> envCoord = possibleEnvCoord[rand() % possibleEnvCoord.size()];
+  if (possibleEnvCoord.size() > 0) {
+    pair<int, int> envCoord =
+        possibleEnvCoord[rand() % possibleEnvCoord.size()];
     new Mushroom(EnvironmentLayer, envCoord.first, envCoord.second);
   }
-  
-  
-  
 }
 
 void Rot::active(vector<GameObject *> targets) {}
 
-// ===================================== PLANTS =====================================
+// ===================================== PLANTS
+// =====================================
 
 // --------------------------- Fruition ---------------------------
 
@@ -2610,30 +2483,20 @@ Fruition::Fruition(GameObject *target) : Ability(target) {}
 
 void Fruition::createStatParam(){};
 
-vector<GameObject *> Fruition::findTargetForPassive()
-{
-  return {};
-}
+vector<GameObject *> Fruition::findTargetForPassive() { return {}; }
 
-vector<GameObject *> Fruition::findTargetForActive()
-{
-  return {};
-};
+vector<GameObject *> Fruition::findTargetForActive() { return {}; };
 
 // no active, always false
-bool Fruition::canActive(vector<GameObject *> targets)
-{
-  return false;
-}
+bool Fruition::canActive(vector<GameObject *> targets) { return false; }
 
 // Ima store fruits as afflictions actually
-void Fruition::passive(vector<GameObject *> targets)
-{
-  if (!parent->getParent()->getStat()->isInAffliction("FruitionCooldown"))
-  { // if not on cooldown
-    int fruitAmount = parent->getParent()->getStat()->amountOfAffliction("Fruit");
-    if (fruitAmount < 3)
-    {
+void Fruition::passive(vector<GameObject *> targets) {
+  if (!parent->getParent()->getStat()->isInAffliction(
+          "FruitionCooldown")) { // if not on cooldown
+    int fruitAmount =
+        parent->getParent()->getStat()->amountOfAffliction("Fruit");
+    if (fruitAmount < 3) {
       // generate fruits, set ability on cooldown
       new FruitionCooldown(parent->getParent(), 200);
       new EatTimes(parent->getParent());
@@ -2650,28 +2513,19 @@ SingleEat::SingleEat(AbilitySystem *target) : Ability(target) {}
 
 SingleEat::SingleEat(GameObject *target) : Ability(target) {}
 
-void SingleEat::createStatParam(){ return; }
+void SingleEat::createStatParam() { return; }
 
-vector<GameObject *> SingleEat::findTargetForPassive()
-{
-  return {};
-}
+vector<GameObject *> SingleEat::findTargetForPassive() { return {}; }
 
-vector<GameObject *> SingleEat::findTargetForActive()
-{
-  return {};
-}
+vector<GameObject *> SingleEat::findTargetForActive() { return {}; }
 
 // no active, always false
-bool SingleEat::canActive(vector<GameObject *> targets)
-{
-  return false;
-}
+bool SingleEat::canActive(vector<GameObject *> targets) { return false; }
 
 // death when eaten
-void SingleEat::passive(vector<GameObject *> targets){
+void SingleEat::passive(vector<GameObject *> targets) {
   StatusBlock *statBlock = parent->getParent()->getStat();
-  if (statBlock->amountOfAffliction("EatTimes") <= 0){
+  if (statBlock->amountOfAffliction("EatTimes") <= 0) {
     Layer *selfLayer = parent->getParent()->getParent();
     pair<int, int> selfCoord = parent->getParent()->getVectorIndex();
     selfLayer->insideLayer[selfCoord.second][selfCoord.first] = nullptr;
@@ -2680,64 +2534,71 @@ void SingleEat::passive(vector<GameObject *> targets){
 }
 
 // no active
-void SingleEat::active(vector<GameObject *> targets){}
+void SingleEat::active(vector<GameObject *> targets) {}
 
 Animal::Animal(Layer *parent, int x, int y) : GameObject(parent, x, y) {
-    // abilities all aniimals can do
-    new WalkSeek(this);
-    new WalkEscape(this);
-    new Mate(this);
-    // mate cooldown on spawn
-    new MateCooldown(this, 200);
+  // abilities all aniimals can do
+  cout << "Animal created\n";
+  new WalkSeek(this);
+  cout << "WalkSeek created\n";
+  new WalkEscape(this);
+  cout << "WalkEscape created\n";
+  new Mate(this);
+  cout << "Mate created\n";
+  // mate cooldown on spawn
+  new MateCooldown(this, 200);
+  cout << "MateCooldown created\n";
 }
 
 Plant::Plant(Layer *parent, int x, int y) : GameObject(parent, x, y) {}
 
 Corpse::Corpse(Layer *parent, int x, int y) : GameObject(parent, x, y) {
-    // Make Corpses have 3 eat times and make it single eat
-    new SingleEat(this);
-    new EatTimes(this);
-    new EatTimes(this);
-    new EatTimes(this);
-    // Corpses rot
-    new Rot(this);
+  // Make Corpses have 3 eat times and make it single eat
+  new SingleEat(this);
+  new EatTimes(this);
+  new EatTimes(this);
+  new EatTimes(this);
+  // Corpses rot
+  new Rot(this);
 }
 
 Deer::Deer(Layer *parent, int x, int y) : Animal(parent, x, y) {
-    // All animals need these stats: 
-    // Health, Sight, Speed
-    new Health(this, nullptr, 100);
-    new Sight(this, nullptr, 10);
-    new Speed(this, nullptr, 3);
+  // All animals need these stats:
+  // Health, Sight, Speed
+  cout << "Deer created\n";
+  new Health(this, nullptr, 100);
+  cout << "Health created\n";
+  new Sight(this, nullptr, 10);
+  new Speed(this, nullptr, 3);
 
-    // created by abilities: Hunger 
-    // Deers can eat
-    new Eat(this, 120, true, false, false);
+  // created by abilities: Hunger
+  // Deers can eat
+  new Eat(this, 120, true, false, false);
 }
 
 Bush::Bush(Layer *parent, int x, int y) : Plant(parent, x, y) {
-    // Bushes get SingleEat
-    new SingleEat(this);
-    new EatTimes(this);
+  // Bushes get SingleEat
+  new SingleEat(this);
+  new EatTimes(this);
 }
 
 Mushroom::Mushroom(Layer *parent, int x, int y) : Plant(parent, x, y) {
-    // Mushroom get SingleEat
-    new SingleEat(this);
-    new EatTimes(this);
+  // Mushroom get SingleEat
+  new SingleEat(this);
+  new EatTimes(this);
 }
 
 Apple_tree::Apple_tree(Layer *parent, int x, int y) : Plant(parent, x, y) {
-    // Can regen EatTimes with Fruition, get 3 EatTimes when created
-    new Fruition(this);
-    new EatTimes(this);
-    new EatTimes(this);
-    new EatTimes(this);
+  // Can regen EatTimes with Fruition, get 3 EatTimes when created
+  new Fruition(this);
+  new EatTimes(this);
+  new EatTimes(this);
+  new EatTimes(this);
 }
 
 EarthWorm::EarthWorm(Layer *parent, int x, int y) : GameObject(parent, x, y) {
-    //can only walk, randomly
-    new WalkSeek(this);
+  // can only walk, randomly
+  new WalkSeek(this);
 }
 
 Grid::Grid(Vector2f size, Vector2f position, GameObject *object)
@@ -3287,7 +3148,8 @@ void SelectedList::shiftShowTextDown() {
 
 GameObject *SelectedList::click(Vector2f position) {
   for (int i = 0; i < showTextCapacity; i++) {
-    if (showShape[i].getGlobalBounds().contains(position) && showTextIndex + i < allObject.size()) {
+    if (showShape[i].getGlobalBounds().contains(position) &&
+        showTextIndex + i < allObject.size()) {
       return allObject[showTextIndex + i];
     }
   }
@@ -3651,8 +3513,10 @@ Gui::Gui() {
       new RenderWindow(VideoMode(1920, 1080), "Ecosystem Simulation");
   font.loadFromFile(FONT_PATH);
   window->setFramerateLimit(120);
-  layerSheet = new LayerSheet(new LayerSystem(255, 153), Vector2f(0, 0),
-                              Vector2f(1920, 100));
+  cout << "start create layerSystem\n";
+  LayerSystem *layerSystem = new LayerSystem(255, 153);
+  cout << "start create layerSheet\n";
+  layerSheet = new LayerSheet(layerSystem, Vector2f(0, 0), Vector2f(1920, 100));
   map = new Map(Vector2f(1291, 775), Vector2f(629, 150),
                 layerSheet->getData()->getOverAllLayer());
   zoomIn = new ZoomIn(Vector2f(1840, 115), 10);
@@ -3715,10 +3579,11 @@ void Gui::render() {
 }
 
 int main() {
-    Gui game;
-    while (game.isOpen()) {
-        game.update();
-        
-        game.render();
-    }
+  srand(time(NULL));
+  Gui game;
+  while (game.isOpen()) {
+    game.update();
+
+    game.render();
+  }
 }

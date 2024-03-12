@@ -70,7 +70,7 @@ public:
   void virtual active(vector<GameObject *> targets) = 0;
   int decision(int sur, int env, int repro);
   inline string getName();
-  inline AbilitySystem *getParent();
+  inline AbilitySystem *getParent() {return parent;}
 };
 
 class Affliction {
@@ -108,7 +108,7 @@ public:
   AbilitySystem(GameObject *parent);
   bool addAbility(Ability *ability);
   void decisionMaking(int sur, int env, int repro);
-  inline GameObject *getParent();
+  inline GameObject *getParent() { return parent; }
 };
 
 class AfflictionSystem {
@@ -141,7 +141,7 @@ public:
   int getParamValueDefault(string name); // ถึงแม้จะไม่มีสแตดก็รีเทิร์น 0 ออกมา
   int getParamValue(string name); // ถึงแม้จะไม่มีสแตดก็รีเทิร์น 0 ออกมา
   StatParam *getParam(string name);
-  inline GameObject *getParent();
+  inline GameObject *getParent() { return parent; }
 };
 
 class GameObject { // จะสร้างซักตัวก็ต้องสร้าง abilty, stat ของมันให้พร้อมนะ
@@ -152,18 +152,21 @@ protected:
 
 public:
   GameObject(Layer *parent, int x, int y);
-  int getSur();
-  int getEnv();
-  int getRepo();
-  void update(); // เล่นเทิร์น
+  int getSur() {return 0;}
+  int getEnv() {return 0;}
+  int getRepo() {return 0;}
+  void update() {
+    stat->updateAffliction();
+    stat->decisionMaking(getSur(), getEnv(), getRepo());
+  }
   pair<int, int> getVectorIndex();
   pair<int, int> getCoord();
   inline void setName(string stringInput);
   void setRepresent(string stringInput);
-  inline string getName();
+  inline string getName() { return name;}
   inline string getRepresent() { return represent; }
   inline StatusBlock *getStat();
-  inline Layer *getParent();
+  inline Layer *getParent() { return parent;}
   vector<GameObject *> findTargetInRange(int range, bool allLayers);
   vector<string> getDetail() { return {}; }
   // bool canAct(GameObject *);

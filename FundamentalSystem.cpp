@@ -103,7 +103,7 @@ int Ability::decision(int sur, int env, int repo)
 }
 
 string Ability::getName() { return name; }
-AbilitySystem *Ability::getParent() { return parent; }
+// inline AbilitySystem *Ability::getParent() { return parent; }
 
 // ------------------Affliction--------------------//
 
@@ -199,7 +199,7 @@ void AbilitySystem::decisionMaking(int sur, int env, int repo) {
   }
 }
 
-GameObject *AbilitySystem::getParent() { return parent; }
+// GameObject *AbilitySystem::getParent() { return parent; }
 
 // ------------------Affliction--------------------//
 
@@ -383,7 +383,7 @@ StatParam *StatusBlock::getParam(string name)
   return nullptr;
 }
 
-GameObject *StatusBlock::getParent() { return parent; }
+// GameObject *StatusBlock::getParent() { return parent; }
 
 // ------------------GameObject--------------------//
 
@@ -427,10 +427,10 @@ pair<int, int> GameObject::getCoord()
 
 void GameObject::setName(string stringInput) { name = stringInput; }
 void GameObject::setRepresent(string stringInput) { represent = stringInput; }
-string GameObject::getName() { return name; }
+// string GameObject::getName() { return name; }
 // inline string GameObject::getRepresent() { return represent; }
 StatusBlock *GameObject::getStat() { return stat; }
-Layer *GameObject::getParent() { return parent; }
+// Layer *GameObject::getParent() { return parent; }
 
 // returns only GameObjects
 vector<GameObject *> GameObject::findTargetInRange(int range, bool allLayers)

@@ -1,11 +1,7 @@
 #include "Ability.h"
-// #include "Ability.cpp"
 #include "Affliction.h"
-// #include "Affliction.cpp"
-// #include "FundamentalSystem.cpp"
 #include "FundamentalSystem.h"
 #include "StatParam.h"
-// #include "StatParam.cpp"
 #include "LivingThing.h"
 
 using namespace std;

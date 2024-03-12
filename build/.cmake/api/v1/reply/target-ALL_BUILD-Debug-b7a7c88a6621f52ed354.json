@@ -5,7 +5,7 @@
 		"commands" : [],
 		"files" : 
 		[
-			"CMakeLists.txt"
+			"lib/SFML/CMakeLists.txt"
 		],
 		"nodes" : 
 		[
@@ -16,9 +16,6 @@
 	},
 	"dependencies" : 
 	[
-		{
-			"id" : "GameGod::@6890427a1f51a3e7e1df"
-		},
 		{
 			"id" : "sfml-system::@a0857d3fa2d27435d485"
 		},
@@ -35,23 +32,23 @@
 			"id" : "sfml-network::@c3d7f79628bafd5c7994"
 		},
 		{
-			"id" : "sfml-audio::@2c88909a109778213ad3"
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+			"id" : "sfml-audio::@2c88909a109778213ad3"
 		}
 	],
 	"folder" : 
 	{
 		"name" : "CMake"
 	},
-	"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+	"id" : "ALL_BUILD::@c424d21c5f18836bb219",
 	"isGeneratorProvided" : true,
 	"name" : "ALL_BUILD",
 	"paths" : 
 	{
-		"build" : ".",
-		"source" : "."
+		"build" : "lib/SFML",
+		"source" : "lib/SFML"
 	},
 	"sources" : [],
 	"type" : "UTILITY"

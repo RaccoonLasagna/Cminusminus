@@ -1,12 +1,10 @@
 #include "Ability.h"
 #include "Affliction.h"
 // #include "Affliction.cpp"
-// #include "FundamentalSystem.cpp"
 #include "FundamentalSystem.h"
+// #include "FundamentalSystem.cpp"
 #include "StatParam.h"
-// #include "StatParam.cpp"
 #include "LivingThing.h"
-// #include "LivingThing.cpp"
 #include <cstddef>
 #include <cstdlib>
 #include <ctime>

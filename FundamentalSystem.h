@@ -9,7 +9,6 @@
 using namespace std;
 
 class StatParam;
-class StatParamMax;
 class Ability;
 class AbilitySystem;
 class Affliction;
@@ -101,9 +100,9 @@ public:
 class AbilitySystem {
 protected:
   GameObject *parent;
-  bool isInAbility(string name);
 
 public:
+  bool isInAbility(string name);
   vector<Ability *> abilityGroup;
   AbilitySystem(GameObject *parent);
   bool addAbility(Ability *ability);

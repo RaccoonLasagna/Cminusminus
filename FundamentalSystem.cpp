@@ -392,6 +392,44 @@ GameObject::GameObject(Layer *parent, int x, int y) : parent(parent)
   parent->setLayer(this, x, y);
 }
 
+int GameObject::getSur(){
+  int current_health = stat->getParamValue("Health");
+  int health_percentage = current_health * 100 / stat->getParamValueDefault("Health");
+  int inverted_percentage = 100 - health_percentage;
+
+  if (!stat->isInParam("Sight")){ return inverted_percentage > 100 ? 100: inverted_percentage; }
+
+  int sight = stat->getParamValue("Sight");
+  vector<GameObject *> animals_in_range = findTargetInRange(sight, false);
+  int sur = animals_in_range.size() > 0? inverted_percentage-20: inverted_percentage;
+  if (sur > 100){
+    sur = 100;
+  }
+  if (sur < 0){
+    sur = 0;
+  }
+  return sur;
+}
+
+int GameObject::getEnv(){
+  int current_hunger = stat->getParamValue("Hunger");
+  int hunger_percentage = current_hunger * 100 / stat->getParamValueDefault("Hunger");
+  int inverted_percentage = 100 - hunger_percentage;
+  return inverted_percentage > 100 ? 100: inverted_percentage;
+}
+
+int GameObject::getRepo(){
+  // If can't mate or on cooldown, get out
+  if (!stat->isInAbility("Mate")){return 0;}
+  if (stat->isInAffliction("MateCooldown")){return 0;}
+
+  return 70;
+}
+
+void GameObject::update(){
+  stat->decisionMaking(getSur(), getEnv(), getRepo());
+}
+
 pair<int, int> GameObject::getVectorIndex()
 {
   if (parent != nullptr)

@@ -16,6 +16,8 @@ Animal::Animal(Layer *parent, int x, int y) : GameObject(parent, x, y) {
     new WalkSeek(this);
     new WalkEscape(this);
     new Mate(this);
+    // mate cooldown on spawn
+    new MateCooldown(this, 200);
 }
 
 Plant::Plant(Layer *parent, int x, int y) : GameObject(parent, x, y) {}

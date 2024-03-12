@@ -1,54 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <PreferredToolArchitecture>x86</PreferredToolArchitecture>
   </PropertyGroup>
   <PropertyGroup>
     <ResolveNugetPackages>false</ResolveNugetPackages>
   </PropertyGroup>
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug|x64">
+    <ProjectConfiguration Include="Debug|win32">
       <Configuration>Debug</Configuration>
-      <Platform>x64</Platform>
+      <Platform>win32</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|x64">
+    <ProjectConfiguration Include="Release|win32">
       <Configuration>Release</Configuration>
-      <Platform>x64</Platform>
+      <Platform>win32</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="MinSizeRel|x64">
+    <ProjectConfiguration Include="MinSizeRel|win32">
       <Configuration>MinSizeRel</Configuration>
-      <Platform>x64</Platform>
+      <Platform>win32</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="RelWithDebInfo|x64">
+    <ProjectConfiguration Include="RelWithDebInfo|win32">
       <Configuration>RelWithDebInfo</Configuration>
-      <Platform>x64</Platform>
+      <Platform>win32</Platform>
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{1BD64AC2-F4B1-3AB5-A0FD-E6398BC9B8AA}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
-    <Platform>x64</Platform>
+    <Platform>win32</Platform>
     <ProjectName>ALL_BUILD</ProjectName>
     <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|win32'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <CharacterSet>MultiByte</CharacterSet>
     <PlatformToolset>v143</PlatformToolset>
@@ -62,12 +62,12 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">
     <Midl>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
@@ -77,7 +77,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|win32'">
     <Midl>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
@@ -87,7 +87,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">
     <Midl>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
@@ -97,7 +97,7 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">
     <Midl>
       <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
@@ -110,8 +110,8 @@
   <ItemGroup>
     <CustomBuild Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">Building Custom Rule C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">setlocal
 C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\cmake.exe -SC:/Users/ADMIN/Documents/GitHub/Cminusminus -BC:/Users/ADMIN/Documents/GitHub/Cminusminus/build --check-stamp-file C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
@@ -120,11 +120,11 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\cmake\Config.cmake;C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\cmake\SFMLConfig.cmake.in;C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\cmake\SFMLConfigDependencies.cmake.in;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakePackageConfigHelpers.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CPack.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CPackComponent.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CheckIncludeFile.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CheckIncludeFileCXX.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CheckTypeSize.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\GNUInstallDirs.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Templates\CPackConfig.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\lib\SFML\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\cmake\Config.cmake;C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\cmake\SFMLConfig.cmake.in;C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\cmake\SFMLConfigDependencies.cmake.in;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakePackageConfigHelpers.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CPack.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CPackComponent.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CheckIncludeFile.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CheckIncludeFileCXX.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CheckTypeSize.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\GNUInstallDirs.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Templates\CPackConfig.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\lib\SFML\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|win32'">Building Custom Rule C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|win32'">setlocal
 C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\cmake.exe -SC:/Users/ADMIN/Documents/GitHub/Cminusminus -BC:/Users/ADMIN/Documents/GitHub/Cminusminus/build --check-stamp-file C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
@@ -133,11 +133,11 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\cmake\Config.cmake;C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\cmake\SFMLConfig.cmake.in;C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\cmake\SFMLConfigDependencies.cmake.in;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakePackageConfigHelpers.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CPack.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CPackComponent.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CheckIncludeFile.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CheckIncludeFileCXX.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CheckTypeSize.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\GNUInstallDirs.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Templates\CPackConfig.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\lib\SFML\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\cmake\Config.cmake;C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\cmake\SFMLConfig.cmake.in;C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\cmake\SFMLConfigDependencies.cmake.in;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakePackageConfigHelpers.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CPack.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CPackComponent.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CheckIncludeFile.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CheckIncludeFileCXX.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CheckTypeSize.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\GNUInstallDirs.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Templates\CPackConfig.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|win32'">C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\lib\SFML\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">Building Custom Rule C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">setlocal
 C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\cmake.exe -SC:/Users/ADMIN/Documents/GitHub/Cminusminus -BC:/Users/ADMIN/Documents/GitHub/Cminusminus/build --check-stamp-file C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
@@ -146,11 +146,11 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\cmake\Config.cmake;C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\cmake\SFMLConfig.cmake.in;C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\cmake\SFMLConfigDependencies.cmake.in;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakePackageConfigHelpers.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CPack.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CPackComponent.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CheckIncludeFile.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CheckIncludeFileCXX.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CheckTypeSize.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\GNUInstallDirs.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Templates\CPackConfig.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\lib\SFML\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/CMakeLists.txt</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\cmake\Config.cmake;C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\cmake\SFMLConfig.cmake.in;C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\cmake\SFMLConfigDependencies.cmake.in;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakePackageConfigHelpers.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CPack.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CPackComponent.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CheckIncludeFile.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CheckIncludeFileCXX.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CheckTypeSize.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\GNUInstallDirs.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Templates\CPackConfig.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\lib\SFML\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">Building Custom Rule C:/Users/ADMIN/Documents/GitHub/Cminusminus/lib/SFML/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">setlocal
 C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\bin\cmake.exe -SC:/Users/ADMIN/Documents/GitHub/Cminusminus -BC:/Users/ADMIN/Documents/GitHub/Cminusminus/build --check-stamp-file C:/Users/ADMIN/Documents/GitHub/Cminusminus/build/lib/SFML/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
@@ -159,9 +159,9 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\cmake\Config.cmake;C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\cmake\SFMLConfig.cmake.in;C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\cmake\SFMLConfigDependencies.cmake.in;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakePackageConfigHelpers.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CPack.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CPackComponent.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CheckIncludeFile.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CheckIncludeFileCXX.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CheckTypeSize.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\GNUInstallDirs.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Templates\CPackConfig.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\lib\SFML\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\cmake\Config.cmake;C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\cmake\SFMLConfig.cmake.in;C:\Users\ADMIN\Documents\GitHub\Cminusminus\lib\SFML\cmake\SFMLConfigDependencies.cmake.in;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CMakePackageConfigHelpers.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CPack.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CPackComponent.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CheckIncludeFile.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CheckIncludeFileCXX.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\CheckTypeSize.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\GNUInstallDirs.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\ADMIN\STUDY\MingGW_Compiler\mingw64\share\cmake-3.27\Templates\CPackConfig.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\lib\SFML\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|win32'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

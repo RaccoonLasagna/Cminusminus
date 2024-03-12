@@ -136,7 +136,7 @@ public:
 
 class Ability { // statParam ทั้งหมดที่ Ability จะใช้ต้องถูกสร้างโดยตัว Ability เองทั้งหมด
 protected:
-  std::string name; // ไปกำหนดเองตอนสร้าง classs
+  std::string name = "Ability"; // ไปกำหนดเองตอนสร้าง classs
   Var3DGraph *data; // ไปกำหนดเองตอนสร้าง classs
   AbilitySystem *parent;
   void virtual createStatParam() { return; } // สร้าง Instant Class StatParam
@@ -1125,6 +1125,8 @@ void StatParam::updateStackInfo() {
 
 StatParam::StatParam(StatusBlock *parent, Ability *createBy, int defaultValue)
     : parent(parent) {
+  cout << "start statparam" << endl;
+  cout << createBy->getName() << endl;
   pair<string, int> pair = make_pair(createBy->getName(), defaultValue);
   stackInfo.push_back(pair);
   updateStackInfo();
@@ -1168,7 +1170,7 @@ StatusBlock *StatParam::getParent() { return parent; }
 
 Ability::Ability(AbilitySystem *parent) : parent(parent) {
   cout << "Ability::Ability(AbilitySystem *parent) : parent(parent)\n";
-  parent->addAbility(this);
+  // parent->addAbility(this);
   cout
       << "Ability::Ability(AbilitySystem *parent) : parent->addAbility(this)\n";
   createStatParam();
@@ -1199,7 +1201,7 @@ bool Affliction::tick() {
 }
 
 Affliction::Affliction(AfflictionSystem *parent) : parent(parent) {
-  parent->addAffliction(this);
+  // parent->addAffliction(this);
 }
 
 Affliction::Affliction(GameObject *target) : Affliction(target->getStat()) {}
@@ -1224,11 +1226,11 @@ AfflictionSystem *Affliction::getParent() { return parent; }
 
 bool AbilitySystem::isInAbility(string name) {
   cout << "start isinability\n";
-  // if (abilityGroup.size() < 1) {
-  //   cout << "WE wil return\n";
-  //   return false;
-  // }
   cout << "ACess ability groub\n";
+  abilityGroup.clear();
+  cout << "yes";
+  cout << "ACess ability groub\n";
+
   for (Ability *ability : abilityGroup)
   { cout << "start condition\n";
     if (ability->getName() == name)
@@ -1237,20 +1239,16 @@ bool AbilitySystem::isInAbility(string name) {
       return true;
     }
   }
-  // cout << "YOOOOOOO\n";
-  // abilityGroup.size();
- 
-
-  // cout << abilityGroup.size() << endl;
   cout << "finish loop\n";
   return false;
 }
 
 AbilitySystem::AbilitySystem(GameObject *parent)
-    : parent(parent), abilityGroup({nullptr}) {}
+    : parent(parent), abilityGroup({}) {}
 
 bool AbilitySystem::addAbility(Ability *target) {
   cout << "AbilitySystem::addAbility(Ability *target)\n";
+  cout << target->getName() << endl;
   if (!isInAbility(target->getName())) {
     cout << "add ability passed\n";
     abilityGroup.push_back(target);
@@ -1802,7 +1800,9 @@ void LayerSystem::randomGenerateLayers() {
 Health_Aff::Health_Aff(StatusBlock *parent, int duration, int valueIncrease,
                        int value)
     : Affliction(parent), duration(duration), valueIncrease(valueIncrease),
-      value(value) {}
+      value(value) {
+        parent->addAffliction(this);
+      }
 Health_Aff::Health_Aff(GameObject *target, int duration, int valueIncrease,
                        int value)
     : Affliction(target), duration(duration), valueIncrease(valueIncrease),
@@ -1811,7 +1811,9 @@ Health_Aff::Health_Aff(GameObject *target, int duration, int valueIncrease,
 Hunger_Aff::Hunger_Aff(StatusBlock *parent, int duration, int valueIncrease,
                        int value)
     : Affliction(parent), duration(duration), valueIncrease(valueIncrease),
-      value(value) {}
+      value(value) {
+        parent->addAffliction(this);
+      }
 Hunger_Aff::Hunger_Aff(GameObject *target, int duration, int valueIncrease,
                        int value)
     : Affliction(target), duration(duration), valueIncrease(valueIncrease),
@@ -1820,43 +1822,59 @@ Hunger_Aff::Hunger_Aff(GameObject *target, int duration, int valueIncrease,
 Attack_Aff::Attack_Aff(StatusBlock *parent, int duration, int valueIncrease,
                        int value)
     : Affliction(parent), duration(duration), valueIncrease(valueIncrease),
-      value(value) {}
+      value(value) {
+        parent->addAffliction(this);
+      }
 Attack_Aff::Attack_Aff(GameObject *target, int duration, int valueIncrease,
                        int value)
     : Affliction(target), duration(duration), valueIncrease(valueIncrease),
       value(value) {}
 
 Sight_Aff::Sight_Aff(StatusBlock *parent, int duration, int value)
-    : Affliction(parent), duration(duration), value(value) {}
+    : Affliction(parent), duration(duration), value(value) {
+      parent->addAffliction(this);
+    }
 Sight_Aff::Sight_Aff(GameObject *target, int duration, int value)
     : Affliction(target), duration(duration), value(value) {}
 
 Speed_Aff::Speed_Aff(StatusBlock *parent, int duration, int valueIncrease,
                      int value)
     : Affliction(parent), duration(duration), valueIncrease(valueIncrease),
-      value(value) {}
+      value(value) {
+        parent->addAffliction(this);
+      }
 Speed_Aff::Speed_Aff(GameObject *target, int duration, int valueIncrease,
                      int value)
     : Affliction(target), duration(duration), valueIncrease(valueIncrease),
       value(value) {}
 
 MateCooldown::MateCooldown(StatusBlock *parent, int duration)
-    : Affliction(parent), duration(duration) {}
+    : Affliction(parent), duration(duration) {
+      parent->addAffliction(this);
+    }
 MateCooldown::MateCooldown(GameObject *target, int duration)
     : Affliction(target), duration(duration) {}
 
-EatTimes::EatTimes(StatusBlock *parent) : Affliction(parent) {}
+EatTimes::EatTimes(StatusBlock *parent) : Affliction(parent) {
+  parent->addAffliction(this);
+}
 EatTimes::EatTimes(GameObject *target) : Affliction(target) {}
 
 FruitionCooldown::FruitionCooldown(StatusBlock *parent, int duration)
-    : Affliction(parent), duration(duration) {}
+    : Affliction(parent), duration(duration) {
+      parent->addAffliction(this);
+    }
 
 FruitionCooldown::FruitionCooldown(GameObject *target, int duration)
     : Affliction(target), duration(duration) {}
 
-Poisonous::Poisonous(StatusBlock *parent) : Affliction(parent) {}
+Poisonous::Poisonous(StatusBlock *parent) : Affliction(parent) {
+  parent->addAffliction(this);
+}
 
 Poisonous::Poisonous(GameObject *target) : Affliction(target) {}
+
+// ================== stat ================== //
 
 Hunger::Hunger(StatusBlock *parent, Ability *createBy, int rawValue)
     : StatParam(parent, createBy, rawValue) {}
@@ -1938,7 +1956,9 @@ void Speed::action() { return; }
 Eat::Eat(AbilitySystem *parent, int max_hunger, bool eatPlants,
          bool eatEarthworms, bool eatAnimals)
     : Ability(parent), max_hunger(max_hunger), eatPlants(eatPlants),
-      eatEarthworms(eatEarthworms), eatAnimals(eatAnimals) {}
+      eatEarthworms(eatEarthworms), eatAnimals(eatAnimals) {
+        parent->addAbility(this);
+      }
 
 Eat::Eat(GameObject *target, int max_hunger, bool eatPlants, bool eatEarthworms,
          bool eatAnimals)
@@ -2053,7 +2073,9 @@ void Eat::active(vector<GameObject *> target) {
 //--------------------------- Attack ----------------------------//
 
 Attack::Attack(AbilitySystem *parent, int atk_amount)
-    : Ability(parent), atk_amount(atk_amount){};
+    : Ability(parent), atk_amount(atk_amount){
+      parent->addAbility(this);
+    };
 
 Attack::Attack(GameObject *target, int atk_amount)
     : Ability(parent), atk_amount(atk_amount){};
@@ -2091,7 +2113,9 @@ void Attack::active(vector<GameObject *> targets) {
 
 // --------------------------- Walk ---------------------------
 
-Walk::Walk(AbilitySystem *parent) : Ability(parent) {}
+Walk::Walk(AbilitySystem *parent) : Ability(parent) {
+  // parent->addAbility(this);
+}
 
 Walk::Walk(GameObject *target) : Ability(target) {}
 
@@ -2153,7 +2177,9 @@ void Walk::passive(vector<GameObject *> targets) { return; }
 
 // --------------------------- WalkSeek ---------------------------
 
-WalkSeek::WalkSeek(AbilitySystem *parent) : Walk(parent) {}
+WalkSeek::WalkSeek(AbilitySystem *parent) : Walk(parent) {
+  parent->addAbility(this);
+}
 
 WalkSeek::WalkSeek(GameObject *target) : Walk(parent) {}
 
@@ -2235,7 +2261,9 @@ void WalkSeek::active(vector<GameObject *> targets) {
 
 // --------------------------- WalkEscape ---------------------------
 
-WalkEscape::WalkEscape(AbilitySystem *parent) : Walk(parent) {}
+WalkEscape::WalkEscape(AbilitySystem *parent) : Walk(parent) {
+  parent->addAbility(this);
+}
 
 WalkEscape::WalkEscape(GameObject *target) : Walk(parent) {}
 
@@ -2313,7 +2341,9 @@ void WalkEscape::active(vector<GameObject *> targets) {
 
 //--------------------------- Mate ---------------------------
 
-Mate::Mate(AbilitySystem *parent) : Ability(parent){};
+Mate::Mate(AbilitySystem *parent) : Ability(parent){
+  parent->addAbility(this);
+};
 
 Mate::Mate(GameObject *target) : Ability(parent) {}
 
@@ -2409,12 +2439,13 @@ void Mate::active(vector<GameObject *> targets) {
   }
 }
 
-// ===================================== CORPSES
-// =====================================
+// ===================================== CORPSES =====================================
 
 //--------------------------- Rot ---------------------------
 
-Rot::Rot(AbilitySystem *target) : Ability(target) {}
+Rot::Rot(AbilitySystem *target) : Ability(target) {
+  parent->addAbility(this);
+}
 
 Rot::Rot(GameObject *target) : Ability(target) {}
 
@@ -2481,7 +2512,9 @@ void Rot::active(vector<GameObject *> targets) {}
 
 // --------------------------- Fruition ---------------------------
 
-Fruition::Fruition(AbilitySystem *target) : Ability(target) {}
+Fruition::Fruition(AbilitySystem *target) : Ability(target) {
+  parent->addAbility(this);
+}
 
 Fruition::Fruition(GameObject *target) : Ability(target) {}
 
@@ -2513,7 +2546,9 @@ void Fruition::active(vector<GameObject *> targets) { return; }
 
 // --------------------------- SingleEat ---------------------------
 
-SingleEat::SingleEat(AbilitySystem *target) : Ability(target) {}
+SingleEat::SingleEat(AbilitySystem *target) : Ability(target) {
+  parent->addAbility(this);
+}
 
 SingleEat::SingleEat(GameObject *target) : Ability(target) {}
 

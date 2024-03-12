@@ -309,10 +309,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\Gui.h" />
-    <ClCompile Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\Gui.cpp" />
-    <ClCompile Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\FundamentalSystem.cpp" />
-    <ClCompile Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\main.cpp" />
+    <ClCompile Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\UltimateGame.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\ADMIN\Documents\GitHub\Cminusminus\build\ZERO_CHECK.vcxproj">

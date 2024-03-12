@@ -1,14 +1,14 @@
-#include <string>
-#include <vector>
-#include "Gui.h"
+// #include <string>
+// #include <vector>
+// #include "UltimateGame.cpp"
 
-// using namespace sf;
+// // using namespace sf;
 
-int main() {
-    Gui game;
-    while (game.isOpen()) {
-        game.update();
+// int main() {
+//     Gui game;
+//     while (game.isOpen()) {
+//         game.update();
         
-        game.render();
-    }
-}
+//         game.render();
+//     }
+// }

@@ -1,3 +1,11 @@
+#include <array>
+#include <cmath>
+#include <stdexcept>
+#include <string>
+#include <utility>
+#include <vector>
+#include <iostream>
+
 #include "SFML/Graphics/CircleShape.hpp"
 #include "SFML/Graphics/Color.hpp"
 #include "SFML/Graphics/Font.hpp"
@@ -13,16 +21,18 @@
 #include "SFML/Window/WindowStyle.hpp"
 #include <SFML/Graphics.hpp>
 #include <SFML/Graphics/Text.hpp>
-#include <array>
-#include <cmath>
-#include <stdexcept>
-#include <string>
-#include <utility>
-#include <vector>
-#include <algorithm>
+
+#define FONT_PATH "C:/Users/ADMIN/Documents/GitHub/Cminusminus/Font/f.ttf"
+#define COLOR1 Color(194, 168, 135, 255)
+#define COLOR2 Color(223, 175, 94, 255)
+#define COLOR3 Color(97, 113, 77, 255)
+#define COLOR4 Color(143, 174, 147, 255)
+#define COLOR5 Color(109, 21, 43, 255)
 
 using namespace std;
+using namespace sf;
 
+class Var3DGraph;
 class StatParam;
 class Ability;
 class AbilitySystem;
@@ -35,6 +45,64 @@ class Land;
 class Ground;
 class LayerSystem;
 class Command;
+
+class Var3DGraph {
+protected:
+    vector<array<int, 4>> exampleData;
+
+public:
+    Var3DGraph(const vector<array<int, 4>>& exampleData) {
+        // กำหนด exampleData โดยเรียงจากน้อยไปมากตาม x, y, z
+        this->exampleData = exampleData;
+        sort(this->exampleData.begin(), this->exampleData.end(), [](const auto& a, const auto& b) {
+            if (a[0] != b[0]) // เรียงตาม x ถ้าไม่เท่ากัน
+                return a[0] < b[0];
+            else if (a[1] != b[1]) // เรียงตาม y ถ้า x เท่ากันและ y ไม่เท่ากัน
+                return a[1] < b[1];
+            else // เรียงตาม z ถ้า x และ y เท่ากัน
+                return a[2] < b[2];
+        });
+    }
+
+    int interpolate(int x, int y, int z) {
+        // ตรวจสอบว่าจุดอยู่นอกขอบเขตข้อมูลหรือไม่
+        if (x < exampleData.front()[0] || x > exampleData.back()[0] ||
+            y < exampleData.front()[1] || y > exampleData.back()[1] ||
+            z < exampleData.front()[2] || z > exampleData.back()[2]) {
+            return 0;
+        }
+
+        // หาตำแหน่งข้อมูลที่อยู่ระหว่าง x, y, z
+        size_t i = 0;
+        while (i < exampleData.size() - 1 && exampleData[i][0] < x) {
+            ++i;
+        }
+
+        // ทำ interpolation แยกตามแต่ละมิติ
+        int x1 = exampleData[i][0], y1 = exampleData[i][1], z1 = exampleData[i][2], val1 = exampleData[i][3];
+        int x2 = exampleData[i + 1][0], y2 = exampleData[i + 1][1], z2 = exampleData[i + 1][2], val2 = exampleData[i + 1][3];
+
+        // คำนวณอัตราส่วนของ interpolation สำหรับแต่ละมิติ
+        double alpha_x = static_cast<double>(x - x1) / (x2 - x1);
+        double alpha_y = static_cast<double>(y - y1) / (y2 - y1);
+        double alpha_z = static_cast<double>(z - z1) / (z2 - z1);
+
+        // ทำ interpolation แยกตามแต่ละมิติ
+        int val_x1 = val1 + alpha_x * (val2 - val1);
+        int val_x2 = val1 + alpha_x * (val2 - val1);
+        int val_y1 = val1 + alpha_y * (val2 - val1);
+        int val_y2 = val1 + alpha_y * (val2 - val1);
+        int val_z1 = val1 + alpha_z * (val2 - val1);
+        int val_z2 = val1 + alpha_z * (val2 - val1);
+
+        // ทำ interpolation สุดท้าย
+        int val_xy1 = val_x1 + alpha_y * (val_x2 - val_x1);
+        int val_xy2 = val_y1 + alpha_y * (val_y2 - val_y1);
+        int val_xyz1 = val_xy1 + alpha_z * (val_xy2 - val_xy1);
+
+        return val_xyz1;
+    }
+};
 
 class StatParam {
 protected:    
@@ -250,10 +318,6 @@ public:
   int getLayersHeight() { return height; }
   int getLayersAmount();
   inline string getLayerName(int i);
-  inline int getLayersAmount();
-  inline int getLayersWidth();
-  inline int getLayersHeight();
-  void printLayer();
   void randomGenerateLayers();
   vector<vector<GameObject *>> getOverAllLayer() {
     vector<vector<GameObject *>> temp;
@@ -276,77 +340,772 @@ public:
   }
 };
 
-class Var3DGraph {
-protected:
-    vector<array<int, 4>> exampleData;
-
-public:
-    Var3DGraph(const vector<array<int, 4>>& exampleData) {
-        // กำหนด exampleData โดยเรียงจากน้อยไปมากตาม x, y, z
-        this->exampleData = exampleData;
-        sort(this->exampleData.begin(), this->exampleData.end(), [](const auto& a, const auto& b) {
-            if (a[0] != b[0]) // เรียงตาม x ถ้าไม่เท่ากัน
-                return a[0] < b[0];
-            else if (a[1] != b[1]) // เรียงตาม y ถ้า x เท่ากันและ y ไม่เท่ากัน
-                return a[1] < b[1];
-            else // เรียงตาม z ถ้า x และ y เท่ากัน
-                return a[2] < b[2];
-        });
-    }
-
-    int interpolate(int x, int y, int z) {
-        // ตรวจสอบว่าจุดอยู่นอกขอบเขตข้อมูลหรือไม่
-        if (x < exampleData.front()[0] || x > exampleData.back()[0] ||
-            y < exampleData.front()[1] || y > exampleData.back()[1] ||
-            z < exampleData.front()[2] || z > exampleData.back()[2]) {
-            return 0;
-        }
-
-        // หาตำแหน่งข้อมูลที่อยู่ระหว่าง x, y, z
-        size_t i = 0;
-        while (i < exampleData.size() - 1 && exampleData[i][0] < x) {
-            ++i;
-        }
-
-        // ทำ interpolation แยกตามแต่ละมิติ
-        int x1 = exampleData[i][0], y1 = exampleData[i][1], z1 = exampleData[i][2], val1 = exampleData[i][3];
-        int x2 = exampleData[i + 1][0], y2 = exampleData[i + 1][1], z2 = exampleData[i + 1][2], val2 = exampleData[i + 1][3];
-
-        // คำนวณอัตราส่วนของ interpolation สำหรับแต่ละมิติ
-        double alpha_x = static_cast<double>(x - x1) / (x2 - x1);
-        double alpha_y = static_cast<double>(y - y1) / (y2 - y1);
-        double alpha_z = static_cast<double>(z - z1) / (z2 - z1);
-
-        // ทำ interpolation แยกตามแต่ละมิติ
-        int val_x1 = val1 + alpha_x * (val2 - val1);
-        int val_x2 = val1 + alpha_x * (val2 - val1);
-        int val_y1 = val1 + alpha_y * (val2 - val1);
-        int val_y2 = val1 + alpha_y * (val2 - val1);
-        int val_z1 = val1 + alpha_z * (val2 - val1);
-        int val_z2 = val1 + alpha_z * (val2 - val1);
-
-        // ทำ interpolation สุดท้าย
-        int val_xy1 = val_x1 + alpha_y * (val_x2 - val_x1);
-        int val_xy2 = val_y1 + alpha_y * (val_y2 - val_y1);
-        int val_xyz1 = val_xy1 + alpha_z * (val_xy2 - val_xy1);
-
-        return val_xyz1;
-    }
+class Health_Aff : public Affliction {
+    protected:
+    string name = "Health_Aff";
+    string targetValue = "Health";
+    int duration,valueIncrease,value;
+    bool permanent = true;
+    public:
+    Health_Aff(StatusBlock *parent, int duration, int valueIncrease, int value);
+    Health_Aff(GameObject *target, int duration, int valueIncrease, int value);
 };
 
-#include "FundamentalSystem.h"
-#include "LivingThing.h"
-#include <algorithm>
-#include <cmath>
-#include <cstddef>
-#include <string>
-#include <utility>
-#include <vector>
+// Hunger is permanent, it is removed when an animal eats
+class Hunger_Aff : public Affliction {
+    protected:
+    string name = "Hunger_Aff";
+    string targetValue = "Hunger";
+    int duration,valueIncrease,value;
+    bool permanent = true;
+    public:
+    Hunger_Aff(StatusBlock *parent, int duration, int valueIncrease, int value);
+    Hunger_Aff(GameObject *target, int duration, int valueIncrease, int value);
+};
 
-using namespace std;
+class Attack_Aff : public Affliction {
+    protected:
+    string name = "Attack_Aff";
+    string targetValue = "Atk";
+    int duration,valueIncrease,value;
+    bool permanent = false;
+    public:
+    Attack_Aff(StatusBlock *parent, int duration, int valueIncrease, int value);
+    Attack_Aff(GameObject *target, int duration, int valueIncrease, int value);
+};
 
-// ------------------StatParam--------------------//
+//sight shouldn't be incremented alot so remove valIncrease
+class Sight_Aff : public Affliction {
+    protected:
+    string name = "Sight_Aff";
+    string targetValue = "Sight";
+    int duration,value;
+    bool permanent = false;
+    public:
+    Sight_Aff(StatusBlock *parent, int duration, int value);
+    Sight_Aff(GameObject *target, int duration, int value);
+};
 
+
+class Speed_Aff : public Affliction {
+    protected:
+    string name = "Speed_Aff";
+    string targetValue = "Speed";
+    int duration,valueIncrease,value;
+    bool permanent = false;
+    public:
+    Speed_Aff(StatusBlock *parent, int duration, int valueIncrease, int value);
+    Speed_Aff(GameObject *target, int duration, int valueIncrease, int value);
+};
+
+class MateCooldown : public Affliction {
+    protected:
+    string name = "MateCooldown";
+    string targetValue = "";
+    int duration, valueIncrease = 0, value = 0;
+    bool permanent = false;
+    public:
+    MateCooldown(StatusBlock *parent, int duration);
+    MateCooldown(GameObject *target, int duration);
+};
+
+class EatTimes : public Affliction{
+    protected:
+    string name = "FruitionCooldown";
+    string targetValue = "";
+    int duration, valueIncrease = 0, value = 0;
+    bool permanent = true;
+    public:
+    EatTimes(StatusBlock *parent);
+    EatTimes(GameObject *target);
+};
+
+class FruitionCooldown : public Affliction {
+    protected:
+    string name = "FruitionCooldown";
+    string targetValue = "";
+    int duration, valueIncrease = 0, value = 0;
+    bool permanent = false;
+    public:
+    FruitionCooldown(StatusBlock *parent, int duration);
+    FruitionCooldown(GameObject *target, int duration);
+};
+
+class Poisonous : public Affliction {
+    protected:
+    string name = "Poisonous";
+    string targetValue = "";
+    int duration, valueIncrease = 0, value = 0;
+    bool permanent = false;
+    public:
+    Poisonous(StatusBlock *parent);
+    Poisonous(GameObject *target);
+};
+
+class Hunger : public StatParam {
+    protected:
+    string name = "Hunger";
+    int targetValue = 0;
+    void virtual action() override;
+    public:
+    Hunger(StatusBlock *parent, Ability *createBy, int rawValue);
+    Hunger(GameObject *target, Ability *createBy, int rawValue);
+};
+
+// No abilities create this, include for all living things
+class Health : public StatParam {
+    protected:
+    string name = "Health";
+    int targetValue = 0;
+    void virtual action() override;
+    public:
+    Health(StatusBlock *parent, Ability *createBy, int rawValue);
+    Health(GameObject *target, Ability *createBy, int rawValue);
+};
+
+class Atk : public StatParam {
+    protected:
+    string name = "Atk";
+    int targetValue = 0;
+    void virtual action() override;
+    public:
+    Atk(StatusBlock *parent, Ability *createBy, int rawValue);
+    Atk(GameObject *target, Ability *createBy, int rawValue);
+};
+
+class Sight : public StatParam {
+    protected:
+    string name = "Sight";
+    int targetValue = 0;
+    void virtual action() override;
+    public:
+    Sight(StatusBlock *parent, Ability *createBy, int rawValue);
+    Sight(GameObject *target, Ability *createBy, int rawValue);
+};
+
+class Speed : public StatParam {
+    protected:
+    string name = "Speed";
+    int targetValue = 0;
+    void virtual action() override;
+    public:
+    Speed(StatusBlock *parent, Ability *createBy, int rawValue);
+    Speed(GameObject *target, Ability *createBy, int rawValue);
+};
+
+class Eat : public Ability
+{
+protected:
+  string name = "Eat";
+  int max_hunger;
+  bool eatPlants, eatEarthworms, eatAnimals;
+  Var3DGraph data = Var3DGraph({{0, 0, 0, 0},
+                                {0, 100, 0, 100},
+                                {100, 100, 0, 40},
+                                {0, 0, 100, 10},
+                                {30, 80, 5, 70},
+                                {100, 100, 100, 25},
+                                {50, 10, 100, 10}}); // เดี๋ยวค่อยคิดใหม่
+  void createStatParam() override;
+
+public:
+  Eat(AbilitySystem *parent, int max_hunger, bool eatPlants, bool eatEarthworms, bool eatAnimals);
+  Eat(GameObject *target, int max_hunger, bool eatPlants, bool eatEarthworms, bool eatAnimals);
+  vector<GameObject *> virtual findTargetForPassive() override;
+  vector<GameObject *> virtual findTargetForActive() override;
+  bool virtual canActive(vector<GameObject *> targets) override;
+  void virtual passive(vector<GameObject *> targets) override;
+  void virtual active(vector<GameObject *> targets) override;
+};
+
+//--------------------------- Attack ---------------------------
+
+class Attack : public Ability
+{
+protected:
+  string name = "Attack";
+  int atk_amount;
+  Var3DGraph data = Var3DGraph({{0, 0, 0, 0},
+                                {0, 100, 0, 100},
+                                {100, 100, 0, 40},
+                                {0, 0, 100, 10},
+                                {30, 80, 5, 70},
+                                {100, 100, 100, 25}}); // remember to change pls
+  void createStatParam() override;
+
+public:
+  Attack(AbilitySystem *parent, int atk_amount);
+  Attack(GameObject *target, int atk_amount);
+  vector<GameObject *> virtual findTargetForPassive() override;
+  vector<GameObject *> virtual findTargetForActive() override;
+  bool virtual canActive(vector<GameObject *> targets) override;
+  void virtual passive(vector<GameObject *> targets) override;
+  void virtual active(vector<GameObject *> targets) override;
+};
+
+//--------------------------- Walk ---------------------------
+
+class Walk : public Ability
+{
+protected:
+  string name = "Walk";
+  void createStatParam() override;
+
+public:
+  Walk(AbilitySystem *parent);
+  Walk(GameObject *target);
+  vector<GameObject *> virtual findTargetForPassive() override;
+  vector<GameObject *> virtual findTargetForActive() override;
+  bool virtual canActive(vector<GameObject *> targets) override;
+  void virtual passive(vector<GameObject *> targets) override;
+  void virtual active(vector<GameObject *> targets) = 0;
+};
+
+class WalkSeek : public Walk
+{
+protected:
+  Var3DGraph data = Var3DGraph({{0, 0, 0, 0},
+                                {0, 100, 0, 100},
+                                {100, 100, 0, 40},
+                                {0, 0, 100, 10},
+                                {30, 80, 5, 70},
+                                {100, 100, 100, 25}});
+
+public:
+  WalkSeek(AbilitySystem *parent);
+  WalkSeek(GameObject *target);
+  void virtual active(vector<GameObject *> targets) override;
+};
+
+class WalkEscape : public Walk
+{
+protected:
+  Var3DGraph data = Var3DGraph({{0, 0, 0, 0},
+                                {0, 100, 0, 100},
+                                {100, 100, 0, 40},
+                                {0, 0, 100, 10},
+                                {30, 80, 5, 70},
+                                {100, 100, 100, 25}});
+
+public:
+  WalkEscape(AbilitySystem *parent);
+  WalkEscape(GameObject *target);
+  void virtual active(vector<GameObject *> targets) override;
+};
+
+//--------------------------- Mate ---------------------------
+
+class Mate : public Ability
+{
+protected:
+  string name = "Mate";
+  void createStatParam() override;
+
+public:
+  Mate(AbilitySystem *parent);
+  Mate(GameObject *target);
+  vector<GameObject *> virtual findTargetForPassive() override;
+  vector<GameObject *> virtual findTargetForActive() override;
+  bool virtual canActive(vector<GameObject *> targets) override;
+  void virtual passive(vector<GameObject *> targets) override;
+  void virtual active(vector<GameObject *> targets) override;
+};
+
+// ===================================== CORPSES =====================================
+
+//--------------------------- Rot ---------------------------
+
+class Rot : public Ability
+{
+protected:
+  string name = "Mate";
+  int rot_timer = 0;
+  void createStatParam() override;
+
+public:
+  Rot(AbilitySystem *parent);
+  Rot(GameObject *target);
+  vector<GameObject *> virtual findTargetForPassive() override;
+  vector<GameObject *> virtual findTargetForActive() override;
+  bool virtual canActive(vector<GameObject *> targets) override;
+  void virtual passive(vector<GameObject *> targets) override;
+  void virtual active(vector<GameObject *> targets) override;
+};
+
+// ===================================== PLANTS =====================================
+
+// --------------------------- Fruition ---------------------------
+
+class Fruition : public Ability
+{
+protected:
+  string name = "Fruition";
+  void createStatParam() override;
+
+public:
+  Fruition(AbilitySystem *parent);
+  Fruition(GameObject *target);
+  vector<GameObject *> virtual findTargetForPassive() override;
+  vector<GameObject *> virtual findTargetForActive() override;
+  bool virtual canActive(vector<GameObject *> targets) override;
+  void virtual passive(vector<GameObject *> targets) override;
+  void virtual active(vector<GameObject *> targets) override;
+};
+
+class SingleEat : public Ability
+{
+protected:
+  string name = "SingleEat";
+  void createStatParam() override;
+
+public:
+  SingleEat(AbilitySystem *parent);
+  SingleEat(GameObject *target);
+  vector<GameObject *> virtual findTargetForPassive() override;
+  vector<GameObject *> virtual findTargetForActive() override;
+  bool virtual canActive(vector<GameObject *> targets) override;
+  void virtual passive(vector<GameObject *> targets) override;
+  void virtual active(vector<GameObject *> targets) override;
+};
+
+class Animal : public GameObject {
+protected:
+public:
+    Animal(Layer *parent, int x, int y);
+};
+
+
+class Plant : public GameObject {
+
+protected:
+public:
+    Plant(Layer *parent, int x, int y);
+};
+
+
+class Corpse : public GameObject {
+
+protected:
+    string name = "Corpse";
+
+public:
+    Corpse(Layer *parent, int x, int y);
+};
+
+
+class Lion : public Animal {
+protected:
+    string name = "Lion";
+
+public:
+    Lion(Layer *parent, int x, int y);
+};
+
+
+class Bear : public Animal {
+protected:
+    string name = "Bear";
+
+public:
+    Bear(Layer *parent, int x, int y);
+};
+
+
+class Cheetah : public Animal {
+protected:
+    string name = "Cheetah";
+
+public:
+    Cheetah(Layer *parent, int x, int y);
+};
+
+
+class Giant_Snake : public Animal {
+protected:
+    string name = "Giant Snake";
+
+public:
+    Giant_Snake(Layer *parent, int x, int y);
+};
+
+
+class Rabbit : public Animal {
+protected:
+    string name = "Rabbit";
+
+public:
+    Rabbit(Layer *parent, int x, int y);
+};
+
+
+class Goat : public Animal {
+protected:
+    string name = "Goat";
+
+public:
+    Goat(Layer *parent, int x, int y);
+};
+
+
+class Deer : public Animal {
+protected:
+    string name = "Deer";
+
+public:
+    Deer(Layer *parent, int x, int y);
+};
+
+
+class Chicken : public Animal {
+protected:
+    string name = "Chicken";
+
+public:
+    Chicken(Layer *parent, int x, int y);
+};
+
+
+class Poison_Frog : public Animal {
+protected:
+    string name = "Poison Frog";
+
+public:
+    Poison_Frog(Layer *parent, int x, int y);
+};
+
+
+
+
+class Bush : public Plant {
+protected:
+    string name = "Bush";
+    
+public:
+    Bush(Layer *parent, int x, int y);
+};
+
+class Mushroom : public Plant {
+protected:
+    string name = "Mushroom";
+    
+public:
+    Mushroom(Layer *parent, int x, int y);
+};
+
+
+class Apple_tree : public Plant {
+protected:
+    string name = "Apple tree";
+    string represent = "";
+    
+public:
+    Apple_tree(Layer *parent, int x, int y);
+};
+
+// not even considered an animal, since it should only be able to walk
+class EarthWorm : public GameObject {
+protected:
+    string name = "EarthWorm";
+
+public:
+    EarthWorm(Layer *parent, int x, int y);
+};
+
+class Grid {
+private:
+  RectangleShape shape;
+  GameObject *object;
+
+public:
+  Grid(Vector2f size, Vector2f position, GameObject *object);
+  void draw(RenderWindow &window); /*not require just have*/
+  GameObject *getObject();
+};
+
+class Map { // แสดงเฉพาะส่วน
+private:
+  Font font;
+  Text tempText;
+  float width, height; /*จำเป็นในการตีตาราง*/
+  int row, column; /*จำเป็นในการตีตาราง*/
+  Vector2i center; /*จุดกึ่งกลางของการแสดงผล*/
+  RectangleShape border;        /*shape ที่กำหนด position*/
+  vector<vector<Grid>> gridMap; /*เวลาซูม เคลียแล้วสร้างใหม่หมดเลยง่ายกว่า*/
+  vector<vector<GameObject *>> dataMap; /*ต้องไปดึงมาทุกเทิร์น*/
+  vector<vector<Text>> showText;
+
+public:
+  void update();
+  Map(Vector2f size, Vector2f position, vector<vector<GameObject *>> dataMap);
+  void draw(RenderWindow &window);
+  void setDataMap(vector<vector<GameObject *>> dataMap);
+  void setRowColumn(Vector2i size);
+  void changeCenter(Vector2i center);
+  GameObject *getObject(Vector2f position);
+  Vector2i getRowColumn();
+  Vector2i getSize();
+  Vector2i getCenter();
+  vector<vector<GameObject *>> getDataMap();
+  RectangleShape getBorder() { return border; }
+};
+
+class ZoomIn {
+protected:
+  CircleShape shape;
+  Font font;
+  Text text;
+
+public:
+  ZoomIn(Vector2f position, int radius);
+  void draw(RenderWindow &window);
+  CircleShape getShape();
+  void zoomIn(Map &map);
+};
+
+class ZoomOut : public ZoomIn {
+public:
+  ZoomOut(Vector2f position, int radius);
+  void zoomOut(Map &map);
+};
+
+class LayerButton {
+private:
+  RectangleShape button;
+  Font font;
+  Text text;
+  vector<vector<GameObject *>> dataMap;
+
+public:
+  LayerButton(Vector2f position, Vector2f size, string text,
+              vector<vector<GameObject *>> dataMap);
+  void draw(RenderWindow &window);
+  void setDataMap(vector<vector<GameObject *>> layer);
+  void pushToMap(Map &map);
+  RectangleShape getButton() { return button; }
+};
+
+class LayerSheet {
+private:
+  RectangleShape sheet;
+  LayerSystem *data;
+  Font font;
+  vector<Text> text;
+  void dumbToButton(vector<vector<GameObject *>> DataMap, LayerButton &button);
+
+public:
+  LayerButton *selectedbutton;
+  vector<LayerButton> buttons;
+  LayerSheet(LayerSystem *data, Vector2f position, Vector2f size);
+  void draw(RenderWindow &window);
+  void setSelectedButton(int i);
+  LayerSystem *getData() { return data; }
+  void update(); /*จะทำการเล่นเทิร์นพร้อมกับ dumb ข้อมูลทั้งหมดออกมา*/
+};
+
+class StopButton {
+protected:
+  RectangleShape shape;
+  Font font;
+  Text text;
+
+public:
+  StopButton(Vector2f position, Vector2f size);
+  void draw(RenderWindow &window);
+  RectangleShape getShape();
+};
+
+class PlayButton : public StopButton {
+public:
+  PlayButton(Vector2f position, Vector2f size);
+};
+
+class RunButton : public StopButton {
+public:
+  RunButton(Vector2f position, Vector2f size);
+};
+
+class TextBox {
+protected:
+  RectangleShape shape, up, down;
+  vector<Text> showText; // จำนวนจะเปลี่ยนไปตามขนาดของ TextBox
+  vector<string> allText;
+  Font font;
+  int showTextIndex, showTextCapacity, textCapacity;
+  Text textUp, textDown;
+
+public:
+  TextBox(Vector2f position, Vector2f size, vector<string> defaultVec,
+          int textCapacity = 50,
+          int showTextCapacity = 10); // ข้อควรระวัง defaultVec
+                                      // ต้องมีขนาดเท่ากับหรือมากกว่า ShowTextCapacity
+  void update();
+  void draw(RenderWindow &window);
+  void dumbText(string text);
+  void dumbText(vector<string> text);
+  RectangleShape getShape();
+  RectangleShape getUp() { return up; }
+  RectangleShape getDown() { return down; }
+  void shiftShowTextUp();
+  void shiftShowTextDown();
+  void setAllText(vector<string> text) { allText = text; }
+};
+
+class Detail : public TextBox {
+protected:
+  GameObject *object;
+  CircleShape deleteButton;
+  void update();
+
+public:
+  Detail(Vector2f position, Vector2f size);
+  void draw(RenderWindow &window);
+  void setObject(GameObject *object);
+  CircleShape getDeleteButton();
+};
+
+class Log : public TextBox {
+protected:
+  float DefaultHeight;
+
+public:
+  void update();
+  Log(Vector2f position, Vector2f size);
+};
+
+class SelectedList {
+  Text tempText;
+  RectangleShape tempShape;
+  RectangleShape shape, up, down;
+  vector<Text> showText; // จำนวนจะเปลี่ยนไปตามขนาดของ TextBox
+  vector<RectangleShape> showShape;
+  Text textUp, textDown;
+  Font font;
+  int showTextIndex, showTextCapacity;
+
+public:
+  vector<GameObject *> allObject;
+  SelectedList(Vector2f position, Vector2f size,
+               vector<GameObject *> allObject = {}, int showTextCapacity = 5);
+  void draw(RenderWindow &window);
+  void dumbObject(GameObject *object);
+  RectangleShape getShape();
+  RectangleShape getUp() { return up; }
+  RectangleShape getDown() { return down; }
+  void shiftShowTextUp();
+  void shiftShowTextDown();
+  GameObject *click(Vector2f position);
+  void update();
+  void clear();
+  void setAllObject(vector<GameObject *> object) { allObject = object; }
+};
+
+class CommandList {
+protected:
+  RectangleShape shape, up, down;
+  vector<Text> showText; // จำนวนจะเปลี่ยนไปตามขนาดของ TextBox
+  vector<RectangleShape> showShape;
+  Text textUp, textDown;
+  Font font;
+  int showTextIndex, textCapacity;
+
+public:
+  vector<string> allObject;
+  CommandList(Vector2f position, Vector2f size, vector<string> allObject = {},
+              int textCapacity = 5, int showTextCapacity = 5);
+  void draw(RenderWindow &window);
+  RectangleShape getShape() { return shape; }
+  RectangleShape getUp() { return up; }
+  RectangleShape getDown() { return down; }
+  void shiftShowTextUp();
+  void shiftShowTextDown();
+  string click(Vector2f position);
+};
+
+class Gui {
+private:
+  // ส่วนของการสร้างหน้าต่าง
+  RenderWindow *window;
+  Text turn;
+  Font font;
+  Sprite sprite;
+  Texture spriteTexture;
+  void renderAny();
+
+  // ส่วนของการรับข้อมูลจากผู้ใช้
+  Event event;
+  void pollEvent();
+
+  // ส่วนของการเช็คการคลิก
+  bool clickAble;
+  Vector2i mousePosition;
+  Vector2f mousePositionView;
+  void updateMousePosition();
+  bool clickAbleCheck();
+  void updateClickAble();
+
+  // ส่วนของการเช็คการกดปุ่ม
+  bool pressAble;
+  Keyboard::Key key;
+  void updateKeyboard();
+  bool pressAbleCheck();
+  void updatePressAble();
+
+  // ส่วนของการรันเกม
+  StopButton *stopButton;
+  PlayButton *playButton;
+  RunButton *runButton;
+  bool play, run = false;
+  void updateUpdateButton();
+  void updateLayerSystem();
+  void renderUpdateButton();
+
+  // ส่วนของการดึงข้อมูลจาก FundamentalSystem
+  int turnCount = 0;
+  vector<LayerButton> layerButtons;
+  LayerSheet *layerSheet;
+  void updateLayerSheet();
+  void renderLayerSheet();
+
+  // ส่วนของการสร้างและแสดงข้อมูล
+  Map *map;
+  void updateMapCenter();
+  void renderMap();
+
+  // ส่วนของการซูม
+  ZoomIn *zoomIn;
+  ZoomOut *zoomOut;
+  void updateZoomButton();
+  void renderZoomButton();
+
+  // ส่วนของการแสดงข้อมูล
+  bool detailShow = false;
+  Detail *detail;
+  void updateDetail();
+  void renderDetail();
+
+  // ส่วนของการแสดงข้อมูลทั้งหมด
+  Log *log;
+  void updateLog();
+  void renderLog();
+
+  // ส่วนของการเลือก
+  SelectedList *selectedList;
+  void updateSelectedList();
+  void renderSelectedList();
+
+  // ส่วนของการคำสั่ง
+  CommandList *commandList;
+  void updateCommandList();
+  void renderCommandList();
+
+public:
+  Gui();
+  bool isOpen();
+  void update();
+  void render();
+};
+
+//------------------------------------------------------------------------------------//
 bool StatParam::isAction(int before, int after)
 {
   if (before > targetValue && targetValue >= after)
@@ -423,7 +1182,6 @@ int StatParam::getValue() { return value; }
 vector<pair<string, int>> StatParam::getStackInfo() { return stackInfo; }
 StatusBlock *StatParam::getParent() { return parent; }
 
-// ------------------Ability--------------------//
 
 Ability::Ability(AbilitySystem *parent) : parent(parent)
 {
@@ -1115,186 +1873,146 @@ void LayerSystem::randomGenerateLayers()
   }
 }
 
-// ===================================== ANIMALS =====================================
+Health_Aff::Health_Aff(StatusBlock *parent, int duration, int valueIncrease, int value) 
+: Affliction(parent), duration(duration),valueIncrease(valueIncrease),value(value)
+{}
+Health_Aff::Health_Aff(GameObject *target, int duration, int valueIncrease, int value) 
+: Affliction(target), duration(duration),valueIncrease(valueIncrease),value(value)
+{}
 
-//--------------------------- Eat ---------------------------
+Hunger_Aff::Hunger_Aff(StatusBlock *parent, int duration, int valueIncrease, int value) 
+: Affliction(parent), duration(duration),valueIncrease(valueIncrease),value(value)
+{}
+Hunger_Aff::Hunger_Aff(GameObject *target, int duration, int valueIncrease, int value) 
+: Affliction(target), duration(duration),valueIncrease(valueIncrease),value(value)
+{}
 
-class Eat : public Ability
+Attack_Aff::Attack_Aff(StatusBlock *parent, int duration, int valueIncrease, int value) 
+: Affliction(parent), duration(duration),valueIncrease(valueIncrease),value(value)
+{}
+Attack_Aff::Attack_Aff(GameObject *target, int duration, int valueIncrease, int value) 
+: Affliction(target), duration(duration),valueIncrease(valueIncrease),value(value)
+{}
+
+Sight_Aff::Sight_Aff(StatusBlock *parent, int duration, int value) 
+: Affliction(parent), duration(duration),value(value)
+{}
+Sight_Aff::Sight_Aff(GameObject *target, int duration, int value) 
+: Affliction(target), duration(duration),value(value)
+{}
+
+Speed_Aff::Speed_Aff(StatusBlock *parent, int duration, int valueIncrease, int value) 
+: Affliction(parent), duration(duration),valueIncrease(valueIncrease),value(value)
+{}
+Speed_Aff::Speed_Aff(GameObject *target, int duration, int valueIncrease, int value) 
+: Affliction(target), duration(duration),valueIncrease(valueIncrease),value(value)
+{}
+
+MateCooldown::MateCooldown(StatusBlock *parent, int duration) 
+: Affliction(parent), duration(duration)
+{}
+MateCooldown::MateCooldown(GameObject *target, int duration) 
+: Affliction(target), duration(duration)
+{}
+
+EatTimes::EatTimes(StatusBlock *parent) 
+: Affliction(parent)
+{}
+EatTimes::EatTimes(GameObject *target) 
+: Affliction(target)
+{}
+
+FruitionCooldown::FruitionCooldown(StatusBlock *parent, int duration)
+: Affliction(parent), duration(duration)
+{}
+
+FruitionCooldown::FruitionCooldown(GameObject *target, int duration)
+: Affliction(target), duration(duration)
+{}
+
+Poisonous::Poisonous(StatusBlock *parent)
+: Affliction(parent)
+{}
+
+Poisonous::Poisonous(GameObject *target)
+: Affliction(target)
+{}
+
+Hunger::Hunger(StatusBlock *parent, Ability *createBy, int rawValue) : StatParam(parent, createBy, rawValue) {}
+
+Hunger::Hunger(GameObject *target, Ability *createBy, int rawValue) : StatParam(target, createBy, rawValue) {}
+
+void Hunger::action()
 {
-protected:
-  string name = "Eat";
-  int max_hunger;
-  bool eatPlants, eatEarthworms, eatAnimals;
-  Var3DGraph data = Var3DGraph({{0, 0, 0, 0},
-                                {0, 100, 0, 100},
-                                {100, 100, 0, 40},
-                                {0, 0, 100, 10},
-                                {30, 80, 5, 70},
-                                {100, 100, 100, 25},
-                                {50, 10, 100, 10}}); // เดี๋ยวค่อยคิดใหม่
-  void createStatParam() override;
-
-public:
-  Eat(AbilitySystem *parent, int max_hunger, bool eatPlants, bool eatEarthworms, bool eatAnimals);
-  Eat(GameObject *target, int max_hunger, bool eatPlants, bool eatEarthworms, bool eatAnimals);
-  vector<GameObject *> virtual findTargetForPassive() override;
-  vector<GameObject *> virtual findTargetForActive() override;
-  bool virtual canActive(vector<GameObject *> targets) override;
-  void virtual passive(vector<GameObject *> targets) override;
-  void virtual active(vector<GameObject *> targets) override;
+    // Animal dies here
+    Layer *currentLayer = parent->getParent()->getParent();
+    Layer *foodLayer = currentLayer->getParent()->getLayer("Food");
+    pair<int, int> currentIndex = parent->getParent()->getVectorIndex();
+    currentLayer->insideLayer[currentIndex.second][currentIndex.first] = nullptr;
+    if (foodLayer->insideLayer[currentIndex.second][currentIndex.first] == nullptr)
+    {
+        GameObject* corpseptr = new Corpse(foodLayer, currentIndex.first, currentIndex.second);
+        // if animal is poisonous, give corpseptr poisonous too
+        if (parent->isInAffliction("Poisonous")){
+            new Poisonous(corpseptr);
+        }
+    }
+    // kill this animal :(
+    delete parent->getParent();
+    return;
 };
 
-//--------------------------- Attack ---------------------------
+Health::Health(StatusBlock *parent, Ability *createBy, int rawValue) : StatParam(parent, createBy, rawValue) {}
 
-class Attack : public Ability
+Health::Health(GameObject *target, Ability *createBy, int rawValue) : StatParam(target, createBy, rawValue) {}
+
+void Health::action()
 {
-protected:
-  string name = "Attack";
-  int atk_amount;
-  Var3DGraph data = Var3DGraph({{0, 0, 0, 0},
-                                {0, 100, 0, 100},
-                                {100, 100, 0, 40},
-                                {0, 0, 100, 10},
-                                {30, 80, 5, 70},
-                                {100, 100, 100, 25}}); // remember to change pls
-  void createStatParam() override;
+    // Animal dies here
+    Layer *currentLayer = parent->getParent()->getParent();
+    Layer *foodLayer = currentLayer->getParent()->getLayer("Food");
+    pair<int, int> currentIndex = parent->getParent()->getVectorIndex();
+    currentLayer->insideLayer[currentIndex.second][currentIndex.first] = nullptr;
+    if (foodLayer->insideLayer[currentIndex.second][currentIndex.first] == nullptr)
+    {
+        GameObject* corpseptr = new Corpse(foodLayer, currentIndex.first, currentIndex.second);
+        // if animal is poisonous, give corpseptr poisonous too
+        if (parent->isInAffliction("Poisonous")){
+            new Poisonous(corpseptr);
+        }
+    }
+    // kill this animal :(
+    delete parent->getParent();
+    return;
+    return;
+}
 
-public:
-  Attack(AbilitySystem *parent, int atk_amount);
-  Attack(GameObject *target, int atk_amount);
-  vector<GameObject *> virtual findTargetForPassive() override;
-  vector<GameObject *> virtual findTargetForActive() override;
-  bool virtual canActive(vector<GameObject *> targets) override;
-  void virtual passive(vector<GameObject *> targets) override;
-  void virtual active(vector<GameObject *> targets) override;
-};
+Atk::Atk(StatusBlock *parent, Ability *createBy, int rawValue) : StatParam(parent, createBy, rawValue) {}
 
-//--------------------------- Walk ---------------------------
+Atk::Atk(GameObject *target, Ability *createBy, int rawValue) : StatParam(target, createBy, rawValue) {}
 
-class Walk : public Ability
+void Atk::action()
 {
-protected:
-  string name = "Walk";
-  void createStatParam() override;
+    return;
+}
 
-public:
-  Walk(AbilitySystem *parent);
-  Walk(GameObject *target);
-  vector<GameObject *> virtual findTargetForPassive() override;
-  vector<GameObject *> virtual findTargetForActive() override;
-  bool virtual canActive(vector<GameObject *> targets) override;
-  void virtual passive(vector<GameObject *> targets) override;
-  void virtual active(vector<GameObject *> targets) = 0;
-};
+Sight::Sight(StatusBlock *parent, Ability *createBy, int rawValue) : StatParam(parent, createBy, rawValue) {}
 
-class WalkSeek : public Walk
+Sight::Sight(GameObject *target, Ability *createBy, int rawValue) : StatParam(target, createBy, rawValue) {}
+
+void Sight::action()
 {
-protected:
-  Var3DGraph data = Var3DGraph({{0, 0, 0, 0},
-                                {0, 100, 0, 100},
-                                {100, 100, 0, 40},
-                                {0, 0, 100, 10},
-                                {30, 80, 5, 70},
-                                {100, 100, 100, 25}});
+    return;
+}
 
-public:
-  WalkSeek(AbilitySystem *parent);
-  WalkSeek(GameObject *target);
-  void virtual active(vector<GameObject *> targets) override;
-};
+Speed::Speed(StatusBlock *parent, Ability *createBy, int rawValue) : StatParam(parent, createBy, rawValue) {}
 
-class WalkEscape : public Walk
+Speed::Speed(GameObject *target, Ability *createBy, int rawValue) : StatParam(target, createBy, rawValue) {}
+
+void Speed::action()
 {
-protected:
-  Var3DGraph data = Var3DGraph({{0, 0, 0, 0},
-                                {0, 100, 0, 100},
-                                {100, 100, 0, 40},
-                                {0, 0, 100, 10},
-                                {30, 80, 5, 70},
-                                {100, 100, 100, 25}});
-
-public:
-  WalkEscape(AbilitySystem *parent);
-  WalkEscape(GameObject *target);
-  void virtual active(vector<GameObject *> targets) override;
-};
-
-//--------------------------- Mate ---------------------------
-
-class Mate : public Ability
-{
-protected:
-  string name = "Mate";
-  void createStatParam() override;
-
-public:
-  Mate(AbilitySystem *parent);
-  Mate(GameObject *target);
-  vector<GameObject *> virtual findTargetForPassive() override;
-  vector<GameObject *> virtual findTargetForActive() override;
-  bool virtual canActive(vector<GameObject *> targets) override;
-  void virtual passive(vector<GameObject *> targets) override;
-  void virtual active(vector<GameObject *> targets) override;
-};
-
-// ===================================== CORPSES =====================================
-
-//--------------------------- Rot ---------------------------
-
-class Rot : public Ability
-{
-protected:
-  string name = "Mate";
-  int rot_timer = 0;
-  void createStatParam() override;
-
-public:
-  Rot(AbilitySystem *parent);
-  Rot(GameObject *target);
-  vector<GameObject *> virtual findTargetForPassive() override;
-  vector<GameObject *> virtual findTargetForActive() override;
-  bool virtual canActive(vector<GameObject *> targets) override;
-  void virtual passive(vector<GameObject *> targets) override;
-  void virtual active(vector<GameObject *> targets) override;
-};
-
-// ===================================== PLANTS =====================================
-
-// --------------------------- Fruition ---------------------------
-
-class Fruition : public Ability
-{
-protected:
-  string name = "Fruition";
-  void createStatParam() override;
-
-public:
-  Fruition(AbilitySystem *parent);
-  Fruition(GameObject *target);
-  vector<GameObject *> virtual findTargetForPassive() override;
-  vector<GameObject *> virtual findTargetForActive() override;
-  bool virtual canActive(vector<GameObject *> targets) override;
-  void virtual passive(vector<GameObject *> targets) override;
-  void virtual active(vector<GameObject *> targets) override;
-};
-
-class SingleEat : public Ability
-{
-protected:
-  string name = "SingleEat";
-  void createStatParam() override;
-
-public:
-  SingleEat(AbilitySystem *parent);
-  SingleEat(GameObject *target);
-  vector<GameObject *> virtual findTargetForPassive() override;
-  vector<GameObject *> virtual findTargetForActive() override;
-  bool virtual canActive(vector<GameObject *> targets) override;
-  void virtual passive(vector<GameObject *> targets) override;
-  void virtual active(vector<GameObject *> targets) override;
-};
-
-//-------------------------- Eat ----------------------------//
+    return;
+}
 
 Eat::Eat(AbilitySystem *parent, int max_hunger, bool eatPlants, bool eatEarthworms, bool eatAnimals) : Ability(parent), max_hunger(max_hunger), eatPlants(eatPlants), eatEarthworms(eatEarthworms), eatAnimals(eatAnimals) {}
 
@@ -1964,427 +2682,6 @@ void SingleEat::passive(vector<GameObject *> targets){
 // no active
 void SingleEat::active(vector<GameObject *> targets){}
 
-class Health_Aff : public Affliction {
-    protected:
-    string name = "Health_Aff";
-    string targetValue = "Health";
-    int duration,valueIncrease,value;
-    bool permanent = true;
-    public:
-    Health_Aff(StatusBlock *parent, int duration, int valueIncrease, int value);
-    Health_Aff(GameObject *target, int duration, int valueIncrease, int value);
-};
-
-// Hunger is permanent, it is removed when an animal eats
-class Hunger_Aff : public Affliction {
-    protected:
-    string name = "Hunger_Aff";
-    string targetValue = "Hunger";
-    int duration,valueIncrease,value;
-    bool permanent = true;
-    public:
-    Hunger_Aff(StatusBlock *parent, int duration, int valueIncrease, int value);
-    Hunger_Aff(GameObject *target, int duration, int valueIncrease, int value);
-};
-
-class Attack_Aff : public Affliction {
-    protected:
-    string name = "Attack_Aff";
-    string targetValue = "Atk";
-    int duration,valueIncrease,value;
-    bool permanent = false;
-    public:
-    Attack_Aff(StatusBlock *parent, int duration, int valueIncrease, int value);
-    Attack_Aff(GameObject *target, int duration, int valueIncrease, int value);
-};
-
-//sight shouldn't be incremented alot so remove valIncrease
-class Sight_Aff : public Affliction {
-    protected:
-    string name = "Sight_Aff";
-    string targetValue = "Sight";
-    int duration,value;
-    bool permanent = false;
-    public:
-    Sight_Aff(StatusBlock *parent, int duration, int value);
-    Sight_Aff(GameObject *target, int duration, int value);
-};
-
-
-class Speed_Aff : public Affliction {
-    protected:
-    string name = "Speed_Aff";
-    string targetValue = "Speed";
-    int duration,valueIncrease,value;
-    bool permanent = false;
-    public:
-    Speed_Aff(StatusBlock *parent, int duration, int valueIncrease, int value);
-    Speed_Aff(GameObject *target, int duration, int valueIncrease, int value);
-};
-
-class MateCooldown : public Affliction {
-    protected:
-    string name = "MateCooldown";
-    string targetValue = "";
-    int duration, valueIncrease = 0, value = 0;
-    bool permanent = false;
-    public:
-    MateCooldown(StatusBlock *parent, int duration);
-    MateCooldown(GameObject *target, int duration);
-};
-
-class EatTimes : public Affliction{
-    protected:
-    string name = "FruitionCooldown";
-    string targetValue = "";
-    int duration, valueIncrease = 0, value = 0;
-    bool permanent = true;
-    public:
-    EatTimes(StatusBlock *parent);
-    EatTimes(GameObject *target);
-};
-
-class FruitionCooldown : public Affliction {
-    protected:
-    string name = "FruitionCooldown";
-    string targetValue = "";
-    int duration, valueIncrease = 0, value = 0;
-    bool permanent = false;
-    public:
-    FruitionCooldown(StatusBlock *parent, int duration);
-    FruitionCooldown(GameObject *target, int duration);
-};
-
-class Poisonous : public Affliction {
-    protected:
-    string name = "Poisonous";
-    string targetValue = "";
-    int duration, valueIncrease = 0, value = 0;
-    bool permanent = false;
-    public:
-    Poisonous(StatusBlock *parent);
-    Poisonous(GameObject *target);
-};
-
-Health_Aff::Health_Aff(StatusBlock *parent, int duration, int valueIncrease, int value) 
-: Affliction(parent), duration(duration),valueIncrease(valueIncrease),value(value)
-{}
-Health_Aff::Health_Aff(GameObject *target, int duration, int valueIncrease, int value) 
-: Affliction(target), duration(duration),valueIncrease(valueIncrease),value(value)
-{}
-
-Hunger_Aff::Hunger_Aff(StatusBlock *parent, int duration, int valueIncrease, int value) 
-: Affliction(parent), duration(duration),valueIncrease(valueIncrease),value(value)
-{}
-Hunger_Aff::Hunger_Aff(GameObject *target, int duration, int valueIncrease, int value) 
-: Affliction(target), duration(duration),valueIncrease(valueIncrease),value(value)
-{}
-
-Attack_Aff::Attack_Aff(StatusBlock *parent, int duration, int valueIncrease, int value) 
-: Affliction(parent), duration(duration),valueIncrease(valueIncrease),value(value)
-{}
-Attack_Aff::Attack_Aff(GameObject *target, int duration, int valueIncrease, int value) 
-: Affliction(target), duration(duration),valueIncrease(valueIncrease),value(value)
-{}
-
-Sight_Aff::Sight_Aff(StatusBlock *parent, int duration, int value) 
-: Affliction(parent), duration(duration),value(value)
-{}
-Sight_Aff::Sight_Aff(GameObject *target, int duration, int value) 
-: Affliction(target), duration(duration),value(value)
-{}
-
-Speed_Aff::Speed_Aff(StatusBlock *parent, int duration, int valueIncrease, int value) 
-: Affliction(parent), duration(duration),valueIncrease(valueIncrease),value(value)
-{}
-Speed_Aff::Speed_Aff(GameObject *target, int duration, int valueIncrease, int value) 
-: Affliction(target), duration(duration),valueIncrease(valueIncrease),value(value)
-{}
-
-MateCooldown::MateCooldown(StatusBlock *parent, int duration) 
-: Affliction(parent), duration(duration)
-{}
-MateCooldown::MateCooldown(GameObject *target, int duration) 
-: Affliction(target), duration(duration)
-{}
-
-EatTimes::EatTimes(StatusBlock *parent) 
-: Affliction(parent)
-{}
-EatTimes::EatTimes(GameObject *target) 
-: Affliction(target)
-{}
-
-class Hunger : public StatParam {
-    protected:
-    string name = "Hunger";
-    int targetValue = 0;
-    void virtual action() override;
-    public:
-    Hunger(StatusBlock *parent, Ability *createBy, int rawValue);
-    Hunger(GameObject *target, Ability *createBy, int rawValue);
-};
-
-// No abilities create this, include for all living things
-class Health : public StatParam {
-    protected:
-    string name = "Health";
-    int targetValue = 0;
-    void virtual action() override;
-    public:
-    Health(StatusBlock *parent, Ability *createBy, int rawValue);
-    Health(GameObject *target, Ability *createBy, int rawValue);
-};
-
-class Atk : public StatParam {
-    protected:
-    string name = "Atk";
-    int targetValue = 0;
-    void virtual action() override;
-    public:
-    Atk(StatusBlock *parent, Ability *createBy, int rawValue);
-    Atk(GameObject *target, Ability *createBy, int rawValue);
-};
-
-class Sight : public StatParam {
-    protected:
-    string name = "Sight";
-    int targetValue = 0;
-    void virtual action() override;
-    public:
-    Sight(StatusBlock *parent, Ability *createBy, int rawValue);
-    Sight(GameObject *target, Ability *createBy, int rawValue);
-};
-
-class Speed : public StatParam {
-    protected:
-    string name = "Speed";
-    int targetValue = 0;
-    void virtual action() override;
-    public:
-    Speed(StatusBlock *parent, Ability *createBy, int rawValue);
-    Speed(GameObject *target, Ability *createBy, int rawValue);
-};
-
-Hunger::Hunger(StatusBlock *parent, Ability *createBy, int rawValue) : StatParam(parent, createBy, rawValue) {}
-
-Hunger::Hunger(GameObject *target, Ability *createBy, int rawValue) : StatParam(target, createBy, rawValue) {}
-
-void Hunger::action()
-{
-    // Animal dies here
-    Layer *currentLayer = parent->getParent()->getParent();
-    Layer *foodLayer = currentLayer->getParent()->getLayer("Food");
-    pair<int, int> currentIndex = parent->getParent()->getVectorIndex();
-    currentLayer->insideLayer[currentIndex.second][currentIndex.first] = nullptr;
-    if (foodLayer->insideLayer[currentIndex.second][currentIndex.first] == nullptr)
-    {
-        GameObject* corpseptr = new Corpse(foodLayer, currentIndex.first, currentIndex.second);
-        // if animal is poisonous, give corpseptr poisonous too
-        if (parent->isInAffliction("Poisonous")){
-            new Poisonous(corpseptr);
-        }
-    }
-    // kill this animal :(
-    delete parent->getParent();
-    return;
-};
-
-Health::Health(StatusBlock *parent, Ability *createBy, int rawValue) : StatParam(parent, createBy, rawValue) {}
-
-Health::Health(GameObject *target, Ability *createBy, int rawValue) : StatParam(target, createBy, rawValue) {}
-
-void Health::action()
-{
-    // Animal dies here
-    Layer *currentLayer = parent->getParent()->getParent();
-    Layer *foodLayer = currentLayer->getParent()->getLayer("Food");
-    pair<int, int> currentIndex = parent->getParent()->getVectorIndex();
-    currentLayer->insideLayer[currentIndex.second][currentIndex.first] = nullptr;
-    if (foodLayer->insideLayer[currentIndex.second][currentIndex.first] == nullptr)
-    {
-        GameObject* corpseptr = new Corpse(foodLayer, currentIndex.first, currentIndex.second);
-        // if animal is poisonous, give corpseptr poisonous too
-        if (parent->isInAffliction("Poisonous")){
-            new Poisonous(corpseptr);
-        }
-    }
-    // kill this animal :(
-    delete parent->getParent();
-    return;
-    return;
-}
-
-Atk::Atk(StatusBlock *parent, Ability *createBy, int rawValue) : StatParam(parent, createBy, rawValue) {}
-
-Atk::Atk(GameObject *target, Ability *createBy, int rawValue) : StatParam(target, createBy, rawValue) {}
-
-void Atk::action()
-{
-    return;
-}
-
-Sight::Sight(StatusBlock *parent, Ability *createBy, int rawValue) : StatParam(parent, createBy, rawValue) {}
-
-Sight::Sight(GameObject *target, Ability *createBy, int rawValue) : StatParam(target, createBy, rawValue) {}
-
-void Sight::action()
-{
-    return;
-}
-
-Speed::Speed(StatusBlock *parent, Ability *createBy, int rawValue) : StatParam(parent, createBy, rawValue) {}
-
-Speed::Speed(GameObject *target, Ability *createBy, int rawValue) : StatParam(target, createBy, rawValue) {}
-
-void Speed::action()
-{
-    return;
-}
-
-class Animal : public GameObject {
-protected:
-public:
-    Animal(Layer *parent, int x, int y);
-};
-
-
-class Plant : public GameObject {
-
-protected:
-public:
-    Plant(Layer *parent, int x, int y);
-};
-
-
-class Corpse : public GameObject {
-
-protected:
-    string name = "Corpse";
-
-public:
-    Corpse(Layer *parent, int x, int y);
-};
-
-
-class Lion : public Animal {
-protected:
-    string name = "Lion";
-
-public:
-    Lion(Layer *parent, int x, int y);
-};
-
-
-class Bear : public Animal {
-protected:
-    string name = "Bear";
-
-public:
-    Bear(Layer *parent, int x, int y);
-};
-
-
-class Cheetah : public Animal {
-protected:
-    string name = "Cheetah";
-
-public:
-    Cheetah(Layer *parent, int x, int y);
-};
-
-
-class Giant_Snake : public Animal {
-protected:
-    string name = "Giant Snake";
-
-public:
-    Giant_Snake(Layer *parent, int x, int y);
-};
-
-
-class Rabbit : public Animal {
-protected:
-    string name = "Rabbit";
-
-public:
-    Rabbit(Layer *parent, int x, int y);
-};
-
-
-class Goat : public Animal {
-protected:
-    string name = "Goat";
-
-public:
-    Goat(Layer *parent, int x, int y);
-};
-
-
-class Deer : public Animal {
-protected:
-    string name = "Deer";
-
-public:
-    Deer(Layer *parent, int x, int y);
-};
-
-
-class Chicken : public Animal {
-protected:
-    string name = "Chicken";
-
-public:
-    Chicken(Layer *parent, int x, int y);
-};
-
-
-class Poison_Frog : public Animal {
-protected:
-    string name = "Poison Frog";
-
-public:
-    Poison_Frog(Layer *parent, int x, int y);
-};
-
-
-
-
-class Bush : public Plant {
-protected:
-    string name = "Bush";
-    
-public:
-    Bush(Layer *parent, int x, int y);
-};
-
-class Mushroom : public Plant {
-protected:
-    string name = "Mushroom";
-    
-public:
-    Mushroom(Layer *parent, int x, int y);
-};
-
-
-class Apple_tree : public Plant {
-protected:
-    string name = "Apple tree";
-    string represent = "";
-    
-public:
-    Apple_tree(Layer *parent, int x, int y);
-};
-
-// not even considered an animal, since it should only be able to walk
-class EarthWorm : public GameObject {
-protected:
-    string name = "EarthWorm";
-
-public:
-    EarthWorm(Layer *parent, int x, int y);
-};
-
 Animal::Animal(Layer *parent, int x, int y) : GameObject(parent, x, y) {
     // abilities all aniimals can do
     new WalkSeek(this);
@@ -2442,313 +2739,6 @@ EarthWorm::EarthWorm(Layer *parent, int x, int y) : GameObject(parent, x, y) {
     //can only walk, randomly
     new WalkSeek(this);
 }
-
-class Grid;
-class Map;
-class Gui;
-
-class Grid {
-private:
-  RectangleShape shape;
-  GameObject *object;
-
-public:
-  Grid(Vector2f size, Vector2f position, GameObject *object);
-  void draw(RenderWindow &window); /*not require just have*/
-  GameObject *getObject();
-};
-
-class Map { // แสดงเฉพาะส่วน
-private:
-  Font font;
-  Text tempText;
-  float width, height; /*จำเป็นในการตีตาราง*/
-  int row, column; /*จำเป็นในการตีตาราง*/
-  Vector2i center; /*จุดกึ่งกลางของการแสดงผล*/
-  RectangleShape border;        /*shape ที่กำหนด position*/
-  vector<vector<Grid>> gridMap; /*เวลาซูม เคลียแล้วสร้างใหม่หมดเลยง่ายกว่า*/
-  vector<vector<GameObject *>> dataMap; /*ต้องไปดึงมาทุกเทิร์น*/
-  vector<vector<Text>> showText;
-
-public:
-  void update();
-  Map(Vector2f size, Vector2f position, vector<vector<GameObject *>> dataMap);
-  void draw(RenderWindow &window);
-  void setDataMap(vector<vector<GameObject *>> dataMap);
-  void setRowColumn(Vector2i size);
-  void changeCenter(Vector2i center);
-  GameObject *getObject(Vector2f position);
-  Vector2i getRowColumn();
-  Vector2i getSize();
-  Vector2i getCenter();
-  vector<vector<GameObject *>> getDataMap();
-  RectangleShape getBorder() { return border; }
-};
-
-class ZoomIn {
-protected:
-  CircleShape shape;
-  Font font;
-  Text text;
-
-public:
-  ZoomIn(Vector2f position, int radius);
-  void draw(RenderWindow &window);
-  CircleShape getShape();
-  void zoomIn(Map &map);
-};
-
-class ZoomOut : public ZoomIn {
-public:
-  ZoomOut(Vector2f position, int radius);
-  void zoomOut(Map &map);
-};
-
-class LayerButton {
-private:
-  RectangleShape button;
-  Font font;
-  Text text;
-  vector<vector<GameObject *>> dataMap;
-
-public:
-  LayerButton(Vector2f position, Vector2f size, string text,
-              vector<vector<GameObject *>> dataMap);
-  void draw(RenderWindow &window);
-  void setDataMap(vector<vector<GameObject *>> layer);
-  void pushToMap(Map &map);
-  RectangleShape getButton() { return button; }
-};
-
-class LayerSheet {
-private:
-  RectangleShape sheet;
-  LayerSystem *data;
-  Font font;
-  vector<Text> text;
-  void dumbToButton(vector<vector<GameObject *>> DataMap, LayerButton &button);
-
-public:
-  LayerButton *selectedbutton;
-  vector<LayerButton> buttons;
-  LayerSheet(LayerSystem *data, Vector2f position, Vector2f size);
-  void draw(RenderWindow &window);
-  void setSelectedButton(int i);
-  LayerSystem *getData() { return data; }
-  void update(); /*จะทำการเล่นเทิร์นพร้อมกับ dumb ข้อมูลทั้งหมดออกมา*/
-};
-
-class StopButton {
-protected:
-  RectangleShape shape;
-  Font font;
-  Text text;
-
-public:
-  StopButton(Vector2f position, Vector2f size);
-  void draw(RenderWindow &window);
-  RectangleShape getShape();
-};
-
-class PlayButton : public StopButton {
-public:
-  PlayButton(Vector2f position, Vector2f size);
-};
-
-class RunButton : public StopButton {
-public:
-  RunButton(Vector2f position, Vector2f size);
-};
-
-class TextBox {
-protected:
-  RectangleShape shape, up, down;
-  vector<Text> showText; // จำนวนจะเปลี่ยนไปตามขนาดของ TextBox
-  vector<string> allText;
-  Font font;
-  int showTextIndex, showTextCapacity, textCapacity;
-  Text textUp, textDown;
-
-public:
-  TextBox(Vector2f position, Vector2f size, vector<string> defaultVec,
-          int textCapacity = 50,
-          int showTextCapacity = 10); // ข้อควรระวัง defaultVec
-                                      // ต้องมีขนาดเท่ากับหรือมากกว่า ShowTextCapacity
-  void update();
-  void draw(RenderWindow &window);
-  void dumbText(string text);
-  void dumbText(vector<string> text);
-  RectangleShape getShape();
-  RectangleShape getUp() { return up; }
-  RectangleShape getDown() { return down; }
-  void shiftShowTextUp();
-  void shiftShowTextDown();
-  void setAllText(vector<string> text) { allText = text; }
-};
-
-class Detail : public TextBox {
-protected:
-  GameObject *object;
-  CircleShape deleteButton;
-  void update();
-
-public:
-  Detail(Vector2f position, Vector2f size);
-  void draw(RenderWindow &window);
-  void setObject(GameObject *object);
-  CircleShape getDeleteButton();
-};
-
-class Log : public TextBox {
-protected:
-  float DefaultHeight;
-
-public:
-  void update();
-  Log(Vector2f position, Vector2f size);
-};
-
-class SelectedList {
-  Text tempText;
-  RectangleShape tempShape;
-  RectangleShape shape, up, down;
-  vector<Text> showText; // จำนวนจะเปลี่ยนไปตามขนาดของ TextBox
-  vector<RectangleShape> showShape;
-  Text textUp, textDown;
-  Font font;
-  int showTextIndex, showTextCapacity;
-
-public:
-  vector<GameObject *> allObject;
-  SelectedList(Vector2f position, Vector2f size,
-               vector<GameObject *> allObject = {}, int showTextCapacity = 5);
-  void draw(RenderWindow &window);
-  void dumbObject(GameObject *object);
-  RectangleShape getShape();
-  RectangleShape getUp() { return up; }
-  RectangleShape getDown() { return down; }
-  void shiftShowTextUp();
-  void shiftShowTextDown();
-  GameObject *click(Vector2f position);
-  void update();
-  void clear();
-  void setAllObject(vector<GameObject *> object) { allObject = object; }
-};
-
-class CommandList {
-protected:
-  RectangleShape shape, up, down;
-  vector<Text> showText; // จำนวนจะเปลี่ยนไปตามขนาดของ TextBox
-  vector<RectangleShape> showShape;
-  Text textUp, textDown;
-  Font font;
-  int showTextIndex, textCapacity;
-
-public:
-  vector<string> allObject;
-  CommandList(Vector2f position, Vector2f size, vector<string> allObject = {},
-              int textCapacity = 5, int showTextCapacity = 5);
-  void draw(RenderWindow &window);
-  RectangleShape getShape() { return shape; }
-  RectangleShape getUp() { return up; }
-  RectangleShape getDown() { return down; }
-  void shiftShowTextUp();
-  void shiftShowTextDown();
-  string click(Vector2f position);
-};
-
-class Gui {
-private:
-  // ส่วนของการสร้างหน้าต่าง
-  RenderWindow *window;
-  Text turn;
-  Font font;
-  Sprite sprite;
-  Texture spriteTexture;
-  void renderAny();
-
-  // ส่วนของการรับข้อมูลจากผู้ใช้
-  Event event;
-  void pollEvent();
-
-  // ส่วนของการเช็คการคลิก
-  bool clickAble;
-  Vector2i mousePosition;
-  Vector2f mousePositionView;
-  void updateMousePosition();
-  bool clickAbleCheck();
-  void updateClickAble();
-
-  // ส่วนของการเช็คการกดปุ่ม
-  bool pressAble;
-  Keyboard::Key key;
-  void updateKeyboard();
-  bool pressAbleCheck();
-  void updatePressAble();
-
-  // ส่วนของการรันเกม
-  StopButton *stopButton;
-  PlayButton *playButton;
-  RunButton *runButton;
-  bool play, run = false;
-  void updateUpdateButton();
-  void updateLayerSystem();
-  void renderUpdateButton();
-
-  // ส่วนของการดึงข้อมูลจาก FundamentalSystem
-  int turnCount = 0;
-  vector<LayerButton> layerButtons;
-  LayerSheet *layerSheet;
-  void updateLayerSheet();
-  void renderLayerSheet();
-
-  // ส่วนของการสร้างและแสดงข้อมูล
-  Map *map;
-  void updateMapCenter();
-  void renderMap();
-
-  // ส่วนของการซูม
-  ZoomIn *zoomIn;
-  ZoomOut *zoomOut;
-  void updateZoomButton();
-  void renderZoomButton();
-
-  // ส่วนของการแสดงข้อมูล
-  bool detailShow = false;
-  Detail *detail;
-  void updateDetail();
-  void renderDetail();
-
-  // ส่วนของการแสดงข้อมูลทั้งหมด
-  Log *log;
-  void updateLog();
-  void renderLog();
-
-  // ส่วนของการเลือก
-  SelectedList *selectedList;
-  void updateSelectedList();
-  void renderSelectedList();
-
-  // ส่วนของการคำสั่ง
-  CommandList *commandList;
-  void updateCommandList();
-  void renderCommandList();
-
-public:
-  Gui();
-  bool isOpen();
-  void update();
-  void render();
-};
-
-#define FONT_PATH "C:/Users/ADMIN/Documents/GitHub/Cminusminus/Font/f.ttf"
-#define COLOR1 Color(194, 168, 135, 255)
-#define COLOR2 Color(223, 175, 94, 255)
-#define COLOR3 Color(97, 113, 77, 255)
-#define COLOR4 Color(143, 174, 147, 255)
-#define COLOR5 Color(109, 21, 43, 255)
-
-//---------------------------------Grid---------------------------------
 
 Grid::Grid(Vector2f size, Vector2f position, GameObject *object)
     : object(object) {
@@ -3722,4 +3712,13 @@ void Gui::render() {
   renderDetail();
 
   window->display();
+}
+
+int main() {
+    Gui game;
+    while (game.isOpen()) {
+        game.update();
+        
+        game.render();
+    }
 }

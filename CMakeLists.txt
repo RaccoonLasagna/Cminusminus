@@ -2,10 +2,7 @@ cmake_minimum_required(VERSION 3.20.0)
 project("Game")
 
 add_executable(GameGod 
-    "Gui.h"
-    "Gui.cpp"
-    "FundamentalSystem.cpp"
-    "main.cpp"
+    "UltimateGame.cpp"
 )
 
 set(BUILD_SHARED_LIBS FALSE CACHE INTERNAL "Use static linking for SFML")
